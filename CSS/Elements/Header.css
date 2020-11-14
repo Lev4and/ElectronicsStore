@@ -1,0 +1,193 @@
+header{
+    position: sticky;
+    top: 0;
+    min-height: 2em;
+    font-size: larger;
+    font-family: Arial;
+}
+.header-top{
+    height: 30px;
+    max-height: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: orange;
+}
+.header-top-table{
+    min-width: 100%;
+    min-height: 30px;
+}
+.header-top-table-tr{
+    min-width: 100%;
+    min-height: 30px;
+    max-height: 30px;
+}
+.header-top-table-tr td{
+    min-width: 33%;
+    max-width: 33%;
+    min-height: 30px;
+    max-height: 30px;
+}
+.header-top-location{
+    color: white;
+    text-align: center;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: row;
+    display: flex;
+}
+.header-top-location > .header-top-location-city{
+    text-align: center;
+    vertical-align: middle;
+}
+.header-top-location-icon{
+    min-height: 20px;
+    max-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+.header-top-information{
+    color: white;
+    text-align: center;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+    display: flex;
+}
+.header-top-information-icon{
+    min-height: 20px;
+    max-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+.header-top-information > .header-top-information-shops{
+    text-align: center;
+    vertical-align: middle;
+}
+.header-top-information > .header-top-information-buyers{
+    text-align: center;
+    vertical-align: middle;
+}
+.header-top-information > .header-top-information-about-the-site{
+    text-align: center;
+    vertical-align: middle;
+}
+.header-top-contact-information{
+    color: white;
+    text-align: center;
+    justify-content: flex-end;
+    align-content: center;
+    flex-direction: row;
+    display: flex;
+}
+.header-top-contact-information > .header-top-contact-information-phone-number{
+    text-align: center;
+    vertical-align: middle;
+}
+.header-top-location-city:hover,
+.header-top-information-shops:hover,
+.header-top-information-buyers:hover,
+.header-top-information-about-the-site:hover,
+.header-top-contact-information-phone-number:hover{
+    color: lime;
+}
+.container{
+    height: 70px;
+    max-height: 70px;
+    border: solid black 1px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.container-table{
+    min-width: 100%;
+    min-height: 70px;
+}
+.container-table-tr{
+    min-width: 100%;
+    min-height: 70px;
+    max-height: 70px;
+}
+.container-table-tr td{
+    min-height: 70px;
+    max-height: 70px;
+}
+.container-table-td-logo{
+    min-width: 10%;
+    max-width: 10%;
+}
+.container-table-td-catalog{
+    min-width: 20%;
+    max-width: 20%;
+}
+.container-table-td-input-search{
+    min-width: 25%;
+    max-width: 25%;
+}
+.container-table-td-buttons{
+    min-width: 20%;
+    max-width: 20%;
+}
+.container-table-td-login{
+    min-width: 25%;
+    max-width: 25%;
+}
+.container-logo{
+    text-align: center;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: row;
+    display: flex;
+}
+.container-catalog{
+    text-align: center;
+}
+.container-catalog-button{
+    font-size: larger;
+    border-radius: 10px;
+    min-width: 80%;
+    max-width: 80%;
+    min-height: 50px;
+    max-height: 50px;
+}
+.container-catalog-button:hover{
+    background-color: orange;
+    color: white;
+}
+.container-logo > img{
+    min-height: 70px;
+    max-height: 70px;
+}
+.container-search-input-search{
+    text-align: left;
+    min-width: 90%;
+    max-width: 90%;
+    min-height: 50px;
+    max-height: 50px;
+    font-size: larger;
+    border-radius: 10px;
+}
+.container-buttons{
+    text-align: center;
+}
+.container-buttons-basket:hover{
+    color: lime;
+}
+.container-login{
+    text-align: right;
+    justify-content: flex-end;
+    align-content: center;
+    flex-direction: column;
+    display: flex;
+}
+.container-login-button{
+    font-size: larger;
+    border-radius: 10px;
+    min-height: 50px;
+    max-height: 50px;
+}
+.container-login-button:hover{
+    background-color: orange;
+    color: white;
+}
+.container-buttons-count-products-in-basket{
+    color: orange;
+}
