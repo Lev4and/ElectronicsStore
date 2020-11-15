@@ -14,7 +14,7 @@
             <h1>Авторизация</h1>
         </div>
     </header>
-    <form action="/Index.php" method="post">
+    <form action="http://electronicsstore/Index.php" method="post">
         <div class="form-block">
             <table class="form-block-table">
                 <tr class="form-block-table-tr">

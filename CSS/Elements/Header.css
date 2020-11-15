@@ -59,17 +59,11 @@ header{
     text-align: center;
     vertical-align: middle;
 }
-.header-top-information > .header-top-information-shops{
-    text-align: center;
-    vertical-align: middle;
-}
-.header-top-information > .header-top-information-buyers{
-    text-align: center;
-    vertical-align: middle;
-}
+.header-top-information > .header-top-information-shops,
+.header-top-information > .header-top-information-buyers,
 .header-top-information > .header-top-information-about-the-site{
     text-align: center;
-    vertical-align: middle;
+    vertical-align: center;
 }
 .header-top-contact-information{
     color: white;
@@ -89,6 +83,39 @@ header{
 .header-top-information-about-the-site:hover,
 .header-top-contact-information-phone-number:hover{
     color: lime;
+}
+.header-top-information-buyers ul,
+.header-top-information-buyers ol{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    min-width: 250px;
+    max-width: 250px;
+    z-index: 1;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    display: none;
+}
+.header-top-information-buyers ul li{
+    min-height: 30px;
+    max-height: 30px;
+    min-width: 250px;
+    max-width: 250px;
+    padding: 10px;
+    border: solid white 1px;
+    text-align: left;
+    text-transform: none;
+    color: white;
+    background-color: orange;
+    flex-direction: column;
+    display: block;
+}
+.header-top-information-buyers ul li:hover{
+    color: lime;
+}
+.header-top-information-buyers:hover > ul{
+    display: block;
 }
 .container{
     height: 70px;
@@ -126,7 +153,7 @@ header{
     min-width: 20%;
     max-width: 20%;
 }
-.container-table-td-login{
+.container-table-td-login-or-user{
     min-width: 25%;
     max-width: 25%;
 }

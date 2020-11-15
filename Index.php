@@ -13,14 +13,15 @@ if(isset($_POST["action"]) && $_POST["action"] == "Авторизоваться"
 
     if(QueryExecutor::getInstance()->authorization($login, $password)){
         $_SESSION["user"] = QueryExecutor::getInstance()->getUser($login);
-
-        header("Location: /Views/Pages/Main.html.php");
-        exit();
     }
     else{
         header("Location: /Views/Pages/Authorization.html.php");
         exit();
     }
+}
+
+if(isset($_POST["action"]) && $_POST["action"] == "Выход"){
+    $_SESSION["user"] = array();
 }
 
 include("./Views/Pages/Main.html.php");

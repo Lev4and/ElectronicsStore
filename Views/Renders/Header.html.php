@@ -1,3 +1,6 @@
+<script src="/JS/XmlHttp.js"></script>
+<script src="/JS/Menu.js"></script>
+<script src="/JS/Login.js"></script>
 <header>
     <div class="header-top">
         <table class="header-top-table" border="0">
@@ -19,6 +22,10 @@
                         <div class="header-top-information-buyers">
                             <span class="header-top-information-icon"><i class="fas fa-users"></i></span>
                             <a>Покупателям</a>
+                            <ul>
+                                <li><a>Доставка</a></li>
+                                <li><a>Сервисные центры</a></li>
+                            </ul>
                         </div>
                         <div class="header-top-information-about-the-site">
                             <span class="header-top-information-icon"><i class="fas fa-info-circle"></i></span>
@@ -47,7 +54,12 @@
                 </td>
                 <td class="container-table-td-catalog">
                     <form class="container-catalog">
-                        <input class="container-catalog-button" type="button" value="Каталог товаров">
+                        <?php if(isset($_SESSION["user"]) && $_SESSION["user"]["role_name"] == "Администратор"): ?>
+                            <button id="menu" class="container-catalog-button" type="button" onclick="{ openOrCloseMenu('menu-admin'); }">Меню</button>
+
+                        <?php else: ?>
+                            <button id="catalog" class="container-catalog-button" type="button" onclick="{ openOrCloseMenu('menu-customer'); }">Каталог товаров</button>
+                        <?php endif; ?>
                     </form>
                 </td>
                 <td class="container-table-td-input-search">
@@ -57,6 +69,7 @@
                     </div>
                 </td>
                 <td class="container-table-td-buttons">
+                    <?php if(!isset($_SESSION["user"]["role_name"]) || $_SESSION["user"]["role_name"] == "Покупатель"): ?>
                     <div class="container-buttons">
                         <div class="container-buttons-basket">
                             <span class="container-buttons-icon"><i class="fas fa-shopping-basket"></i></span>
@@ -64,19 +77,16 @@
                             <span class="container-buttons-count-products-in-basket">0</span>
                         </div>
                     </div>
+                    <?php endif; ?>
                 </td>
-                <td class="container-table-td-login">
-                    <div class="container-login">
-                        <?php if(!isset($_SESSION["user"]) || count($_SESSION["user"]) == 0){
-                            echo "<form action='/Views/Pages/Authorization.html.php' method='post'>";
-                            echo "<input class='container-login-button' type='submit' value='Войти'>";
-                            echo "</form>";
-                        }
-                        else{
-                            echo "Привет, " . $_SESSION["user"]["login"] . "!";
-                        }
-                        ?>
-                    </div>
+                <td class="container-table-td-login-or-user">
+                    <?php if(!isset($_SESSION["user"]) || count($_SESSION["user"]) == 0): ?>
+                        <div class="container-login">
+                        <button class='container-login-button' onclick='onClickLogin();'>Войти</button>
+                        </div>
+                    <?php else: ?>
+                        <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/MenuUser.html.php"; ?>
+                    <?php endif; ?>
                 </td>
             </tr>
         </table>
