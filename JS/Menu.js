@@ -18,3 +18,7 @@ function openMenu(elementId) {
 function closeMenu(elementId) {
     document.getElementById(elementId).setAttribute('style', 'visibility: hidden');
 }
+
+function onClickCountries() {
+    window.location = "http://electronicsstore/Views/Pages/Administrator/Country/";
+}

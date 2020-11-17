@@ -1,6 +1,6 @@
 function onClickExit() {
     const request = getXmlHttp();
-    const url = "http://electronicsstore/Index.php";
+    const url = "http://electronicsstore/";
     const params = "action=Выход";
 
     request.open("POST", url, true);
@@ -11,7 +11,7 @@ function onClickExit() {
     });
     request.send(params);
 
-    window.location = "http://electronicsstore/Index.php";
+    window.location = "http://electronicsstore/";
 }
 
 function onClickProfile() {

@@ -1,0 +1,8 @@
+.error-block{
+    margin: 0 auto;
+}
+.error-message-block{
+    color: red;
+    text-align: center;
+    font-family: Arial;
+}

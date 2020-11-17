@@ -1,0 +1,31 @@
+.countries{
+    width: 100%;
+    font-size: larger;
+    font-family: Arial;
+}
+.table-countries{
+    margin: 0 auto;
+}
+.table-countries th{
+    text-align: center;
+}
+.table-countries td{
+    text-align: left;
+}
+.table-countries .select{
+    text-align: center;
+}
+.table-countries .table-countries-row-values{
+    height: 50px;
+    max-height: 50px;
+}
+.table-countries .table-countries-row-values .country-flag{
+    text-align: center;
+}
+.table-countries .table-countries-row-values .country-flag img{
+    height: 50px;
+    width: 100px;
+    max-height: 50px;
+    max-width: 100px;
+    vertical-align: middle;
+}

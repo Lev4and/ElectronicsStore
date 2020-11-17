@@ -1,36 +1,38 @@
 .menu-admin{
     z-index: 1;
-    min-width: 30%;
-    max-width: 30%;
+    width: 30%;
     height: 520px;
+    max-width: 30%;
+    max-height: 520px;
     padding-left: 10%;
     font-size: larger;
     font-family: Arial;
     visibility: hidden;
+    position: fixed;
 }
 .menu-admin ul,
 .menu-admin ol{
     margin: 0;
     padding: 0;
-    position: absolute;
-    min-width: 250px;
-    max-width: 250px;
     z-index: 1;
+    max-width: 100%;
+    position: absolute;
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
     display: block;
 }
 .menu-admin ul li{
-    min-height: 30px;
+    padding: 10px 10px 5px 10px;
+    height: 30px;
+    width: 100%;
     max-height: 30px;
-    min-width: 250px;
-    max-width: 250px;
-    padding: 10px;
-    border: solid white 1px;
+    max-width: 100%;
+    color: white;
     text-align: left;
     text-transform: none;
-    color: white;
+    vertical-align: middle;
+    border: solid white 1px;
     background-color: orange;
     flex-direction: row;
     display: block;

@@ -179,7 +179,8 @@ header{
     background-color: orange;
     color: white;
 }
-.container-logo > img{
+.container-logo a,
+.container-logo img{
     min-height: 70px;
     max-height: 70px;
 }

@@ -49,7 +49,7 @@
             <tr class="container-table-tr">
                 <td class="container-table-td-logo">
                     <div class="container-logo">
-                        <img src="/Resources/Images/Icons/Logo.png">
+                        <a href="http://electronicsstore/"><img src="/Resources/Images/Icons/Logo.png"></a>
                     </div>
                 </td>
                 <td class="container-table-td-catalog">
@@ -85,7 +85,7 @@
                         <button class='container-login-button' onclick='onClickLogin();'>Войти</button>
                         </div>
                     <?php else: ?>
-                        <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/MenuUser.html.php"; ?>
+                        <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/MenuUser.php"; ?>
                     <?php endif; ?>
                 </td>
             </tr>
