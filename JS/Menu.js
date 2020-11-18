@@ -26,3 +26,7 @@ function onClickCountries() {
 function onClickRegions() {
     window.location = "http://electronicsstore/Views/Pages/Administrator/Region/";
 }
+
+function onClickCities() {
+    window.location = "http://electronicsstore/Views/Pages/Administrator/City/";
+}

@@ -63,10 +63,12 @@ class QueryExecutor{
     }
 
     public function getRegions($countryId = null, $name){
-        $query1 = "SELECT * FROM v_region WHERE name LIKE '%$name%'";
-        $query2 = "SELECT * FROM v_region WHERE name LIKE '%$name%' AND country_id=$countryId";
+        $condition = isset($countryId) && $countryId > 0 ? " AND country_id=$countryId" : "";
 
-        return $this->executeQuery($countryId != null ? $query2 : $query1);
+        $query = "SELECT * FROM v_region WHERE name LIKE '%$name%'";
+        $query .= $condition;
+
+        return $this->executeQuery($query);
     }
 
     public function containsRegion($countryId, $name){
@@ -87,6 +89,37 @@ class QueryExecutor{
 
     public function updateRegion($id, $countryId, $name){
         $this->executeQuery("UPDATE region SET country_id=$countryId, name='$name' WHERE id=$id");
+    }
+
+    public function getCities($countryId = null, $regionId = null, $name){
+        $condition1 = isset($countryId) && $countryId > 0 ? " AND country_id=$countryId" : "";
+        $condition2 = isset($regionId) && $regionId > 0 ? " AND region_id=$regionId" : "";
+
+        $query = "SELECT * FROM v_city WHERE name LIKE '%$name%'";
+        $query .= $condition1;
+        $query .= $condition2;
+
+        return $this->executeQuery($query);
+    }
+
+    public function containsCity($regionId, $name){
+        return !is_null($this->executeQuery("SELECT * FROM city WHERE region_id=$regionId AND name='$name' LIMIT 1")[0]);
+    }
+
+    public function addCity($regionId, $name){
+        $this->executeQuery("INSERT INTO city (region_id, name) VALUES ($regionId, '$name')");
+    }
+
+    public function removeCity($id){
+        $this->executeQuery("DELETE FROM city WHERE id=$id");
+    }
+
+    public function getCity($id){
+       return $this->executeQuery("SELECT * FROM v_city WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function updateCity($id, $regionId, $name){
+        $this->executeQuery("UPDATE city SET region_id=$regionId, name='$name' WHERE id=$id");
     }
 
     private function executeQuery($query){

@@ -98,8 +98,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить"){
 }
 
 if(!isset($_POST["action"]) || $_POST["action"] == "Поиск"){
-    $countryName = $_POST["inputSearch"];
-    $countries = QueryExecutor::getInstance()->getCountries($countryName);
+    $countries = QueryExecutor::getInstance()->getCountries($_POST["inputSearch"]);
 
     include "Countries.php";
 }

@@ -3,17 +3,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ElectronicsStore - Регионы</title>
-    <link rel="stylesheet" href="/CSS/Pages/Regions.css">
+    <title>ElectronicsStore - Города</title>
+    <link rel="stylesheet" href="/CSS/Pages/Cities.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/Toolbar.css">
-    <link rel="stylesheet" href="/CSS/Elements/TableRegions.css">
+    <link rel="stylesheet" href="/CSS/Elements/TableCities.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
     <link rel="stylesheet" href="/Resources/Fonts/Font%20Awesome/css/all.min.css">
+    <script src="/JS/JQuery.js"></script>
+    <script src="/JS/Cities.js"></script>
 </head>
 <body>
 <div class="main">
@@ -30,16 +32,16 @@
     <div class="content">
         <?php if(isset($_SESSION["user"]) && count($_SESSION["user"]) > 0 && $_SESSION["user"]["role_name"] == "Администратор"): ?>
             <div class="header-block">
-                <h1>Регионы</h1>
+                <h1>Города</h1>
             </div>
-            <form action="http://electronicsstore/Views/Pages/Administrator/Region/" method="post">
+            <form action="http://electronicsstore/Views/Pages/Administrator/City/" method="post">
                 <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Toolbar.php"; ?>
                 <fieldset class="filters-block">
                     <legend>Фильтры</legend>
                     <div class="filter">
                         <span>Страны</span>
                         <div>
-                            <select name="countryId">
+                            <select id="select-countries" name="countryId" onchange="onChangeSelectedCountries(this);">
                                 <option value="">Выберите страну</option>
                                 <?php foreach ($countries as $country): ?>
                                     <option value="<?php echo $country["id"]; ?>"><?php echo $country["name"]; ?></option>
@@ -47,11 +49,19 @@
                             </select>
                         </div>
                     </div>
+                    <div class="filter">
+                        <span>Регионы</span>
+                        <div>
+                            <select id="select-regions" name="regionId">
+
+                            </select>
+                        </div>
+                    </div>
                     <div class="reset-filters">
                         <input class="reset-filters-button" type="submit" name="action" value="Сбросить фильтры">
                     </div>
                 </fieldset>
-                <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableRegions.php"; ?>
+                <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableCities.php"; ?>
             </form>
             <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Error.php"; ?>
             <?php $_SESSION["error"] = ""; ?>
