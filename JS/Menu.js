@@ -22,3 +22,7 @@ function closeMenu(elementId) {
 function onClickCountries() {
     window.location = "http://electronicsstore/Views/Pages/Administrator/Country/";
 }
+
+function onClickRegions() {
+    window.location = "http://electronicsstore/Views/Pages/Administrator/Region/";
+}

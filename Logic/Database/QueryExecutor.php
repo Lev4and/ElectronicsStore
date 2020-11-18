@@ -62,6 +62,33 @@ class QueryExecutor{
         $this->executeQuery("UPDATE country SET name='$name', flag='$flag' WHERE id=$id");
     }
 
+    public function getRegions($countryId = null, $name){
+        $query1 = "SELECT * FROM v_region WHERE name LIKE '%$name%'";
+        $query2 = "SELECT * FROM v_region WHERE name LIKE '%$name%' AND country_id=$countryId";
+
+        return $this->executeQuery($countryId != null ? $query2 : $query1);
+    }
+
+    public function containsRegion($countryId, $name){
+        return !is_null($this->executeQuery("SELECT * FROM region WHERE country_id=$countryId AND name='$name' LIMIT 1")[0]);
+    }
+
+    public function addRegion($countryId, $name){
+        $this->executeQuery("INSERT INTO region (country_id, name) VALUES ($countryId, '$name')");
+    }
+
+    public function removeRegion($id){
+        $this->executeQuery("DELETE FROM region WHERE id=$id");
+    }
+
+    public function getRegion($id){
+        return $this->executeQuery("SELECT * FROM region WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function updateRegion($id, $countryId, $name){
+        $this->executeQuery("UPDATE region SET country_id=$countryId, name='$name' WHERE id=$id");
+    }
+
     private function executeQuery($query){
         try{
             return ($this->contextDb->query($query))->FETCHALL(PDO::FETCH_ASSOC);

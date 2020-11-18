@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ElectronicsStore - Изменение данных о стране</title>
-    <link rel="stylesheet" href="/CSS/Pages/EditCountry.css">
+    <title>ElectronicsStore - Добавление региона</title>
+    <link rel="stylesheet" href="/CSS/Pages/AddRegion.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
@@ -27,32 +27,43 @@
         include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/MenuCustomer.php";
     }
 
-    $country = QueryExecutor::getInstance()->getCountry($_GET["countryId"]);
+    $countries = QueryExecutor::getInstance()->getCountries("");
     ?>
     <div class="content">
         <?php if(isset($_SESSION["user"]) && count($_SESSION["user"]) > 0 && $_SESSION["user"]["role_name"] == "Администратор"): ?>
             <div class="header-block">
-                <h1>Изменение данных о стране</h1>
+                <h1>Добавление региона</h1>
             </div>
-            <form action="http://electronicsstore/Views/Pages/Administrator/Country/?countryId=<?php echo $_GET["countryId"]; ?>&flag=<?php echo $country["flag"] ?>" method="post" enctype="multipart/form-data">
+            <form action="http://electronicsstore/Views/Pages/Administrator/Region/" method="post">
                 <div class="form-block">
                     <table class="form-block-table">
                         <tr class="form-block-table-tr">
                             <td class="form-block-table-td-label">
-                                <label>Введите название страны:</label>
+                                <label>Укажите страну:</label>
                             </td>
-                            <td class="form-block-table-td-text">
-                                <input type="text" name="name" value="<?php echo $country["name"]; ?>">
-                            </td>
-                            <td class="form-block-table-td-image">
-                                <img id="country-flag" name="flag" src="<?php echo "http://electronicsstore/Resources/Images/Upload/" . $country["flag"]; ?>">
+                            <td class="form-block-table-td-field">
+                                <div>
+                                    <select name="countryId">
+                                        <?php foreach ($countries as $country): ?>
+                                            <option value="<?php echo $country["id"]; ?>"><?php echo $country["name"]; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
                             </td>
                         </tr>
                         <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-button" colspan="3">
-                                <script src="/JS/UnloadFile.js"></script>
-                                <input class="action-button" id="edit-button" type="submit" name="action" value="Сохранить"/>
-                                <input id="select-file" type="file" name="selectedImage" accept="image/*" onchange="onChangeSelectedFile('select-file' , 'country-flag');">
+                            <td class="form-block-table-td-label">
+                                <label>Введите название региона:</label>
+                            </td>
+                            <td class="form-block-table-td-field">
+                                <div>
+                                    <input type="text" name="name" value="">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="form-block-table-tr">
+                            <td class="form-block-table-td-button" colspan="2">
+                                <input class="action-button" id="add-button" type="submit" name="action" value="Записать"/>
                             </td>
                         </tr>
                     </table>

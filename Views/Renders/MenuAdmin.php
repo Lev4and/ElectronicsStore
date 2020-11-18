@@ -1,7 +1,7 @@
 <div id="menu-admin" class="menu-admin">
     <ul>
         <li onclick="onClickCountries();"><span>Страны</span></li>
-        <li><span>Регионы</span></li>
+        <li onclick="onClickRegions();"><span>Регионы</span></li>
         <li><span>Города</span></li>
         <li><span>Улицы</span></li>
         <li><span>Дома</span></li>
