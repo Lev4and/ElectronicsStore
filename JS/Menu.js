@@ -38,3 +38,7 @@ function onClickStreets() {
 function onClickHouses() {
     window.location = "http://electronicsstore/Views/Pages/Administrator/House/";
 }
+
+function onClickClassifications() {
+    window.location = "http://electronicsstore/Views/Pages/Administrator/Classification/";
+}

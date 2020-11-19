@@ -190,6 +190,30 @@ class QueryExecutor{
         $this->executeQuery("DELETE FROM house WHERE id=$id");
     }
 
+    public function getClassifications($name){
+        return $this->executeQuery("SELECT * FROM classification WHERE name LIKE '%$name%'");
+    }
+
+    public function containsClassification($name){
+        return !is_null($this->executeQuery("SELECT * FROM classification WHERE name='$name' LIMIT 1")[0]);
+    }
+
+    public function addClassification($name, $photo){
+        $this->executeQuery("INSERT INTO classification (name, photo) VALUES ('$name', '$photo')");
+    }
+
+    public function getClassification($id){
+        return $this->executeQuery("SELECT * FROM classification WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function updateClassification($id, $name, $photo){
+        $this->executeQuery("UPDATE classification SET name='$name', photo='$photo' WHERE id=$id");
+    }
+
+    public function removeClassification($id){
+        $this->executeQuery("DELETE FROM classification WHERE id=$id");
+    }
+
     private function executeQuery($query){
         try{
             return ($this->contextDb->query($query))->FETCHALL(PDO::FETCH_ASSOC);

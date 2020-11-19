@@ -1,0 +1,72 @@
+.main{
+    margin: 0 auto;
+}
+.content{
+    height: 1000px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.header-block{
+    color: orange;
+    text-align: center;
+    font-family: Arial;
+}
+.form-block{
+    width: 58%;
+    margin: 0 auto;
+}
+.form-block-table{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.form-block-table-tr{
+    height: 50px;
+}
+.form-block-table-td-label label{
+    color: black;
+    font-size: larger;
+    font-family: Arial;
+}
+.form-block-table-td-text{
+    height: 50px;
+    width: 300px;
+}
+.form-block-table-td-text input{
+    margin: 10px 0;
+    width: 300px;
+    height: 30px;
+    color: black;
+    font-size: larger;
+    font-family: Arial;
+    border-radius: 10px;
+}
+.form-block-table-td-image{
+    width: 50px;
+    height: 50px;
+}
+.form-block-table-td-image img{
+    width: 50px;
+    height: 50px;
+    border: solid black 1px;
+}
+.form-block-table-td-button{
+    text-align: center;
+}
+.form-block-table-td-button input[type=submit]{
+    height: 30px;
+    margin: 10px 10px;
+    font-size: larger;
+    font-family: Arial;
+    border-radius: 10px;
+}
+.form-block-table-td-button input[type=submit]:hover{
+    color: white;;
+    background-color: orange;
+}
+.form-block-table-td-button input[type=file]{
+    height: 30px;
+    margin: 10px 10px;
+    font-size: larger;
+    font-family: Arial;
+}

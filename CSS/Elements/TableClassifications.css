@@ -1,0 +1,31 @@
+.classifications{
+    width: 100%;
+    font-size: larger;
+    font-family: Arial;
+}
+.table-classifications{
+    margin: 0 auto;
+}
+.table-classifications th{
+    text-align: center;
+}
+.table-classifications td{
+    text-align: left;
+}
+.table-classifications .select{
+    text-align: center;
+}
+.table-classifications .table-classifications-row-values{
+    height: 50px;
+    max-height: 50px;
+}
+.table-classifications .table-classifications-row-values .classification-photo{
+    text-align: center;
+}
+.table-classifications .table-classifications-row-values .classification-photo img{
+    height: 50px;
+    width: 50px;
+    max-height: 50px;
+    max-width: 50px;
+    vertical-align: middle;
+}

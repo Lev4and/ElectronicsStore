@@ -5,7 +5,7 @@
         <li onclick="onClickCities();"><span>Города</span></li>
         <li onclick="onClickStreets();"><span>Улицы</span></li>
         <li onclick="onClickHouses();"><span>Дома</span></li>
-        <li><span>Классификации</span></li>
+        <li onclick="onClickClassifications();"><span>Классификации</span></li>
         <li><span>Категории</span></li>
         <li><span>Подкатегории</span></li>
         <li><span>Категории подкатегорий</span></li>
