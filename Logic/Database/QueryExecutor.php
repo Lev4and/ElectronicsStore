@@ -122,6 +122,39 @@ class QueryExecutor{
         $this->executeQuery("UPDATE city SET region_id=$regionId, name='$name' WHERE id=$id");
     }
 
+    public function getStreets($countryId, $regionId, $cityId, $name){
+        $condition1 = isset($countryId) && $countryId > 0 ? " AND country_id=$countryId" : "";
+        $condition2 = isset($regionId) && $regionId > 0 ? " AND region_id=$regionId" : "";
+        $condition3 = isset($cityId) && $cityId > 0 ? " AND city_id=$cityId" : "";
+
+        $query = "SELECT * FROM v_street WHERE name LIKE '%$name%'";
+        $query .= $condition1;
+        $query .= $condition2;
+        $query .= $condition3;
+
+        return $this->executeQuery($query);
+    }
+
+    public function containsStreet($cityId, $name){
+        return !is_null($this->executeQuery("SELECT * FROM street WHERE city_id=$cityId AND name='$name' LIMIT 1")[0]);
+    }
+
+    public function addStreet($cityId, $name){
+        $this->executeQuery("INSERT INTO street (city_id, name) VALUES ($cityId, '$name')");
+    }
+
+    public function getStreet($id){
+        return $this->executeQuery("SELECT * FROM v_street WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function updateStreet($id, $cityId, $name){
+        $this->executeQuery("UPDATE street SET city_id=$cityId, name='$name' WHERE id=$id");
+    }
+
+    public function removeStreet($id){
+        $this->executeQuery("DELETE FROM street WHERE id=$id");
+    }
+
     private function executeQuery($query){
         try{
             return ($this->contextDb->query($query))->FETCHALL(PDO::FETCH_ASSOC);

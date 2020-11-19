@@ -30,3 +30,7 @@ function onClickRegions() {
 function onClickCities() {
     window.location = "http://electronicsstore/Views/Pages/Administrator/City/";
 }
+
+function onClickStreets() {
+    window.location = "http://electronicsstore/Views/Pages/Administrator/Street/";
+}
