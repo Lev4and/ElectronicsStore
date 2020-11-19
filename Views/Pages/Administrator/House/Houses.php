@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php
+session_start();
+
+require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
+require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,16 +26,10 @@
 <div class="main">
     <?php
     include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Header.php";
-
-    if(isset($_SESSION["user"]) && $_SESSION["user"]["role_name"] == "Администратор"){
-        include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/MenuAdmin.php";
-    }
-    else{
-        include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/MenuCustomer.php";
-    }
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Menu.php";
     ?>
     <div class="content">
-        <?php if(isset($_SESSION["user"]) && count($_SESSION["user"]) > 0 && $_SESSION["user"]["role_name"] == "Администратор"): ?>
+        <?php if(Access::isAdministrator()): ?>
             <div class="header-block">
                 <h1>Дома</h1>
             </div>
@@ -79,12 +78,9 @@
                 </fieldset>
                 <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableHouses.php"; ?>
             </form>
-            <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Error.php"; ?>
-            <?php $_SESSION["error"] = ""; ?>
+            <?php VisibleError::showError(); ?>
         <?php else: ?>
-            <?php $_SESSION["error"] = "У вас нет прав доступа на посещение данной страницы."; ?>
-            <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Error.php"; ?>
-            <?php $_SESSION["error"] = ""; ?>
+            <?php Access::denyAccess(); ?>
         <?php endif; ?>
     </div>
     <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Footer.php"; ?>

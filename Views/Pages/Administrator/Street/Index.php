@@ -14,9 +14,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Добавить"){
 }
 
 if(isset($_POST["action"]) && $_POST["action"] == "Изменить"){
-    $streetId = $_POST["selectedStreet"];
-
-    header("Location: EditStreet.php?streetId=$streetId");
+    header("Location: EditStreet.php?streetId=" . $_POST["selectedStreet"]);
     exit();
 }
 

@@ -1,4 +1,17 @@
-<?php session_start(); ?>
+<?php
+session_start();
+
+require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
+require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
+require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
+
+$house = QueryExecutor::getInstance()->getHouse($_GET["houseId"]);
+
+$countries = QueryExecutor::getInstance()->getCountries("");
+$regions = QueryExecutor::getInstance()->getRegions($house["country_id"], "");
+$cities = QueryExecutor::getInstance()->getCities(null, $house["region_id"], "");
+$streets = QueryExecutor::getInstance()->getStreets(null, null, $house["street_id"], "");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,26 +31,11 @@
 <body>
 <div class="main">
     <?php
-    require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
-
     include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Header.php";
-
-    if(isset($_SESSION["user"]) && $_SESSION["user"]["role_name"] == "Администратор"){
-        include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/MenuAdmin.php";
-    }
-    else{
-        include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/MenuCustomer.php";
-    }
-
-    $house = QueryExecutor::getInstance()->getHouse($_GET["houseId"]);
-
-    $countries = QueryExecutor::getInstance()->getCountries("");
-    $regions = QueryExecutor::getInstance()->getRegions($house["country_id"], "");
-    $cities = QueryExecutor::getInstance()->getCities(null, $house["region_id"], "");
-    $streets = QueryExecutor::getInstance()->getStreets(null, null, $house["street_id"], "");
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Menu.php";
     ?>
     <div class="content">
-        <?php if(isset($_SESSION["user"]) && count($_SESSION["user"]) > 0 && $_SESSION["user"]["role_name"] == "Администратор"): ?>
+        <?php if(Access::isAdministrator()): ?>
             <div class="header-block">
                 <h1>Изменение данных о доме</h1>
             </div>
@@ -122,12 +120,9 @@
                     </table>
                 </div>
             </form>
-            <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Error.php"; ?>
-            <?php $_SESSION["error"] = ""; ?>
+            <?php VisibleError::showError(); ?>
         <?php else: ?>
-            <?php $_SESSION["error"] = "У вас нет прав доступа на посещение данной страницы."; ?>
-            <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Error.php"; ?>
-            <?php $_SESSION["error"] = ""; ?>
+            <?php Access::denyAccess(); ?>
         <?php endif; ?>
     </div>
     <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Footer.php"; ?>

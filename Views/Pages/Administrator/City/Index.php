@@ -13,15 +13,12 @@ if(isset($_POST["action"]) && $_POST["action"] == "Добавить"){
 }
 
 if(isset($_POST["action"]) && $_POST["action"] == "Изменить"){
-    $cityId = $_POST["selectedCity"];
-
-    header("Location: EditCity.php?cityId=$cityId");
+    header("Location: EditCity.php?cityId=" . $_POST["selectedCity"]);
     exit();
 }
 
 if(isset($_POST["action"]) && $_POST["action"] == "Регионы"){
     if(isset($_POST["countryId"]) && $_POST["countryId"] > 0){
-
         echo '<option value="">Выберите регион</option>';
         foreach (QueryExecutor::getInstance()->getRegions($_POST["countryId"], "") as $region){
             echo '<option value="' .$region["id"] . '">' . $region["name"] . '</option>';

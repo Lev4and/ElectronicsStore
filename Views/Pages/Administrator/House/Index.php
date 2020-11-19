@@ -15,9 +15,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Добавить"){
 }
 
 if(isset($_POST["action"]) && $_POST["action"] == "Изменить"){
-    $houseId = $_POST["selectedHouse"];
-
-    header("Location: EditHouse.php?houseId=$houseId");
+    header("Location: EditHouse.php?houseId=" . $_POST["selectedHouse"]);
     exit();
 }
 
@@ -32,7 +30,6 @@ if(isset($_POST["action"]) && $_POST["action"] == "Удалить"){
 
 if(isset($_POST["action"]) && $_POST["action"] == "Регионы"){
     if(isset($_POST["countryId"]) && $_POST["countryId"] > 0){
-
         echo '<option value="">Выберите регион</option>';
         foreach (QueryExecutor::getInstance()->getRegions($_POST["countryId"], "") as $region){
             echo '<option value="' . $region["id"] . '">' . $region["name"] . '</option>';

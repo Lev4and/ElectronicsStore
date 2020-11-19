@@ -26,8 +26,6 @@ if(isset($_POST["action"]) && $_POST["action"] == "Удалить"){
 if(isset($_POST["action"]) && $_POST["action"] == "Записать"){
     if(isset($_POST["name"]) && iconv_strlen($_POST["name"], "UTF-8") > 0){
         if(!QueryExecutor::getInstance()->containsClassification($_POST["name"])){
-            $classificationName = $_POST["name"];
-
             $fileName = $_FILES["selectedImage"]["name"];
             $tmpFileName = $_FILES["selectedImage"]["tmp_name"];
 
@@ -35,7 +33,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Записать"){
                 move_uploaded_file($tmpFileName, $_SERVER["DOCUMENT_ROOT"] . "/Resources/Images/Upload/$fileName");
             }
 
-            QueryExecutor::getInstance()->addClassification($classificationName, $fileName);
+            QueryExecutor::getInstance()->addClassification($_POST["name"], $fileName);
 
             header("Location: http://electronicsstore/Views/Pages/Administrator/Classification/");
             exit();

@@ -1,7 +1,7 @@
 <?php
-require "Logic/Database/QueryExecutor.php";
-
 session_start();
+
+require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
 
 if(!isset($_SESSION["user"])){
     $_SESSION["user"] = array();
@@ -16,11 +16,8 @@ if(isset($_SESSION["error"]) && iconv_strlen($_SESSION["error"], "UTF-8") > 0){
 }
 
 if(isset($_POST["action"]) && $_POST["action"] == "Авторизоваться"){
-    $login = $_POST["login"];
-    $password = $_POST["password"];
-
-    if(QueryExecutor::getInstance()->authorization($login, $password)){
-        $_SESSION["user"] = QueryExecutor::getInstance()->getUser($login);
+    if(QueryExecutor::getInstance()->authorization($_POST["login"], $_POST["password"])){
+        $_SESSION["user"] = QueryExecutor::getInstance()->getUser($_POST["login"]);
     }
     else{
         $_SESSION["error"] = "Вы ввели неверный логин или пароль.";

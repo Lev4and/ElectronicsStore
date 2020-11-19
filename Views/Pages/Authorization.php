@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php
+session_start();
+
+require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
+require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,16 +22,10 @@
 <div class="main">
     <?php
     include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Header.php";
-
-    if(isset($_SESSION["user"]) && $_SESSION["user"]["role_name"] == "Администратор"){
-        include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/MenuAdmin.php";
-    }
-    else{
-        include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/MenuCustomer.php";
-    }
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Menu.php";
     ?>
     <div class="content">
-        <?php if(!isset($_SESSION["user"]) || count($_SESSION["user"]) == 0): ?>
+        <?php if(Access::isAuthorized()): ?>
             <div class="header-block">
                 <h1>Авторизация</h1>
             </div>
@@ -62,12 +61,9 @@
                     </table>
                 </div>
             </form>
-            <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Error.php"; ?>
-            <?php $_SESSION["error"] = ""; ?>
+            <?php VisibleError::showError(); ?>
         <?php else: ?>
-            <?php $_SESSION["error"] = "Вы уже авторизованы."; ?>
-            <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Error.php"; ?>
-            <?php $_SESSION["error"] = ""; ?>
+            <?php Access::denyAuthorization(); ?>
         <?php endif; ?>
     </div>
     <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Footer.php";?>

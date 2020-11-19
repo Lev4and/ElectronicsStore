@@ -6,10 +6,6 @@ session_start();
 $countries = array();
 $regions = array();
 
-if(isset($_SESSION["error"]) && iconv_strlen($_SESSION["error"], "UTF-8") > 0){
-    $_SESSION["error"] = "";
-}
-
 if(isset($_POST["action"]) && $_POST["action"] == "Добавить"){
     header("Location: AddRegion.php");
     exit();
