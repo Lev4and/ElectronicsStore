@@ -12,10 +12,11 @@
     font-family: Arial;
 }
 .form-block{
+    width: 50%;
     margin: 0 auto;
-    width: 700px;
 }
 .form-block-table{
+    width: 100%;
     margin: 0 auto;
     margin-top: 25px;
 }

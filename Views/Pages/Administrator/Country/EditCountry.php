@@ -39,8 +39,10 @@ $country = QueryExecutor::getInstance()->getCountry($_GET["countryId"]);
                             <td class="form-block-table-td-label">
                                 <label>Введите название страны:</label>
                             </td>
-                            <td class="form-block-table-td-text">
-                                <input type="text" name="name" value="<?php echo $country["name"]; ?>">
+                            <td class="form-block-table-td-field">
+                                <div>
+                                    <input type="text" name="name" value="<?php echo $country["name"]; ?>">
+                                </div>
                             </td>
                             <td class="form-block-table-td-image">
                                 <img id="country-flag" name="flag" src="<?php echo "http://electronicsstore/Resources/Images/Upload/" . $country["flag"]; ?>">

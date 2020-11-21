@@ -36,8 +36,10 @@ require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
                             <td class="form-block-table-td-label">
                                 <label>Введите название страны:</label>
                             </td>
-                            <td class="form-block-table-td-text">
-                                <input type="text" name="name" value="">
+                            <td class="form-block-table-td-field">
+                                <div>
+                                    <input type="text" name="name" value="">
+                                </div>
                             </td>
                             <td class="form-block-table-td-image">
                                 <img id="country-flag" name="flag">

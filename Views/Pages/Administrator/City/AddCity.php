@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
 require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
 require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
 

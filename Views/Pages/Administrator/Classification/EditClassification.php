@@ -39,8 +39,10 @@ $classification = QueryExecutor::getInstance()->getClassification($_GET["classif
                             <td class="form-block-table-td-label">
                                 <label>Введите название классификации:</label>
                             </td>
-                            <td class="form-block-table-td-text">
-                                <input type="text" name="name" value="<?php echo $classification["name"]; ?>">
+                            <td class="form-block-table-td-field">
+                                <div>
+                                    <input type="text" name="name" value="<?php echo $classification["name"]; ?>">
+                                </div>
                             </td>
                             <td class="form-block-table-td-image">
                                 <img id="classification-photo" name="photo" src="<?php echo "http://electronicsstore/Resources/Images/Upload/" . $classification["photo"]; ?>">
