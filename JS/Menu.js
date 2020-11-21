@@ -46,3 +46,7 @@ function onClickClassifications() {
 function onClickCategories() {
     window.location = "http://electronicsstore/Views/Pages/Administrator/Category/";
 }
+
+function onClickSubcategories() {
+    window.location = "http://electronicsstore/Views/Pages/Administrator/Subcategory/";
+}

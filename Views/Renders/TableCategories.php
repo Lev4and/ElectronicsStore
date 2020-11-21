@@ -4,7 +4,7 @@
             <th id="select" class="select">Выбрать</th>
             <th id="category-photo" class="category-photo">Фото</th>
             <th id="classification-name" class="classification-name">Классификация</th>
-            <th id="category-name" class="classification-name">Название</th>
+            <th id="category-name" class="category-name">Название</th>
         </tr>
         <?php foreach ($categories as $category): ?>
             <tr id="<?php echo $category["id"]; ?>" class="table-categories-row-values">

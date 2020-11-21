@@ -227,8 +227,8 @@ class QueryExecutor{
         return !is_null($this->executeQuery("SELECT * FROM category WHERE classification_id=$classificationId AND name='$name' LIMIT 1")[0]);
     }
 
-    public function addCategory($classificationId, $name){
-        $this->executeQuery("INSERT INTO category (classification_id, name) VALUES ($classificationId, '$name')");
+    public function addCategory($classificationId, $name, $photo){
+        $this->executeQuery("INSERT INTO category (classification_id, name, photo) VALUES ($classificationId, '$name', '$photo')");
     }
 
     public function getCategory($id){
@@ -241,6 +241,37 @@ class QueryExecutor{
 
     public function removeCategory($id){
         $this->executeQuery("DELETE FROM category WHERE id=$id");
+    }
+
+    public function getSubcategories($classificationId = null, $categoryId = null, $name){
+        $condition1 = isset($classificationId) && $classificationId > 0 ? " AND classification_id=$classificationId" : "";
+        $condition2 = isset($categoryId) && $categoryId > 0 ? " AND category_id=$categoryId" : "";
+
+        $query = "SELECT * FROM v_subcategory WHERE name LIKE '%$name%'";
+        $query .= $condition1;
+        $query .= $condition2;
+
+        return $this->executeQuery($query);
+    }
+
+    public function containsSubcategory($categoryId, $name){
+        return !is_null($this->executeQuery("SELECT * FROM subcategory WHERE category_id=$categoryId AND name='$name' LIMIT 1")[0]);
+    }
+
+    public function addSubcategory($categoryId, $name, $photo){
+        $this->executeQuery("INSERT INTO subcategory (category_id, name, photo) VALUES ($categoryId, '$name', '$photo')");
+    }
+
+    public function getSubcategory($id){
+        return $this->executeQuery("SELECT * FROM v_subcategory WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function updateSubcategory($id, $categoryId, $name, $photo){
+        $this->executeQuery("UPDATE subcategory SET category_id=$categoryId, name='$name', photo='$photo' WHERE id=$id");
+    }
+
+    public function removeSubcategory($id){
+        $this->executeQuery("DELETE FROM subcategory WHERE id=$id");
     }
 
     private function executeQuery($query){
