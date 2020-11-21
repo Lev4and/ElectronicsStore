@@ -38,5 +38,6 @@
     display: block;
 }
 .menu-admin ul li:hover{
+    cursor: pointer;
     color: lime;
 }

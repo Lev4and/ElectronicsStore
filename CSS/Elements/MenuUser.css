@@ -35,6 +35,7 @@
     display: block;
 }
 .container-menu-user ul li:hover{
+    cursor: pointer;
     color: lime;
 }
 .container-menu-user:hover > ul{
