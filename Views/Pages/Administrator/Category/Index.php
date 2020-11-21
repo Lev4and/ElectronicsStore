@@ -35,7 +35,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Записать") {
                 move_uploaded_file($tmpFileName, $_SERVER["DOCUMENT_ROOT"] . "/Resources/Images/Upload/$fileName");
             }
 
-            QueryExecutor::getInstance()->addClassification($_POST["name"], $fileName);
+            QueryExecutor::getInstance()->addCategory($_POST["classificationId"], $_POST["name"], $fileName);
 
             header("Location: http://electronicsstore/Views/Pages/Administrator/Category/");
             exit();
