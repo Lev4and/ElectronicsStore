@@ -55,7 +55,7 @@ require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
                         <tr class="form-block-table-tr">
                             <td class="form-block-table-td-button" colspan="2">
                                 <input class="action-button" id="login-button" type="submit" name="action" value="Авторизоваться"/>
-                                <a class="link" href="Registration.php">Нету аккаунта?</a>
+                                <a class="link" href="Registration.php">Нет аккаунта?</a>
                             </td>
                         </tr>
                     </table>

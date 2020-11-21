@@ -6,7 +6,7 @@
         <li onclick="onClickStreets();"><span>Улицы</span></li>
         <li onclick="onClickHouses();"><span>Дома</span></li>
         <li onclick="onClickClassifications();"><span>Классификации</span></li>
-        <li><span>Категории</span></li>
+        <li onclick="onClickCategories();"><span>Категории</span></li>
         <li><span>Подкатегории</span></li>
         <li><span>Категории подкатегорий</span></li>
         <li><span>Производители</span></li>

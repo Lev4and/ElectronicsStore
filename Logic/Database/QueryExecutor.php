@@ -122,7 +122,7 @@ class QueryExecutor{
         $this->executeQuery("UPDATE city SET region_id=$regionId, name='$name' WHERE id=$id");
     }
 
-    public function getStreets($countryId, $regionId, $cityId, $name){
+    public function getStreets($countryId = null, $regionId = null, $cityId = null, $name){
         $condition1 = isset($countryId) && $countryId > 0 ? " AND country_id=$countryId" : "";
         $condition2 = isset($regionId) && $regionId > 0 ? " AND region_id=$regionId" : "";
         $condition3 = isset($cityId) && $cityId > 0 ? " AND city_id=$cityId" : "";
@@ -155,7 +155,7 @@ class QueryExecutor{
         $this->executeQuery("DELETE FROM street WHERE id=$id");
     }
 
-    public function getHouses($countryId, $regionId, $cityId, $streetId, $name){
+    public function getHouses($countryId = null, $regionId = null, $cityId = null, $streetId = null, $name){
         $condition1 = isset($countryId) && $countryId > 0 ? " AND country_id=$countryId" : "";
         $condition2 = isset($regionId) && $regionId > 0 ? " AND region_id=$regionId" : "";
         $condition3 = isset($cityId) && $cityId > 0 ? " AND city_id=$cityId" : "";
@@ -212,6 +212,35 @@ class QueryExecutor{
 
     public function removeClassification($id){
         $this->executeQuery("DELETE FROM classification WHERE id=$id");
+    }
+
+    public function getCategories($classificationId = null, $name){
+        $condition1 = isset($classificationId) && $classificationId > 0 ? " AND classification_id=$classificationId" : "";
+
+        $query = "SELECT * FROM v_category WHERE name LIKE '%$name%'";
+        $query .= $condition1;
+
+        return $this->executeQuery($query);
+    }
+
+    public function containsCategory($classificationId, $name){
+        return !is_null($this->executeQuery("SELECT * FROM category WHERE classification_id=$classificationId AND name='$name' LIMIT 1")[0]);
+    }
+
+    public function addCategory($classificationId, $name){
+        $this->executeQuery("INSERT INTO category (classification_id, name) VALUES ($classificationId, '$name')");
+    }
+
+    public function getCategory($id){
+        return $this->executeQuery("SELECT * FROM category WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function updateCategory($id, $classificationId, $name, $photo){
+        $this->executeQuery("UPDATE category SET classification_id=$classificationId, name='$name', photo='$photo' WHERE id=$id");
+    }
+
+    public function removeCategory($id){
+        $this->executeQuery("DELETE FROM category WHERE id=$id");
     }
 
     private function executeQuery($query){

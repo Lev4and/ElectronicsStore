@@ -42,3 +42,7 @@ function onClickHouses() {
 function onClickClassifications() {
     window.location = "http://electronicsstore/Views/Pages/Administrator/Classification/";
 }
+
+function onClickCategories() {
+    window.location = "http://electronicsstore/Views/Pages/Administrator/Category/";
+}

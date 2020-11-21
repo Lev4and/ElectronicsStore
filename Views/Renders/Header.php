@@ -82,7 +82,7 @@
                 <td class="container-table-td-login-or-user">
                     <?php if(!isset($_SESSION["user"]) || count($_SESSION["user"]) == 0): ?>
                         <div class="container-login">
-                        <button class='container-login-button' onclick='onClickLogin();'>Войти</button>
+                            <button class='container-login-button' onclick='onClickLogin();'>Войти</button>
                         </div>
                     <?php else: ?>
                         <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/MenuUser.php"; ?>
