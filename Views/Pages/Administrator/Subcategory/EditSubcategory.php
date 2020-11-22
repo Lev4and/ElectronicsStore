@@ -19,6 +19,7 @@ $categories = QueryExecutor::getInstance()->getCategories($subcategory["classifi
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
+    <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">

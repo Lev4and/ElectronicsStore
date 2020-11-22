@@ -54,9 +54,8 @@
                 </td>
                 <td class="container-table-td-catalog">
                     <form class="container-catalog">
-                        <?php if(isset($_SESSION["user"]) && $_SESSION["user"]["role_name"] == "Администратор"): ?>
+                        <?php  if(Access::isAdministrator()): ?>
                             <button id="menu" class="container-catalog-button" type="button" onclick="{ openOrCloseMenu('menu-admin'); }">Меню</button>
-
                         <?php else: ?>
                             <button id="catalog" class="container-catalog-button" type="button" onclick="{ openOrCloseMenu('menu-customer'); }">Каталог товаров</button>
                         <?php endif; ?>

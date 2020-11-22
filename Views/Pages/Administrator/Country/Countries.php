@@ -1,8 +1,9 @@
 <?php
 session_start();
 
-require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
-require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +14,7 @@ require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
+    <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
     <link rel="stylesheet" href="/CSS/Elements/Toolbar.css">
     <link rel="stylesheet" href="/CSS/Elements/TableCountries.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">

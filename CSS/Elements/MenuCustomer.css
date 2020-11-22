@@ -1,18 +1,20 @@
-.menu-admin{
+.menu-customer{
     z-index: 1;
     padding-left: 10%;
     visibility: hidden;
     position: fixed;
 }
-.menu-admin ul,
-.menu-admin ol{
+.menu-customer ul,
+.menu-customer ol{
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.menu-admin ul li{
+.menu-customer li{
     margin: 0;
     padding: 0;
+}
+.menu-customer ul li{
     width: 400px;
     height: 30px;
     color: white;
@@ -25,20 +27,20 @@
     flex-direction: inherit;
     background-color: orange;
 }
-.menu-admin ul li span{
+.menu-customer ul li span{
     width: 100%;
     margin: auto;
     padding: 0 5px;
 }
-.menu-admin ul li > ul{
+.menu-customer ul li > ul{
     display: none;
     position: absolute;
     right: -400px;
 }
-.menu-admin ul li:hover{
+.menu-customer ul li:hover{
     cursor: pointer;
     color: lime;
 }
-.menu-admin ul li:hover > ul{
+.menu-customer ul li:hover > ul{
     display: block;
 }

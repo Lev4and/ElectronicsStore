@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
-require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
-require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
 
 $countries = QueryExecutor::getInstance()->getCountries("");
 $region = QueryExecutor::getInstance()->getRegion($_GET["regionId"]);
@@ -17,6 +17,7 @@ $region = QueryExecutor::getInstance()->getRegion($_GET["regionId"]);
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
+    <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
