@@ -274,6 +274,40 @@ class QueryExecutor{
         $this->executeQuery("DELETE FROM subcategory WHERE id=$id");
     }
 
+    public function getCategoriesSubcategory($classificationId = null, $categoryId = null, $subcategoryId = null, $name){
+        $condition1 = isset($classificationId) && $classificationId > 0 ? " AND classification_id=$classificationId" : "";
+        $condition2 = isset($categoryId) && $categoryId > 0 ? " AND category_id=$categoryId" : "";
+        $condition3 = isset($subcategoryId) && $subcategoryId > 0 ? " AND subcategory_id=$subcategoryId" : "";
+
+        $query = "SELECT * FROM v_category_subcategory WHERE name LIKE '%$name%'";
+
+        $query .= $condition1;
+        $query .= $condition2;
+        $query .= $condition3;
+
+        return $this->executeQuery($query);
+    }
+
+    public function containsCategorySubcategory($subcategoryId, $name){
+        return !is_null($this->executeQuery("SELECT * FROM category_subcategory WHERE subcategory_id=$subcategoryId AND name='$name' LIMIT 1")[0]);
+    }
+
+    public function addCategorySubcategory($subcategoryId, $name, $photo){
+        $this->executeQuery("INSERT INTO category_subcategory (subcategory_id, name, photo) VALUES ($subcategoryId, '$name', '$photo')");
+    }
+
+    public function getCategorySubcategory($id){
+        return $this->executeQuery("SELECT * FROM v_category_subcategory WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function updateCategorySubcategory($id, $subcategoryId, $name, $photo){
+        $this->executeQuery("UPDATE category_subcategory SET subcategory_id=$subcategoryId, name='$name', photo='$photo' WHERE id=$id");
+    }
+
+    public function removeCategorySubcategory($id){
+        $this->executeQuery("DELETE FROM category_subcategory WHERE id=$id");
+    }
+
     private function executeQuery($query){
         try{
             return ($this->contextDb->query($query))->FETCHALL(PDO::FETCH_ASSOC);

@@ -30,12 +30,20 @@
     margin: auto;
     padding: 0 5px;
 }
+.menu-admin ul li span a{
+    color: white;
+    text-decoration: none;
+}
 .menu-admin ul li > ul{
     display: none;
     position: absolute;
     right: -400px;
 }
 .menu-admin ul li:hover{
+    cursor: pointer;
+    color: lime;
+}
+.menu-admin ul li:hover > span a{
     cursor: pointer;
     color: lime;
 }

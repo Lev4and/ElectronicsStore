@@ -2,6 +2,7 @@
 $classifications = QueryExecutor::getInstance()->getClassifications("");
 $categories = QueryExecutor::getInstance()->getCategories(null, "");
 $subcategories = QueryExecutor::getInstance()->getSubcategories(null, null, "");
+$categoriesSubcategory = QueryExecutor::getInstance()->getCategoriesSubcategory(null, null,  null, "");
 ?>
 <div id="menu-customer" class="menu-customer">
     <ul class="menu-customer-classifications">
@@ -16,7 +17,16 @@ $subcategories = QueryExecutor::getInstance()->getSubcategories(null, null, "");
                                 <ul class="menu-customer-subcategories">
                                     <?php foreach ($subcategories as $subcategory): ?>
                                         <?php if($subcategory["category_id"] == $category["id"]): ?>
-                                            <li class="menu-customer-subcategory"><span><?php echo $subcategory["name"]; ?></span></li>
+                                            <li class="menu-customer-subcategory">
+                                                <span><?php echo $subcategory["name"]; ?></span>
+                                                <ul class="menu-customer-categories-subcategory">
+                                                    <?php foreach ($categoriesSubcategory as $categorySubcategory): ?>
+                                                        <?php if($categorySubcategory["subcategory_id"] == $subcategory["id"]): ?>
+                                                            <li class="menu-customer-category-subcategory"><span><?php echo $categorySubcategory["name"]; ?></span></li>
+                                                        <?php endif; ?>
+                                                    <?php endforeach; ?>
+                                                </ul>
+                                            </li>
                                         <?php endif; ?>
                                     <?php endforeach; ?>
                                 </ul>
