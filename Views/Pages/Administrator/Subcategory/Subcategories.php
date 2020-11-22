@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
-require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
-require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
