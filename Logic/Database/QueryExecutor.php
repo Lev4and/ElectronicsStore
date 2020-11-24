@@ -308,6 +308,30 @@ class QueryExecutor{
         $this->executeQuery("DELETE FROM category_subcategory WHERE id=$id");
     }
 
+    public function getManufacturers($name){
+        return $this->executeQuery("SELECT * FROM manufacturer WHERE name LIKE '%$name%'");
+    }
+
+    public function containsManufacturer($name){
+        return !is_null($this->executeQuery("SELECT * FROM manufacturer WHERE name='$name' LIMIT 1")[0]);
+    }
+
+    public function addManufacturer($name, $photo){
+        $this->executeQuery("INSERT INTO manufacturer (name, photo) VALUES ('$name', '$photo')");
+    }
+
+    public function getManufacturer($id){
+        return $this->executeQuery("SELECT * FROM manufacturer WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function updateManufacturer($id, $name, $photo){
+        $this->executeQuery("UPDATE manufacturer SET name='$name', photo='$photo' WHERE id=$id");
+    }
+
+    public function removeManufacturer($id){
+        $this->executeQuery("DELETE FROM manufacturer WHERE id=$id");
+    }
+
     private function executeQuery($query){
         try{
             return ($this->contextDb->query($query))->FETCHALL(PDO::FETCH_ASSOC);
