@@ -33,6 +33,10 @@
     margin: auto;
     padding: 0 5px;
 }
+.menu-customer ul li span a{
+    color: white;
+    text-decoration: none;
+}
 .menu-customer ul li > ul{
     display: none;
     position: absolute;

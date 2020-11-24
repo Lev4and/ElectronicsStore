@@ -8,21 +8,21 @@ $categoriesSubcategory = QueryExecutor::getInstance()->getCategoriesSubcategory(
     <ul class="menu-customer-classifications">
         <?php foreach ($classifications as $classification): ?>
             <li class="menu-customer-classification">
-                <span><?php echo $classification["name"]; ?></span>
+                <span><a href="/Views/Pages/Customer/Catalog/?action=Категории&classificationId=<?php echo $classification["id"]; ?>"><?php echo $classification["name"]; ?></a></span>
                 <ul class="menu-customer-categories">
                     <?php foreach ($categories as $category): ?>
                         <?php if($category["classification_id"] == $classification["id"]): ?>
                             <li class="menu-customer-category">
-                                <span><?php echo $category["name"]; ?></span>
+                                <span><a href="/Views/Pages/Customer/Catalog/?action=Подкатегории&categoryId=<?php echo $category["id"]; ?>"><?php echo $category["name"]; ?></a></span>
                                 <ul class="menu-customer-subcategories">
                                     <?php foreach ($subcategories as $subcategory): ?>
                                         <?php if($subcategory["category_id"] == $category["id"]): ?>
                                             <li class="menu-customer-subcategory">
-                                                <span><?php echo $subcategory["name"]; ?></span>
+                                                <span><a href="/Views/Pages/Customer/Catalog/?action=КатегорииПодкатегории&subcategoryId=<?php echo $subcategory["id"]; ?>"><?php echo $subcategory["name"]; ?></a></span>
                                                 <ul class="menu-customer-categories-subcategory">
                                                     <?php foreach ($categoriesSubcategory as $categorySubcategory): ?>
                                                         <?php if($categorySubcategory["subcategory_id"] == $subcategory["id"]): ?>
-                                                            <li class="menu-customer-category-subcategory"><span><?php echo $categorySubcategory["name"]; ?></span></li>
+                                                            <li class="menu-customer-category-subcategory"><span><a href="/Views/Pages/Customer/Catalog/?action=Товары&categorySubcategoryId=<?php echo $categorySubcategory["id"]; ?>"><?php echo $categorySubcategory["name"]; ?></a></span></li>
                                                         <?php endif; ?>
                                                     <?php endforeach; ?>
                                                 </ul>
