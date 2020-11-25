@@ -10,7 +10,7 @@
         <li><span><a href="/Views/Pages/Administrator/Subcategory/">Подкатегории</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/CategorySubcategory/">Категории подкатегорий</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/Manufacturer/">Производители</a></span></li>
-        <li><span><a href="/Views/Pages/Administrator//">Склады</a></span></li>
+        <li><span><a href="/Views/Pages/Administrator/Warehouse/">Склады</a></span></li>
         <li><span><a href="/Views/Pages/Administrator//">Магазины</a></span></li>
         <li><span><a href="/Views/Pages/Administrator//">Должности</a></span></li>
         <li><span><a href="/Views/Pages/Administrator//">Пользователи</a></span></li>
