@@ -369,6 +369,30 @@ class QueryExecutor{
         $this->executeQuery("DELETE FROM warehouse WHERE id=$id");
     }
 
+    public function getCharacteristics($name){
+        return $this->executeQuery("SELECT * FROM characteristic WHERE name LIKE '%$name%'");
+    }
+
+    public function containsCharacteristic($name){
+        return !is_null($this->executeQuery("SELECT * FROM characteristic WHERE name='$name' LIMIT 1")[0]);
+    }
+
+    public function addCharacteristic($name){
+        $this->executeQuery("INSERT INTO characteristic (name) VALUES ('$name')");
+    }
+
+    public function getCharacteristic($id){
+        return $this->executeQuery("SELECT * FROM characteristic WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function updateCharacteristic($id, $name){
+        $this->executeQuery("UPDATE characteristic SET name='$name' WHERE id=$id");
+    }
+
+    public function removeCharacteristic($id){
+        $this->executeQuery("DELETE FROM characteristic WHERE id=$id");
+    }
+
     private function executeQuery($query){
         try{
             return ($this->contextDb->query($query))->FETCHALL(PDO::FETCH_ASSOC);
