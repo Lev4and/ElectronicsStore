@@ -1,0 +1,68 @@
+.main{
+    margin: 0 auto;
+}
+.content{
+    height: 1000px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.header-block{
+    color: orange;
+    text-align: center;
+    font-family: Arial;
+}
+.form-block{
+    width: 58%;
+    margin: 0 auto;
+}
+.form-block-table{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.form-block-table-tr{
+    height: 50px;
+}
+.form-block-table-td-label label{
+    color: black;
+    font-size: larger;
+    font-family: Arial;
+}
+.form-block-table-td-field{
+    width: 300px;
+    height: 50px;
+}
+.form-block-table-td-field div{
+    width: 300px;
+    height: 30px;
+    margin: 10px 0;
+    overflow: hidden;
+    border-radius: 10px;
+    border: solid black 1px;
+}
+.form-block-table-td-field input,
+.form-block-table-td-field select{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: black;
+    border: none;
+    font-size: larger;
+    font-family: Arial;
+}
+.form-block-table-td-button{
+    text-align: center;
+}
+.action-button{
+    margin: 10px 10px;
+    min-height: 30px;
+    max-height: 30px;
+    border-radius: 10px;
+    font-size: larger;
+    font-family: Arial;
+}
+.action-button:hover{
+    color: white;
+    background-color: orange;
+}

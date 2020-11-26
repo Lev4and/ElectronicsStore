@@ -393,6 +393,30 @@ class QueryExecutor{
         $this->executeQuery("DELETE FROM characteristic WHERE id=$id");
     }
 
+    public function getUnits($name){
+        return $this->executeQuery("SELECT * FROM unit WHERE name LIKE '%$name%'");
+    }
+
+    public function containsUnit($name, $designation){
+        return !is_null($this->executeQuery("SELECT * FROM unit WHERE name='$name' AND designation='$designation' LIMIT 1")[0]);
+    }
+
+    public function addUnit($name, $designation){
+        $this->executeQuery("INSERT INTO unit (name, designation) VALUES ('$name', '$designation')");
+    }
+
+    public function getUnit($id){
+        return $this->executeQuery("SELECT * FROM unit WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function updateUnit($id, $name, $designation){
+        $this->executeQuery("UPDATE unit SET name='$name', designation='$designation' WHERE id=$id");
+    }
+
+    public function removeUnit($id){
+        $this->executeQuery("DELETE FROM unit WHERE id=$id");
+    }
+
     private function executeQuery($query){
         try{
             return ($this->contextDb->query($query))->FETCHALL(PDO::FETCH_ASSOC);
