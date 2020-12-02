@@ -417,6 +417,43 @@ class QueryExecutor{
         $this->executeQuery("DELETE FROM unit WHERE id=$id");
     }
 
+    public function getCharacteristicsCategorySubcategory($classificationId = null, $categoryId = null, $subcategoryId = null, $categorySubcategoryId = null, $characteristicId = null, $name){
+        $condition1 = isset($classificationId) && $classificationId > 0 ? " AND classification_id=$classificationId" : "";
+        $condition2 = isset($categoryId) && $categoryId > 0 ? " AND category_id=$categoryId" : "";
+        $condition3 = isset($subcategoryId) && $subcategoryId > 0 ? " AND subcategory_id=$subcategoryId" : "";
+        $condition4 = isset($categorySubcategoryId) && $categorySubcategoryId > 0 ? " AND category_subcategory_id=$categorySubcategoryId" : "";
+        $condition5 = isset($characteristicId) && $characteristicId > 0 ? " AND characteristic_id=$characteristicId" : "";
+
+        $query = "SELECT * FROM v_characteristic_category_subcategory WHERE characteristic_name LIKE '%$name%'";
+        $query .= $condition1;
+        $query .= $condition2;
+        $query .= $condition3;
+        $query .= $condition4;
+        $query .= $condition5;
+
+        return $this->executeQuery($query);
+    }
+
+    public function containsCharacteristicCategorySubcategory($characteristicId, $categorySubcategoryId){
+        return !is_null($this->executeQuery("SELECT * FROM characteristic_category_subcategory WHERE characteristic_id=$characteristicId AND category_subcategory_id = $categorySubcategoryId LIMIT 1")[0]);
+    }
+
+    public function addCharacteristicCategorySubcategory($characteristicId, $categorySubcategoryId){
+        $this->executeQuery("INSERT INTO characteristic_category_subcategory (characteristic_id, category_subcategory_id) VALUES ($characteristicId, $categorySubcategoryId)");
+    }
+
+    public function getCharacteristicCategorySubcategory($id){
+        return $this->executeQuery("SELECT * FROM v_characteristic_category_subcategory WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function updateCharacteristicCategorySubcategory($id, $characteristicId, $categorySubcategoryId){
+        $this->executeQuery("UPDATE characteristic_category_subcategory SET characteristic_id=$characteristicId, category_subcategory_id=$categorySubcategoryId WHERE id=$id");
+    }
+
+    public function removeCharacteristicCategorySubcategory($id){
+        $this->executeQuery("DELETE FROM characteristic_category_subcategory WHERE id=$id");
+    }
+
     private function executeQuery($query){
         try{
             return ($this->contextDb->query($query))->FETCHALL(PDO::FETCH_ASSOC);

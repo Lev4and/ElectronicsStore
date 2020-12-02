@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7235fee-ce82-4657-a516-0dde89f9f921" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CSS/Elements/TableUnits.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CSS/Pages/AddUnit.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CSS/Pages/EditUnit.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CSS/Pages/Units.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Unit/AddUnit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Unit/EditUnit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Unit/Index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Unit/Units.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/Renders/TableUnits.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CSS/Elements/TableCharacteristicsCategorySubcategory.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CSS/Pages/AddCharacteristicCategorySubcategory.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CSS/Pages/CharacteristicsCategorySubcategory.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CSS/Pages/EditCharacteristicCategorySubcategory.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JS/CharacteristicsCategorySubcategory.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/AddCharacteristicCategorySubcategory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/CharacteristicsCategorySubcategory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/EditCharacteristicCategorySubcategory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/Index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/Renders/TableCharacteristicsCategorySubcategory.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Logic/Database/QueryExecutor.php" afterPath="$PROJECT_DIR$/Logic/Database/QueryExecutor.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/MenuAdmin.php" afterPath="$PROJECT_DIR$/Views/Renders/MenuAdmin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/TableCharacteristics.php" afterPath="$PROJECT_DIR$/Views/Renders/TableCharacteristics.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,315 +27,331 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="QueryExecutor.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Logic/Database/QueryExecutor.php">
+      <file leaf-file-name="CharacteristicsCategorySubcategory.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/CharacteristicsCategorySubcategory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="416" column="61" lean-forward="false" selection-start-line="416" selection-start-column="61" selection-end-line="416" selection-end-column="61" />
-              <folding>
-                <marker date="1606401875151" expanded="true" signature="508:549" ph="SELECT * FRO... v_user" />
-                <marker date="1606401875151" expanded="true" signature="508:574" ph="SELECT * FRO... v_user" />
-                <marker date="1606401875151" expanded="true" signature="508:582" ph="SELECT * FRO... v_user" />
-                <marker date="1606401875151" expanded="true" signature="684:731" ph="SELECT * FRO... v_user" />
-                <marker date="1606401875151" expanded="true" signature="879:1010" ph="INSERT INTO user... " />
-                <marker date="1606401875151" expanded="true" signature="1094:1135" ph="SELECT * FRO... v_user" />
-                <marker date="1606401875151" expanded="true" signature="1094:1143" ph="SELECT * FRO... v_user" />
-                <marker date="1606401875151" expanded="true" signature="1225:1243" ph="SELECT * FRO... role" />
-                <marker date="1606401875151" expanded="true" signature="1331:1378" ph="SELECT * FRO... country" />
-                <marker date="1606401875151" expanded="true" signature="1458:1487" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="1458:1488" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="1590:1630" ph="SELECT * FRO... country" />
-                <marker date="1606401875151" expanded="true" signature="1590:1638" ph="SELECT * FRO... country" />
-                <marker date="1606401875151" expanded="true" signature="1728:1786" ph="INSERT INTO country... " />
-                <marker date="1606401875151" expanded="true" signature="1870:1902" ph="SELECT * FRO... country" />
-                <marker date="1606401875151" expanded="true" signature="1870:1912" ph="SELECT * FRO... country" />
-                <marker date="1606401875151" expanded="true" signature="2009:2040" ph="UPDATE count... " />
-                <marker date="1606401875151" expanded="true" signature="2009:2054" ph="UPDATE count... " />
-                <marker date="1606401875151" expanded="true" signature="2009:2064" ph="UPDATE count... " />
-                <marker date="1606401875151" expanded="true" signature="2009:2065" ph="UPDATE count... " />
-                <marker date="1606401875151" expanded="true" signature="2249:2297" ph="SELECT * FRO... v_region" />
-                <marker date="1606401875151" expanded="true" signature="2372:2373" ph="SELECT * FRO... v_region" />
-                <marker date="1606401875151" expanded="true" signature="2482:2531" ph="SELECT * FRO... region" />
-                <marker date="1606401875151" expanded="true" signature="2482:2547" ph="SELECT * FRO... region" />
-                <marker date="1606401875151" expanded="true" signature="2482:2555" ph="SELECT * FRO... region" />
-                <marker date="1606401875151" expanded="true" signature="2649:2715" ph="INSERT INTO region... " />
-                <marker date="1606401875151" expanded="true" signature="2794:2822" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="2794:2823" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="2908:2938" ph="SELECT * FRO... region" />
-                <marker date="1606401875151" expanded="true" signature="2908:2939" ph="SELECT * FRO... region" />
-                <marker date="1606401875151" expanded="true" signature="2908:2949" ph="SELECT * FRO... region" />
-                <marker date="1606401875151" expanded="true" signature="3050:3079" ph="UPDATE regio... " />
-                <marker date="1606401875151" expanded="true" signature="3050:3103" ph="UPDATE regio... " />
-                <marker date="1606401875151" expanded="true" signature="3050:3113" ph="UPDATE regio... " />
-                <marker date="1606401875151" expanded="true" signature="3050:3114" ph="UPDATE regio... " />
-                <marker date="1606401875151" expanded="true" signature="3407:3453" ph="SELECT * FRO... v_city" />
-                <marker date="1606401875151" expanded="true" signature="3667:3692" ph="SELECT FROM region... " />
-                <marker date="1606401875151" expanded="true" signature="3667:3702" ph="SELECT FROM region... " />
-                <marker date="1606401875151" expanded="true" signature="3667:3728" ph="SELECT FROM region... " />
-                <marker date="1606401875151" expanded="true" signature="3667:3736" ph="SELECT FROM region... " />
-                <marker date="1606401875151" expanded="true" signature="3827:3851" ph="INSERT INTO region... " />
-                <marker date="1606401875151" expanded="true" signature="3827:3861" ph="INSERT INTO region... " />
-                <marker date="1606401875151" expanded="true" signature="3827:3889" ph="INSERT INTO region... " />
-                <marker date="1606401875151" expanded="true" signature="3966:3992" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="3966:3993" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="4075:4095" ph="SELECT * FRO... v_city" />
-                <marker date="1606401875151" expanded="true" signature="4075:4105" ph="SELECT * FRO... v_city" />
-                <marker date="1606401875151" expanded="true" signature="4075:4106" ph="SELECT * FRO... v_city" />
-                <marker date="1606401875151" expanded="true" signature="4075:4116" ph="SELECT * FRO... v_city" />
-                <marker date="1606401875151" expanded="true" signature="4214:4273" ph="UPDATE city " />
-                <marker date="1606401875151" expanded="true" signature="4214:4274" ph="UPDATE city " />
-                <marker date="1606401875151" expanded="true" signature="4667:4715" ph="SELECT * FRO... v_street" />
-                <marker date="1606401875151" expanded="true" signature="4960:4995" ph="SELECT * FRO... street" />
-                <marker date="1606401875151" expanded="true" signature="4960:4996" ph="SELECT * FRO... street" />
-                <marker date="1606401875151" expanded="true" signature="4960:5019" ph="SELECT * FRO... street" />
-                <marker date="1606401875151" expanded="true" signature="4960:5027" ph="SELECT * FRO... street" />
-                <marker date="1606401875151" expanded="true" signature="5118:5135" ph="INSERT INTO stree... " />
-                <marker date="1606401875151" expanded="true" signature="5118:5152" ph="INSERT INTO street... " />
-                <marker date="1606401875151" expanded="true" signature="5118:5178" ph="INSERT INTO street... " />
-                <marker date="1606401875151" expanded="true" signature="5261:5279" ph="SELECT * FRO... v_st" />
-                <marker date="1606401875151" expanded="true" signature="5261:5294" ph="SELECT * FRO... v_street" />
-                <marker date="1606401875151" expanded="true" signature="5261:5304" ph="SELECT * FRO... v_street" />
-                <marker date="1606401875151" expanded="true" signature="5402:5428" ph="UPDATE stree... " />
-                <marker date="1606401875151" expanded="true" signature="5402:5429" ph="UPDATE stree... " />
-                <marker date="1606401875151" expanded="true" signature="5402:5449" ph="UPDATE stree... " />
-                <marker date="1606401875151" expanded="true" signature="5402:5459" ph="UPDATE stree... " />
-                <marker date="1606401875151" expanded="true" signature="5541:5569" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="6071:6118" ph="SELECT * FRO... v_hou" />
-                <marker date="1606401875151" expanded="true" signature="6395:6408" ph="SELECT * FRO... " />
-                <marker date="1606401875151" expanded="true" signature="6395:6431" ph="SELECT * FRO... house" />
-                <marker date="1606401875151" expanded="true" signature="6395:6432" ph="SELECT * FRO... house" />
-                <marker date="1606401875151" expanded="true" signature="6395:6457" ph="SELECT * FRO... house" />
-                <marker date="1606401875151" expanded="true" signature="6395:6465" ph="SELECT * FRO... house" />
-                <marker date="1606401875151" expanded="true" signature="6557:6620" ph="INSERT INTO house... " />
-                <marker date="1606401875151" expanded="true" signature="6702:6718" ph="SELECT * FRO... v_" />
-                <marker date="1606401875151" expanded="true" signature="6702:6733" ph="SELECT * FRO... v_house" />
-                <marker date="1606401875151" expanded="true" signature="6702:6734" ph="SELECT * FRO... v_house" />
-                <marker date="1606401875151" expanded="true" signature="6702:6744" ph="SELECT * FRO... v_house" />
-                <marker date="1606401875151" expanded="true" signature="6843:6870" ph="UPDATE house... " />
-                <marker date="1606401875151" expanded="true" signature="6843:6871" ph="UPDATE house... " />
-                <marker date="1606401875151" expanded="true" signature="6843:6886" ph="UPDATE house... " />
-                <marker date="1606401875151" expanded="true" signature="6843:6887" ph="UPDATE house... " />
-                <marker date="1606401875151" expanded="true" signature="6843:6901" ph="UPDATE house... " />
-                <marker date="1606401875151" expanded="true" signature="6843:6902" ph="UPDATE house... " />
-                <marker date="1606401875151" expanded="true" signature="6982:7009" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="6982:7010" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="7106:7160" ph="SELECT * FRO... classification" />
-                <marker date="1606401875151" expanded="true" signature="7267:7295" ph="SELECT * FRO... classification" />
-                <marker date="1606401875151" expanded="true" signature="7267:7314" ph="SELECT * FRO... classification" />
-                <marker date="1606401875151" expanded="true" signature="7267:7322" ph="SELECT * FRO... classification" />
-                <marker date="1606401875151" expanded="true" signature="7420:7487" ph="INSERT INTO classification... " />
-                <marker date="1606401875151" expanded="true" signature="7578:7616" ph="SELECT * FRO... classification" />
-                <marker date="1606401875151" expanded="true" signature="7578:7617" ph="SELECT * FRO... classification" />
-                <marker date="1606401875151" expanded="true" signature="7578:7627" ph="SELECT * FRO... classification" />
-                <marker date="1606401875151" expanded="true" signature="7732:7770" ph="UPDATE class... " />
-                <marker date="1606401875151" expanded="true" signature="7732:7786" ph="UPDATE class... " />
-                <marker date="1606401875151" expanded="true" signature="7732:7796" ph="UPDATE class... " />
-                <marker date="1606401875151" expanded="true" signature="7732:7797" ph="UPDATE class... " />
-                <marker date="1606401875151" expanded="true" signature="7886:7922" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="7886:7923" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="8146:8170" ph="SELECT * FRO... category" />
-                <marker date="1606401875151" expanded="true" signature="8146:8196" ph="SELECT * FRO... category" />
-                <marker date="1606401875151" expanded="true" signature="8391:8413" ph="SELECT * FRO... category" />
-                <marker date="1606401875151" expanded="true" signature="8391:8419" ph="SELECT * FRO... category" />
-                <marker date="1606401875151" expanded="true" signature="8391:8438" ph="SELECT * FRO... category" />
-                <marker date="1606401875151" expanded="true" signature="8391:8472" ph="SELECT * FRO... category" />
-                <marker date="1606401875151" expanded="true" signature="8391:8480" ph="SELECT * FRO... category" />
-                <marker date="1606401875151" expanded="true" signature="8591:8644" ph="INSERT INTO category... " />
-                <marker date="1606401875151" expanded="true" signature="8591:8690" ph="INSERT INTO category... " />
-                <marker date="1606401875151" expanded="true" signature="8775:8788" ph="SELECT * FRO... " />
-                <marker date="1606401875151" expanded="true" signature="8775:8818" ph="SELECT * FRO... category" />
-                <marker date="1606401875151" expanded="true" signature="8936:8974" ph="UPDATE categ... " />
-                <marker date="1606401875151" expanded="true" signature="8936:9005" ph="UPDATE categ... " />
-                <marker date="1606401875151" expanded="true" signature="8936:9031" ph="UPDATE categ... " />
-                <marker date="1606401875151" expanded="true" signature="8936:9032" ph="UPDATE categ... " />
-                <marker date="1606401875151" expanded="true" signature="9115:9145" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="9115:9146" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="9491:9544" ph="SELECT * FRO... v_subcategory" />
-                <marker date="1606401875151" expanded="true" signature="9767:9799" ph="SELECT * FRO... subcategory" />
-                <marker date="1606401875151" expanded="true" signature="9767:9811" ph="SELECT * FRO... subcategory" />
-                <marker date="1606401875151" expanded="true" signature="9767:9812" ph="SELECT * FRO... subcategory" />
-                <marker date="1606401875151" expanded="true" signature="9767:9832" ph="SELECT * FRO... subcategory" />
-                <marker date="1606401875151" expanded="true" signature="9767:9847" ph="SELECT * FRO... subcategory" />
-                <marker date="1606401875151" expanded="true" signature="9955:9978" ph="INSERT INTO subcategory... " />
-                <marker date="1606401875151" expanded="true" signature="9955:10005" ph="INSERT INTO subcategory... " />
-                <marker date="1606401875151" expanded="true" signature="9955:10045" ph="INSERT INTO subcategory... " />
-                <marker date="1606401875151" expanded="true" signature="10133:10160" ph="SELECT * FRO... v_subcategory" />
-                <marker date="1606401875151" expanded="true" signature="10133:10181" ph="SELECT * FRO... v_subcategory" />
-                <marker date="1606401875151" expanded="true" signature="10296:10318" ph="UPDATE subca... " />
-                <marker date="1606401875151" expanded="true" signature="10296:10331" ph="UPDATE subca... " />
-                <marker date="1606401875151" expanded="true" signature="10296:10356" ph="UPDATE subca... " />
-                <marker date="1606401875151" expanded="true" signature="10296:10372" ph="UPDATE subca... " />
-                <marker date="1606401875151" expanded="true" signature="10296:10382" ph="UPDATE subca... " />
-                <marker date="1606401875151" expanded="true" signature="10296:10383" ph="UPDATE subca... " />
-                <marker date="1606401875151" expanded="true" signature="10469:10492" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="10469:10502" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="10990:11052" ph="SELECT * FRO... v_category_subcategory" />
-                <marker date="1606401875151" expanded="true" signature="11318:11358" ph="SELECT * FRO... category_subcategory" />
-                <marker date="1606401875151" expanded="true" signature="11318:11374" ph="SELECT * FRO... category_subcategory" />
-                <marker date="1606401875151" expanded="true" signature="11318:11405" ph="SELECT * FRO... category_subcategory" />
-                <marker date="1606401875151" expanded="true" signature="11318:11413" ph="SELECT * FRO... category_subcategory" />
-                <marker date="1606401875151" expanded="true" signature="11532:11637" ph="INSERT INTO category_subcategory... " />
-                <marker date="1606401875151" expanded="true" signature="11733:11769" ph="SELECT * FRO... category_subcategory" />
-                <marker date="1606401875151" expanded="true" signature="11733:11779" ph="SELECT * FRO... category_subcategory" />
-                <marker date="1606401875151" expanded="true" signature="11733:11780" ph="SELECT * FRO... category_subcategory" />
-                <marker date="1606401875151" expanded="true" signature="11733:11790" ph="SELECT * FRO... v_category_subcategory" />
-                <marker date="1606401875151" expanded="true" signature="11916:11963" ph="UPDATE categ... " />
-                <marker date="1606401875151" expanded="true" signature="11916:11991" ph="UPDATE categ... " />
-                <marker date="1606401875151" expanded="true" signature="11916:12007" ph="UPDATE categ... " />
-                <marker date="1606401875151" expanded="true" signature="11916:12017" ph="UPDATE categ... " />
-                <marker date="1606401875151" expanded="true" signature="11916:12018" ph="UPDATE categ... " />
-                <marker date="1606401875151" expanded="true" signature="12112:12154" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="12112:12155" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="12249:12301" ph="SELECT * FRO... manufacturer" />
-                <marker date="1606401875151" expanded="true" signature="12406:12451" ph="SELECT * FRO... WHERE" />
-                <marker date="1606401875151" expanded="true" signature="12406:12459" ph="SELECT * FRO... manufacturer" />
-                <marker date="1606401875151" expanded="true" signature="12555:12593" ph="INSERT INTO manufacturer... " />
-                <marker date="1606401875151" expanded="true" signature="12555:12620" ph="INSERT INTO manufacturer... " />
-                <marker date="1606401875151" expanded="true" signature="12709:12746" ph="SELECT * FRO... manufacturer" />
-                <marker date="1606401875151" expanded="true" signature="12709:12756" ph="SELECT * FRO... manufacturer" />
-                <marker date="1606401875151" expanded="true" signature="12859:12911" ph="UPDATE manuf... " />
-                <marker date="1606401875151" expanded="true" signature="12859:12921" ph="UPDATE manuf... " />
-                <marker date="1606401875151" expanded="true" signature="12859:12922" ph="UPDATE manuf... " />
-                <marker date="1606401875151" expanded="true" signature="13009:13043" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="13660:13726" ph="SELECT * FRO... v_warehouse" />
-                <marker date="1606401875151" expanded="true" signature="14043:14072" ph="SELECT * FRO... warehouse" />
-                <marker date="1606401875151" expanded="true" signature="14043:14082" ph="SELECT * FRO... warehouse" />
-                <marker date="1606401875151" expanded="true" signature="14043:14122" ph="SELECT * FRO... warehouse" />
-                <marker date="1606401875151" expanded="true" signature="14043:14130" ph="SELECT * FRO... warehouse" />
-                <marker date="1606401875151" expanded="true" signature="14232:14278" ph="INSERT INTO warehouse... " />
-                <marker date="1606401875151" expanded="true" signature="14232:14312" ph="INSERT INTO warehouse... " />
-                <marker date="1606401875151" expanded="true" signature="14398:14411" ph="SELECT * FRO... " />
-                <marker date="1606401875151" expanded="true" signature="14398:14433" ph="SELECT * FRO... v_warehouse" />
-                <marker date="1606401875151" expanded="true" signature="14398:14434" ph="SELECT * FRO... v_warehouse" />
-                <marker date="1606401875151" expanded="true" signature="14398:14444" ph="SELECT * FRO... v_warehouse" />
-                <marker date="1606401875151" expanded="true" signature="14553:14573" ph="UPDATE wareh... " />
-                <marker date="1606401875151" expanded="true" signature="14553:14583" ph="UPDATE wareh... " />
-                <marker date="1606401875151" expanded="true" signature="14553:14620" ph="UPDATE wareh... " />
-                <marker date="1606401875151" expanded="true" signature="14553:14630" ph="UPDATE wareh... " />
-                <marker date="1606401875151" expanded="true" signature="14715:14746" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="14715:14747" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="14843:14897" ph="SELECT * FRO... characteristic" />
-                <marker date="1606401875151" expanded="true" signature="15004:15044" ph="SELECT * FRO... characteristic" />
-                <marker date="1606401875151" expanded="true" signature="15004:15059" ph="SELECT * FRO... characteristic" />
-                <marker date="1606401875151" expanded="true" signature="15149:15199" ph="INSERT INTO characteristic... " />
-                <marker date="1606401875151" expanded="true" signature="15290:15328" ph="SELECT * FRO... characteristic" />
-                <marker date="1606401875151" expanded="true" signature="15290:15329" ph="SELECT * FRO... characteristic" />
-                <marker date="1606401875151" expanded="true" signature="15290:15339" ph="SELECT * FRO... characteristic" />
-                <marker date="1606401875151" expanded="true" signature="15436:15474" ph="UPDATE chara... " />
-                <marker date="1606401875151" expanded="true" signature="15436:15484" ph="UPDATE chara... " />
-                <marker date="1606401875151" expanded="true" signature="15436:15485" ph="UPDATE chara... " />
-                <marker date="1606401875151" expanded="true" signature="15574:15600" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="15574:15610" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="15697:15715" ph="SELECT * FRO... unit" />
-                <marker date="1606401875151" expanded="true" signature="15697:15741" ph="SELECT * FRO... unit" />
-                <marker date="1606401875151" expanded="true" signature="15852:15870" ph="SELECT * FRO... unit" />
-                <marker date="1606401875151" expanded="true" signature="15852:15889" ph="SELECT * FRO... unit" />
-                <marker date="1606401875151" expanded="true" signature="15852:15925" ph="SELECT * FRO... unit" />
-                <marker date="1606401875151" expanded="true" signature="15852:15928" ph="SELECT * FRO... unit" />
-                <marker date="1606401875151" expanded="true" signature="16022:16038" ph="INSERT INTO unit... " />
-                <marker date="1606401875151" expanded="true" signature="16022:16091" ph="INSERT INTO unit... " />
-                <marker date="1606401875151" expanded="true" signature="16172:16200" ph="SELECT * FRO... unit" />
-                <marker date="1606401875151" expanded="true" signature="16172:16211" ph="SELECT * FRO... unit" />
-                <marker date="1606401875151" expanded="true" signature="16312:16340" ph="UPDATE unit " />
-                <marker date="1606401875151" expanded="true" signature="16312:16368" ph="UPDATE unit " />
-                <marker date="1606401875151" expanded="true" signature="16312:16378" ph="UPDATE unit " />
-                <marker date="1606401875151" expanded="true" signature="16312:16379" ph="UPDATE unit " />
-                <marker date="1606401875151" expanded="true" signature="16458:16484" ph="DELETE FROM " />
-                <marker date="1606401875151" expanded="true" signature="16458:16485" ph="DELETE FROM " />
-              </folding>
+            <state relative-caret-position="1628">
+              <caret line="74" column="30" lean-forward="true" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditUnit.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Unit/EditUnit.php">
+      <file leaf-file-name="AddCharacteristicCategorySubcategory.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/AddCharacteristicCategorySubcategory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="33" column="57" lean-forward="false" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
-              <folding>
-                <marker date="1606402607079" expanded="true" signature="1991:2040" ph="..." />
-                <marker date="1606402607079" expanded="true" signature="2547:2596" ph="..." />
-              </folding>
+            <state relative-caret-position="391">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="124" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditUnit.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CSS/Pages/EditUnit.css">
+      <file leaf-file-name="Index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/CategorySubcategory/Index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="717">
-              <caret line="67" column="1" lean-forward="false" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+            <state relative-caret-position="396">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="25" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Unit/Index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-537">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TableUnits.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Renders/TableUnits.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="96" lean-forward="false" selection-start-line="11" selection-start-column="96" selection-end-line="11" selection-end-column="96" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/Index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="849">
-              <caret line="117" column="5" lean-forward="true" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddUnit.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Unit/AddUnit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="34" column="30" lean-forward="false" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddWarehouse.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/AddWarehouse.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2332">
-              <caret line="106" column="33" lean-forward="true" selection-start-line="106" selection-start-column="33" selection-end-line="106" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/Index.php">
+        <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/Index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
+              <caret line="65" column="61" lean-forward="true" selection-start-line="65" selection-start-column="61" selection-end-line="65" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddUnit.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CSS/Pages/AddUnit.css">
+      <file leaf-file-name="TableCharacteristicsCategorySubcategory.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/Renders/TableCharacteristicsCategorySubcategory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-449">
-              <caret line="14" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="1" />
+            <state relative-caret-position="462">
+              <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditCharacteristicCategorySubcategory.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/EditCharacteristicCategorySubcategory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="82" lean-forward="true" selection-start-line="7" selection-start-column="82" selection-end-line="7" selection-end-column="82" />
+              <folding>
+                <marker date="1606933051280" expanded="true" signature="2867:2915" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditCharacteristicCategorySubcategory.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CSS/Pages/EditCharacteristicCategorySubcategory.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="805">
+              <caret line="67" column="1" lean-forward="false" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddCharacteristicCategorySubcategory.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CSS/Pages/AddCharacteristicCategorySubcategory.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="837">
+              <caret line="67" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditCategorySubcategory.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/CategorySubcategory/EditCategorySubcategory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="87" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueryExecutor.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Logic/Database/QueryExecutor.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="453" column="92" lean-forward="false" selection-start-line="453" selection-start-column="92" selection-end-line="453" selection-end-column="92" />
+              <folding>
+                <marker date="1606933711712" expanded="true" signature="508:549" ph="SELECT * FRO... v_user" />
+                <marker date="1606933711712" expanded="true" signature="508:574" ph="SELECT * FRO... v_user" />
+                <marker date="1606933711712" expanded="true" signature="508:582" ph="SELECT * FRO... v_user" />
+                <marker date="1606933711712" expanded="true" signature="684:731" ph="SELECT * FRO... v_user" />
+                <marker date="1606933711712" expanded="true" signature="879:1010" ph="INSERT INTO user... " />
+                <marker date="1606933711712" expanded="true" signature="1094:1135" ph="SELECT * FRO... v_user" />
+                <marker date="1606933711712" expanded="true" signature="1094:1143" ph="SELECT * FRO... v_user" />
+                <marker date="1606933711712" expanded="true" signature="1225:1243" ph="SELECT * FRO... role" />
+                <marker date="1606933711712" expanded="true" signature="1331:1378" ph="SELECT * FRO... country" />
+                <marker date="1606933711712" expanded="true" signature="1458:1487" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="1458:1488" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="1590:1630" ph="SELECT * FRO... country" />
+                <marker date="1606933711712" expanded="true" signature="1590:1638" ph="SELECT * FRO... country" />
+                <marker date="1606933711712" expanded="true" signature="1728:1786" ph="INSERT INTO country... " />
+                <marker date="1606933711712" expanded="true" signature="1870:1902" ph="SELECT * FRO... country" />
+                <marker date="1606933711712" expanded="true" signature="1870:1912" ph="SELECT * FRO... country" />
+                <marker date="1606933711712" expanded="true" signature="2009:2040" ph="UPDATE count... " />
+                <marker date="1606933711712" expanded="true" signature="2009:2054" ph="UPDATE count... " />
+                <marker date="1606933711712" expanded="true" signature="2009:2064" ph="UPDATE count... " />
+                <marker date="1606933711712" expanded="true" signature="2009:2065" ph="UPDATE count... " />
+                <marker date="1606933711712" expanded="true" signature="2249:2297" ph="SELECT * FRO... v_region" />
+                <marker date="1606933711712" expanded="true" signature="2372:2373" ph="SELECT * FRO... v_region" />
+                <marker date="1606933711712" expanded="true" signature="2482:2531" ph="SELECT * FRO... region" />
+                <marker date="1606933711712" expanded="true" signature="2482:2547" ph="SELECT * FRO... region" />
+                <marker date="1606933711712" expanded="true" signature="2482:2555" ph="SELECT * FRO... region" />
+                <marker date="1606933711712" expanded="true" signature="2649:2715" ph="INSERT INTO region... " />
+                <marker date="1606933711712" expanded="true" signature="2794:2822" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="2794:2823" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="2908:2938" ph="SELECT * FRO... region" />
+                <marker date="1606933711712" expanded="true" signature="2908:2939" ph="SELECT * FRO... region" />
+                <marker date="1606933711712" expanded="true" signature="2908:2949" ph="SELECT * FRO... region" />
+                <marker date="1606933711712" expanded="true" signature="3050:3079" ph="UPDATE regio... " />
+                <marker date="1606933711712" expanded="true" signature="3050:3103" ph="UPDATE regio... " />
+                <marker date="1606933711712" expanded="true" signature="3050:3113" ph="UPDATE regio... " />
+                <marker date="1606933711712" expanded="true" signature="3050:3114" ph="UPDATE regio... " />
+                <marker date="1606933711712" expanded="true" signature="3407:3453" ph="SELECT * FRO... v_city" />
+                <marker date="1606933711712" expanded="true" signature="3667:3692" ph="SELECT FROM region... " />
+                <marker date="1606933711712" expanded="true" signature="3667:3702" ph="SELECT FROM region... " />
+                <marker date="1606933711712" expanded="true" signature="3667:3728" ph="SELECT FROM region... " />
+                <marker date="1606933711712" expanded="true" signature="3667:3736" ph="SELECT FROM region... " />
+                <marker date="1606933711712" expanded="true" signature="3827:3851" ph="INSERT INTO region... " />
+                <marker date="1606933711712" expanded="true" signature="3827:3861" ph="INSERT INTO region... " />
+                <marker date="1606933711712" expanded="true" signature="3827:3889" ph="INSERT INTO region... " />
+                <marker date="1606933711712" expanded="true" signature="3966:3992" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="3966:3993" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="4075:4095" ph="SELECT * FRO... v_city" />
+                <marker date="1606933711712" expanded="true" signature="4075:4105" ph="SELECT * FRO... v_city" />
+                <marker date="1606933711712" expanded="true" signature="4075:4106" ph="SELECT * FRO... v_city" />
+                <marker date="1606933711712" expanded="true" signature="4075:4116" ph="SELECT * FRO... v_city" />
+                <marker date="1606933711712" expanded="true" signature="4214:4273" ph="UPDATE city " />
+                <marker date="1606933711712" expanded="true" signature="4214:4274" ph="UPDATE city " />
+                <marker date="1606933711712" expanded="true" signature="4667:4715" ph="SELECT * FRO... v_street" />
+                <marker date="1606933711712" expanded="true" signature="4960:4995" ph="SELECT * FRO... street" />
+                <marker date="1606933711712" expanded="true" signature="4960:4996" ph="SELECT * FRO... street" />
+                <marker date="1606933711712" expanded="true" signature="4960:5019" ph="SELECT * FRO... street" />
+                <marker date="1606933711712" expanded="true" signature="4960:5027" ph="SELECT * FRO... street" />
+                <marker date="1606933711712" expanded="true" signature="5118:5135" ph="INSERT INTO stree... " />
+                <marker date="1606933711712" expanded="true" signature="5118:5152" ph="INSERT INTO street... " />
+                <marker date="1606933711712" expanded="true" signature="5118:5178" ph="INSERT INTO street... " />
+                <marker date="1606933711712" expanded="true" signature="5261:5279" ph="SELECT * FRO... v_st" />
+                <marker date="1606933711712" expanded="true" signature="5261:5294" ph="SELECT * FRO... v_street" />
+                <marker date="1606933711712" expanded="true" signature="5261:5304" ph="SELECT * FRO... v_street" />
+                <marker date="1606933711712" expanded="true" signature="5402:5428" ph="UPDATE stree... " />
+                <marker date="1606933711712" expanded="true" signature="5402:5429" ph="UPDATE stree... " />
+                <marker date="1606933711712" expanded="true" signature="5402:5449" ph="UPDATE stree... " />
+                <marker date="1606933711712" expanded="true" signature="5402:5459" ph="UPDATE stree... " />
+                <marker date="1606933711712" expanded="true" signature="5541:5569" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="6071:6118" ph="SELECT * FRO... v_hou" />
+                <marker date="1606933711712" expanded="true" signature="6395:6408" ph="SELECT * FRO... " />
+                <marker date="1606933711712" expanded="true" signature="6395:6431" ph="SELECT * FRO... house" />
+                <marker date="1606933711712" expanded="true" signature="6395:6432" ph="SELECT * FRO... house" />
+                <marker date="1606933711712" expanded="true" signature="6395:6457" ph="SELECT * FRO... house" />
+                <marker date="1606933711712" expanded="true" signature="6395:6465" ph="SELECT * FRO... house" />
+                <marker date="1606933711712" expanded="true" signature="6557:6620" ph="INSERT INTO house... " />
+                <marker date="1606933711712" expanded="true" signature="6702:6718" ph="SELECT * FRO... v_" />
+                <marker date="1606933711712" expanded="true" signature="6702:6733" ph="SELECT * FRO... v_house" />
+                <marker date="1606933711712" expanded="true" signature="6702:6734" ph="SELECT * FRO... v_house" />
+                <marker date="1606933711712" expanded="true" signature="6702:6744" ph="SELECT * FRO... v_house" />
+                <marker date="1606933711712" expanded="true" signature="6843:6870" ph="UPDATE house... " />
+                <marker date="1606933711712" expanded="true" signature="6843:6871" ph="UPDATE house... " />
+                <marker date="1606933711712" expanded="true" signature="6843:6886" ph="UPDATE house... " />
+                <marker date="1606933711712" expanded="true" signature="6843:6887" ph="UPDATE house... " />
+                <marker date="1606933711712" expanded="true" signature="6843:6901" ph="UPDATE house... " />
+                <marker date="1606933711712" expanded="true" signature="6843:6902" ph="UPDATE house... " />
+                <marker date="1606933711712" expanded="true" signature="6982:7009" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="6982:7010" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="7106:7160" ph="SELECT * FRO... classification" />
+                <marker date="1606933711712" expanded="true" signature="7267:7295" ph="SELECT * FRO... classification" />
+                <marker date="1606933711712" expanded="true" signature="7267:7314" ph="SELECT * FRO... classification" />
+                <marker date="1606933711712" expanded="true" signature="7267:7322" ph="SELECT * FRO... classification" />
+                <marker date="1606933711712" expanded="true" signature="7420:7487" ph="INSERT INTO classification... " />
+                <marker date="1606933711712" expanded="true" signature="7578:7616" ph="SELECT * FRO... classification" />
+                <marker date="1606933711712" expanded="true" signature="7578:7617" ph="SELECT * FRO... classification" />
+                <marker date="1606933711712" expanded="true" signature="7578:7627" ph="SELECT * FRO... classification" />
+                <marker date="1606933711712" expanded="true" signature="7732:7770" ph="UPDATE class... " />
+                <marker date="1606933711712" expanded="true" signature="7732:7786" ph="UPDATE class... " />
+                <marker date="1606933711712" expanded="true" signature="7732:7796" ph="UPDATE class... " />
+                <marker date="1606933711712" expanded="true" signature="7732:7797" ph="UPDATE class... " />
+                <marker date="1606933711712" expanded="true" signature="7886:7922" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="7886:7923" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="8146:8170" ph="SELECT * FRO... category" />
+                <marker date="1606933711712" expanded="true" signature="8146:8196" ph="SELECT * FRO... category" />
+                <marker date="1606933711712" expanded="true" signature="8391:8413" ph="SELECT * FRO... category" />
+                <marker date="1606933711712" expanded="true" signature="8391:8419" ph="SELECT * FRO... category" />
+                <marker date="1606933711712" expanded="true" signature="8391:8438" ph="SELECT * FRO... category" />
+                <marker date="1606933711712" expanded="true" signature="8391:8472" ph="SELECT * FRO... category" />
+                <marker date="1606933711712" expanded="true" signature="8391:8480" ph="SELECT * FRO... category" />
+                <marker date="1606933711712" expanded="true" signature="8591:8644" ph="INSERT INTO category... " />
+                <marker date="1606933711712" expanded="true" signature="8591:8690" ph="INSERT INTO category... " />
+                <marker date="1606933711712" expanded="true" signature="8775:8788" ph="SELECT * FRO... " />
+                <marker date="1606933711712" expanded="true" signature="8775:8818" ph="SELECT * FRO... category" />
+                <marker date="1606933711712" expanded="true" signature="8936:8974" ph="UPDATE categ... " />
+                <marker date="1606933711712" expanded="true" signature="8936:9005" ph="UPDATE categ... " />
+                <marker date="1606933711712" expanded="true" signature="8936:9031" ph="UPDATE categ... " />
+                <marker date="1606933711712" expanded="true" signature="8936:9032" ph="UPDATE categ... " />
+                <marker date="1606933711712" expanded="true" signature="9115:9145" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="9115:9146" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="9491:9544" ph="SELECT * FRO... v_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="9767:9799" ph="SELECT * FRO... subcategory" />
+                <marker date="1606933711712" expanded="true" signature="9767:9811" ph="SELECT * FRO... subcategory" />
+                <marker date="1606933711712" expanded="true" signature="9767:9812" ph="SELECT * FRO... subcategory" />
+                <marker date="1606933711712" expanded="true" signature="9767:9832" ph="SELECT * FRO... subcategory" />
+                <marker date="1606933711712" expanded="true" signature="9767:9847" ph="SELECT * FRO... subcategory" />
+                <marker date="1606933711712" expanded="true" signature="9955:9978" ph="INSERT INTO subcategory... " />
+                <marker date="1606933711712" expanded="true" signature="9955:10005" ph="INSERT INTO subcategory... " />
+                <marker date="1606933711712" expanded="true" signature="9955:10045" ph="INSERT INTO subcategory... " />
+                <marker date="1606933711712" expanded="true" signature="10133:10160" ph="SELECT * FRO... v_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="10133:10181" ph="SELECT * FRO... v_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="10296:10318" ph="UPDATE subca... " />
+                <marker date="1606933711712" expanded="true" signature="10296:10331" ph="UPDATE subca... " />
+                <marker date="1606933711712" expanded="true" signature="10296:10356" ph="UPDATE subca... " />
+                <marker date="1606933711712" expanded="true" signature="10296:10372" ph="UPDATE subca... " />
+                <marker date="1606933711712" expanded="true" signature="10296:10382" ph="UPDATE subca... " />
+                <marker date="1606933711712" expanded="true" signature="10296:10383" ph="UPDATE subca... " />
+                <marker date="1606933711712" expanded="true" signature="10469:10492" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="10469:10502" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="10990:11052" ph="SELECT * FRO... v_category_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="11318:11358" ph="SELECT * FRO... category_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="11318:11374" ph="SELECT * FRO... category_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="11318:11405" ph="SELECT * FRO... category_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="11318:11413" ph="SELECT * FRO... category_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="11532:11637" ph="INSERT INTO category_subcategory... " />
+                <marker date="1606933711712" expanded="true" signature="11733:11769" ph="SELECT * FRO... category_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="11733:11779" ph="SELECT * FRO... category_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="11733:11780" ph="SELECT * FRO... category_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="11733:11790" ph="SELECT * FRO... v_category_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="11916:11963" ph="UPDATE categ... " />
+                <marker date="1606933711712" expanded="true" signature="11916:11991" ph="UPDATE categ... " />
+                <marker date="1606933711712" expanded="true" signature="11916:12007" ph="UPDATE categ... " />
+                <marker date="1606933711712" expanded="true" signature="11916:12017" ph="UPDATE categ... " />
+                <marker date="1606933711712" expanded="true" signature="11916:12018" ph="UPDATE categ... " />
+                <marker date="1606933711712" expanded="true" signature="12112:12154" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="12112:12155" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="12249:12301" ph="SELECT * FRO... manufacturer" />
+                <marker date="1606933711712" expanded="true" signature="12406:12451" ph="SELECT * FRO... WHERE" />
+                <marker date="1606933711712" expanded="true" signature="12406:12459" ph="SELECT * FRO... manufacturer" />
+                <marker date="1606933711712" expanded="true" signature="12555:12593" ph="INSERT INTO manufacturer... " />
+                <marker date="1606933711712" expanded="true" signature="12555:12620" ph="INSERT INTO manufacturer... " />
+                <marker date="1606933711712" expanded="true" signature="12709:12746" ph="SELECT * FRO... manufacturer" />
+                <marker date="1606933711712" expanded="true" signature="12709:12756" ph="SELECT * FRO... manufacturer" />
+                <marker date="1606933711712" expanded="true" signature="12859:12911" ph="UPDATE manuf... " />
+                <marker date="1606933711712" expanded="true" signature="12859:12921" ph="UPDATE manuf... " />
+                <marker date="1606933711712" expanded="true" signature="12859:12922" ph="UPDATE manuf... " />
+                <marker date="1606933711712" expanded="true" signature="13009:13043" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="13660:13726" ph="SELECT * FRO... v_warehouse" />
+                <marker date="1606933711712" expanded="true" signature="14043:14072" ph="SELECT * FRO... warehouse" />
+                <marker date="1606933711712" expanded="true" signature="14043:14082" ph="SELECT * FRO... warehouse" />
+                <marker date="1606933711712" expanded="true" signature="14043:14122" ph="SELECT * FRO... warehouse" />
+                <marker date="1606933711712" expanded="true" signature="14043:14130" ph="SELECT * FRO... warehouse" />
+                <marker date="1606933711712" expanded="true" signature="14232:14278" ph="INSERT INTO warehouse... " />
+                <marker date="1606933711712" expanded="true" signature="14232:14312" ph="INSERT INTO warehouse... " />
+                <marker date="1606933711712" expanded="true" signature="14398:14411" ph="SELECT * FRO... " />
+                <marker date="1606933711712" expanded="true" signature="14398:14433" ph="SELECT * FRO... v_warehouse" />
+                <marker date="1606933711712" expanded="true" signature="14398:14434" ph="SELECT * FRO... v_warehouse" />
+                <marker date="1606933711712" expanded="true" signature="14398:14444" ph="SELECT * FRO... v_warehouse" />
+                <marker date="1606933711712" expanded="true" signature="14553:14573" ph="UPDATE wareh... " />
+                <marker date="1606933711712" expanded="true" signature="14553:14583" ph="UPDATE wareh... " />
+                <marker date="1606933711712" expanded="true" signature="14553:14620" ph="UPDATE wareh... " />
+                <marker date="1606933711712" expanded="true" signature="14553:14630" ph="UPDATE wareh... " />
+                <marker date="1606933711712" expanded="true" signature="14715:14746" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="14715:14747" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="14843:14897" ph="SELECT * FRO... characteristic" />
+                <marker date="1606933711712" expanded="true" signature="15004:15044" ph="SELECT * FRO... characteristic" />
+                <marker date="1606933711712" expanded="true" signature="15004:15059" ph="SELECT * FRO... characteristic" />
+                <marker date="1606933711712" expanded="true" signature="15149:15199" ph="INSERT INTO characteristic... " />
+                <marker date="1606933711712" expanded="true" signature="15290:15328" ph="SELECT * FRO... characteristic" />
+                <marker date="1606933711712" expanded="true" signature="15290:15329" ph="SELECT * FRO... characteristic" />
+                <marker date="1606933711712" expanded="true" signature="15290:15339" ph="SELECT * FRO... characteristic" />
+                <marker date="1606933711712" expanded="true" signature="15436:15474" ph="UPDATE chara... " />
+                <marker date="1606933711712" expanded="true" signature="15436:15484" ph="UPDATE chara... " />
+                <marker date="1606933711712" expanded="true" signature="15436:15485" ph="UPDATE chara... " />
+                <marker date="1606933711712" expanded="true" signature="15574:15600" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="15574:15610" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="15697:15715" ph="SELECT * FRO... unit" />
+                <marker date="1606933711712" expanded="true" signature="15697:15741" ph="SELECT * FRO... unit" />
+                <marker date="1606933711712" expanded="true" signature="15852:15870" ph="SELECT * FRO... unit" />
+                <marker date="1606933711712" expanded="true" signature="15852:15889" ph="SELECT * FRO... unit" />
+                <marker date="1606933711712" expanded="true" signature="15852:15925" ph="SELECT * FRO... unit" />
+                <marker date="1606933711712" expanded="true" signature="15852:15928" ph="SELECT * FRO... unit" />
+                <marker date="1606933711712" expanded="true" signature="16022:16038" ph="INSERT INTO unit... " />
+                <marker date="1606933711712" expanded="true" signature="16022:16091" ph="INSERT INTO unit... " />
+                <marker date="1606933711712" expanded="true" signature="16172:16200" ph="SELECT * FRO... unit" />
+                <marker date="1606933711712" expanded="true" signature="16172:16211" ph="SELECT * FRO... unit" />
+                <marker date="1606933711712" expanded="true" signature="16312:16340" ph="UPDATE unit " />
+                <marker date="1606933711712" expanded="true" signature="16312:16368" ph="UPDATE unit " />
+                <marker date="1606933711712" expanded="true" signature="16312:16378" ph="UPDATE unit " />
+                <marker date="1606933711712" expanded="true" signature="16312:16379" ph="UPDATE unit " />
+                <marker date="1606933711712" expanded="true" signature="16458:16484" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="16458:16485" ph="DELETE FROM " />
+                <marker date="1606933711712" expanded="true" signature="17309:17366" ph="SELECT * FRO... v_characteristic_category_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="17309:17401" ph="SELECT * FRO... v_characteristic_category_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="17762:17775" ph="SELECT * FRO... " />
+                <marker date="1606933711712" expanded="true" signature="17762:17776" ph="SELECT * FRO... ${$categorySubcategoryId}" />
+                <marker date="1606933711712" expanded="true" signature="17762:17836" ph="SELECT * FRO... characteristic_category_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="17762:17883" ph="SELECT * FRO... characteristic_category_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="17762:17914" ph="SELECT * FRO... characteristic_category_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="18059:18106" ph="INSERT INTO characteristic_category_subcategory... " />
+                <marker date="1606933711712" expanded="true" signature="18059:18202" ph="INSERT INTO characteristic_category_subcategory... " />
+                <marker date="1606933711712" expanded="true" signature="18312:18373" ph="SELECT * FRO... characteristic_category_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="18312:18374" ph="SELECT * FRO... characteristic_category_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="18312:18384" ph="SELECT * FRO... characteristic_category_subcategory" />
+                <marker date="1606933711712" expanded="true" signature="18536:18601" ph="UPDATE chara... " />
+                <marker date="1606933711712" expanded="true" signature="18536:18644" ph="UPDATE chara... " />
+                <marker date="1606933711712" expanded="true" signature="18536:18676" ph="UPDATE chara... " />
+                <marker date="1606933711712" expanded="true" signature="18536:18677" ph="UPDATE chara... " />
+                <marker date="1606933711712" expanded="true" signature="18785:18842" ph="DELETE FROM " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -361,20 +379,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/Manufacturers.php" />
-        <option value="$PROJECT_DIR$/Views/Renders/TableManufacturers.php" />
-        <option value="$PROJECT_DIR$/CSS/Elements/TableManufacturers.css" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/AddManufacturer.html" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/AddManufacturer.php" />
-        <option value="$PROJECT_DIR$/CSS/Pages/AddManufacturer.css" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/EditManufacturer.html" />
-        <option value="$PROJECT_DIR$/CSS/Pages/EditManufacturer.css" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/EditManufacturer.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/Index.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Shop/Index.php" />
-        <option value="$PROJECT_DIR$/Views/Renders/TableWarehouses.php" />
-        <option value="$PROJECT_DIR$/CSS/Elements/TableWarehouses.css" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/Warehouses.html" />
         <option value="$PROJECT_DIR$/CSS/Pages/Warehouses.css" />
         <option value="$PROJECT_DIR$/JS/Warehouses.js" />
         <option value="$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/AddWarehouse.html" />
@@ -388,7 +392,6 @@
         <option value="$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/Index.php" />
         <option value="$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/Characteristics.html" />
         <option value="$PROJECT_DIR$/CSS/Pages/Characteristics.css" />
-        <option value="$PROJECT_DIR$/Views/Renders/TableCharacteristics.php" />
         <option value="$PROJECT_DIR$/CSS/Elements/TableCharacteristics.css" />
         <option value="$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/Characteristics.php" />
         <option value="$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/AddCharacteristic.html" />
@@ -403,15 +406,30 @@
         <option value="$PROJECT_DIR$/CSS/Elements/TableUnits.css" />
         <option value="$PROJECT_DIR$/CSS/Pages/Units.css" />
         <option value="$PROJECT_DIR$/Views/Pages/Administrator/Unit/Units.php" />
-        <option value="$PROJECT_DIR$/Views/Renders/MenuAdmin.php" />
         <option value="$PROJECT_DIR$/Views/Pages/Administrator/Unit/AddUnit.html" />
         <option value="$PROJECT_DIR$/Views/Pages/Administrator/Unit/AddUnit.php" />
         <option value="$PROJECT_DIR$/CSS/Pages/AddUnit.css" />
-        <option value="$PROJECT_DIR$/Logic/Database/QueryExecutor.php" />
         <option value="$PROJECT_DIR$/Views/Pages/Administrator/Unit/EditUnit.html" />
         <option value="$PROJECT_DIR$/CSS/Pages/EditUnit.css" />
         <option value="$PROJECT_DIR$/Views/Pages/Administrator/Unit/EditUnit.php" />
         <option value="$PROJECT_DIR$/Views/Pages/Administrator/Unit/Index.php" />
+        <option value="$PROJECT_DIR$/Views/Renders/MenuAdmin.php" />
+        <option value="$PROJECT_DIR$/Views/Renders/TableCharacteristics.php" />
+        <option value="$PROJECT_DIR$/CSS/Elements/TableCharacteristicsCategorySubcategory.css" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/CharacteristicsCategorySubcategory.html" />
+        <option value="$PROJECT_DIR$/CSS/Pages/CharacteristicsCategorySubcategory.css" />
+        <option value="$PROJECT_DIR$/JS/CharacteristicsCategorySubcategory.js" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/AddCharacteristicCategorySubcategory.html" />
+        <option value="$PROJECT_DIR$/CSS/Elements/AddCharacteristicCategorySubcategory.css" />
+        <option value="$PROJECT_DIR$/CSS/Pages/AddCharacteristicCategorySubcategory.css" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/AddCharacteristicCategorySubcategory.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/CharacteristicsCategorySubcategory.php" />
+        <option value="$PROJECT_DIR$/Views/Renders/TableCharacteristicsCategorySubcategory.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/EditCharacteristicCategorySubcategory.html" />
+        <option value="$PROJECT_DIR$/CSS/Pages/EditCharacteristicCategorySubcategory.css" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/EditCharacteristicCategorySubcategory.php" />
+        <option value="$PROJECT_DIR$/Logic/Database/QueryExecutor.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/Index.php" />
       </list>
     </option>
   </component>
@@ -449,7 +467,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -541,8 +558,30 @@
               <option name="myItemId" value="Administrator" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Warehouse" />
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CharacteristicCategorySubcategory" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -568,55 +607,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Unit" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ElectronicsStore" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ElectronicsStore" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Administrator" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ElectronicsStore" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ElectronicsStore" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Administrator" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Characteristic" />
+              <option name="myItemId" value="CategorySubcategory" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -663,10 +654,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Logic" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Managers" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -722,6 +709,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -875,12 +863,17 @@
       <workItem from="1606289926904" duration="6884000" />
       <workItem from="1606310528791" duration="8975000" />
       <workItem from="1606361635188" duration="1372000" />
-      <workItem from="1606398475276" duration="4178000" />
+      <workItem from="1606398475276" duration="4797000" />
+      <workItem from="1606571817824" duration="937000" />
+      <workItem from="1606576614808" duration="1574000" />
+      <workItem from="1606842267772" duration="2529000" />
+      <workItem from="1606895153350" duration="3821000" />
+      <workItem from="1606917054137" duration="5799000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="308665000" />
+    <option name="totallyTimeSpent" value="323944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -919,147 +912,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Street/Streets.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="23" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Pages/Streets.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="65" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Pages/Subcategories.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/Houses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="58" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Street/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="105" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/Warehouses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="63" column="38" lean-forward="false" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Pages/AddHouse.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/House/AddHouse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="115" column="6" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="115" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/EditWarehouse.css" />
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/House/Houses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1936">
-          <caret line="88" column="6" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="88" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/House/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="28" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/EditWarehouse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="127" column="119" lean-forward="false" selection-start-line="127" selection-start-column="119" selection-end-line="127" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/House/EditHouse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="100" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Pages/EditWarehouse.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="67" column="1" lean-forward="false" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Pages/Countries.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Country/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="89" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Elements/TableCharacteristics.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Renders/TableCountries.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Elements/TableCities.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Country/Countries.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="673">
-          <caret line="44" column="6" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="44" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Pages/AddCountry.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CSS/Pages/AddCity.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-528">
@@ -1102,20 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Renders/TableCharacteristics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Pages/AddCharacteristic.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-449">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CSS/Pages/Characteristics.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -1127,7 +965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1135,7 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="23" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1143,7 +979,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1151,7 +986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="717">
           <caret line="65" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="65" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1159,7 +993,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="805">
           <caret line="65" column="1" lean-forward="false" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1167,15 +1000,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="45" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Renders/MenuAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1183,7 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
           <caret line="37" column="84" lean-forward="false" selection-start-line="37" selection-start-column="84" selection-end-line="37" selection-end-column="84" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1191,11 +1014,175 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="22" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/Pages/EditUnit.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1474">
+          <caret line="67" column="1" lean-forward="false" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Unit/EditUnit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="33" column="57" lean-forward="false" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Unit/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Renders/TableUnits.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="96" lean-forward="false" selection-start-line="11" selection-start-column="96" selection-end-line="11" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="117" column="5" lean-forward="true" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Unit/AddUnit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="34" column="30" lean-forward="false" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/AddWarehouse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="106" column="33" lean-forward="true" selection-start-line="106" selection-start-column="33" selection-end-line="106" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/Pages/AddUnit.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Renders/MenuAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="57" lean-forward="true" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Renders/TableCities.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Renders/TableCategoriesSubcategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="75" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/Elements/TableCharacteristics.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="31" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Renders/TableCharacteristics.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="63" lean-forward="true" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/Elements/TableCharacteristicsCategorySubcategory.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="87" lean-forward="false" selection-start-line="17" selection-start-column="87" selection-end-line="17" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/CharacteristicsCategorySubcategory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/CategoriesSubcategory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/Pages/CategoriesSubcategories.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-713">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="65" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/Pages/CharacteristicsCategorySubcategory.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1430">
+          <caret line="65" column="1" lean-forward="false" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/CategorySubcategory/CategoriesSubcategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="80" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/Pages/CatalogCategoriesSubcategory.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="16" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CSS/Pages/AddWarehouse.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/Elements/AddCharacteristicCategorySubcategory.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/Pages/AddCharacteristic.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-449">
           <caret line="14" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="1" />
@@ -1205,301 +1192,325 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/AddCharacteristic.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="36" column="19" lean-forward="false" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+        <state relative-caret-position="264">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="20" selection-end-column="82" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/AddWarehouse.php">
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/CategorySubcategory/AddCategorySubcategory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2332">
-          <caret line="106" column="33" lean-forward="true" selection-start-line="106" selection-start-column="33" selection-end-line="106" selection-end-column="33" />
+        <state relative-caret-position="154">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/Index.php">
+    <entry file="file://$PROJECT_DIR$/CSS/Pages/AddCharacteristicCategorySubcategory.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="849">
-          <caret line="117" column="5" lean-forward="true" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
+        <state relative-caret-position="837">
+          <caret line="67" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Renders/TableUnits.php">
+    <entry file="file://$PROJECT_DIR$/CSS/Pages/EditCharacteristicCategorySubcategory.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="96" lean-forward="false" selection-start-line="11" selection-start-column="96" selection-end-line="11" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logic/Database/QueryExecutor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="416" column="61" lean-forward="false" selection-start-line="416" selection-start-column="61" selection-end-line="416" selection-end-column="61" />
-          <folding>
-            <marker date="1606401875151" expanded="true" signature="508:549" ph="SELECT * FRO... v_user" />
-            <marker date="1606401875151" expanded="true" signature="508:574" ph="SELECT * FRO... v_user" />
-            <marker date="1606401875151" expanded="true" signature="508:582" ph="SELECT * FRO... v_user" />
-            <marker date="1606401875151" expanded="true" signature="684:731" ph="SELECT * FRO... v_user" />
-            <marker date="1606401875151" expanded="true" signature="879:1010" ph="INSERT INTO user... " />
-            <marker date="1606401875151" expanded="true" signature="1094:1135" ph="SELECT * FRO... v_user" />
-            <marker date="1606401875151" expanded="true" signature="1094:1143" ph="SELECT * FRO... v_user" />
-            <marker date="1606401875151" expanded="true" signature="1225:1243" ph="SELECT * FRO... role" />
-            <marker date="1606401875151" expanded="true" signature="1331:1378" ph="SELECT * FRO... country" />
-            <marker date="1606401875151" expanded="true" signature="1458:1487" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="1458:1488" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="1590:1630" ph="SELECT * FRO... country" />
-            <marker date="1606401875151" expanded="true" signature="1590:1638" ph="SELECT * FRO... country" />
-            <marker date="1606401875151" expanded="true" signature="1728:1786" ph="INSERT INTO country... " />
-            <marker date="1606401875151" expanded="true" signature="1870:1902" ph="SELECT * FRO... country" />
-            <marker date="1606401875151" expanded="true" signature="1870:1912" ph="SELECT * FRO... country" />
-            <marker date="1606401875151" expanded="true" signature="2009:2040" ph="UPDATE count... " />
-            <marker date="1606401875151" expanded="true" signature="2009:2054" ph="UPDATE count... " />
-            <marker date="1606401875151" expanded="true" signature="2009:2064" ph="UPDATE count... " />
-            <marker date="1606401875151" expanded="true" signature="2009:2065" ph="UPDATE count... " />
-            <marker date="1606401875151" expanded="true" signature="2249:2297" ph="SELECT * FRO... v_region" />
-            <marker date="1606401875151" expanded="true" signature="2372:2373" ph="SELECT * FRO... v_region" />
-            <marker date="1606401875151" expanded="true" signature="2482:2531" ph="SELECT * FRO... region" />
-            <marker date="1606401875151" expanded="true" signature="2482:2547" ph="SELECT * FRO... region" />
-            <marker date="1606401875151" expanded="true" signature="2482:2555" ph="SELECT * FRO... region" />
-            <marker date="1606401875151" expanded="true" signature="2649:2715" ph="INSERT INTO region... " />
-            <marker date="1606401875151" expanded="true" signature="2794:2822" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="2794:2823" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="2908:2938" ph="SELECT * FRO... region" />
-            <marker date="1606401875151" expanded="true" signature="2908:2939" ph="SELECT * FRO... region" />
-            <marker date="1606401875151" expanded="true" signature="2908:2949" ph="SELECT * FRO... region" />
-            <marker date="1606401875151" expanded="true" signature="3050:3079" ph="UPDATE regio... " />
-            <marker date="1606401875151" expanded="true" signature="3050:3103" ph="UPDATE regio... " />
-            <marker date="1606401875151" expanded="true" signature="3050:3113" ph="UPDATE regio... " />
-            <marker date="1606401875151" expanded="true" signature="3050:3114" ph="UPDATE regio... " />
-            <marker date="1606401875151" expanded="true" signature="3407:3453" ph="SELECT * FRO... v_city" />
-            <marker date="1606401875151" expanded="true" signature="3667:3692" ph="SELECT FROM region... " />
-            <marker date="1606401875151" expanded="true" signature="3667:3702" ph="SELECT FROM region... " />
-            <marker date="1606401875151" expanded="true" signature="3667:3728" ph="SELECT FROM region... " />
-            <marker date="1606401875151" expanded="true" signature="3667:3736" ph="SELECT FROM region... " />
-            <marker date="1606401875151" expanded="true" signature="3827:3851" ph="INSERT INTO region... " />
-            <marker date="1606401875151" expanded="true" signature="3827:3861" ph="INSERT INTO region... " />
-            <marker date="1606401875151" expanded="true" signature="3827:3889" ph="INSERT INTO region... " />
-            <marker date="1606401875151" expanded="true" signature="3966:3992" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="3966:3993" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="4075:4095" ph="SELECT * FRO... v_city" />
-            <marker date="1606401875151" expanded="true" signature="4075:4105" ph="SELECT * FRO... v_city" />
-            <marker date="1606401875151" expanded="true" signature="4075:4106" ph="SELECT * FRO... v_city" />
-            <marker date="1606401875151" expanded="true" signature="4075:4116" ph="SELECT * FRO... v_city" />
-            <marker date="1606401875151" expanded="true" signature="4214:4273" ph="UPDATE city " />
-            <marker date="1606401875151" expanded="true" signature="4214:4274" ph="UPDATE city " />
-            <marker date="1606401875151" expanded="true" signature="4667:4715" ph="SELECT * FRO... v_street" />
-            <marker date="1606401875151" expanded="true" signature="4960:4995" ph="SELECT * FRO... street" />
-            <marker date="1606401875151" expanded="true" signature="4960:4996" ph="SELECT * FRO... street" />
-            <marker date="1606401875151" expanded="true" signature="4960:5019" ph="SELECT * FRO... street" />
-            <marker date="1606401875151" expanded="true" signature="4960:5027" ph="SELECT * FRO... street" />
-            <marker date="1606401875151" expanded="true" signature="5118:5135" ph="INSERT INTO stree... " />
-            <marker date="1606401875151" expanded="true" signature="5118:5152" ph="INSERT INTO street... " />
-            <marker date="1606401875151" expanded="true" signature="5118:5178" ph="INSERT INTO street... " />
-            <marker date="1606401875151" expanded="true" signature="5261:5279" ph="SELECT * FRO... v_st" />
-            <marker date="1606401875151" expanded="true" signature="5261:5294" ph="SELECT * FRO... v_street" />
-            <marker date="1606401875151" expanded="true" signature="5261:5304" ph="SELECT * FRO... v_street" />
-            <marker date="1606401875151" expanded="true" signature="5402:5428" ph="UPDATE stree... " />
-            <marker date="1606401875151" expanded="true" signature="5402:5429" ph="UPDATE stree... " />
-            <marker date="1606401875151" expanded="true" signature="5402:5449" ph="UPDATE stree... " />
-            <marker date="1606401875151" expanded="true" signature="5402:5459" ph="UPDATE stree... " />
-            <marker date="1606401875151" expanded="true" signature="5541:5569" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="6071:6118" ph="SELECT * FRO... v_hou" />
-            <marker date="1606401875151" expanded="true" signature="6395:6408" ph="SELECT * FRO... " />
-            <marker date="1606401875151" expanded="true" signature="6395:6431" ph="SELECT * FRO... house" />
-            <marker date="1606401875151" expanded="true" signature="6395:6432" ph="SELECT * FRO... house" />
-            <marker date="1606401875151" expanded="true" signature="6395:6457" ph="SELECT * FRO... house" />
-            <marker date="1606401875151" expanded="true" signature="6395:6465" ph="SELECT * FRO... house" />
-            <marker date="1606401875151" expanded="true" signature="6557:6620" ph="INSERT INTO house... " />
-            <marker date="1606401875151" expanded="true" signature="6702:6718" ph="SELECT * FRO... v_" />
-            <marker date="1606401875151" expanded="true" signature="6702:6733" ph="SELECT * FRO... v_house" />
-            <marker date="1606401875151" expanded="true" signature="6702:6734" ph="SELECT * FRO... v_house" />
-            <marker date="1606401875151" expanded="true" signature="6702:6744" ph="SELECT * FRO... v_house" />
-            <marker date="1606401875151" expanded="true" signature="6843:6870" ph="UPDATE house... " />
-            <marker date="1606401875151" expanded="true" signature="6843:6871" ph="UPDATE house... " />
-            <marker date="1606401875151" expanded="true" signature="6843:6886" ph="UPDATE house... " />
-            <marker date="1606401875151" expanded="true" signature="6843:6887" ph="UPDATE house... " />
-            <marker date="1606401875151" expanded="true" signature="6843:6901" ph="UPDATE house... " />
-            <marker date="1606401875151" expanded="true" signature="6843:6902" ph="UPDATE house... " />
-            <marker date="1606401875151" expanded="true" signature="6982:7009" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="6982:7010" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="7106:7160" ph="SELECT * FRO... classification" />
-            <marker date="1606401875151" expanded="true" signature="7267:7295" ph="SELECT * FRO... classification" />
-            <marker date="1606401875151" expanded="true" signature="7267:7314" ph="SELECT * FRO... classification" />
-            <marker date="1606401875151" expanded="true" signature="7267:7322" ph="SELECT * FRO... classification" />
-            <marker date="1606401875151" expanded="true" signature="7420:7487" ph="INSERT INTO classification... " />
-            <marker date="1606401875151" expanded="true" signature="7578:7616" ph="SELECT * FRO... classification" />
-            <marker date="1606401875151" expanded="true" signature="7578:7617" ph="SELECT * FRO... classification" />
-            <marker date="1606401875151" expanded="true" signature="7578:7627" ph="SELECT * FRO... classification" />
-            <marker date="1606401875151" expanded="true" signature="7732:7770" ph="UPDATE class... " />
-            <marker date="1606401875151" expanded="true" signature="7732:7786" ph="UPDATE class... " />
-            <marker date="1606401875151" expanded="true" signature="7732:7796" ph="UPDATE class... " />
-            <marker date="1606401875151" expanded="true" signature="7732:7797" ph="UPDATE class... " />
-            <marker date="1606401875151" expanded="true" signature="7886:7922" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="7886:7923" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="8146:8170" ph="SELECT * FRO... category" />
-            <marker date="1606401875151" expanded="true" signature="8146:8196" ph="SELECT * FRO... category" />
-            <marker date="1606401875151" expanded="true" signature="8391:8413" ph="SELECT * FRO... category" />
-            <marker date="1606401875151" expanded="true" signature="8391:8419" ph="SELECT * FRO... category" />
-            <marker date="1606401875151" expanded="true" signature="8391:8438" ph="SELECT * FRO... category" />
-            <marker date="1606401875151" expanded="true" signature="8391:8472" ph="SELECT * FRO... category" />
-            <marker date="1606401875151" expanded="true" signature="8391:8480" ph="SELECT * FRO... category" />
-            <marker date="1606401875151" expanded="true" signature="8591:8644" ph="INSERT INTO category... " />
-            <marker date="1606401875151" expanded="true" signature="8591:8690" ph="INSERT INTO category... " />
-            <marker date="1606401875151" expanded="true" signature="8775:8788" ph="SELECT * FRO... " />
-            <marker date="1606401875151" expanded="true" signature="8775:8818" ph="SELECT * FRO... category" />
-            <marker date="1606401875151" expanded="true" signature="8936:8974" ph="UPDATE categ... " />
-            <marker date="1606401875151" expanded="true" signature="8936:9005" ph="UPDATE categ... " />
-            <marker date="1606401875151" expanded="true" signature="8936:9031" ph="UPDATE categ... " />
-            <marker date="1606401875151" expanded="true" signature="8936:9032" ph="UPDATE categ... " />
-            <marker date="1606401875151" expanded="true" signature="9115:9145" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="9115:9146" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="9491:9544" ph="SELECT * FRO... v_subcategory" />
-            <marker date="1606401875151" expanded="true" signature="9767:9799" ph="SELECT * FRO... subcategory" />
-            <marker date="1606401875151" expanded="true" signature="9767:9811" ph="SELECT * FRO... subcategory" />
-            <marker date="1606401875151" expanded="true" signature="9767:9812" ph="SELECT * FRO... subcategory" />
-            <marker date="1606401875151" expanded="true" signature="9767:9832" ph="SELECT * FRO... subcategory" />
-            <marker date="1606401875151" expanded="true" signature="9767:9847" ph="SELECT * FRO... subcategory" />
-            <marker date="1606401875151" expanded="true" signature="9955:9978" ph="INSERT INTO subcategory... " />
-            <marker date="1606401875151" expanded="true" signature="9955:10005" ph="INSERT INTO subcategory... " />
-            <marker date="1606401875151" expanded="true" signature="9955:10045" ph="INSERT INTO subcategory... " />
-            <marker date="1606401875151" expanded="true" signature="10133:10160" ph="SELECT * FRO... v_subcategory" />
-            <marker date="1606401875151" expanded="true" signature="10133:10181" ph="SELECT * FRO... v_subcategory" />
-            <marker date="1606401875151" expanded="true" signature="10296:10318" ph="UPDATE subca... " />
-            <marker date="1606401875151" expanded="true" signature="10296:10331" ph="UPDATE subca... " />
-            <marker date="1606401875151" expanded="true" signature="10296:10356" ph="UPDATE subca... " />
-            <marker date="1606401875151" expanded="true" signature="10296:10372" ph="UPDATE subca... " />
-            <marker date="1606401875151" expanded="true" signature="10296:10382" ph="UPDATE subca... " />
-            <marker date="1606401875151" expanded="true" signature="10296:10383" ph="UPDATE subca... " />
-            <marker date="1606401875151" expanded="true" signature="10469:10492" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="10469:10502" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="10990:11052" ph="SELECT * FRO... v_category_subcategory" />
-            <marker date="1606401875151" expanded="true" signature="11318:11358" ph="SELECT * FRO... category_subcategory" />
-            <marker date="1606401875151" expanded="true" signature="11318:11374" ph="SELECT * FRO... category_subcategory" />
-            <marker date="1606401875151" expanded="true" signature="11318:11405" ph="SELECT * FRO... category_subcategory" />
-            <marker date="1606401875151" expanded="true" signature="11318:11413" ph="SELECT * FRO... category_subcategory" />
-            <marker date="1606401875151" expanded="true" signature="11532:11637" ph="INSERT INTO category_subcategory... " />
-            <marker date="1606401875151" expanded="true" signature="11733:11769" ph="SELECT * FRO... category_subcategory" />
-            <marker date="1606401875151" expanded="true" signature="11733:11779" ph="SELECT * FRO... category_subcategory" />
-            <marker date="1606401875151" expanded="true" signature="11733:11780" ph="SELECT * FRO... category_subcategory" />
-            <marker date="1606401875151" expanded="true" signature="11733:11790" ph="SELECT * FRO... v_category_subcategory" />
-            <marker date="1606401875151" expanded="true" signature="11916:11963" ph="UPDATE categ... " />
-            <marker date="1606401875151" expanded="true" signature="11916:11991" ph="UPDATE categ... " />
-            <marker date="1606401875151" expanded="true" signature="11916:12007" ph="UPDATE categ... " />
-            <marker date="1606401875151" expanded="true" signature="11916:12017" ph="UPDATE categ... " />
-            <marker date="1606401875151" expanded="true" signature="11916:12018" ph="UPDATE categ... " />
-            <marker date="1606401875151" expanded="true" signature="12112:12154" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="12112:12155" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="12249:12301" ph="SELECT * FRO... manufacturer" />
-            <marker date="1606401875151" expanded="true" signature="12406:12451" ph="SELECT * FRO... WHERE" />
-            <marker date="1606401875151" expanded="true" signature="12406:12459" ph="SELECT * FRO... manufacturer" />
-            <marker date="1606401875151" expanded="true" signature="12555:12593" ph="INSERT INTO manufacturer... " />
-            <marker date="1606401875151" expanded="true" signature="12555:12620" ph="INSERT INTO manufacturer... " />
-            <marker date="1606401875151" expanded="true" signature="12709:12746" ph="SELECT * FRO... manufacturer" />
-            <marker date="1606401875151" expanded="true" signature="12709:12756" ph="SELECT * FRO... manufacturer" />
-            <marker date="1606401875151" expanded="true" signature="12859:12911" ph="UPDATE manuf... " />
-            <marker date="1606401875151" expanded="true" signature="12859:12921" ph="UPDATE manuf... " />
-            <marker date="1606401875151" expanded="true" signature="12859:12922" ph="UPDATE manuf... " />
-            <marker date="1606401875151" expanded="true" signature="13009:13043" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="13660:13726" ph="SELECT * FRO... v_warehouse" />
-            <marker date="1606401875151" expanded="true" signature="14043:14072" ph="SELECT * FRO... warehouse" />
-            <marker date="1606401875151" expanded="true" signature="14043:14082" ph="SELECT * FRO... warehouse" />
-            <marker date="1606401875151" expanded="true" signature="14043:14122" ph="SELECT * FRO... warehouse" />
-            <marker date="1606401875151" expanded="true" signature="14043:14130" ph="SELECT * FRO... warehouse" />
-            <marker date="1606401875151" expanded="true" signature="14232:14278" ph="INSERT INTO warehouse... " />
-            <marker date="1606401875151" expanded="true" signature="14232:14312" ph="INSERT INTO warehouse... " />
-            <marker date="1606401875151" expanded="true" signature="14398:14411" ph="SELECT * FRO... " />
-            <marker date="1606401875151" expanded="true" signature="14398:14433" ph="SELECT * FRO... v_warehouse" />
-            <marker date="1606401875151" expanded="true" signature="14398:14434" ph="SELECT * FRO... v_warehouse" />
-            <marker date="1606401875151" expanded="true" signature="14398:14444" ph="SELECT * FRO... v_warehouse" />
-            <marker date="1606401875151" expanded="true" signature="14553:14573" ph="UPDATE wareh... " />
-            <marker date="1606401875151" expanded="true" signature="14553:14583" ph="UPDATE wareh... " />
-            <marker date="1606401875151" expanded="true" signature="14553:14620" ph="UPDATE wareh... " />
-            <marker date="1606401875151" expanded="true" signature="14553:14630" ph="UPDATE wareh... " />
-            <marker date="1606401875151" expanded="true" signature="14715:14746" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="14715:14747" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="14843:14897" ph="SELECT * FRO... characteristic" />
-            <marker date="1606401875151" expanded="true" signature="15004:15044" ph="SELECT * FRO... characteristic" />
-            <marker date="1606401875151" expanded="true" signature="15004:15059" ph="SELECT * FRO... characteristic" />
-            <marker date="1606401875151" expanded="true" signature="15149:15199" ph="INSERT INTO characteristic... " />
-            <marker date="1606401875151" expanded="true" signature="15290:15328" ph="SELECT * FRO... characteristic" />
-            <marker date="1606401875151" expanded="true" signature="15290:15329" ph="SELECT * FRO... characteristic" />
-            <marker date="1606401875151" expanded="true" signature="15290:15339" ph="SELECT * FRO... characteristic" />
-            <marker date="1606401875151" expanded="true" signature="15436:15474" ph="UPDATE chara... " />
-            <marker date="1606401875151" expanded="true" signature="15436:15484" ph="UPDATE chara... " />
-            <marker date="1606401875151" expanded="true" signature="15436:15485" ph="UPDATE chara... " />
-            <marker date="1606401875151" expanded="true" signature="15574:15600" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="15574:15610" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="15697:15715" ph="SELECT * FRO... unit" />
-            <marker date="1606401875151" expanded="true" signature="15697:15741" ph="SELECT * FRO... unit" />
-            <marker date="1606401875151" expanded="true" signature="15852:15870" ph="SELECT * FRO... unit" />
-            <marker date="1606401875151" expanded="true" signature="15852:15889" ph="SELECT * FRO... unit" />
-            <marker date="1606401875151" expanded="true" signature="15852:15925" ph="SELECT * FRO... unit" />
-            <marker date="1606401875151" expanded="true" signature="15852:15928" ph="SELECT * FRO... unit" />
-            <marker date="1606401875151" expanded="true" signature="16022:16038" ph="INSERT INTO unit... " />
-            <marker date="1606401875151" expanded="true" signature="16022:16091" ph="INSERT INTO unit... " />
-            <marker date="1606401875151" expanded="true" signature="16172:16200" ph="SELECT * FRO... unit" />
-            <marker date="1606401875151" expanded="true" signature="16172:16211" ph="SELECT * FRO... unit" />
-            <marker date="1606401875151" expanded="true" signature="16312:16340" ph="UPDATE unit " />
-            <marker date="1606401875151" expanded="true" signature="16312:16368" ph="UPDATE unit " />
-            <marker date="1606401875151" expanded="true" signature="16312:16378" ph="UPDATE unit " />
-            <marker date="1606401875151" expanded="true" signature="16312:16379" ph="UPDATE unit " />
-            <marker date="1606401875151" expanded="true" signature="16458:16484" ph="DELETE FROM " />
-            <marker date="1606401875151" expanded="true" signature="16458:16485" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Pages/AddUnit.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-449">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Pages/EditUnit.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
+        <state relative-caret-position="805">
           <caret line="67" column="1" lean-forward="false" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Unit/AddUnit.php">
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/CategorySubcategory/EditCategorySubcategory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="34" column="30" lean-forward="false" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+        <state relative-caret-position="396">
+          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="87" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Unit/EditUnit.php">
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/AddCharacteristicCategorySubcategory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="33" column="57" lean-forward="false" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+        <state relative-caret-position="391">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="124" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/CharacteristicsCategorySubcategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1628">
+          <caret line="74" column="30" lean-forward="true" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Renders/TableCharacteristicsCategorySubcategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/EditCharacteristicCategorySubcategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="82" lean-forward="true" selection-start-line="7" selection-start-column="82" selection-end-line="7" selection-end-column="82" />
           <folding>
-            <marker date="1606402607079" expanded="true" signature="1991:2040" ph="..." />
-            <marker date="1606402607079" expanded="true" signature="2547:2596" ph="..." />
+            <marker date="1606933051280" expanded="true" signature="2867:2915" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/Index.php">
+    <entry file="file://$PROJECT_DIR$/Logic/Database/QueryExecutor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
+        <state relative-caret-position="629">
+          <caret line="453" column="92" lean-forward="false" selection-start-line="453" selection-start-column="92" selection-end-line="453" selection-end-column="92" />
+          <folding>
+            <marker date="1606933711712" expanded="true" signature="508:549" ph="SELECT * FRO... v_user" />
+            <marker date="1606933711712" expanded="true" signature="508:574" ph="SELECT * FRO... v_user" />
+            <marker date="1606933711712" expanded="true" signature="508:582" ph="SELECT * FRO... v_user" />
+            <marker date="1606933711712" expanded="true" signature="684:731" ph="SELECT * FRO... v_user" />
+            <marker date="1606933711712" expanded="true" signature="879:1010" ph="INSERT INTO user... " />
+            <marker date="1606933711712" expanded="true" signature="1094:1135" ph="SELECT * FRO... v_user" />
+            <marker date="1606933711712" expanded="true" signature="1094:1143" ph="SELECT * FRO... v_user" />
+            <marker date="1606933711712" expanded="true" signature="1225:1243" ph="SELECT * FRO... role" />
+            <marker date="1606933711712" expanded="true" signature="1331:1378" ph="SELECT * FRO... country" />
+            <marker date="1606933711712" expanded="true" signature="1458:1487" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="1458:1488" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="1590:1630" ph="SELECT * FRO... country" />
+            <marker date="1606933711712" expanded="true" signature="1590:1638" ph="SELECT * FRO... country" />
+            <marker date="1606933711712" expanded="true" signature="1728:1786" ph="INSERT INTO country... " />
+            <marker date="1606933711712" expanded="true" signature="1870:1902" ph="SELECT * FRO... country" />
+            <marker date="1606933711712" expanded="true" signature="1870:1912" ph="SELECT * FRO... country" />
+            <marker date="1606933711712" expanded="true" signature="2009:2040" ph="UPDATE count... " />
+            <marker date="1606933711712" expanded="true" signature="2009:2054" ph="UPDATE count... " />
+            <marker date="1606933711712" expanded="true" signature="2009:2064" ph="UPDATE count... " />
+            <marker date="1606933711712" expanded="true" signature="2009:2065" ph="UPDATE count... " />
+            <marker date="1606933711712" expanded="true" signature="2249:2297" ph="SELECT * FRO... v_region" />
+            <marker date="1606933711712" expanded="true" signature="2372:2373" ph="SELECT * FRO... v_region" />
+            <marker date="1606933711712" expanded="true" signature="2482:2531" ph="SELECT * FRO... region" />
+            <marker date="1606933711712" expanded="true" signature="2482:2547" ph="SELECT * FRO... region" />
+            <marker date="1606933711712" expanded="true" signature="2482:2555" ph="SELECT * FRO... region" />
+            <marker date="1606933711712" expanded="true" signature="2649:2715" ph="INSERT INTO region... " />
+            <marker date="1606933711712" expanded="true" signature="2794:2822" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="2794:2823" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="2908:2938" ph="SELECT * FRO... region" />
+            <marker date="1606933711712" expanded="true" signature="2908:2939" ph="SELECT * FRO... region" />
+            <marker date="1606933711712" expanded="true" signature="2908:2949" ph="SELECT * FRO... region" />
+            <marker date="1606933711712" expanded="true" signature="3050:3079" ph="UPDATE regio... " />
+            <marker date="1606933711712" expanded="true" signature="3050:3103" ph="UPDATE regio... " />
+            <marker date="1606933711712" expanded="true" signature="3050:3113" ph="UPDATE regio... " />
+            <marker date="1606933711712" expanded="true" signature="3050:3114" ph="UPDATE regio... " />
+            <marker date="1606933711712" expanded="true" signature="3407:3453" ph="SELECT * FRO... v_city" />
+            <marker date="1606933711712" expanded="true" signature="3667:3692" ph="SELECT FROM region... " />
+            <marker date="1606933711712" expanded="true" signature="3667:3702" ph="SELECT FROM region... " />
+            <marker date="1606933711712" expanded="true" signature="3667:3728" ph="SELECT FROM region... " />
+            <marker date="1606933711712" expanded="true" signature="3667:3736" ph="SELECT FROM region... " />
+            <marker date="1606933711712" expanded="true" signature="3827:3851" ph="INSERT INTO region... " />
+            <marker date="1606933711712" expanded="true" signature="3827:3861" ph="INSERT INTO region... " />
+            <marker date="1606933711712" expanded="true" signature="3827:3889" ph="INSERT INTO region... " />
+            <marker date="1606933711712" expanded="true" signature="3966:3992" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="3966:3993" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="4075:4095" ph="SELECT * FRO... v_city" />
+            <marker date="1606933711712" expanded="true" signature="4075:4105" ph="SELECT * FRO... v_city" />
+            <marker date="1606933711712" expanded="true" signature="4075:4106" ph="SELECT * FRO... v_city" />
+            <marker date="1606933711712" expanded="true" signature="4075:4116" ph="SELECT * FRO... v_city" />
+            <marker date="1606933711712" expanded="true" signature="4214:4273" ph="UPDATE city " />
+            <marker date="1606933711712" expanded="true" signature="4214:4274" ph="UPDATE city " />
+            <marker date="1606933711712" expanded="true" signature="4667:4715" ph="SELECT * FRO... v_street" />
+            <marker date="1606933711712" expanded="true" signature="4960:4995" ph="SELECT * FRO... street" />
+            <marker date="1606933711712" expanded="true" signature="4960:4996" ph="SELECT * FRO... street" />
+            <marker date="1606933711712" expanded="true" signature="4960:5019" ph="SELECT * FRO... street" />
+            <marker date="1606933711712" expanded="true" signature="4960:5027" ph="SELECT * FRO... street" />
+            <marker date="1606933711712" expanded="true" signature="5118:5135" ph="INSERT INTO stree... " />
+            <marker date="1606933711712" expanded="true" signature="5118:5152" ph="INSERT INTO street... " />
+            <marker date="1606933711712" expanded="true" signature="5118:5178" ph="INSERT INTO street... " />
+            <marker date="1606933711712" expanded="true" signature="5261:5279" ph="SELECT * FRO... v_st" />
+            <marker date="1606933711712" expanded="true" signature="5261:5294" ph="SELECT * FRO... v_street" />
+            <marker date="1606933711712" expanded="true" signature="5261:5304" ph="SELECT * FRO... v_street" />
+            <marker date="1606933711712" expanded="true" signature="5402:5428" ph="UPDATE stree... " />
+            <marker date="1606933711712" expanded="true" signature="5402:5429" ph="UPDATE stree... " />
+            <marker date="1606933711712" expanded="true" signature="5402:5449" ph="UPDATE stree... " />
+            <marker date="1606933711712" expanded="true" signature="5402:5459" ph="UPDATE stree... " />
+            <marker date="1606933711712" expanded="true" signature="5541:5569" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="6071:6118" ph="SELECT * FRO... v_hou" />
+            <marker date="1606933711712" expanded="true" signature="6395:6408" ph="SELECT * FRO... " />
+            <marker date="1606933711712" expanded="true" signature="6395:6431" ph="SELECT * FRO... house" />
+            <marker date="1606933711712" expanded="true" signature="6395:6432" ph="SELECT * FRO... house" />
+            <marker date="1606933711712" expanded="true" signature="6395:6457" ph="SELECT * FRO... house" />
+            <marker date="1606933711712" expanded="true" signature="6395:6465" ph="SELECT * FRO... house" />
+            <marker date="1606933711712" expanded="true" signature="6557:6620" ph="INSERT INTO house... " />
+            <marker date="1606933711712" expanded="true" signature="6702:6718" ph="SELECT * FRO... v_" />
+            <marker date="1606933711712" expanded="true" signature="6702:6733" ph="SELECT * FRO... v_house" />
+            <marker date="1606933711712" expanded="true" signature="6702:6734" ph="SELECT * FRO... v_house" />
+            <marker date="1606933711712" expanded="true" signature="6702:6744" ph="SELECT * FRO... v_house" />
+            <marker date="1606933711712" expanded="true" signature="6843:6870" ph="UPDATE house... " />
+            <marker date="1606933711712" expanded="true" signature="6843:6871" ph="UPDATE house... " />
+            <marker date="1606933711712" expanded="true" signature="6843:6886" ph="UPDATE house... " />
+            <marker date="1606933711712" expanded="true" signature="6843:6887" ph="UPDATE house... " />
+            <marker date="1606933711712" expanded="true" signature="6843:6901" ph="UPDATE house... " />
+            <marker date="1606933711712" expanded="true" signature="6843:6902" ph="UPDATE house... " />
+            <marker date="1606933711712" expanded="true" signature="6982:7009" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="6982:7010" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="7106:7160" ph="SELECT * FRO... classification" />
+            <marker date="1606933711712" expanded="true" signature="7267:7295" ph="SELECT * FRO... classification" />
+            <marker date="1606933711712" expanded="true" signature="7267:7314" ph="SELECT * FRO... classification" />
+            <marker date="1606933711712" expanded="true" signature="7267:7322" ph="SELECT * FRO... classification" />
+            <marker date="1606933711712" expanded="true" signature="7420:7487" ph="INSERT INTO classification... " />
+            <marker date="1606933711712" expanded="true" signature="7578:7616" ph="SELECT * FRO... classification" />
+            <marker date="1606933711712" expanded="true" signature="7578:7617" ph="SELECT * FRO... classification" />
+            <marker date="1606933711712" expanded="true" signature="7578:7627" ph="SELECT * FRO... classification" />
+            <marker date="1606933711712" expanded="true" signature="7732:7770" ph="UPDATE class... " />
+            <marker date="1606933711712" expanded="true" signature="7732:7786" ph="UPDATE class... " />
+            <marker date="1606933711712" expanded="true" signature="7732:7796" ph="UPDATE class... " />
+            <marker date="1606933711712" expanded="true" signature="7732:7797" ph="UPDATE class... " />
+            <marker date="1606933711712" expanded="true" signature="7886:7922" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="7886:7923" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="8146:8170" ph="SELECT * FRO... category" />
+            <marker date="1606933711712" expanded="true" signature="8146:8196" ph="SELECT * FRO... category" />
+            <marker date="1606933711712" expanded="true" signature="8391:8413" ph="SELECT * FRO... category" />
+            <marker date="1606933711712" expanded="true" signature="8391:8419" ph="SELECT * FRO... category" />
+            <marker date="1606933711712" expanded="true" signature="8391:8438" ph="SELECT * FRO... category" />
+            <marker date="1606933711712" expanded="true" signature="8391:8472" ph="SELECT * FRO... category" />
+            <marker date="1606933711712" expanded="true" signature="8391:8480" ph="SELECT * FRO... category" />
+            <marker date="1606933711712" expanded="true" signature="8591:8644" ph="INSERT INTO category... " />
+            <marker date="1606933711712" expanded="true" signature="8591:8690" ph="INSERT INTO category... " />
+            <marker date="1606933711712" expanded="true" signature="8775:8788" ph="SELECT * FRO... " />
+            <marker date="1606933711712" expanded="true" signature="8775:8818" ph="SELECT * FRO... category" />
+            <marker date="1606933711712" expanded="true" signature="8936:8974" ph="UPDATE categ... " />
+            <marker date="1606933711712" expanded="true" signature="8936:9005" ph="UPDATE categ... " />
+            <marker date="1606933711712" expanded="true" signature="8936:9031" ph="UPDATE categ... " />
+            <marker date="1606933711712" expanded="true" signature="8936:9032" ph="UPDATE categ... " />
+            <marker date="1606933711712" expanded="true" signature="9115:9145" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="9115:9146" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="9491:9544" ph="SELECT * FRO... v_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="9767:9799" ph="SELECT * FRO... subcategory" />
+            <marker date="1606933711712" expanded="true" signature="9767:9811" ph="SELECT * FRO... subcategory" />
+            <marker date="1606933711712" expanded="true" signature="9767:9812" ph="SELECT * FRO... subcategory" />
+            <marker date="1606933711712" expanded="true" signature="9767:9832" ph="SELECT * FRO... subcategory" />
+            <marker date="1606933711712" expanded="true" signature="9767:9847" ph="SELECT * FRO... subcategory" />
+            <marker date="1606933711712" expanded="true" signature="9955:9978" ph="INSERT INTO subcategory... " />
+            <marker date="1606933711712" expanded="true" signature="9955:10005" ph="INSERT INTO subcategory... " />
+            <marker date="1606933711712" expanded="true" signature="9955:10045" ph="INSERT INTO subcategory... " />
+            <marker date="1606933711712" expanded="true" signature="10133:10160" ph="SELECT * FRO... v_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="10133:10181" ph="SELECT * FRO... v_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="10296:10318" ph="UPDATE subca... " />
+            <marker date="1606933711712" expanded="true" signature="10296:10331" ph="UPDATE subca... " />
+            <marker date="1606933711712" expanded="true" signature="10296:10356" ph="UPDATE subca... " />
+            <marker date="1606933711712" expanded="true" signature="10296:10372" ph="UPDATE subca... " />
+            <marker date="1606933711712" expanded="true" signature="10296:10382" ph="UPDATE subca... " />
+            <marker date="1606933711712" expanded="true" signature="10296:10383" ph="UPDATE subca... " />
+            <marker date="1606933711712" expanded="true" signature="10469:10492" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="10469:10502" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="10990:11052" ph="SELECT * FRO... v_category_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="11318:11358" ph="SELECT * FRO... category_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="11318:11374" ph="SELECT * FRO... category_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="11318:11405" ph="SELECT * FRO... category_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="11318:11413" ph="SELECT * FRO... category_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="11532:11637" ph="INSERT INTO category_subcategory... " />
+            <marker date="1606933711712" expanded="true" signature="11733:11769" ph="SELECT * FRO... category_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="11733:11779" ph="SELECT * FRO... category_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="11733:11780" ph="SELECT * FRO... category_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="11733:11790" ph="SELECT * FRO... v_category_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="11916:11963" ph="UPDATE categ... " />
+            <marker date="1606933711712" expanded="true" signature="11916:11991" ph="UPDATE categ... " />
+            <marker date="1606933711712" expanded="true" signature="11916:12007" ph="UPDATE categ... " />
+            <marker date="1606933711712" expanded="true" signature="11916:12017" ph="UPDATE categ... " />
+            <marker date="1606933711712" expanded="true" signature="11916:12018" ph="UPDATE categ... " />
+            <marker date="1606933711712" expanded="true" signature="12112:12154" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="12112:12155" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="12249:12301" ph="SELECT * FRO... manufacturer" />
+            <marker date="1606933711712" expanded="true" signature="12406:12451" ph="SELECT * FRO... WHERE" />
+            <marker date="1606933711712" expanded="true" signature="12406:12459" ph="SELECT * FRO... manufacturer" />
+            <marker date="1606933711712" expanded="true" signature="12555:12593" ph="INSERT INTO manufacturer... " />
+            <marker date="1606933711712" expanded="true" signature="12555:12620" ph="INSERT INTO manufacturer... " />
+            <marker date="1606933711712" expanded="true" signature="12709:12746" ph="SELECT * FRO... manufacturer" />
+            <marker date="1606933711712" expanded="true" signature="12709:12756" ph="SELECT * FRO... manufacturer" />
+            <marker date="1606933711712" expanded="true" signature="12859:12911" ph="UPDATE manuf... " />
+            <marker date="1606933711712" expanded="true" signature="12859:12921" ph="UPDATE manuf... " />
+            <marker date="1606933711712" expanded="true" signature="12859:12922" ph="UPDATE manuf... " />
+            <marker date="1606933711712" expanded="true" signature="13009:13043" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="13660:13726" ph="SELECT * FRO... v_warehouse" />
+            <marker date="1606933711712" expanded="true" signature="14043:14072" ph="SELECT * FRO... warehouse" />
+            <marker date="1606933711712" expanded="true" signature="14043:14082" ph="SELECT * FRO... warehouse" />
+            <marker date="1606933711712" expanded="true" signature="14043:14122" ph="SELECT * FRO... warehouse" />
+            <marker date="1606933711712" expanded="true" signature="14043:14130" ph="SELECT * FRO... warehouse" />
+            <marker date="1606933711712" expanded="true" signature="14232:14278" ph="INSERT INTO warehouse... " />
+            <marker date="1606933711712" expanded="true" signature="14232:14312" ph="INSERT INTO warehouse... " />
+            <marker date="1606933711712" expanded="true" signature="14398:14411" ph="SELECT * FRO... " />
+            <marker date="1606933711712" expanded="true" signature="14398:14433" ph="SELECT * FRO... v_warehouse" />
+            <marker date="1606933711712" expanded="true" signature="14398:14434" ph="SELECT * FRO... v_warehouse" />
+            <marker date="1606933711712" expanded="true" signature="14398:14444" ph="SELECT * FRO... v_warehouse" />
+            <marker date="1606933711712" expanded="true" signature="14553:14573" ph="UPDATE wareh... " />
+            <marker date="1606933711712" expanded="true" signature="14553:14583" ph="UPDATE wareh... " />
+            <marker date="1606933711712" expanded="true" signature="14553:14620" ph="UPDATE wareh... " />
+            <marker date="1606933711712" expanded="true" signature="14553:14630" ph="UPDATE wareh... " />
+            <marker date="1606933711712" expanded="true" signature="14715:14746" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="14715:14747" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="14843:14897" ph="SELECT * FRO... characteristic" />
+            <marker date="1606933711712" expanded="true" signature="15004:15044" ph="SELECT * FRO... characteristic" />
+            <marker date="1606933711712" expanded="true" signature="15004:15059" ph="SELECT * FRO... characteristic" />
+            <marker date="1606933711712" expanded="true" signature="15149:15199" ph="INSERT INTO characteristic... " />
+            <marker date="1606933711712" expanded="true" signature="15290:15328" ph="SELECT * FRO... characteristic" />
+            <marker date="1606933711712" expanded="true" signature="15290:15329" ph="SELECT * FRO... characteristic" />
+            <marker date="1606933711712" expanded="true" signature="15290:15339" ph="SELECT * FRO... characteristic" />
+            <marker date="1606933711712" expanded="true" signature="15436:15474" ph="UPDATE chara... " />
+            <marker date="1606933711712" expanded="true" signature="15436:15484" ph="UPDATE chara... " />
+            <marker date="1606933711712" expanded="true" signature="15436:15485" ph="UPDATE chara... " />
+            <marker date="1606933711712" expanded="true" signature="15574:15600" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="15574:15610" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="15697:15715" ph="SELECT * FRO... unit" />
+            <marker date="1606933711712" expanded="true" signature="15697:15741" ph="SELECT * FRO... unit" />
+            <marker date="1606933711712" expanded="true" signature="15852:15870" ph="SELECT * FRO... unit" />
+            <marker date="1606933711712" expanded="true" signature="15852:15889" ph="SELECT * FRO... unit" />
+            <marker date="1606933711712" expanded="true" signature="15852:15925" ph="SELECT * FRO... unit" />
+            <marker date="1606933711712" expanded="true" signature="15852:15928" ph="SELECT * FRO... unit" />
+            <marker date="1606933711712" expanded="true" signature="16022:16038" ph="INSERT INTO unit... " />
+            <marker date="1606933711712" expanded="true" signature="16022:16091" ph="INSERT INTO unit... " />
+            <marker date="1606933711712" expanded="true" signature="16172:16200" ph="SELECT * FRO... unit" />
+            <marker date="1606933711712" expanded="true" signature="16172:16211" ph="SELECT * FRO... unit" />
+            <marker date="1606933711712" expanded="true" signature="16312:16340" ph="UPDATE unit " />
+            <marker date="1606933711712" expanded="true" signature="16312:16368" ph="UPDATE unit " />
+            <marker date="1606933711712" expanded="true" signature="16312:16378" ph="UPDATE unit " />
+            <marker date="1606933711712" expanded="true" signature="16312:16379" ph="UPDATE unit " />
+            <marker date="1606933711712" expanded="true" signature="16458:16484" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="16458:16485" ph="DELETE FROM " />
+            <marker date="1606933711712" expanded="true" signature="17309:17366" ph="SELECT * FRO... v_characteristic_category_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="17309:17401" ph="SELECT * FRO... v_characteristic_category_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="17762:17775" ph="SELECT * FRO... " />
+            <marker date="1606933711712" expanded="true" signature="17762:17776" ph="SELECT * FRO... ${$categorySubcategoryId}" />
+            <marker date="1606933711712" expanded="true" signature="17762:17836" ph="SELECT * FRO... characteristic_category_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="17762:17883" ph="SELECT * FRO... characteristic_category_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="17762:17914" ph="SELECT * FRO... characteristic_category_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="18059:18106" ph="INSERT INTO characteristic_category_subcategory... " />
+            <marker date="1606933711712" expanded="true" signature="18059:18202" ph="INSERT INTO characteristic_category_subcategory... " />
+            <marker date="1606933711712" expanded="true" signature="18312:18373" ph="SELECT * FRO... characteristic_category_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="18312:18374" ph="SELECT * FRO... characteristic_category_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="18312:18384" ph="SELECT * FRO... characteristic_category_subcategory" />
+            <marker date="1606933711712" expanded="true" signature="18536:18601" ph="UPDATE chara... " />
+            <marker date="1606933711712" expanded="true" signature="18536:18644" ph="UPDATE chara... " />
+            <marker date="1606933711712" expanded="true" signature="18536:18676" ph="UPDATE chara... " />
+            <marker date="1606933711712" expanded="true" signature="18536:18677" ph="UPDATE chara... " />
+            <marker date="1606933711712" expanded="true" signature="18785:18842" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/CategorySubcategory/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="25" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Unit/Index.php">
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/Index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-537">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="374">
+          <caret line="65" column="61" lean-forward="true" selection-start-line="65" selection-start-column="61" selection-end-line="65" selection-end-column="61" />
           <folding />
         </state>
       </provider>

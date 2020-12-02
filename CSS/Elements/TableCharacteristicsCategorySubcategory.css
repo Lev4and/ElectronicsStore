@@ -1,0 +1,21 @@
+.characteristics-category-subcategory{
+    width: 100%;
+    font-size: larger;
+    font-family: Arial;
+}
+.table-characteristics-category-subcategory{
+    margin: 0 auto;
+}
+.table-characteristics-category-subcategory th{
+    text-align: center;
+}
+.table-characteristics-category-subcategory td{
+    text-align: left;
+}
+.table-characteristics-category-subcategory .select{
+    text-align: center;
+}
+.table-characteristics-category-subcategory .table-characteristics-category-subcategory-row-values{
+    height: 50px;
+    max-height: 50px;
+}
