@@ -12,17 +12,20 @@ $classifications = QueryExecutor::getInstance()->getClassifications("");
 <head>
     <meta charset="UTF-8">
     <title>ElectronicsStore - Добавление категории подкатегории</title>
+    <link rel="stylesheet" href="/CSS/Pages/Main.css">
     <link rel="stylesheet" href="/CSS/Pages/AddCategorySubcategory.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
+    <link rel="stylesheet" href="/CSS/Elements/Form.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
     <link rel="stylesheet" href="/Resources/Fonts/Font%20Awesome/css/all.min.css">
     <script src="/JS/JQuery.js"></script>
     <script src="/JS/CategoriesSubcategory.js"></script>
+    <script src="/JS/UnloadFile.js"></script>
 </head>
 <body>
 <div class="main">
@@ -35,15 +38,22 @@ $classifications = QueryExecutor::getInstance()->getClassifications("");
             <div class="header-block">
                 <h1>Добавление подкатегории</h1>
             </div>
-            <form action="http://electronicsstore/Views/Pages/Administrator/CategorySubcategory/" method="post" enctype="multipart/form-data">
-                <div class="form-block">
-                    <table class="form-block-table">
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-label">
-                                <label>Укажите классификацию:</label>
-                            </td>
-                            <td class="form-block-table-td-field">
-                                <div>
+            <div class="form-block">
+                <form action="http://electronicsstore/Views/Pages/Administrator/CategorySubcategory/" method="post" enctype="multipart/form-data">
+                    <div class="form-block-image-block">
+                        <div class="form-block-image-block-container">
+                            <img id="category-subcategory-photo" name="photo">
+                        </div>
+                    </div>
+                    <div class="form-block-inputs">
+                        <div class="form-block-row">
+                            <div id="form-block-row-column-label" class="form-block-row-column">
+                                <div class="form-block-row-column-label">
+                                    <label>Укажите классификацию:</label>
+                                </div>
+                            </div>
+                            <div id="form-block-row-column-input" class="form-block-row-column">
+                                <div class="form-block-row-column-input-select">
                                     <select id="select-classifications" name="classificationId" onchange="onChangeSelectedClassifications(this);">
                                         <option value="">Выберите классификацию</option>
                                         <?php foreach ($classifications as $classification): ?>
@@ -51,55 +61,59 @@ $classifications = QueryExecutor::getInstance()->getClassifications("");
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
-                            </td>
-                            <td class="form-block-table-td-image" rowspan="4">
-                                <img id="category-subcategory-photo" name="photo">
-                            </td>
-                        </tr>
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-label">
-                                <label>Укажите категорию:</label>
-                            </td>
-                            <td class="form-block-table-td-field">
-                                <div>
+                            </div>
+                        </div>
+                        <div class="form-block-row">
+                            <div id="form-block-row-column-label" class="form-block-row-column">
+                                <div class="form-block-row-column-label">
+                                    <label>Укажите категорию:</label>
+                                </div>
+                            </div>
+                            <div id="form-block-row-column-input" class="form-block-row-column">
+                                <div class="form-block-row-column-input-select">
                                     <select id="select-categories" name="categoryId" onchange="onChangeSelectedCategories(this);">
 
                                     </select>
                                 </div>
-                            </td>
-                        </tr>
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-label">
-                                <label>Укажите подкатегорию:</label>
-                            </td>
-                            <td class="form-block-table-td-field">
-                                <div>
+                            </div>
+                        </div>
+                        <div class="form-block-row">
+                            <div id="form-block-row-column-label" class="form-block-row-column">
+                                <div class="form-block-row-column-label">
+                                    <label>Укажите подкатегорию:</label>
+                                </div>
+                            </div>
+                            <div id="form-block-row-column-input" class="form-block-row-column">
+                                <div class="form-block-row-column-input-select">
                                     <select id="select-subcategories" name="subcategoryId">
 
                                     </select>
                                 </div>
-                            </td>
-                        </tr>
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-label">
-                                <label>Введите название категории подкатегории:</label>
-                            </td>
-                            <td class="form-block-table-td-field">
-                                <div>
+                            </div>
+                        </div>
+                        <div class="form-block-row">
+                            <div id="form-block-row-column-label" class="form-block-row-column">
+                                <div class="form-block-row-column-label">
+                                    <label>Введите название категории подкатегории:</label>
+                                </div>
+                            </div>
+                            <div id="form-block-row-column-input" class="form-block-row-column">
+                                <div class="form-block-row-column-input-text">
                                     <input type="text" name="name" value="">
                                 </div>
-                            </td>
-                        </tr>
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-button" colspan="3">
-                                <script src="/JS/UnloadFile.js"></script>
-                                <input class="action-button" id="add-button" type="submit" name="action" value="Записать"/>
-                                <input id="select-file" type="file" name="selectedImage" accept="image/*" onchange="onChangeSelectedFile('select-file' , 'category-subcategory-photo');">
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-block-actions">
+                        <div class="form-block-actions-button">
+                            <input class="action-button" id="add-button" type="submit" name="action" value="Записать"/>
+                        </div>
+                        <div class="form-block-actions-select-file">
+                            <input id="select-file" type="file" name="selectedImage" accept="image/*" onchange="onChangeSelectedFile('select-file' , 'category-subcategory-photo');">
+                        </div>
+                    </div>
+                </form>
+            </div>
             <?php VisibleError::showError(); ?>
         <?php else: ?>
             <?php Access::denyAccess(); ?>

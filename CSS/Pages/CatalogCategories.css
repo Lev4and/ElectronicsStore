@@ -1,15 +1,3 @@
-.main{
-    margin: 0 auto;
-}
-.content{
-    padding-left: 10%;
-    padding-right: 10%;
-}
-.header-block{
-    color: orange;
-    text-align: center;
-    font-family: Arial;
-}
 .categories-block{
     display: flex;
     flex-wrap: wrap;

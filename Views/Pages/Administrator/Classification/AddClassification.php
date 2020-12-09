@@ -10,15 +10,18 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
 <head>
     <meta charset="UTF-8">
     <title>ElectronicsStore - Добавление классификации</title>
+    <link rel="stylesheet" href="/CSS/Pages/Main.css">
     <link rel="stylesheet" href="/CSS/Pages/AddClassification.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
+    <link rel="stylesheet" href="/CSS/Elements/Form.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
     <link rel="stylesheet" href="/Resources/Fonts/Font%20Awesome/css/all.min.css">
+    <script src="/JS/UnloadFile.js"></script>
 </head>
 <body>
 <div class="main">
@@ -31,32 +34,37 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
             <div class="header-block">
                 <h1>Добавление классификации</h1>
             </div>
-            <form action="http://electronicsstore/Views/Pages/Administrator/Classification/" method="post" enctype="multipart/form-data">
-                <div class="form-block">
-                    <table class="form-block-table">
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-label">
-                                <label>Введите название классификации:</label>
-                            </td>
-                            <td class="form-block-table-td-field">
-                                <div>
+            <div class="form-block">
+                <form action="http://electronicsstore/Views/Pages/Administrator/Classification/" method="post" enctype="multipart/form-data">
+                    <div class="form-block-image-block">
+                        <div class="form-block-image-block-container">
+                            <img id="classification-photo" name="photo">
+                        </div>
+                    </div>
+                    <div class="form-block-inputs">
+                        <div class="form-block-row">
+                            <div id="form-block-row-column-label" class="form-block-row-column">
+                                <div class="form-block-row-column-label">
+                                    <label>Введите название классификации:</label>
+                                </div>
+                            </div>
+                            <div id="form-block-row-column-input" class="form-block-row-column">
+                                <div class="form-block-row-column-input-text">
                                     <input type="text" name="name" value="">
                                 </div>
-                            </td>
-                            <td class="form-block-table-td-image">
-                                <img id="classification-photo" name="photo">
-                            </td>
-                        </tr>
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-button" colspan="3">
-                                <script src="/JS/UnloadFile.js"></script>
-                                <input class="action-button" id="add-button" type="submit" name="action" value="Записать"/>
-                                <input id="select-file" type="file" name="selectedImage" accept="image/*" onchange="onChangeSelectedFile('select-file' , 'classification-photo');">
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-block-actions">
+                        <div class="form-block-actions-button">
+                            <input class="action-button" id="add-button" type="submit" name="action" value="Записать"/>
+                        </div>
+                        <div class="form-block-actions-select-file">
+                            <input id="select-file" type="file" name="selectedImage" accept="image/*" onchange="onChangeSelectedFile('select-file' , 'classification-photo');">
+                        </div>
+                    </div>
+                </form>
+            </div>
             <?php VisibleError::showError(); ?>
         <?php else: ?>
             <?php Access::denyAccess(); ?>

@@ -10,13 +10,14 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
 <head>
     <meta charset="UTF-8">
     <title>ElectronicsStore - Характеристики</title>
+    <link rel="stylesheet" href="/CSS/Pages/Main.css">
     <link rel="stylesheet" href="/CSS/Pages/Characteristics.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
     <link rel="stylesheet" href="/CSS/Elements/Toolbar.css">
-    <link rel="stylesheet" href="/CSS/Elements/TableCharacteristics.css">
+    <link rel="stylesheet" href="/CSS/Elements/Table.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">

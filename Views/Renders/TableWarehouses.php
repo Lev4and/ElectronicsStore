@@ -1,15 +1,15 @@
-<div class="warehouses">
-    <table class="table-warehouses" border="1">
-        <tr class="table-warehouses-row-headers">
-            <th id="select" class="select">Выбрать</th>
-            <th id="warehouse-address" class="warehouse-address">Адрес</th>
-            <th id="warehouse-phone-number" class="warehouse-phone-number">Номер телефона</th>
+<div class="table-block">
+    <table border="1">
+        <tr class="table-block-headers">
+            <th class="table-block-header">Выбрать</th>
+            <th class="table-block-header">Адрес</th>
+            <th class="table-block-header">Номер телефона</th>
         </tr>
         <?php foreach ($warehouses as $warehouse): ?>
-            <tr id="<?php echo $warehouse["id"]; ?>" class="table-warehouses-row-values">
-                <td id="select" class="select"><input type="radio" name="selectedWarehouse" checked="checked" value="<?php echo $warehouse["id"]; ?>"></td>
-                <td id="warehouse-address" class="warehouse-address"><?php echo $warehouse["address"]; ?></td>
-                <td id="warehouse-phone-number" class="warehouse-phone-number"><?php echo $warehouse["phone_number"]; ?></td>
+            <tr id="<?php echo $warehouse["id"]; ?>" class="table-block-values">
+                <td class="table-block-value-input-radio"><input type="radio" name="selectedWarehouse" checked="checked" value="<?php echo $warehouse["id"]; ?>"></td>
+                <td class="table-block-value-text"><?php echo $warehouse["address"]; ?></td>
+                <td class="table-block-value-text"><?php echo $warehouse["phone_number"]; ?></td>
             </tr>
         <? endforeach; ?>
     </table>

@@ -12,11 +12,13 @@ $countries = QueryExecutor::getInstance()->getCountries("");
 <head>
     <meta charset="UTF-8">
     <title>ElectronicsStore - Добавление склада</title>
+    <link rel="stylesheet" href="/CSS/Pages/Main.css">
     <link rel="stylesheet" href="/CSS/Pages/AddWarehouse.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
+    <link rel="stylesheet" href="/CSS/Elements/Form.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
@@ -35,15 +37,17 @@ $countries = QueryExecutor::getInstance()->getCountries("");
             <div class="header-block">
                 <h1>Добавление склада</h1>
             </div>
-            <form action="http://electronicsstore/Views/Pages/Administrator/Warehouse/" method="post">
-                <div class="form-block">
-                    <table class="form-block-table">
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-label">
-                                <label>Укажите страну:</label>
-                            </td>
-                            <td class="form-block-table-td-field">
-                                <div>
+            <div class="form-block">
+                <form action="http://electronicsstore/Views/Pages/Administrator/Warehouse/" method="post">
+                    <div class="form-block-inputs">
+                        <div class="form-block-row">
+                            <div id="form-block-row-column-label" class="form-block-row-column">
+                                <div class="form-block-row-column-label">
+                                    <label>Укажите страну:</label>
+                                </div>
+                            </div>
+                            <div id="form-block-row-column-input" class="form-block-row-column">
+                                <div class="form-block-row-column-input-select">
                                     <select id="select-countries" name="countryId" onchange="onChangeSelectedCountries(this);">
                                         <option value="">Выберите страну</option>
                                         <?php foreach ($countries as $country): ?>
@@ -51,74 +55,84 @@ $countries = QueryExecutor::getInstance()->getCountries("");
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
-                            </td>
-                        </tr>
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-label">
-                                <label>Укажите регион:</label>
-                            </td>
-                            <td class="form-block-table-td-field">
-                                <div>
+                            </div>
+                        </div>
+                        <div class="form-block-row">
+                            <div id="form-block-row-column-label" class="form-block-row-column">
+                                <div class="form-block-row-column-label">
+                                    <label>Укажите регион:</label>
+                                </div>
+                            </div>
+                            <div id="form-block-row-column-input" class="form-block-row-column">
+                                <div class="form-block-row-column-input-select">
                                     <select id="select-regions" name="regionId" onchange="onChangeSelectedRegions(this);">
 
                                     </select>
                                 </div>
-                            </td>
-                        </tr>
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-label">
-                                <label>Укажите город:</label>
-                            </td>
-                            <td class="form-block-table-td-field">
-                                <div>
+                            </div>
+                        </div>
+                        <div class="form-block-row">
+                            <div id="form-block-row-column-label" class="form-block-row-column">
+                                <div class="form-block-row-column-label">
+                                    <label>Укажите город:</label>
+                                </div>
+                            </div>
+                            <div id="form-block-row-column-input" class="form-block-row-column">
+                                <div class="form-block-row-column-input-select">
                                     <select id="select-cities" name="cityId" onchange="onChangeSelectedCities(this);">
 
                                     </select>
                                 </div>
-                            </td>
-                        </tr>
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-label">
-                                <label>Укажите улицу:</label>
-                            </td>
-                            <td class="form-block-table-td-field">
-                                <div>
+                            </div>
+                        </div>
+                        <div class="form-block-row">
+                            <div id="form-block-row-column-label" class="form-block-row-column">
+                                <div class="form-block-row-column-label">
+                                    <label>Укажите улицу:</label>
+                                </div>
+                            </div>
+                            <div id="form-block-row-column-input" class="form-block-row-column">
+                                <div class="form-block-row-column-input-select">
                                     <select id="select-streets" name="streetId" onchange="onChangeSelectedStreets(this);">
 
                                     </select>
                                 </div>
-                            </td>
-                        </tr>
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-label">
-                                <label>Укажите дом:</label>
-                            </td>
-                            <td class="form-block-table-td-field">
-                                <div>
+                            </div>
+                        </div>
+                        <div class="form-block-row">
+                            <div id="form-block-row-column-label" class="form-block-row-column">
+                                <div class="form-block-row-column-label">
+                                    <label>Укажите дом:</label>
+                                </div>
+                            </div>
+                            <div id="form-block-row-column-input" class="form-block-row-column">
+                                <div class="form-block-row-column-input-select">
                                     <select id="select-houses" name="houseId">
 
                                     </select>
                                 </div>
-                            </td>
-                        </tr>
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-label">
-                                <label>Введите номер телефона:</label>
-                            </td>
-                            <td class="form-block-table-td-field">
-                                <div>
+                            </div>
+                        </div>
+                        <div class="form-block-row">
+                            <div id="form-block-row-column-label" class="form-block-row-column">
+                                <div class="form-block-row-column-label">
+                                    <label>Введите номер телефона:</label>
+                                </div>
+                            </div>
+                            <div id="form-block-row-column-input" class="form-block-row-column">
+                                <div class="form-block-row-column-input-text">
                                     <input type="text" name="phoneNumber" value="">
                                 </div>
-                            </td>
-                        </tr>
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-button" colspan="2">
-                                <input class="action-button" id="add-button" type="submit" name="action" value="Записать"/>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-block-actions">
+                        <div class="form-block-actions-button">
+                            <input class="action-button" id="add-button" type="submit" name="action" value="Записать"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
             <?php VisibleError::showError(); ?>
         <?php else: ?>
             <?php Access::denyAccess(); ?>

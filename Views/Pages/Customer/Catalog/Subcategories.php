@@ -13,6 +13,7 @@ $subcategoriesCategory = QueryExecutor::getInstance()->getSubcategories(null, $_
 <head>
     <meta charset="UTF-8">
     <title>ElectronicsStore - <?php echo $selectedCategory["name"]; ?></title>
+    <link rel="stylesheet" href="/CSS/Pages/Main.css">
     <link rel="stylesheet" href="/CSS/Pages/CatalogSubcategories.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">

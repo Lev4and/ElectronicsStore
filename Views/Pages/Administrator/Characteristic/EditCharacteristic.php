@@ -12,11 +12,13 @@ $characteristic = QueryExecutor::getInstance()->getCharacteristic($_GET["charact
 <head>
     <meta charset="UTF-8">
     <title>ElectronicsStore - Изменение данных о характеристики</title>
+    <link rel="stylesheet" href="/CSS/Pages/Main.css">
     <link rel="stylesheet" href="/CSS/Pages/EditCharacteristic.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
+    <link rel="stylesheet" href="/CSS/Elements/Form.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
@@ -33,27 +35,29 @@ $characteristic = QueryExecutor::getInstance()->getCharacteristic($_GET["charact
             <div class="header-block">
                 <h1>Добавление характеристики</h1>
             </div>
-            <form action="http://electronicsstore/Views/Pages/Administrator/Characteristic/?characteristicId=<?php echo $_GET["characteristicId"]; ?>" method="post">
-                <div class="form-block">
-                    <table class="form-block-table">
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-label">
-                                <label>Введите название характеристики:</label>
-                            </td>
-                            <td class="form-block-table-td-field">
-                                <div>
+            <div class="form-block">
+                <form action="http://electronicsstore/Views/Pages/Administrator/Characteristic/?characteristicId=<?php echo $_GET["characteristicId"]; ?>" method="post">
+                    <div class="form-block-inputs">
+                        <div class="form-block-row">
+                            <div id="form-block-row-column-label" class="form-block-row-column">
+                                <div class="form-block-row-column-label">
+                                    <label>Введите название характеристики:</label>
+                                </div>
+                            </div>
+                            <div id="form-block-row-column-input" class="form-block-row-column">
+                                <div class="form-block-row-column-input-text">
                                     <input type="text" name="name" value="<?php echo $characteristic["name"]; ?>">
                                 </div>
-                            </td>
-                        </tr>
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-button" colspan="2">
-                                <input class="action-button" id="add-button" type="submit" name="action" value="Сохранить"/>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-block-actions">
+                        <div class="form-block-actions-button">
+                            <input class="action-button" id="add-button" type="submit" name="action" value="Сохранить"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
             <?php VisibleError::showError(); ?>
         <?php else: ?>
             <?php Access::denyAccess(); ?>

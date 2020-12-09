@@ -1,21 +1,21 @@
-<div class="houses">
-    <table class="table-houses" border="1">
-        <tr class="table-houses-row-headers">
-            <th id="select" class="select">Выбрать</th>
-            <th id="country-name" class="country-name">Страна</th>
-            <th id="region-name" class="region-name">Регион</th>
-            <th id="city-name" class="city-name">Город</th>
-            <th id="street-name" class="street-name">Улица</th>
-            <th id="house-name" class="house-name">Название</th>
+<div class="table-block">
+    <table border="1">
+        <tr class="table-block-headers">
+            <th class="table-block-header">Выбрать</th>
+            <th class="table-block-header">Страна</th>
+            <th class="table-block-header">Регион</th>
+            <th class="table-block-header">Город</th>
+            <th class="table-block-header">Улица</th>
+            <th class="table-block-header">Название</th>
         </tr>
         <?php foreach ($houses as $house): ?>
-            <tr id="<?php echo $house["id"]; ?>" class="table-houses-row-values">
-                <td id="select" class="select"><input type="radio" name="selectedHouse" checked="checked" value="<?php echo $house["id"]; ?>"></td>
-                <td id="country-name" class="country-name"><?php echo $house["country_name"]; ?></td>
-                <td id="region-name" class="region-name"><?php echo $house["region_name"]; ?></td>
-                <td id="city-name" class="city-name"><?php echo $house["city_name"]; ?></td>
-                <td id="street-name" class="street-name"><?php echo $house["street_name"]; ?></td>
-                <td id="house-name" class="house-name"><?php echo $house["name"]; ?></td>
+            <tr id="<?php echo $house["id"]; ?>" class="table-block-values">
+                <td class="table-block-value-input-radio"><input type="radio" name="selectedHouse" checked="checked" value="<?php echo $house["id"]; ?>"></td>
+                <td class="table-block-value-text"><?php echo $house["country_name"]; ?></td>
+                <td class="table-block-value-text"><?php echo $house["region_name"]; ?></td>
+                <td class="table-block-value-text"><?php echo $house["city_name"]; ?></td>
+                <td class="table-block-value-text"><?php echo $house["street_name"]; ?></td>
+                <td class="table-block-value-text"><?php echo $house["name"]; ?></td>
             </tr>
         <? endforeach; ?>
     </table>

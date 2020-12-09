@@ -1,104 +1,198 @@
-footer{
-    padding-left: 10%;
-    padding-right: 10%;
+.footer{
+    color: white;
+    height: 490px;
     font-size: larger;
     font-family: Arial;
     background-color: #333333;
 }
+.footer .footer-content{
+    height: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
 .footer-top{
-    height: 90px;
-    border: solid;
-    border-color: white;
-    border-width: 0 0 1px 0;
-}
-.footer-top-logo{
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-    flex-direction: row;
-    display: flex;
-}
-.footer-top-logo > img{
-    margin: 10px 0;
-    height: 70px;
-    background-color: white;
-    border: solid black 1px;
-    border-radius: 10px;
-}
-.footer-middle-table{
-    height: 300px;
     width: 100%;
-    border: solid;
-    border-color: white;
-    border-width: 0 0 1px 0;
+    height: 90px;
+    display: flex;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 90px;
+    flex-direction: row;
+    vertical-align: middle;
+    justify-content: center;
 }
-.footer-middle-table .footer-middle-table-tr-headers{
-    height: 40px;
+.footer-top .footer-top-logo{
+    height: 90%;
+    margin: auto;
+    display: flex;
+    max-height: 90%;
+    flex-direction: row;
+    vertical-align: middle;
 }
-.footer-middle-table .footer-middle-table-tr-headers th{
-    vertical-align: top;
-    text-align: left;
+.footer-top .footer-top-logo img{
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    border: solid black 1px;
+    background-color: white;
+}
+.footer .footer-content .footer-middle{
+    width: 100%;
+    height: 350px;
+    max-width: 100%;
+    max-height: 350px;
+    border: solid white;
+    border-width: 1px 0 1px 0;
+}
+.footer .footer-content .footer-middle .footer-middle-sections{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer .footer-content .footer-middle .footer-middle-sections .footer-middle-section{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    max-height: 100%;
+    vertical-align: middle;
+}
+.footer .footer-content .footer-middle .footer-middle-sections .footer-middle-section span{
     color: white;
+    font-weight: bold;
 }
-.footer-middle-table .footer-middle-table-tr-content td{
-    color: white;
-    vertical-align: top;
-}
-.footer-middle-table .footer-middle-table-tr-content td ul,
-.footer-middle-table .footer-middle-table-tr-content td li{
+.footer .footer-content .footer-middle .footer-middle-sections #footer-middle-section-links-block ul{
+    margin: 0;
     padding: 0;
-    margin: 5px 0;
+    margin: 10px 0;
     list-style: none;
 }
-.footer-middle-table .footer-middle-table-tr-content td li:hover{
-    color: lime;
+.footer .footer-content .footer-middle .footer-middle-sections #footer-middle-section-links-block ul li:nth-child(2n +1){
+    margin: 15px 0;
 }
-.footer-bottom{
+.footer .footer-content .footer-middle .footer-middle-sections #footer-middle-section-links-block a{
     color: white;
-    text-align: center;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    text-decoration: none;
 }
-.footer-middle-links-on-contacts-table{
-    width: 300px;
-    height: 60px;
+.footer .footer-content .footer-middle .footer-middle-sections #footer-middle-section-links-block a:hover{
+    color: lime;
 }
-.footer-middle-links-on-contacts-table .footer-middle-links-on-contacts-table-tr{
-    height: 60px;
+.footer .footer-content .footer-middle .footer-middle-sections #footer-middle-section-contacts{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
 }
-.footer-middle-links-on-contacts-table .footer-middle-links-on-contacts-table-tr .footer-middle-links-on-contacts-table-td{
-    text-align: center;
-}
-.footer-middle-links-on-contacts-table .footer-middle-links-on-contacts-table-tr .footer-middle-links-on-contacts-table-td img{
-    height: 50px;
-    margin: 5px 10px 5px 0;
-    border-radius: 10px;
-    border: solid white 1px;
-}
-.footer-middle-links-on-contacts-table .footer-middle-links-on-contacts-table-tr .footer-middle-links-on-contacts-table-td #footer-middle-links-on-contacts-contact-image-youTube{
-    margin-left: 0;
-    margin-right: 10px;
-}
-.footer-middle-links-on-contacts-table .footer-middle-links-on-contacts-table-tr .footer-middle-links-on-contacts-table-td img:hover{
-    background-color: lime;
-}
-.footer-middle-contacts-mailing .footer-middle-contacts-mailing-form{
+.footer .footer-content .footer-middle .footer-middle-sections #footer-middle-section-contacts .footer-middle-section-contacts-links-block{
     width: 100%;
-    height: 60px;
-    padding: 5px 0;
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
 }
-.footer-middle-contacts-mailing .footer-middle-contacts-mailing-form .footer-middle-contacts-mailing-email{
-    width: 90%;
+.footer .footer-content .footer-middle .footer-middle-sections #footer-middle-section-contacts .footer-middle-section-contacts-links-block .footer-middle-section-contacts-links{
+    width: 100%;
     height: 50px;
-    text-align: left;
-    font-size: larger;
-    border-radius: 10px;
-}
-.footer-middle-contacts-mailing .footer-middle-contacts-mailing-form .footer-middle-contacts-mailing-icon:hover{
-    color: lime;
-}
-.footer-middle-contacts-phone-number-and-time,
-.footer-middle-contacts-shops{
+    display: flex;
+    margin: 0 auto;
     margin: 10px 0;
+    max-width: 100%;
+    max-height: 50px;
+    flex-direction: row;
+    justify-content: flex-start;
 }
-.footer-middle-contacts-shops:hover{
-    color: lime;
+.footer .footer-content .footer-middle .footer-middle-sections #footer-middle-section-contacts .footer-middle-section-contacts-links-block .footer-middle-section-contacts-links .footer-middle-section-contacts-link{
+    height: 100%;
+    display: flex;
+    max-height: 100%;
+    vertical-align: middle;
+    border: solid black 1px;
+}
+.footer .footer-content .footer-middle .footer-middle-sections #footer-middle-section-contacts .footer-middle-section-contacts-links-block .footer-middle-section-contacts-links .footer-middle-section-contacts-link:hover{
+    background-color: yellow;
+}
+.footer .footer-content .footer-middle .footer-middle-sections #footer-middle-section-contacts .footer-middle-section-contacts-links-block .footer-middle-section-contacts-links .footer-middle-section-contacts-link:nth-child(2n){
+    margin: 0 10px;
+}
+.footer .footer-content .footer-middle .footer-middle-sections #footer-middle-section-contacts .footer-middle-section-contacts-links-block .footer-middle-section-contacts-links .footer-middle-section-contacts-link img{
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.footer .footer-content .footer-middle .footer-middle-sections .footer-middle-section .footer-middle-section-contacts-mailing .footer-middle-section-contacts-mailing-form{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin: 10px 0;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer .footer-content .footer-middle .footer-middle-sections .footer-middle-section .footer-middle-section-contacts-mailing .footer-middle-section-contacts-mailing-form .footer-middle-section-contacts-mailing-form-input-container{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    border-radius: 10px;
+    border: solid black 1px;
+}
+.footer .footer-content .footer-middle .footer-middle-sections .footer-middle-section .footer-middle-section-contacts-mailing .footer-middle-section-contacts-mailing-form .footer-middle-section-contacts-mailing-form-input-container input{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: black;
+    border: none;
+    font-weight: bold;
+    font-size: larger;
+    font-family: Arial;
+}
+.footer .footer-content .footer-middle .footer-middle-sections .footer-middle-section .footer-middle-section-contacts-mailing .footer-middle-section-contacts-mailing-form .footer-middle-section-contacts-mailing-form-icon-button-container{
+    height: 100%;
+    display: flex;
+    margin: 0 10px;
+    max-height: 100%;
+    vertical-align: middle;
+}
+.footer .footer-content .footer-middle .footer-middle-sections .footer-middle-section .footer-middle-section-contacts-mailing .footer-middle-section-contacts-mailing-form .footer-middle-section-contacts-mailing-form-icon-button-container span{
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    font-weight: bold;
+    font-size: larger;
+    font-family: Arial;
+}
+.footer .footer-content .footer-middle .footer-middle-sections .footer-middle-section .footer-middle-section-contacts-mailing .footer-middle-section-contacts-mailing-form .footer-middle-section-contacts-mailing-form-icon-button-container span a{
+    color: white;
+    text-decoration: none;
+}
+.footer .footer-content .footer-middle .footer-middle-sections .footer-middle-section .footer-middle-section-contacts-mailing .footer-middle-section-contacts-mailing-form .footer-middle-section-contacts-mailing-form-icon-button-container span:hover > a{
+    color: red;
+}
+.footer .footer-content .footer-middle .footer-middle-sections .footer-middle-section .footer-middle-section-contacts-data-block ul{
+    margin: 0;
+    padding: 0;
+    margin: 10px 0;
+    list-style: none;
+}
+.footer .footer-content .footer-middle .footer-middle-sections .footer-middle-section .footer-middle-section-contacts-data-block ul li:nth-child(2n + 1){
+    margin: 15px 0;
+}
+.footer .footer-content .footer-bottom{
+    height: 50px;
+    display: flex;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+}
+.footer .footer-content .footer-bottom span{
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
 }

@@ -1,121 +1,89 @@
 header{
-    position: sticky;
     top: 0;
     min-height: 2em;
+    position: sticky;
     font-size: larger;
     font-family: Arial;
 }
 .header-top{
     height: 30px;
+    display: flex;
+    flex-wrap: wrap;
     max-height: 30px;
     padding-left: 10%;
     padding-right: 10%;
+    flex-direction: row;
     background-color: orange;
-}
-.header-top-table{
-    min-width: 100%;
-    min-height: 30px;
-}
-.header-top-table-tr{
-    min-width: 100%;
-    min-height: 30px;
-    max-height: 30px;
-}
-.header-top-table-tr td{
-    min-width: 33%;
-    max-width: 33%;
-    min-height: 30px;
-    max-height: 30px;
-}
-.header-top-location{
-    color: white;
-    text-align: center;
-    justify-content: flex-start;
-    align-content: center;
-    flex-direction: row;
-    display: flex;
-}
-.header-top-location > .header-top-location-city{
-    text-align: center;
-    vertical-align: middle;
-}
-.header-top-location-icon{
-    min-height: 20px;
-    max-height: 20px;
-    text-align: center;
-    vertical-align: middle;
-}
-.header-top-information{
-    color: white;
-    text-align: center;
     justify-content: space-between;
-    align-content: center;
-    flex-direction: row;
+}
+.header-top .header-top-location{
+    height: 100%;
     display: flex;
-}
-.header-top-information-icon{
-    min-height: 20px;
-    max-height: 20px;
-    text-align: center;
+    max-height: 100%;
     vertical-align: middle;
+    flex-direction: inherit;
 }
-.header-top-information > .header-top-information-shops,
-.header-top-information > .header-top-information-buyers,
-.header-top-information > .header-top-information-about-the-site{
-    text-align: center;
-    vertical-align: center;
+.header-top .header-top-location a{
+    margin: auto;
+    width: 100%;
 }
-.header-top-contact-information{
-    color: white;
-    text-align: center;
-    justify-content: flex-end;
-    align-content: center;
-    flex-direction: row;
+.header-top .header-top-information{
+    width: 50%;
+    height: 100%;
     display: flex;
-}
-.header-top-contact-information > .header-top-contact-information-phone-number{
-    text-align: center;
+    max-width: 50%;
+    max-height: 100%;
     vertical-align: middle;
+    justify-content: space-between;
 }
-.header-top-location-city:hover,
-.header-top-information-shops:hover,
-.header-top-information-buyers:hover,
-.header-top-information-about-the-site:hover,
-.header-top-contact-information-phone-number:hover{
-    color: lime;
-}
-.header-top-information-buyers ul,
-.header-top-information-buyers ol{
+.header-top .header-top-information ul{
     margin: 0;
     padding: 0;
-    position: absolute;
-    min-width: 250px;
-    max-width: 250px;
-    z-index: 1;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
+    width: 100%;
+    display: flex;
+    max-width: 100%;
+    list-style: none;
+    flex-direction: row;
+    vertical-align: middle;
+    justify-content: space-between;
+}
+.header-top .header-top-information ul li{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+.header-top .header-top-information ul li a{
+    margin: auto;
+    color: black;
+    max-width: 100%;
+    max-height: 100%;
+    text-decoration: none;
+}
+.header-top .header-top-information ul li ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
     display: none;
-}
-.header-top-information-buyers ul li{
-    min-height: 30px;
-    max-height: 30px;
-    min-width: 250px;
-    max-width: 250px;
-    padding: 10px;
-    border: solid white 1px;
-    text-align: left;
-    text-transform: none;
-    color: white;
-    background-color: orange;
+    max-width: 100%;
+    list-style: none;
     flex-direction: column;
-    display: block;
+    vertical-align: middle;
+    justify-content: space-between;
 }
-.header-top-information-buyers ul li:hover{
-    color: lime;
+.header-top .header-top-contacts{
+    height: 100%;
+    display: flex;
+    max-height: 100%;
+    vertical-align: middle;
+    flex-direction: inherit;
 }
-.header-top-information-buyers:hover > ul{
-    display: block;
+.header-top .header-top-contacts .header-top-contacts-phone{
+    margin: auto;
+    width: 100%;
 }
 .container{
     height: 70px;
@@ -123,99 +91,146 @@ header{
     border: solid black 1px;
     padding-left: 10%;
     padding-right: 10%;
-}
-.container-table{
-    min-width: 100%;
-    min-height: 70px;
-}
-.container-table-tr{
-    min-width: 100%;
-    min-height: 70px;
-    max-height: 70px;
-}
-.container-table-tr td{
-    min-height: 70px;
-    max-height: 70px;
-}
-.container-table-td-logo{
-    min-width: 10%;
-    max-width: 10%;
-}
-.container-table-td-catalog{
-    min-width: 20%;
-    max-width: 20%;
-}
-.container-table-td-input-search{
-    min-width: 25%;
-    max-width: 25%;
-}
-.container-table-td-buttons{
-    min-width: 20%;
-    max-width: 20%;
-}
-.container-table-td-login-or-user{
-    min-width: 25%;
-    max-width: 25%;
-}
-.container-logo{
-    text-align: center;
-    justify-content: flex-start;
-    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
     flex-direction: row;
+    justify-content: space-between;
+}
+.container .container-logo{
+    width: 5%;
+    height: 100%;
     display: flex;
+    max-width: 5%;
+    max-height: 100%;
+    vertical-align: middle;
+    justify-content: inherit;
 }
-.container-catalog{
-    text-align: center;
+.container .container-logo a{
+    margin: auto;
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+    justify-content: inherit;
 }
-.container-catalog-button{
+.container .container-logo a img{
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.container .container-catalog{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    max-width: 20%;
+    max-height: 100%;
+    vertical-align: middle;
+    justify-content: inherit;
+}
+.container .container-catalog button{
+    height: 80%;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
     font-size: larger;
+    font-family: Arial;
     border-radius: 10px;
-    min-width: 80%;
-    max-width: 80%;
-    min-height: 50px;
-    max-height: 50px;
 }
-.container-catalog-button:hover{
+.container .container-catalog button:hover{
     background-color: orange;
     color: white;
 }
-.container-logo a,
-.container-logo img{
-    min-height: 70px;
-    max-height: 70px;
+.container .container-search{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    max-width: 35%;
+    max-height: 100%;
+    vertical-align: middle;
+    justify-content: space-between;
 }
-.container-search-input-search{
-    text-align: left;
-    min-width: 90%;
-    max-width: 90%;
-    min-height: 50px;
-    max-height: 50px;
+.container .container-search .container-search-input{
+    margin: auto;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+    justify-content: inherit;
+}
+.container .container-search .container-search-input input[type=search]{
+    width: 100%;
+    height: 80%;
+    margin: auto;
+    max-width: 100%;
+    max-height: 80%;
     font-size: larger;
+    font-family: Arial;
     border-radius: 10px;
 }
-.container-buttons{
-    text-align: center;
+.container .container-search .container-search-button{
+    margin: auto;
+    height: 100%;
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+    justify-content: inherit;
 }
-.container-buttons-basket:hover{
-    color: lime;
+.container .container-search .container-search-button i{
+    margin: auto;
 }
-.container-login{
+.container .container-actions{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    max-width: 20%;
+    max-height: 100%;
+    vertical-align: middle;
+    justify-content: space-between;
+}
+.container .container-actions .container-action{
+    margin: auto;
+    height: 100%;
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+    justify-content: inherit;
+}
+.container .container-actions .container-action a{
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.container .container-login-or-menu-user{
+    width: 20%;
+    height: 100%;
+    max-width: 20%;
+    max-height: 100%;
+}
+.container .container-login-or-menu-user .container-login{
+    height: 100%;
+    display: grid;
+    max-width: 100%;
+    max-height: 100%;
     text-align: right;
+    flex-direction: row;
+    vertical-align: middle;
     justify-content: flex-end;
-    align-content: center;
-    flex-direction: column;
-    display: flex;
 }
-.container-login-button{
+.container .container-login-or-menu-user .container-login button{
+    height: 80%;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
     font-size: larger;
+    font-family: Arial;
     border-radius: 10px;
-    min-height: 50px;
-    max-height: 50px;
 }
-.container-login-button:hover{
+.container .container-login-or-menu-user .container-login button:hover{
     background-color: orange;
     color: white;
-}
-.container-buttons-count-products-in-basket{
-    color: orange;
 }

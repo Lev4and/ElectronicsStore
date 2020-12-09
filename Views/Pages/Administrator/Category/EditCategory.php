@@ -13,15 +13,18 @@ $classifications = QueryExecutor::getInstance()->getClassifications("");
 <head>
     <meta charset="UTF-8">
     <title>ElectronicsStore - Изменение данных о категории</title>
+    <link rel="stylesheet" href="/CSS/Pages/Main.css">
     <link rel="stylesheet" href="/CSS/Pages/EditCategory.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
+    <link rel="stylesheet" href="/CSS/Elements/Form.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
     <link rel="stylesheet" href="/Resources/Fonts/Font%20Awesome/css/all.min.css">
+    <script src="/JS/UnloadFile.js"></script>
 </head>
 <body>
 <div class="main">
@@ -34,15 +37,22 @@ $classifications = QueryExecutor::getInstance()->getClassifications("");
             <div class="header-block">
                 <h1>Изменение данных о категории</h1>
             </div>
-            <form action="http://electronicsstore/Views/Pages/Administrator/Category/?categoryId=<?php echo $_GET["categoryId"]; ?>&photo=<?php echo $category["photo"]; ?>" method="post" enctype="multipart/form-data">
-                <div class="form-block">
-                    <table class="form-block-table">
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-label">
-                                <label>Укажите классификацию:</label>
-                            </td>
-                            <td class="form-block-table-td-field">
-                                <div>
+            <div class="form-block">
+                <form action="http://electronicsstore/Views/Pages/Administrator/Category/?categoryId=<?php echo $_GET["categoryId"]; ?>&photo=<?php echo $category["photo"]; ?>" method="post" enctype="multipart/form-data">
+                    <div class="form-block-image-block">
+                        <div class="form-block-image-block-container">
+                            <img id="category-photo" name="photo" src="<?php echo "http://electronicsstore/Resources/Images/Upload/" . $category["photo"]; ?>">
+                        </div>
+                    </div>
+                    <div class="form-block-inputs">
+                        <div class="form-block-row">
+                            <div id="form-block-row-column-label" class="form-block-row-column">
+                                <div class="form-block-row-column-label">
+                                    <label>Укажите классификацию:</label>
+                                </div>
+                            </div>
+                            <div id="form-block-row-column-input" class="form-block-row-column">
+                                <div class="form-block-row-column-input-select">
                                     <select id="select-classifications" name="classificationId">
                                         <option value="">Выберите классификацию</option>
                                         <?php foreach ($classifications as $classification): ?>
@@ -50,31 +60,31 @@ $classifications = QueryExecutor::getInstance()->getClassifications("");
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
-                            </td>
-                            <td class="form-block-table-td-image" rowspan="2">
-                                <img id="category-photo" name="photo" src="<?php echo "http://electronicsstore/Resources/Images/Upload/" . $category["photo"]; ?>">
-                            </td>
-                        </tr>
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-label">
-                                <label>Введите название категории:</label>
-                            </td>
-                            <td class="form-block-table-td-field">
-                                <div>
+                            </div>
+                        </div>
+                        <div class="form-block-row">
+                            <div id="form-block-row-column-label" class="form-block-row-column">
+                                <div class="form-block-row-column-label">
+                                    <label>Введите название категории:</label>
+                                </div>
+                            </div>
+                            <div id="form-block-row-column-input" class="form-block-row-column">
+                                <div class="form-block-row-column-input-text">
                                     <input type="text" name="name" value="<?php echo $category["name"]; ?>">
                                 </div>
-                            </td>
-                        </tr>
-                        <tr class="form-block-table-tr">
-                            <td class="form-block-table-td-button" colspan="3">
-                                <script src="/JS/UnloadFile.js"></script>
+                            </div>
+                        </div>
+                        <div class="form-block-actions">
+                            <div class="form-block-actions-button">
                                 <input class="action-button" id="add-button" type="submit" name="action" value="Сохранить"/>
+                            </div>
+                            <div class="form-block-actions-select-file">
                                 <input id="select-file" type="file" name="selectedImage" accept="image/*" onchange="onChangeSelectedFile('select-file' , 'category-photo');">
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </form>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
             <?php VisibleError::showError(); ?>
         <?php else: ?>
             <?php Access::denyAccess(); ?>

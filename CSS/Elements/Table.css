@@ -1,0 +1,39 @@
+.table-block{
+    width: 100%;
+    font-family: Arial;
+}
+.table-block table{
+    margin: 0 auto;
+}
+.table-block table .table-block-headers .table-block-header{
+    text-align: center;
+    font-size: larger;
+}
+.table-block table .table-block-values{
+    height: 50px;
+    max-height: 50px;
+    font-size: small;
+}
+.table-block table .table-block-values .table-block-value-input-radio{
+    text-align: center;
+}
+.table-block table .table-block-values .table-block-value-image{
+    width: 100px;
+    max-width: 100%;
+}
+.table-block table .table-block-values .table-block-value-image div{
+    width: 100%;
+    height: 50px;
+    max-width: 100%;
+    max-height: 50px;
+    text-align: center;
+    align-content: center;
+    vertical-align: middle;
+}
+.table-block table .table-block-values .table-block-value-image img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.table-block table .table-block-values .table-block-value-text{
+    text-align: left;
+}
