@@ -332,43 +332,6 @@ class QueryExecutor{
         $this->executeQuery("DELETE FROM manufacturer WHERE id=$id");
     }
 
-    public function getWarehouses($countryId = null, $regionId = null, $cityId = null, $streetId = null, $houseId = null, $phoneNumber){
-        $condition1 = isset($countryId) && $countryId > 0 ? " AND country_id=$countryId" : "";
-        $condition2 = isset($regionId) && $regionId > 0 ? " AND region_id=$regionId" : "";
-        $condition3 = isset($cityId) && $cityId > 0 ? " AND city_id=$cityId" : "";
-        $condition4 = isset($streetId) && $streetId > 0 ? " AND street_id=$streetId" : "";
-        $condition5 = isset($houseId) && $houseId > 0 ? " AND house_id=$houseId" : "";
-
-        $query = "SELECT * FROM v_warehouse WHERE phone_number LIKE '%$phoneNumber%'";
-        $query .= $condition1;
-        $query .= $condition2;
-        $query .= $condition3;
-        $query .= $condition4;
-        $query .= $condition5;
-
-        return $this->executeQuery($query);
-    }
-
-    public function containsWarehouse($houseId, $phoneNumber){
-       return !is_null($this->executeQuery("SELECT * FROM warehouse WHERE house_id=$houseId AND phone_number='$phoneNumber' LIMIT 1")[0]);
-    }
-
-    public function addWarehouse($houseId, $phoneNumber){
-        $this->executeQuery("INSERT INTO warehouse (house_id, phone_number) VALUES ($houseId, '$phoneNumber')");
-    }
-
-    public function getWarehouse($id){
-        return $this->executeQuery("SELECT * FROM v_warehouse WHERE id=$id LIMIT 1")[0];
-    }
-
-    public function updateWarehouse($id, $houseId, $phoneNumber){
-        $this->executeQuery("UPDATE warehouse SET house_id=$houseId, phone_number='$phoneNumber' WHERE id=$id");
-    }
-
-    public function removeWarehouse($id){
-        $this->executeQuery("DELETE FROM warehouse WHERE id=$id");
-    }
-
     public function getCharacteristics($name){
         return $this->executeQuery("SELECT * FROM characteristic WHERE name LIKE '%$name%'");
     }

@@ -2,141 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7235fee-ce82-4657-a516-0dde89f9f921" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CSS/Elements/Filters.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CSS/Elements/Form.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CSS/Elements/Table.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS/Elements/TableCategories.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS/Elements/TableCategoriesSubcategory.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS/Elements/TableCharacteristics.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS/Elements/TableCharacteristicsCategorySubcategory.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS/Elements/TableCities.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS/Elements/TableClassifications.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS/Elements/TableCountries.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS/Elements/TableHouses.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS/Elements/TableManufacturers.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS/Elements/TableRegions.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS/Elements/TableStreets.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS/Elements/TableSubcategories.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS/Elements/TableUnits.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS/Elements/TableWarehouses.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS/Pages/AddWarehouse.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS/Pages/EditWarehouse.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS/Pages/Warehouses.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JS/Warehouses.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/AddWarehouse.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/EditWarehouse.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/Index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/Warehouses.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Views/Renders/TableWarehouses.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Elements/Footer.css" afterPath="$PROJECT_DIR$/CSS/Elements/Footer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Elements/Header.css" afterPath="$PROJECT_DIR$/CSS/Elements/Header.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Elements/MenuUser.css" afterPath="$PROJECT_DIR$/CSS/Elements/MenuUser.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Elements/Toolbar.css" afterPath="$PROJECT_DIR$/CSS/Elements/Toolbar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/AddCategory.css" afterPath="$PROJECT_DIR$/CSS/Pages/AddCategory.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/AddCategorySubcategory.css" afterPath="$PROJECT_DIR$/CSS/Pages/AddCategorySubcategory.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/AddCharacteristic.css" afterPath="$PROJECT_DIR$/CSS/Pages/AddCharacteristic.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/AddCharacteristicCategorySubcategory.css" afterPath="$PROJECT_DIR$/CSS/Pages/AddCharacteristicCategorySubcategory.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/AddCity.css" afterPath="$PROJECT_DIR$/CSS/Pages/AddCity.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/AddClassification.css" afterPath="$PROJECT_DIR$/CSS/Pages/AddClassification.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/AddCountry.css" afterPath="$PROJECT_DIR$/CSS/Pages/AddCountry.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/AddHouse.css" afterPath="$PROJECT_DIR$/CSS/Pages/AddHouse.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/AddManufacturer.css" afterPath="$PROJECT_DIR$/CSS/Pages/AddManufacturer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/AddRegion.css" afterPath="$PROJECT_DIR$/CSS/Pages/AddRegion.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/AddStreet.css" afterPath="$PROJECT_DIR$/CSS/Pages/AddStreet.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/AddSubcategory.css" afterPath="$PROJECT_DIR$/CSS/Pages/AddSubcategory.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/AddUnit.css" afterPath="$PROJECT_DIR$/CSS/Pages/AddUnit.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/AddWarehouse.css" afterPath="$PROJECT_DIR$/CSS/Pages/AddWarehouse.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/Authorization.css" afterPath="$PROJECT_DIR$/CSS/Pages/Authorization.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/CatalogCategories.css" afterPath="$PROJECT_DIR$/CSS/Pages/CatalogCategories.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/CatalogCategoriesSubcategory.css" afterPath="$PROJECT_DIR$/CSS/Pages/CatalogCategoriesSubcategory.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/CatalogSubcategories.css" afterPath="$PROJECT_DIR$/CSS/Pages/CatalogSubcategories.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/Categories.css" afterPath="$PROJECT_DIR$/CSS/Pages/Categories.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/CategoriesSubcategories.css" afterPath="$PROJECT_DIR$/CSS/Pages/CategoriesSubcategories.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/Characteristics.css" afterPath="$PROJECT_DIR$/CSS/Pages/Characteristics.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/CharacteristicsCategorySubcategory.css" afterPath="$PROJECT_DIR$/CSS/Pages/CharacteristicsCategorySubcategory.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/Cities.css" afterPath="$PROJECT_DIR$/CSS/Pages/Cities.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/Classifications.css" afterPath="$PROJECT_DIR$/CSS/Pages/Classifications.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/Countries.css" afterPath="$PROJECT_DIR$/CSS/Pages/Countries.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/EditCategory.css" afterPath="$PROJECT_DIR$/CSS/Pages/EditCategory.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/EditCategorySubcategory.css" afterPath="$PROJECT_DIR$/CSS/Pages/EditCategorySubcategory.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/EditCharacteristic.css" afterPath="$PROJECT_DIR$/CSS/Pages/EditCharacteristic.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/EditCharacteristicCategorySubcategory.css" afterPath="$PROJECT_DIR$/CSS/Pages/EditCharacteristicCategorySubcategory.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/EditCity.css" afterPath="$PROJECT_DIR$/CSS/Pages/EditCity.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/EditClassification.css" afterPath="$PROJECT_DIR$/CSS/Pages/EditClassification.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/EditCountry.css" afterPath="$PROJECT_DIR$/CSS/Pages/EditCountry.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/EditHouse.css" afterPath="$PROJECT_DIR$/CSS/Pages/EditHouse.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/EditManufacturer.css" afterPath="$PROJECT_DIR$/CSS/Pages/EditManufacturer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/EditRegion.css" afterPath="$PROJECT_DIR$/CSS/Pages/EditRegion.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/EditStreet.css" afterPath="$PROJECT_DIR$/CSS/Pages/EditStreet.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/EditSubcategory.css" afterPath="$PROJECT_DIR$/CSS/Pages/EditSubcategory.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/EditUnit.css" afterPath="$PROJECT_DIR$/CSS/Pages/EditUnit.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/EditWarehouse.css" afterPath="$PROJECT_DIR$/CSS/Pages/EditWarehouse.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/Houses.css" afterPath="$PROJECT_DIR$/CSS/Pages/Houses.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/Main.css" afterPath="$PROJECT_DIR$/CSS/Pages/Main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/Manufacturers.css" afterPath="$PROJECT_DIR$/CSS/Pages/Manufacturers.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/Regions.css" afterPath="$PROJECT_DIR$/CSS/Pages/Regions.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/Registration.css" afterPath="$PROJECT_DIR$/CSS/Pages/Registration.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/Streets.css" afterPath="$PROJECT_DIR$/CSS/Pages/Streets.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/Subcategories.css" afterPath="$PROJECT_DIR$/CSS/Pages/Subcategories.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/Units.css" afterPath="$PROJECT_DIR$/CSS/Pages/Units.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/Warehouses.css" afterPath="$PROJECT_DIR$/CSS/Pages/Warehouses.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Category/AddCategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Category/AddCategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Category/Categories.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Category/Categories.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Category/EditCategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Category/EditCategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/CategorySubcategory/AddCategorySubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CategorySubcategory/AddCategorySubcategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/CategorySubcategory/CategoriesSubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CategorySubcategory/CategoriesSubcategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/CategorySubcategory/EditCategorySubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CategorySubcategory/EditCategorySubcategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/AddCharacteristic.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/AddCharacteristic.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/Characteristics.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/Characteristics.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/EditCharacteristic.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/EditCharacteristic.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/AddCharacteristicCategorySubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/AddCharacteristicCategorySubcategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/CharacteristicsCategorySubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/CharacteristicsCategorySubcategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/EditCharacteristicCategorySubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/EditCharacteristicCategorySubcategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/City/AddCity.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/City/AddCity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/City/Cities.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/City/Cities.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/City/EditCity.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/City/EditCity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Classification/AddClassification.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Classification/AddClassification.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Classification/Classifications.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Classification/Classifications.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Classification/EditClassification.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Classification/EditClassification.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Country/AddCountry.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Country/AddCountry.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Country/Countries.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Country/Countries.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Country/EditCountry.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Country/EditCountry.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/House/AddHouse.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/House/AddHouse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/House/EditHouse.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/House/EditHouse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/House/Houses.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/House/Houses.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/AddManufacturer.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/AddManufacturer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/EditManufacturer.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/EditManufacturer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/Manufacturers.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/Manufacturers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Region/AddRegion.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Region/AddRegion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Region/EditRegion.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Region/EditRegion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Region/Index.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Region/Index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Region/Regions.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Region/Regions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Street/AddStreet.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Street/AddStreet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Street/EditStreet.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Street/EditStreet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Street/Streets.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Street/Streets.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Subcategory/AddSubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Subcategory/AddSubcategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Subcategory/EditSubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Subcategory/EditSubcategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Subcategory/Subcategories.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Subcategory/Subcategories.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Unit/AddUnit.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Unit/AddUnit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Unit/EditUnit.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Unit/EditUnit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Unit/Units.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Unit/Units.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/AddWarehouse.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/AddWarehouse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/EditWarehouse.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/EditWarehouse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/Warehouses.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Warehouse/Warehouses.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Authorization.php" afterPath="$PROJECT_DIR$/Views/Pages/Authorization.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Categories.php" afterPath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Categories.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/CategoriesSubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/CategoriesSubcategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Subcategories.php" afterPath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Subcategories.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Registration.php" afterPath="$PROJECT_DIR$/Views/Pages/Registration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/Footer.php" afterPath="$PROJECT_DIR$/Views/Renders/Footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/Header.php" afterPath="$PROJECT_DIR$/Views/Renders/Header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/TableCategories.php" afterPath="$PROJECT_DIR$/Views/Renders/TableCategories.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/TableCategoriesSubcategory.php" afterPath="$PROJECT_DIR$/Views/Renders/TableCategoriesSubcategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/TableCharacteristics.php" afterPath="$PROJECT_DIR$/Views/Renders/TableCharacteristics.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/TableCharacteristicsCategorySubcategory.php" afterPath="$PROJECT_DIR$/Views/Renders/TableCharacteristicsCategorySubcategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/TableCities.php" afterPath="$PROJECT_DIR$/Views/Renders/TableCities.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/TableClassifications.php" afterPath="$PROJECT_DIR$/Views/Renders/TableClassifications.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/TableCountries.php" afterPath="$PROJECT_DIR$/Views/Renders/TableCountries.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/TableHouses.php" afterPath="$PROJECT_DIR$/Views/Renders/TableHouses.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/TableManufacturers.php" afterPath="$PROJECT_DIR$/Views/Renders/TableManufacturers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/TableRegions.php" afterPath="$PROJECT_DIR$/Views/Renders/TableRegions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/TableStreets.php" afterPath="$PROJECT_DIR$/Views/Renders/TableStreets.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/TableSubcategories.php" afterPath="$PROJECT_DIR$/Views/Renders/TableSubcategories.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/TableUnits.php" afterPath="$PROJECT_DIR$/Views/Renders/TableUnits.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/TableWarehouses.php" afterPath="$PROJECT_DIR$/Views/Renders/TableWarehouses.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/Toolbar.php" afterPath="$PROJECT_DIR$/Views/Renders/Toolbar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Logic/Database/QueryExecutor.php" afterPath="$PROJECT_DIR$/Logic/Database/QueryExecutor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/MenuAdmin.php" afterPath="$PROJECT_DIR$/Views/Renders/MenuAdmin.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -148,42 +25,96 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Header.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CSS/Elements/Header.css">
+      <file leaf-file-name="QueryExecutor.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Logic/Database/QueryExecutor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3199">
-              <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Footer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Renders/Footer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="71" column="41" lean-forward="false" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Footer.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CSS/Elements/Footer.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2051">
-              <caret line="72" column="18" lean-forward="false" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Renders/Header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="22" column="67" lean-forward="false" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
-              <folding />
+            <state relative-caret-position="330">
+              <caret line="332" column="5" lean-forward="false" selection-start-line="332" selection-start-column="5" selection-end-line="332" selection-end-column="5" />
+              <folding>
+                <marker date="1607527416342" expanded="true" signature="508:582" ph="SELECT * FRO... v_user" />
+                <marker date="1607527416342" expanded="true" signature="684:731" ph="SELECT * FRO... user" />
+                <marker date="1607527416342" expanded="true" signature="879:1010" ph="INSERT INTO user... " />
+                <marker date="1607527416342" expanded="true" signature="1094:1143" ph="SELECT * FRO... v_user" />
+                <marker date="1607527416342" expanded="true" signature="1225:1243" ph="SELECT * FRO... role" />
+                <marker date="1607527416342" expanded="true" signature="1331:1378" ph="SELECT * FRO... country" />
+                <marker date="1607527416342" expanded="true" signature="1458:1487" ph="DELETE FROM " />
+                <marker date="1607527416342" expanded="true" signature="1590:1638" ph="SELECT * FRO... country" />
+                <marker date="1607527416342" expanded="true" signature="1728:1786" ph="INSERT INTO country... " />
+                <marker date="1607527416342" expanded="true" signature="1870:1912" ph="SELECT * FRO... country" />
+                <marker date="1607527416342" expanded="true" signature="2009:2064" ph="UPDATE count... " />
+                <marker date="1607527416342" expanded="true" signature="2249:2297" ph="SELECT * FRO... v_region" />
+                <marker date="1607527416342" expanded="true" signature="2482:2555" ph="SELECT * FRO... region" />
+                <marker date="1607527416342" expanded="true" signature="2649:2715" ph="INSERT INTO region... " />
+                <marker date="1607527416342" expanded="true" signature="2794:2822" ph="DELETE FROM " />
+                <marker date="1607527416342" expanded="true" signature="2908:2949" ph="SELECT * FRO... region" />
+                <marker date="1607527416342" expanded="true" signature="3050:3113" ph="UPDATE regio... " />
+                <marker date="1607527416342" expanded="true" signature="3407:3453" ph="SELECT * FRO... v_city" />
+                <marker date="1607527416342" expanded="true" signature="3667:3736" ph="SELECT * FRO... city" />
+                <marker date="1607527416342" expanded="true" signature="3827:3889" ph="INSERT INTO city... " />
+                <marker date="1607527416342" expanded="true" signature="3966:3992" ph="DELETE FROM " />
+                <marker date="1607527416342" expanded="true" signature="4075:4116" ph="SELECT * FRO... v_city" />
+                <marker date="1607527416342" expanded="true" signature="4214:4273" ph="UPDATE city " />
+                <marker date="1607527416342" expanded="true" signature="4667:4715" ph="SELECT * FRO... v_street" />
+                <marker date="1607527416342" expanded="true" signature="4960:5027" ph="SELECT * FRO... street" />
+                <marker date="1607527416342" expanded="true" signature="5118:5178" ph="INSERT INTO street... " />
+                <marker date="1607527416342" expanded="true" signature="5261:5304" ph="SELECT * FRO... v_street" />
+                <marker date="1607527416342" expanded="true" signature="5402:5459" ph="UPDATE stree... " />
+                <marker date="1607527416342" expanded="true" signature="5541:5569" ph="DELETE FROM " />
+                <marker date="1607527416342" expanded="true" signature="6071:6118" ph="SELECT * FRO... v_house" />
+                <marker date="1607527416342" expanded="true" signature="6395:6465" ph="SELECT * FRO... house" />
+                <marker date="1607527416342" expanded="true" signature="6557:6620" ph="INSERT INTO house... " />
+                <marker date="1607527416342" expanded="true" signature="6702:6744" ph="SELECT * FRO... v_house" />
+                <marker date="1607527416342" expanded="true" signature="6843:6901" ph="UPDATE house... " />
+                <marker date="1607527416342" expanded="true" signature="6982:7009" ph="DELETE FROM " />
+                <marker date="1607527416342" expanded="true" signature="7106:7160" ph="SELECT * FRO... classification" />
+                <marker date="1607527416342" expanded="true" signature="7267:7322" ph="SELECT * FRO... classification" />
+                <marker date="1607527416342" expanded="true" signature="7420:7487" ph="INSERT INTO classification... " />
+                <marker date="1607527416342" expanded="true" signature="7578:7627" ph="SELECT * FRO... classification" />
+                <marker date="1607527416342" expanded="true" signature="7732:7796" ph="UPDATE class... " />
+                <marker date="1607527416342" expanded="true" signature="7886:7922" ph="DELETE FROM " />
+                <marker date="1607527416342" expanded="true" signature="8146:8196" ph="SELECT * FRO... v_category" />
+                <marker date="1607527416342" expanded="true" signature="8391:8480" ph="SELECT * FRO... category" />
+                <marker date="1607527416342" expanded="true" signature="8591:8690" ph="INSERT INTO category... " />
+                <marker date="1607527416342" expanded="true" signature="8775:8818" ph="SELECT * FRO... category" />
+                <marker date="1607527416342" expanded="true" signature="8936:9031" ph="UPDATE categ... " />
+                <marker date="1607527416342" expanded="true" signature="9115:9145" ph="DELETE FROM " />
+                <marker date="1607527416342" expanded="true" signature="9491:9544" ph="SELECT * FRO... v_subcategory" />
+                <marker date="1607527416342" expanded="true" signature="9767:9847" ph="SELECT * FRO... subcategory" />
+                <marker date="1607527416342" expanded="true" signature="9955:10045" ph="INSERT INTO subcategory... " />
+                <marker date="1607527416342" expanded="true" signature="10133:10181" ph="SELECT * FRO... v_subcategory" />
+                <marker date="1607527416342" expanded="true" signature="10296:10382" ph="UPDATE subca... " />
+                <marker date="1607527416342" expanded="true" signature="10469:10502" ph="DELETE FROM " />
+                <marker date="1607527416342" expanded="true" signature="10990:11052" ph="SELECT * FRO... v_category_subcategory" />
+                <marker date="1607527416342" expanded="true" signature="11318:11413" ph="SELECT * FRO... category_subcategory" />
+                <marker date="1607527416342" expanded="true" signature="11532:11637" ph="INSERT INTO category_subcategory... " />
+                <marker date="1607527416342" expanded="true" signature="11733:11790" ph="SELECT * FRO... v_category_subcategory" />
+                <marker date="1607527416342" expanded="true" signature="11916:12017" ph="UPDATE categ... " />
+                <marker date="1607527416342" expanded="true" signature="12112:12154" ph="DELETE FROM " />
+                <marker date="1607527416342" expanded="true" signature="12249:12301" ph="SELECT * FRO... manufacturer" />
+                <marker date="1607527416342" expanded="true" signature="12406:12459" ph="SELECT * FRO... manufacturer" />
+                <marker date="1607527416342" expanded="true" signature="12555:12620" ph="INSERT INTO manufacturer... " />
+                <marker date="1607527416342" expanded="true" signature="12709:12756" ph="SELECT * FRO... manufacturer" />
+                <marker date="1607527416342" expanded="true" signature="12859:12921" ph="UPDATE manuf... " />
+                <marker date="1607527416342" expanded="true" signature="13009:13043" ph="DELETE FROM " />
+                <marker date="1607527416342" expanded="true" signature="13140:13194" ph="SELECT * FRO... characteristic" />
+                <marker date="1607527416342" expanded="true" signature="13301:13356" ph="SELECT * FRO... characteristic" />
+                <marker date="1607527416342" expanded="true" signature="13446:13496" ph="INSERT INTO characteristic... " />
+                <marker date="1607527416342" expanded="true" signature="13587:13636" ph="SELECT * FRO... characteristic" />
+                <marker date="1607527416342" expanded="true" signature="13733:13781" ph="UPDATE chara... " />
+                <marker date="1607527416342" expanded="true" signature="13871:13907" ph="DELETE FROM " />
+                <marker date="1607527416342" expanded="true" signature="13994:14038" ph="SELECT * FRO... unit" />
+                <marker date="1607527416342" expanded="true" signature="14149:14225" ph="SELECT * FRO... unit" />
+                <marker date="1607527416342" expanded="true" signature="14319:14388" ph="INSERT INTO unit... " />
+                <marker date="1607527416342" expanded="true" signature="14469:14508" ph="SELECT * FRO... unit" />
+                <marker date="1607527416342" expanded="true" signature="14609:14675" ph="UPDATE unit " />
+                <marker date="1607527416342" expanded="true" signature="14755:14781" ph="DELETE FROM " />
+                <marker date="1607527416342" expanded="true" signature="15606:15698" ph="SELECT * FRO... v_characteristic_category_subcategory" />
+                <marker date="1607527416342" expanded="true" signature="16059:16211" ph="SELECT * FRO... characteristic_category_subcategory" />
+                <marker date="1607527416342" expanded="true" signature="16356:16499" ph="INSERT INTO characteristic_category_subcategory... " />
+                <marker date="1607527416342" expanded="true" signature="16609:16681" ph="SELECT * FRO... v_characteristic_category_subcategory" />
+                <marker date="1607527416342" expanded="true" signature="16833:16973" ph="UPDATE chara... " />
+                <marker date="1607527416342" expanded="true" signature="17082:17139" ph="DELETE FROM " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -211,8 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CSS/Pages/Subcategories.css" />
-        <option value="$PROJECT_DIR$/CSS/Pages/Units.css" />
         <option value="$PROJECT_DIR$/CSS/Pages/Warehouses.css" />
         <option value="$PROJECT_DIR$/CSS/Pages/EditUnit.css" />
         <option value="$PROJECT_DIR$/CSS/Pages/EditSubcategory.css" />
@@ -262,6 +191,8 @@
         <option value="$PROJECT_DIR$/Views/Renders/Header.php" />
         <option value="$PROJECT_DIR$/CSS/Elements/Header.css" />
         <option value="$PROJECT_DIR$/CSS/Elements/Footer.css" />
+        <option value="$PROJECT_DIR$/Views/Renders/MenuAdmin.php" />
+        <option value="$PROJECT_DIR$/Logic/Database/QueryExecutor.php" />
       </list>
     </option>
   </component>
@@ -368,46 +299,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Administrator" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ElectronicsStore" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ElectronicsStore" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Images" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ElectronicsStore" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ElectronicsStore" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Images" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Interface" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -681,18 +572,17 @@
       <workItem from="1607309958806" duration="2326000" />
       <workItem from="1607436292665" duration="2020000" />
       <workItem from="1607506089413" duration="1952000" />
-      <workItem from="1607521218038" duration="5820000" />
+      <workItem from="1607521218038" duration="6230000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="400882000" />
+    <option name="totallyTimeSpent" value="401292000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -841,14 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Renders/MenuAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1017,14 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Logic/Database/QueryExecutor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="30" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/Renders/MenuUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -1073,14 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Renders/Header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="67" lean-forward="false" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CSS/Elements/Header.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3199">
@@ -1102,6 +968,114 @@
         <state relative-caret-position="-2051">
           <caret line="72" column="18" lean-forward="false" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Renders/Header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="67" lean-forward="false" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Renders/MenuAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="98" lean-forward="false" selection-start-line="11" selection-start-column="98" selection-end-line="11" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logic/Database/QueryExecutor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="332" column="5" lean-forward="false" selection-start-line="332" selection-start-column="5" selection-end-line="332" selection-end-column="5" />
+          <folding>
+            <marker date="1607527416342" expanded="true" signature="508:582" ph="SELECT * FRO... v_user" />
+            <marker date="1607527416342" expanded="true" signature="684:731" ph="SELECT * FRO... user" />
+            <marker date="1607527416342" expanded="true" signature="879:1010" ph="INSERT INTO user... " />
+            <marker date="1607527416342" expanded="true" signature="1094:1143" ph="SELECT * FRO... v_user" />
+            <marker date="1607527416342" expanded="true" signature="1225:1243" ph="SELECT * FRO... role" />
+            <marker date="1607527416342" expanded="true" signature="1331:1378" ph="SELECT * FRO... country" />
+            <marker date="1607527416342" expanded="true" signature="1458:1487" ph="DELETE FROM " />
+            <marker date="1607527416342" expanded="true" signature="1590:1638" ph="SELECT * FRO... country" />
+            <marker date="1607527416342" expanded="true" signature="1728:1786" ph="INSERT INTO country... " />
+            <marker date="1607527416342" expanded="true" signature="1870:1912" ph="SELECT * FRO... country" />
+            <marker date="1607527416342" expanded="true" signature="2009:2064" ph="UPDATE count... " />
+            <marker date="1607527416342" expanded="true" signature="2249:2297" ph="SELECT * FRO... v_region" />
+            <marker date="1607527416342" expanded="true" signature="2482:2555" ph="SELECT * FRO... region" />
+            <marker date="1607527416342" expanded="true" signature="2649:2715" ph="INSERT INTO region... " />
+            <marker date="1607527416342" expanded="true" signature="2794:2822" ph="DELETE FROM " />
+            <marker date="1607527416342" expanded="true" signature="2908:2949" ph="SELECT * FRO... region" />
+            <marker date="1607527416342" expanded="true" signature="3050:3113" ph="UPDATE regio... " />
+            <marker date="1607527416342" expanded="true" signature="3407:3453" ph="SELECT * FRO... v_city" />
+            <marker date="1607527416342" expanded="true" signature="3667:3736" ph="SELECT * FRO... city" />
+            <marker date="1607527416342" expanded="true" signature="3827:3889" ph="INSERT INTO city... " />
+            <marker date="1607527416342" expanded="true" signature="3966:3992" ph="DELETE FROM " />
+            <marker date="1607527416342" expanded="true" signature="4075:4116" ph="SELECT * FRO... v_city" />
+            <marker date="1607527416342" expanded="true" signature="4214:4273" ph="UPDATE city " />
+            <marker date="1607527416342" expanded="true" signature="4667:4715" ph="SELECT * FRO... v_street" />
+            <marker date="1607527416342" expanded="true" signature="4960:5027" ph="SELECT * FRO... street" />
+            <marker date="1607527416342" expanded="true" signature="5118:5178" ph="INSERT INTO street... " />
+            <marker date="1607527416342" expanded="true" signature="5261:5304" ph="SELECT * FRO... v_street" />
+            <marker date="1607527416342" expanded="true" signature="5402:5459" ph="UPDATE stree... " />
+            <marker date="1607527416342" expanded="true" signature="5541:5569" ph="DELETE FROM " />
+            <marker date="1607527416342" expanded="true" signature="6071:6118" ph="SELECT * FRO... v_house" />
+            <marker date="1607527416342" expanded="true" signature="6395:6465" ph="SELECT * FRO... house" />
+            <marker date="1607527416342" expanded="true" signature="6557:6620" ph="INSERT INTO house... " />
+            <marker date="1607527416342" expanded="true" signature="6702:6744" ph="SELECT * FRO... v_house" />
+            <marker date="1607527416342" expanded="true" signature="6843:6901" ph="UPDATE house... " />
+            <marker date="1607527416342" expanded="true" signature="6982:7009" ph="DELETE FROM " />
+            <marker date="1607527416342" expanded="true" signature="7106:7160" ph="SELECT * FRO... classification" />
+            <marker date="1607527416342" expanded="true" signature="7267:7322" ph="SELECT * FRO... classification" />
+            <marker date="1607527416342" expanded="true" signature="7420:7487" ph="INSERT INTO classification... " />
+            <marker date="1607527416342" expanded="true" signature="7578:7627" ph="SELECT * FRO... classification" />
+            <marker date="1607527416342" expanded="true" signature="7732:7796" ph="UPDATE class... " />
+            <marker date="1607527416342" expanded="true" signature="7886:7922" ph="DELETE FROM " />
+            <marker date="1607527416342" expanded="true" signature="8146:8196" ph="SELECT * FRO... v_category" />
+            <marker date="1607527416342" expanded="true" signature="8391:8480" ph="SELECT * FRO... category" />
+            <marker date="1607527416342" expanded="true" signature="8591:8690" ph="INSERT INTO category... " />
+            <marker date="1607527416342" expanded="true" signature="8775:8818" ph="SELECT * FRO... category" />
+            <marker date="1607527416342" expanded="true" signature="8936:9031" ph="UPDATE categ... " />
+            <marker date="1607527416342" expanded="true" signature="9115:9145" ph="DELETE FROM " />
+            <marker date="1607527416342" expanded="true" signature="9491:9544" ph="SELECT * FRO... v_subcategory" />
+            <marker date="1607527416342" expanded="true" signature="9767:9847" ph="SELECT * FRO... subcategory" />
+            <marker date="1607527416342" expanded="true" signature="9955:10045" ph="INSERT INTO subcategory... " />
+            <marker date="1607527416342" expanded="true" signature="10133:10181" ph="SELECT * FRO... v_subcategory" />
+            <marker date="1607527416342" expanded="true" signature="10296:10382" ph="UPDATE subca... " />
+            <marker date="1607527416342" expanded="true" signature="10469:10502" ph="DELETE FROM " />
+            <marker date="1607527416342" expanded="true" signature="10990:11052" ph="SELECT * FRO... v_category_subcategory" />
+            <marker date="1607527416342" expanded="true" signature="11318:11413" ph="SELECT * FRO... category_subcategory" />
+            <marker date="1607527416342" expanded="true" signature="11532:11637" ph="INSERT INTO category_subcategory... " />
+            <marker date="1607527416342" expanded="true" signature="11733:11790" ph="SELECT * FRO... v_category_subcategory" />
+            <marker date="1607527416342" expanded="true" signature="11916:12017" ph="UPDATE categ... " />
+            <marker date="1607527416342" expanded="true" signature="12112:12154" ph="DELETE FROM " />
+            <marker date="1607527416342" expanded="true" signature="12249:12301" ph="SELECT * FRO... manufacturer" />
+            <marker date="1607527416342" expanded="true" signature="12406:12459" ph="SELECT * FRO... manufacturer" />
+            <marker date="1607527416342" expanded="true" signature="12555:12620" ph="INSERT INTO manufacturer... " />
+            <marker date="1607527416342" expanded="true" signature="12709:12756" ph="SELECT * FRO... manufacturer" />
+            <marker date="1607527416342" expanded="true" signature="12859:12921" ph="UPDATE manuf... " />
+            <marker date="1607527416342" expanded="true" signature="13009:13043" ph="DELETE FROM " />
+            <marker date="1607527416342" expanded="true" signature="13140:13194" ph="SELECT * FRO... characteristic" />
+            <marker date="1607527416342" expanded="true" signature="13301:13356" ph="SELECT * FRO... characteristic" />
+            <marker date="1607527416342" expanded="true" signature="13446:13496" ph="INSERT INTO characteristic... " />
+            <marker date="1607527416342" expanded="true" signature="13587:13636" ph="SELECT * FRO... characteristic" />
+            <marker date="1607527416342" expanded="true" signature="13733:13781" ph="UPDATE chara... " />
+            <marker date="1607527416342" expanded="true" signature="13871:13907" ph="DELETE FROM " />
+            <marker date="1607527416342" expanded="true" signature="13994:14038" ph="SELECT * FRO... unit" />
+            <marker date="1607527416342" expanded="true" signature="14149:14225" ph="SELECT * FRO... unit" />
+            <marker date="1607527416342" expanded="true" signature="14319:14388" ph="INSERT INTO unit... " />
+            <marker date="1607527416342" expanded="true" signature="14469:14508" ph="SELECT * FRO... unit" />
+            <marker date="1607527416342" expanded="true" signature="14609:14675" ph="UPDATE unit " />
+            <marker date="1607527416342" expanded="true" signature="14755:14781" ph="DELETE FROM " />
+            <marker date="1607527416342" expanded="true" signature="15606:15698" ph="SELECT * FRO... v_characteristic_category_subcategory" />
+            <marker date="1607527416342" expanded="true" signature="16059:16211" ph="SELECT * FRO... characteristic_category_subcategory" />
+            <marker date="1607527416342" expanded="true" signature="16356:16499" ph="INSERT INTO characteristic_category_subcategory... " />
+            <marker date="1607527416342" expanded="true" signature="16609:16681" ph="SELECT * FRO... v_characteristic_category_subcategory" />
+            <marker date="1607527416342" expanded="true" signature="16833:16973" ph="UPDATE chara... " />
+            <marker date="1607527416342" expanded="true" signature="17082:17139" ph="DELETE FROM " />
+          </folding>
         </state>
       </provider>
     </entry>
