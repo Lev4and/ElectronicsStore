@@ -356,28 +356,28 @@ class QueryExecutor{
         $this->executeQuery("DELETE FROM characteristic WHERE id=$id");
     }
 
-    public function getUnits($name){
-        return $this->executeQuery("SELECT * FROM unit WHERE name LIKE '%$name%'");
+    public function getQuantities($name){
+        return $this->executeQuery("SELECT * FROM quantity WHERE name LIKE '%$name%'");
     }
 
-    public function containsUnit($name){
-        return !is_null($this->executeQuery("SELECT * FROM unit WHERE name='$name' LIMIT 1")[0]);
+    public function containsQuantity($name){
+        return !is_null($this->executeQuery("SELECT * FROM quantity WHERE name='$name' LIMIT 1")[0]);
     }
 
-    public function addUnit($name){
-        $this->executeQuery("INSERT INTO unit (name) VALUES ('$name')");
+    public function addQuantity($name){
+        $this->executeQuery("INSERT INTO quantity (name) VALUES ('$name')");
     }
 
-    public function getUnit($id){
-        return $this->executeQuery("SELECT * FROM unit WHERE id=$id LIMIT 1")[0];
+    public function getQuantity($id){
+        return $this->executeQuery("SELECT * FROM quantity WHERE id=$id LIMIT 1")[0];
     }
 
-    public function updateUnit($id, $name){
-        $this->executeQuery("UPDATE unit SET name='$name' WHERE id=$id");
+    public function updateQuantity($id, $name){
+        $this->executeQuery("UPDATE quantity SET name='$name' WHERE id=$id");
     }
 
-    public function removeUnit($id){
-        $this->executeQuery("DELETE FROM unit WHERE id=$id");
+    public function removeQuantity($id){
+        $this->executeQuery("DELETE FROM quantity WHERE id=$id");
     }
 
     public function getCharacteristicsCategorySubcategory($classificationId = null, $categoryId = null, $subcategoryId = null, $categorySubcategoryId = null, $characteristicId = null, $name){
@@ -417,35 +417,66 @@ class QueryExecutor{
         $this->executeQuery("DELETE FROM characteristic_category_subcategory WHERE id=$id");
     }
 
-    public function getMeters($name){
-        return $this->executeQuery("SELECT * FROM meter WHERE name LIKE '%$name%'");
+    public function getUnits($name){
+        return $this->executeQuery("SELECT * FROM unit WHERE name LIKE '%$name%'");
     }
 
-    public function containsMeter($name, $designation = null){
+    public function containsUnit($name, $designation = null){
         $condition1 = isset($designation) ? " AND designation='$designation'" : "";
         $condition2 = " LIMIT 1";
 
-        $query = "SELECT * FROM meter WHERE name='$name'";
+        $query = "SELECT * FROM unit WHERE name='$name'";
         $query .= $condition1;
         $query .= $condition2;
 
         return !is_null($this->executeQuery($query)[0]);
     }
 
-    public function addMeter($name, $designation){
-        $this->executeQuery("INSERT INTO meter (name, designation) VALUES ('$name', '$designation')");
+    public function addUnit($name, $designation){
+        $this->executeQuery("INSERT INTO unit (name, designation) VALUES ('$name', '$designation')");
     }
 
-    public function getMeter($id){
-        return $this->executeQuery("SELECT * FROM meter WHERE id=$id LIMIT 1")[0];
+    public function getUnit($id){
+        return $this->executeQuery("SELECT * FROM unit WHERE id=$id LIMIT 1")[0];
     }
 
-    public function updateMeter($id, $name, $designation){
-        $this->executeQuery("UPDATE meter SET name='$name', designation='$designation' WHERE id=$id");
+    public function updateUnit($id, $name, $designation){
+        $this->executeQuery("UPDATE unit SET name='$name', designation='$designation' WHERE id=$id");
     }
 
-    public function removeMeter($id){
-        $this->executeQuery("DELETE FROM meter WHERE id=$id");
+    public function removeUnit($id){
+        $this->executeQuery("DELETE FROM unit WHERE id=$id");
+    }
+
+    public function getQuantityUnits($quantityId = null, $unitId = null, $name){
+        $condition1 = isset($quantityId) && $quantityId > 0 ? " AND quantity_id=$quantityId" : "";
+        $condition2 = isset($unitId) && $unitId > 0 ? " AND unit_id=$unitId" : "";
+
+        $query = "SELECT * FROM v_quantity_unit WHERE quantity_name LIKE '%$name%'";
+        $query .= $condition1;
+        $query .= $condition2;
+
+        return $this->executeQuery($query);
+    }
+
+    public function containsQuantityUnit($quantityId, $unitId){
+        return !is_null($this->executeQuery("SELECT * FROM quantity_unit WHERE quantity_id=$quantityId AND unit_id=$unitId LIMIT 1")[0]);
+    }
+
+    public function addQuantityUnit($quantityId, $unitId){
+        $this->executeQuery("INSERT INTO quantity_unit (quantity_id, unit_id) VALUES ($quantityId, $unitId)");
+    }
+
+    public function getQuantityUnit($id){
+        return $this->executeQuery("SELECT * FROM v_quantity_unit WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function updateQuantityUnit($id, $quantityId, $unitId){
+        $this->executeQuery("UPDATE quantity_unit SET quantity_id=$quantityId, unit_id=$unitId WHERE id=$id");
+    }
+
+    public function removeQuantityUnit($id){
+        $this->executeQuery("DELETE FROM quantity_unit WHERE id=$id");
     }
 
     private function executeQuery($query){

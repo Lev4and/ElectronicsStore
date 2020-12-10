@@ -4,14 +4,16 @@ session_start();
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
+
+$quantity = QueryExecutor::getInstance()->getQuantity($_GET["quantityId"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ElectronicsStore - Добавление измерителя</title>
+    <title>ElectronicsStore - Изменение данных о величине</title>
     <link rel="stylesheet" href="/CSS/Pages/Main.css">
-    <link rel="stylesheet" href="/CSS/Pages/AddMeter.css">
+    <link rel="stylesheet" href="/CSS/Pages/EditQuantity.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
@@ -31,39 +33,27 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
     <div class="content">
         <?php if(Access::isAdministrator()): ?>
             <div class="header-block">
-                <h1>Добавление измерителя</h1>
+                <h1>Изменение данных о величине</h1>
             </div>
             <div class="form-block">
-                <form action="." method="post">
+                <form action=".?quantityId=<?php echo $_GET["quantityId"]; ?>" method="post">
                     <div class="form-block-inputs">
                         <div class="form-block-row">
                             <div id="form-block-row-column-label" class="form-block-row-column">
                                 <div class="form-block-row-column-label">
-                                    <label>Введите название измерителя:</label>
+                                    <label>Введите название величины:</label>
                                 </div>
                             </div>
                             <div id="form-block-row-column-input" class="form-block-row-column">
                                 <div class="form-block-row-column-input-text">
-                                    <input type="text" name="name" value="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-block-row">
-                            <div id="form-block-row-column-label" class="form-block-row-column">
-                                <div class="form-block-row-column-label">
-                                    <label>Введите обозначение измерителя:</label>
-                                </div>
-                            </div>
-                            <div id="form-block-row-column-input" class="form-block-row-column">
-                                <div class="form-block-row-column-input-text">
-                                    <input type="text" name="designation" value="">
+                                    <input type="text" name="name" value="<?php echo $quantity["name"] ?>">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="form-block-actions">
                         <div class="form-block-actions-button">
-                            <input class="action-button" id="add-button" type="submit" name="action" value="Записать"/>
+                            <input class="action-button" id="add-button" type="submit" name="action" value="Сохранить"/>
                         </div>
                     </div>
                 </form>

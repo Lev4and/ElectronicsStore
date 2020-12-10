@@ -4,7 +4,6 @@ session_start();
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,6 +45,18 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
                             <div id="form-block-row-column-input" class="form-block-row-column">
                                 <div class="form-block-row-column-input-text">
                                     <input type="text" name="name" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-block-row">
+                            <div id="form-block-row-column-label" class="form-block-row-column">
+                                <div class="form-block-row-column-label">
+                                    <label>Введите обозначение единицы измерения:</label>
+                                </div>
+                            </div>
+                            <div id="form-block-row-column-input" class="form-block-row-column">
+                                <div class="form-block-row-column-input-text">
+                                    <input type="text" name="designation" value="">
                                 </div>
                             </div>
                         </div>

@@ -9,9 +9,9 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ElectronicsStore - Измерители</title>
+    <title>ElectronicsStore - Величины</title>
     <link rel="stylesheet" href="/CSS/Pages/Main.css">
-    <link rel="stylesheet" href="/CSS/Pages/Meters.css">
+    <link rel="stylesheet" href="/CSS/Pages/Quantities.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
@@ -32,11 +32,11 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
     <div class="content">
         <?php if(Access::isAdministrator()): ?>
             <div class="header-block">
-                <h1>Измерители</h1>
+                <h1>Величины</h1>
             </div>
             <form action="." method="post">
                 <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Toolbar.php"; ?>
-                <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableMeters.php"; ?>
+                <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableQuantities.php"; ?>
             </form>
             <?php VisibleError::showError(); ?>
         <?php else: ?>
