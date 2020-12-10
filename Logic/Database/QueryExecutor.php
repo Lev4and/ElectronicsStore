@@ -360,20 +360,20 @@ class QueryExecutor{
         return $this->executeQuery("SELECT * FROM unit WHERE name LIKE '%$name%'");
     }
 
-    public function containsUnit($name, $designation){
-        return !is_null($this->executeQuery("SELECT * FROM unit WHERE name='$name' AND designation='$designation' LIMIT 1")[0]);
+    public function containsUnit($name){
+        return !is_null($this->executeQuery("SELECT * FROM unit WHERE name='$name' LIMIT 1")[0]);
     }
 
-    public function addUnit($name, $designation){
-        $this->executeQuery("INSERT INTO unit (name, designation) VALUES ('$name', '$designation')");
+    public function addUnit($name){
+        $this->executeQuery("INSERT INTO unit (name) VALUES ('$name')");
     }
 
     public function getUnit($id){
         return $this->executeQuery("SELECT * FROM unit WHERE id=$id LIMIT 1")[0];
     }
 
-    public function updateUnit($id, $name, $designation){
-        $this->executeQuery("UPDATE unit SET name='$name', designation='$designation' WHERE id=$id");
+    public function updateUnit($id, $name){
+        $this->executeQuery("UPDATE unit SET name='$name' WHERE id=$id");
     }
 
     public function removeUnit($id){

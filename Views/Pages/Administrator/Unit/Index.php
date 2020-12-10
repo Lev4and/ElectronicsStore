@@ -25,7 +25,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Удалить"){
 
 if(isset($_POST["action"]) && $_POST["action"] == "Записать") {
     if (iconv_strlen($_POST["name"], "UTF-8") > 0) {
-        if (!QueryExecutor::getInstance()->containsUnit($_POST["name"], $_POST["designation"])) {
+        if (!QueryExecutor::getInstance()->containsUnit($_POST["name"])) {
             QueryExecutor::getInstance()->addUnit($_POST["name"], $_POST["designation"]);
 
             header("Location: http://" . $_SERVER["SERVER_NAME"] ."/Views/Pages/Administrator/Unit/");
@@ -48,8 +48,8 @@ if(isset($_POST["action"]) && $_POST["action"] == "Записать") {
 
 if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
     if (iconv_strlen($_POST["name"], "UTF-8") > 0) {
-        if (!QueryExecutor::getInstance()->containsUnit($_POST["name"], $_POST["designation"])) {
-            QueryExecutor::getInstance()->updateUnit($_GET["unitId"], $_POST["name"], $_POST["designation"]);
+        if (!QueryExecutor::getInstance()->containsUnit($_POST["name"])) {
+            QueryExecutor::getInstance()->updateUnit($_GET["unitId"], $_POST["name"]);
 
             header("Location: http://electronicsstore/Views/Pages/Administrator/Unit/");
             exit();

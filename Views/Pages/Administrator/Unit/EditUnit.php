@@ -50,18 +50,6 @@ $unit = QueryExecutor::getInstance()->getUnit($_GET["unitId"]);
                                 </div>
                             </div>
                         </div>
-                        <div class="form-block-row">
-                            <div id="form-block-row-column-label" class="form-block-row-column">
-                                <div class="form-block-row-column-label">
-                                    <label>Укажите обозначение единицы измерения:</label>
-                                </div>
-                            </div>
-                            <div id="form-block-row-column-input" class="form-block-row-column">
-                                <div class="form-block-row-column-input-text">
-                                    <input type="text" name="designation" value="<?php echo $unit["designation"]; ?>">
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="form-block-actions">
                         <div class="form-block-actions-button">

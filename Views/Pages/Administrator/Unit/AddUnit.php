@@ -49,18 +49,6 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="form-block-row">
-                            <div id="form-block-row-column-label" class="form-block-row-column">
-                                <div class="form-block-row-column-label">
-                                    <label>Укажите обозначение единицы измерения:</label>
-                                </div>
-                            </div>
-                            <div id="form-block-row-column-input" class="form-block-row-column">
-                                <div class="form-block-row-column-input-text">
-                                    <input type="text" name="designation" value="">
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="form-block-actions">
                         <div class="form-block-actions-button">
