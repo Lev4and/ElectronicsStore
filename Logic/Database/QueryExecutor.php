@@ -417,6 +417,37 @@ class QueryExecutor{
         $this->executeQuery("DELETE FROM characteristic_category_subcategory WHERE id=$id");
     }
 
+    public function getMeters($name){
+        return $this->executeQuery("SELECT * FROM meter WHERE name LIKE '%$name%'");
+    }
+
+    public function containsMeter($name, $designation = null){
+        $condition1 = isset($designation) ? " AND designation='$designation'" : "";
+        $condition2 = " LIMIT 1";
+
+        $query = "SELECT * FROM meter WHERE name='$name'";
+        $query .= $condition1;
+        $query .= $condition2;
+
+        return !is_null($this->executeQuery($query)[0]);
+    }
+
+    public function addMeter($name, $designation){
+        $this->executeQuery("INSERT INTO meter (name, designation) VALUES ('$name', '$designation')");
+    }
+
+    public function getMeter($id){
+        return $this->executeQuery("SELECT * FROM meter WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function updateMeter($id, $name, $designation){
+        $this->executeQuery("UPDATE meter SET name='$name', designation='$designation' WHERE id=$id");
+    }
+
+    public function removeMeter($id){
+        $this->executeQuery("DELETE FROM meter WHERE id=$id");
+    }
+
     private function executeQuery($query){
         try{
             return ($this->contextDb->query($query))->FETCHALL(PDO::FETCH_ASSOC);

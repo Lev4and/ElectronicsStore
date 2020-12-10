@@ -16,6 +16,7 @@
         <li><span><a href="/Views/Pages/Administrator/CharacteristicCategorySubcategory/">Характеристики категории подкатегорий</a></span></li>
         <li><span><a href="/Views/Pages/Administrator//">Значения характеристик</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/Unit/">Единицы измерения</a></span></li>
+        <li><span><a href="/Views/Pages/Administrator/Meters/">Измерители</a></span></li>
         <li><span><a href="/Views/Pages/Administrator//">Товары</a></span></li>
     </ul>
 </div>
