@@ -35,7 +35,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
                 <h1>Добавление единицы измерения</h1>
             </div>
             <div class="form-block">
-                <form action="http://electronicsstore/Views/Pages/Administrator/Unit/" method="post">
+                <form action="." method="post">
                     <div class="form-block-inputs">
                         <div class="form-block-row">
                             <div id="form-block-row-column-label" class="form-block-row-column">

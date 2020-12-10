@@ -35,7 +35,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Записать") {
 
             QueryExecutor::getInstance()->addManufacturer($_POST["name"], $fileName);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/Manufacturer/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] ."/Views/Pages/Administrator/Manufacturer/");
             exit();
         }
         else{
@@ -55,7 +55,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Записать") {
 
 if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
     if (isset($_POST["name"]) && iconv_strlen($_POST["name"], "UTF-8") > 0) {
-        if (!QueryExecutor::getInstance()->containsManufacturer($_POST["name"]) || $_GET["flag"] != $_FILES["selectedImage"]["tmp_name"]) {
+        if (!QueryExecutor::getInstance()->containsManufacturer($_POST["name"]) || $_GET["photo"] != $_FILES["selectedImage"]["tmp_name"]) {
             $fileName = $_FILES["selectedImage"]["name"];
             $tmpFileName = $_FILES["selectedImage"]["tmp_name"];
 
@@ -63,9 +63,9 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
                 move_uploaded_file($tmpFileName, $_SERVER["DOCUMENT_ROOT"] . "/Resources/Images/Upload/$fileName");
             }
 
-            QueryExecutor::getInstance()->updateManufacturer($_GET["manufacturerId"], $_POST["name"], iconv_strlen($fileName) > 0 ? $fileName : $_GET["flag"]);
+            QueryExecutor::getInstance()->updateManufacturer($_GET["manufacturerId"], $_POST["name"], iconv_strlen($fileName) > 0 ? $fileName : $_GET["photo"]);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/Manufacturer/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] . "/Views/Pages/Administrator/Manufacturer/");
             exit();
         }
         else{

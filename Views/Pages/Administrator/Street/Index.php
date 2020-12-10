@@ -32,7 +32,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Записать"){
         if(!QueryExecutor::getInstance()->containsStreet($_POST["cityId"], $_POST["name"])){
             QueryExecutor::getInstance()->addStreet($_POST["cityId"], $_POST["name"]);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/Street/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] . "/Views/Pages/Administrator/Street/");
             exit();
         }
         else{
@@ -55,7 +55,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить"){
         if (!QueryExecutor::getInstance()->containsStreet($_POST["cityId"], $_POST["name"])) {
             QueryExecutor::getInstance()->updateStreet($_GET["streetId"], $_POST["cityId"], $_POST["name"]);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/Street/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] . "/Views/Pages/Administrator/Street/");
             exit();
         }
         else{

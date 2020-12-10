@@ -37,10 +37,10 @@ $classification = QueryExecutor::getInstance()->getClassification($_GET["classif
                 <h1>Изменение данных о классификации</h1>
             </div>
             <div class="form-block">
-                <form action="http://electronicsstore/Views/Pages/Administrator/Classification/?classificationId=<?php echo $_GET["classificationId"]; ?>&photo=<?php echo $classification["photo"]; ?>" method="post" enctype="multipart/form-data">
+                <form action=".?classificationId=<?php echo $_GET["classificationId"]; ?>&photo=<?php echo $classification["photo"]; ?>" method="post" enctype="multipart/form-data">
                     <div class="form-block-image-block">
                         <div class="form-block-image-block-container">
-                            <img id="classification-photo" name="photo" src="<?php echo "http://electronicsstore/Resources/Images/Upload/" . $classification["photo"]; ?>">
+                            <img id="classification-photo" name="photo" src="<?php echo "http://" . $_SERVER["SERVER_NAME"] ."/Resources/Images/Upload/" . $classification["photo"]; ?>">
                         </div>
                     </div>
                     <div class="form-block-inputs">

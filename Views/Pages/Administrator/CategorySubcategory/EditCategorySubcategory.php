@@ -43,10 +43,10 @@ $subcategories = QueryExecutor::getInstance()->getSubcategories(null, $categoryS
                 <h1>Изменение данных о категории подкатегории</h1>
             </div>
             <div class="form-block">
-                <form action="http://electronicsstore/Views/Pages/Administrator/CategorySubcategory/?categorySubcategoryId=<?php echo $_GET["categorySubcategoryId"]; ?>&photo=<?php echo $categorySubcategory["photo"] ?>" method="post" enctype="multipart/form-data">
+                <form action=".?categorySubcategoryId=<?php echo $_GET["categorySubcategoryId"]; ?>&photo=<?php echo $categorySubcategory["photo"] ?>" method="post" enctype="multipart/form-data">
                     <div class="form-block-image-block">
                         <div class="form-block-image-block-container">
-                            <img id="category-subcategory-photo" name="photo" src="<?php echo "http://electronicsstore/Resources/Images/Upload/" . $categorySubcategory["photo"]; ?>">
+                            <img id="category-subcategory-photo" name="photo" src="<?php echo "http://" . $_SERVER["SERVER_NAME"] ."/Resources/Images/Upload/" . $categorySubcategory["photo"]; ?>">
                         </div>
                     </div>
                     <div class="form-block-inputs">

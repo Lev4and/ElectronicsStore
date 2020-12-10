@@ -35,7 +35,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
                 <h1>Добавление производителя</h1>
             </div>
             <div class="form-block">
-                <form action="http://electronicsstore/Views/Pages/Administrator/Manufacturer/" method="post" enctype="multipart/form-data">
+                <form action="." method="post" enctype="multipart/form-data">
                     <div class="form-block-image-block">
                         <div class="form-block-image-block-container">
                             <img id="manufacturer-photo" name="photo">

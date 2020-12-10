@@ -28,7 +28,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Записать") {
         if (!QueryExecutor::getInstance()->containsCharacteristic($_POST["name"])) {
             QueryExecutor::getInstance()->addCharacteristic($_POST["name"]);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/Characteristic/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] ."/Views/Pages/Administrator/Characteristic/");
             exit();
         }
         else{
@@ -51,7 +51,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
         if (!QueryExecutor::getInstance()->containsCharacteristic($_POST["name"])) {
             QueryExecutor::getInstance()->updateCharacteristic($_GET["characteristicId"], $_POST["name"]);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/Characteristic/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] . "/Views/Pages/Administrator/Characteristic/");
             exit();
         }
         else{

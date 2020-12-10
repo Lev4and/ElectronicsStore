@@ -32,7 +32,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Записать"){
         if(!QueryExecutor::getInstance()->containsRegion($_POST["countryId"], $_POST["name"])){
             QueryExecutor::getInstance()->addRegion($_POST["countryId"], $_POST["name"]);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/Region/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] . "/Views/Pages/Administrator/Region/");
             exit();
         }
         else{
@@ -55,7 +55,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить"){
         if(!QueryExecutor::getInstance()->containsRegion($_POST["countryId"], $_POST["name"])){
             QueryExecutor::getInstance()->updateRegion($_GET["regionId"], $_POST["countryId"], $_POST["name"]);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/Region/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] . "/Views/Pages/Administrator/Region/");
             exit();
         }
         else{

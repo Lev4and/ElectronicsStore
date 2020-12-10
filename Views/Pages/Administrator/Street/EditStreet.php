@@ -42,7 +42,7 @@ $cities = QueryExecutor::getInstance()->getCities(null, $street["region_id"], ""
                 <h1>Изменение данных об улице</h1>
             </div>
             <div class="form-block">
-                <form action="http://electronicsstore/Views/Pages/Administrator/Street/?streetId=<?php echo $_GET["streetId"]; ?>" method="post">
+                <form action=".?streetId=<?php echo $_GET["streetId"]; ?>" method="post">
                     <div class="form-block-inputs">
                         <div class="form-block-row">
                             <div id="form-block-row-column-label" class="form-block-row-column">

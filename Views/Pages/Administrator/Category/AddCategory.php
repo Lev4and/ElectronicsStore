@@ -37,7 +37,7 @@ $classifications = QueryExecutor::getInstance()->getClassifications("");
                 <h1>Добавление категории</h1>
             </div>
             <div class="form-block">
-                <form action="http://electronicsstore/Views/Pages/Administrator/Category/" method="post" enctype="multipart/form-data">
+                <form action="." method="post" enctype="multipart/form-data">
                     <div class="form-block-image-block">
                         <div class="form-block-image-block-container">
                             <img id="category-photo" name="photo">

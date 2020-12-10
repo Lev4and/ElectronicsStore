@@ -35,7 +35,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Записать"){
 
             QueryExecutor::getInstance()->addCountry($_POST["name"], $fileName);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/Country/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] ."/Views/Pages/Administrator/Country/");
             exit();
         }
         else{
@@ -65,7 +65,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить"){
 
             QueryExecutor::getInstance()->updateCountry($_GET["countryId"], $_POST["name"], iconv_strlen($fileName) > 0 ? $fileName : $_GET["flag"]);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/Country/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] ."/Views/Pages/Administrator/Country/");
             exit();
         }
         else{

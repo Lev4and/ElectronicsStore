@@ -37,10 +37,10 @@ $manufacturer = QueryExecutor::getInstance()->getManufacturer($_GET["manufacture
                 <h1>Изменение данных о производителе</h1>
             </div>
             <div class="form-block">
-                <form action="http://electronicsstore/Views/Pages/Administrator/Manufacturer/?manufacturerId=<?php echo $_GET["manufacturerId"]; ?>&photo=<?php echo $manufacturer["photo"]; ?>" method="post" enctype="multipart/form-data">
+                <form action=".?manufacturerId=<?php echo $_GET["manufacturerId"]; ?>&photo=<?php echo $manufacturer["photo"]; ?>" method="post" enctype="multipart/form-data">
                     <div class="form-block-image-block">
                         <div class="form-block-image-block-container">
-                            <img id="manufacturer-photo" name="photo" src="<?php echo "http://electronicsstore/Resources/Images/Upload/" . $manufacturer["photo"]; ?>">
+                            <img id="manufacturer-photo" name="photo" src="<?php echo "http://" . $_SERVER["SERVER_NAME"] . "/Resources/Images/Upload/" . $manufacturer["photo"]; ?>">
                         </div>
                     </div>
                     <div class="form-block-inputs">

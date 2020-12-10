@@ -38,7 +38,7 @@ $countries = QueryExecutor::getInstance()->getCountries("");
                 <h1>Добавление улицы</h1>
             </div>
             <div class="form-block">
-                <form action="http://electronicsstore/Views/Pages/Administrator/Street/" method="post">
+                <form action="." method="post">
                     <div class="form-block-inputs">
                         <div class="form-block-row">
                             <div id="form-block-row-column-label" class="form-block-row-column">

@@ -34,7 +34,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Записать"){
         if(!QueryExecutor::getInstance()->containsCity($_POST["regionId"], $_POST["name"])){
             QueryExecutor::getInstance()->addCity($_POST["regionId"], $_POST["name"]);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/City/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] ."/Views/Pages/Administrator/City/");
             exit();
         }
         else{
@@ -57,7 +57,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить"){
         if(!QueryExecutor::getInstance()->containsCity($_POST["regionId"], $_POST["name"])){
             QueryExecutor::getInstance()->updateCity($_GET["cityId"], $_POST["regionId"], $_POST["name"]);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/City/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] ."/Views/Pages/Administrator/City/");
             exit();
         }
         else{

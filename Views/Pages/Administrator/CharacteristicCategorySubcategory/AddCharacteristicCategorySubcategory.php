@@ -39,7 +39,7 @@ $classifications = QueryExecutor::getInstance()->getClassifications("");
                 <h1>Добавление характеристики категории подкатегории</h1>
             </div>
             <div class="form-block">
-                <form action="http://electronicsstore/Views/Pages/Administrator/CharacteristicCategorySubcategory/" method="post">
+                <form action="." method="post">
                     <div class="form-block-inputs">
                         <div class="form-block-row">
                             <div id="form-block-row-column-label" class="form-block-row-column">

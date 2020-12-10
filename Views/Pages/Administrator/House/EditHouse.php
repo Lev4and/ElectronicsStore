@@ -43,7 +43,7 @@ $streets = QueryExecutor::getInstance()->getStreets(null, null, $house["street_i
                 <h1>Изменение данных о доме</h1>
             </div>
             <div class="form-block">
-                <form action="http://electronicsstore/Views/Pages/Administrator/House/" method="post">
+                <form action=".?houseId=<?php echo $_GET["houseId"]; ?>" method="post">
                     <div class="form-block-inputs">
                         <div class="form-block-row">
                             <div id="form-block-row-column-label" class="form-block-row-column">

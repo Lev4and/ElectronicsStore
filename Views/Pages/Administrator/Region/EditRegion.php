@@ -37,7 +37,7 @@ $region = QueryExecutor::getInstance()->getRegion($_GET["regionId"]);
                 <h1>Изменение данных о регионе</h1>
             </div>
             <div class="form-block">
-                <form action="http://electronicsstore/Views/Pages/Administrator/Region/?regionId=<?php echo $_GET["regionId"]; ?>" method="post">
+                <form action=".?regionId=<?php echo $_GET["regionId"]; ?>" method="post">
                     <div class="form-block-inputs">
                         <div class="form-block-row">
                             <div id="form-block-row-column-label" class="form-block-row-column">

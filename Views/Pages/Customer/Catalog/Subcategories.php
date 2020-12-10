@@ -38,10 +38,10 @@ $subcategoriesCategory = QueryExecutor::getInstance()->getSubcategories(null, $_
             <div class="subcategories-block">
                 <?php foreach ($subcategoriesCategory as $subcategory): ?>
                     <div class="subcategory-block">
-                        <a href="/Views/Pages/Customer/Catalog/?action=КатегорииПодкатегории&subcategoryId=<?php echo $subcategory["id"]; ?>">
+                        <a href=".?action=КатегорииПодкатегории&subcategoryId=<?php echo $subcategory["id"]; ?>">
                             <div>
                                 <div class="subcategory-block-image-container">
-                                    <img src="<?php echo "/Resources/Images/Upload/" . $subcategory["photo"]; ?>">
+                                    <img src="<?php echo "http://" . $_SERVER["SERVER_NAME"] . "/Resources/Images/Upload/" . $subcategory["photo"]; ?>">
                                 </div>
                                 <div class="subcategory-block-title">
                                     <span><?php echo $subcategory["name"]; ?></span>

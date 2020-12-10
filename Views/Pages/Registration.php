@@ -36,7 +36,7 @@ $roles = QueryExecutor::getInstance()->getRoles();
                 <h1>Регистрация</h1>
             </div>
             <div class="form-block">
-                <form action="http://electronicsstore/" method="post">
+                <form action="http://<?php echo $_SERVER["SERVER_NAME"]; ?>/" method="post">
                     <div class="form-block-inputs">
                         <div class="form-block-row">
                             <div id="form-block-row-column-label" class="form-block-row-column">

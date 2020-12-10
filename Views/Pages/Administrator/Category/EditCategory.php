@@ -38,10 +38,10 @@ $classifications = QueryExecutor::getInstance()->getClassifications("");
                 <h1>Изменение данных о категории</h1>
             </div>
             <div class="form-block">
-                <form action="http://electronicsstore/Views/Pages/Administrator/Category/?categoryId=<?php echo $_GET["categoryId"]; ?>&photo=<?php echo $category["photo"]; ?>" method="post" enctype="multipart/form-data">
+                <form action=".?categoryId=<?php echo $_GET["categoryId"]; ?>&photo=<?php echo $category["photo"]; ?>" method="post" enctype="multipart/form-data">
                     <div class="form-block-image-block">
                         <div class="form-block-image-block-container">
-                            <img id="category-photo" name="photo" src="<?php echo "http://electronicsstore/Resources/Images/Upload/" . $category["photo"]; ?>">
+                            <img id="category-photo" name="photo" src="<?php echo "http://" . $_SERVER["SERVER_NAME"] . "/Resources/Images/Upload/" . $category["photo"]; ?>">
                         </div>
                     </div>
                     <div class="form-block-inputs">

@@ -38,10 +38,10 @@ $categoriesClassification = QueryExecutor::getInstance()->getCategories($_GET["c
             <div class="categories-block">
                 <?php foreach ($categoriesClassification as $category): ?>
                     <div class="category-block">
-                        <a href="/Views/Pages/Customer/Catalog/?action=Подкатегории&categoryId=<?php echo $category["id"]; ?>">
+                        <a href=".?action=Подкатегории&categoryId=<?php echo $category["id"]; ?>">
                             <div>
                                 <div class="category-block-image-container">
-                                    <img src="<?php echo "/Resources/Images/Upload/" . $category["photo"]; ?>">
+                                    <img src="<?php echo "http://" . $_SERVER["SERVER_NAME"] . "/Resources/Images/Upload/" . $category["photo"]; ?>">
                                 </div>
                                 <div class="category-block-title">
                                     <span><?php echo $category["name"]; ?></span>

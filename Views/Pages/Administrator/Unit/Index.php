@@ -28,7 +28,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Записать") {
         if (!QueryExecutor::getInstance()->containsUnit($_POST["name"], $_POST["designation"])) {
             QueryExecutor::getInstance()->addUnit($_POST["name"], $_POST["designation"]);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/Unit/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] ."/Views/Pages/Administrator/Unit/");
             exit();
         }
         else{

@@ -36,7 +36,7 @@ $unit = QueryExecutor::getInstance()->getUnit($_GET["unitId"]);
                 <h1>Изменение данных об единицы измерения</h1>
             </div>
             <div class="form-block">
-                <form action="http://electronicsstore/Views/Pages/Administrator/Unit/?unitId=<?php echo $_GET["unitId"]; ?>" method="post">
+                <form action=".?unitId=<?php echo $_GET["unitId"]; ?>" method="post">
                     <div class="form-block-inputs">
                         <div class="form-block-row">
                             <div id="form-block-row-column-label" class="form-block-row-column">

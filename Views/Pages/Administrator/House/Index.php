@@ -45,7 +45,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Записать") {
         if (!QueryExecutor::getInstance()->containsHouse($_POST["streetId"], $_POST["name"])) {
             QueryExecutor::getInstance()->addHouse($_POST["streetId"], $_POST["name"]);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/House/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] ."/Views/Pages/Administrator/House/");
             exit();
         }
         else{
@@ -68,7 +68,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
         if (!QueryExecutor::getInstance()->containsHouse($_POST["streetId"], $_POST["name"])) {
             QueryExecutor::getInstance()->updateHouse($_GET["houseId"], $_POST["streetId"], $_POST["name"]);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/House/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] ."/Views/Pages/Administrator/House/");
             exit();
         }
         else{

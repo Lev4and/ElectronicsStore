@@ -34,7 +34,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
             <div class="header-block">
                 <h1>Производители</h1>
             </div>
-            <form action="http://electronicsstore/Views/Pages/Administrator/Manufacturer/" method="post">
+            <form action="." method="post">
                 <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Toolbar.php"; ?>
                 <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableManufacturers.php"; ?>
             </form>

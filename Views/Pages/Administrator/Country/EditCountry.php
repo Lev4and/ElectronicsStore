@@ -37,10 +37,10 @@ $country = QueryExecutor::getInstance()->getCountry($_GET["countryId"]);
                 <h1>Изменение данных о стране</h1>
             </div>
             <div class="form-block">
-                <form action="http://electronicsstore/Views/Pages/Administrator/Country/?countryId=<?php echo $_GET["countryId"]; ?>&flag=<?php echo $country["flag"] ?>" method="post" enctype="multipart/form-data">
+                <form action=".?countryId=<?php echo $_GET["countryId"]; ?>&flag=<?php echo $country["flag"] ?>" method="post" enctype="multipart/form-data">
                     <div class="form-block-image-block">
                         <div class="form-block-image-block-container">
-                            <img id="country-flag" name="flag" src="<?php echo "http://electronicsstore/Resources/Images/Upload/" . $country["flag"]; ?>">
+                            <img id="country-flag" name="flag" src="<?php echo "http://" . $_SERVER["SERVER_NAME"] ."/Resources/Images/Upload/" . $country["flag"]; ?>">
                         </div>
                     </div>
                     <div class="form-block-inputs">

@@ -22,7 +22,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Записать") {
         if (!QueryExecutor::getInstance()->containsCharacteristicCategorySubcategory($_POST["characteristicId"], $_POST["categorySubcategoryId"])) {
             QueryExecutor::getInstance()->addCharacteristicCategorySubcategory($_POST["characteristicId"], $_POST["categorySubcategoryId"]);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/CharacteristicCategorySubcategory/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] ."/Views/Pages/Administrator/CharacteristicCategorySubcategory/");
             exit();
         }
         else{
@@ -45,7 +45,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
         if (!QueryExecutor::getInstance()->containsCharacteristicCategorySubcategory($_POST["characteristicId"], $_POST["categorySubcategoryId"])) {
             QueryExecutor::getInstance()->updateCharacteristicCategorySubcategory($_GET["characteristicCategorySubcategoryId"], $_POST["characteristicId"], $_POST["categorySubcategoryId"]);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/CharacteristicCategorySubcategory/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] ."/Views/Pages/Administrator/CharacteristicCategorySubcategory/");
             exit();
         }
         else{

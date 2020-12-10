@@ -37,7 +37,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Записать") {
 
             QueryExecutor::getInstance()->addCategorySubcategory($_POST["subcategoryId"], $_POST["name"], $fileName);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/CategorySubcategory/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] . "/Views/Pages/Administrator/CategorySubcategory/");
             exit();
         }
         else{
@@ -67,7 +67,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
 
             QueryExecutor::getInstance()->updateCategorySubcategory($_GET["categorySubcategoryId"], $_POST["subcategoryId"], $_POST["name"], iconv_strlen($fileName) > 0 ? $fileName : $_GET["photo"]);
 
-            header("Location: http://electronicsstore/Views/Pages/Administrator/CategorySubcategory/");
+            header("Location: http://" . $_SERVER["SERVER_NAME"] ."/Views/Pages/Administrator/CategorySubcategory/");
             exit();
         }
         else{
