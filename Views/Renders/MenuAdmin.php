@@ -14,7 +14,7 @@
         <li><span><a href="/Views/Pages/Administrator//">Пользователи</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/Characteristic/">Характеристики</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/CharacteristicCategorySubcategory/">Характеристики категории подкатегорий</a></span></li>
-        <li><span><a href="/Views/Pages/Administrator//">Значения характеристик</a></span></li>
+        <li><span><a href="/Views/Pages/Administrator/CharacteristicQuantityUnitValue/">Значения характеристик</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/Quantity/">Величины</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/Unit/">Единицы измерения</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/QuantityUnit/">Единицы измерения величин</a></span></li>

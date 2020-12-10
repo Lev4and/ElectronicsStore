@@ -479,6 +479,38 @@ class QueryExecutor{
         $this->executeQuery("DELETE FROM quantity_unit WHERE id=$id");
     }
 
+    public function getCharacteristicQuantityUnitValues($characteristicId = null, $quantityId = null, $unitId = null, $value){
+        $condition1 = isset($characteristicId) && $characteristicId > 0 ? " AND characteristic_id=$characteristicId" : "";
+        $condition2 = isset($quantityId) && $quantityId > 0 ? " AND quantity_id=$quantityId" : "";
+        $condition3 = isset($unitId) && $unitId > 0 ? " AND unit_id=$unitId" : "";
+
+        $query = "SELECT * FROM v_characteristic_quantity_unit_value WHERE value LIKE '%$value%'";
+        $query .= $condition2;
+        $query .= $condition3;
+
+        return $this->executeQuery($query);
+    }
+
+    public function containsCharacteristicQuantityUnitValue($characteristicId, $quantityUnitId, $value){
+        return !is_null($this->executeQuery("SELECT * FROM characteristic_quantity_unit_value WHERE characteristic_id=$characteristicId AND quantity_unit_id=$quantityUnitId AND value='$value' LIMIT 1")[0]);
+    }
+
+    public function addCharacteristicQuantityUnitValue($characteristicId, $quantityUnitId, $value){
+        $this->executeQuery("INSERT INTO characteristic_quantity_unit_value (characteristic_id, quantity_unit_id, value) VALUES ($characteristicId, $quantityUnitId, '$value')");
+    }
+
+    public function getCharacteristicQuantityUnitValue($id){
+        return $this->executeQuery("SELECT * FROM v_characteristic_quantity_unit_value WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function updateCharacteristicQuantityUnitValue($id, $characteristicId, $quantityUnitId, $value){
+        $this->executeQuery("UPDATE characteristic_quantity_unit_value SET characteristic_id=$characteristicId, quantity_unit_id=$quantityUnitId, value='$value' WHERE id=$id");
+    }
+
+    public function removeCharacteristicQuantityUnitValue($id){
+        $this->executeQuery("DELETE FROM characteristic_quantity_unit_value WHERE id=$id");
+    }
+
     private function executeQuery($query){
         try{
             return ($this->contextDb->query($query))->FETCHALL(PDO::FETCH_ASSOC);
