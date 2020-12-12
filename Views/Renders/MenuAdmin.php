@@ -18,6 +18,6 @@
         <li><span><a href="/Views/Pages/Administrator/Quantity/">Величины</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/Unit/">Единицы измерения</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/QuantityUnit/">Единицы измерения величин</a></span></li>
-        <li><span><a href="/Views/Pages/Administrator//">Товары</a></span></li>
+        <li><span><a href="/Views/Pages/Administrator/Product/">Товары</a></span></li>
     </ul>
 </div>

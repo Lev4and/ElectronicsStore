@@ -485,6 +485,7 @@ class QueryExecutor{
         $condition3 = isset($unitId) && $unitId > 0 ? " AND unit_id=$unitId" : "";
 
         $query = "SELECT * FROM v_characteristic_quantity_unit_value WHERE value LIKE '%$value%'";
+        $query .= $condition1;
         $query .= $condition2;
         $query .= $condition3;
 
@@ -509,6 +510,71 @@ class QueryExecutor{
 
     public function removeCharacteristicQuantityUnitValue($id){
         $this->executeQuery("DELETE FROM characteristic_quantity_unit_value WHERE id=$id");
+    }
+
+    public function containsProduct($manufacturerId, $model){
+        return !is_null($this->executeQuery("SELECT * FROM product WHERE manufacturer_id=$manufacturerId AND model='$model' LIMIT 1")[0]);
+    }
+
+    public function addProduct($categorySubcategoryId, $manufacturerId, $photo, $model, $description, $price){
+        $this->executeQuery("INSERT INTO product (category_subcategory_id, manufacturer_id, photo, model, description, price) VALUES ($categorySubcategoryId, $manufacturerId, '$photo', '$model', '$description', $price)");
+
+        return $this->contextDb->lastInsertId();
+    }
+
+    public function addProductCharacteristicQuantityUnitValue($productId, $characteristicQuantityUnitValueId){
+        $this->executeQuery("INSERT INTO product_characteristic_quantity_unit_value (product_id, characteristic_quantity_unit_value_id) VALUES ($productId, $characteristicQuantityUnitValueId)");
+    }
+
+    public function getMinPriceProduct(){
+        return $this->executeQuery("SELECT MIN(price) FROM product")[0];
+    }
+
+    public function getMaxPriceProduct(){
+        return $this->executeQuery("SELECT MAX(price) FROM product")[0];
+    }
+
+    public function getProducts($classificationId = null, $categoryId = null, $subcategoryId = null, $categorySubcategoryId = null, $manufacturerId = null,  $minPrice = null, $maxPrice = null, $model){
+        $condition1 = isset($classificationId) && $classificationId > 0 ? " AND classification_id=$classificationId" : "";
+        $condition2 = isset($categoryId) && $categoryId > 0 ? " AND category_id=$categoryId" : "";
+        $condition3 = isset($subcategoryId) && $subcategoryId > 0 ? " AND subcategory_id=$subcategoryId" : "";
+        $condition4 = isset($categorySubcategoryId) && $categorySubcategoryId > 0 ? " AND category_subcategory_id=$categorySubcategoryId" : "";
+        $condition5 = isset($characteristicId) && $characteristicId > 0 ? " AND characteristic_id=$characteristicId" : "";
+        $condition6 = isset($manufacturerId) && $manufacturerId > 0 ? " AND manufacturer_id=$manufacturerId" : "";
+        $condition7 = isset($minPrice) && $minPrice >= 0 ? " AND price >= $minPrice" : "";
+        $condition8 = isset($maxPrice) && $maxPrice <= 0 ? " AND price <= $maxPrice" : "";
+
+        $query = "SELECT * FROM v_product WHERE model LIKE '%$model%'";
+        $query .= $condition1;
+        $query .= $condition2;
+        $query .= $condition3;
+        $query .= $condition4;
+        $query .= $condition5;
+        $query .= $condition6;
+        $query .= $condition7;
+        $query .= $condition8;
+
+        return $this->executeQuery($query);
+    }
+
+    public function getProduct($id){
+        return $this->executeQuery("SELECT * FROM v_product WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function getProductCharacteristicsQuantityUnitValues($id){
+        return $this->executeQuery("SELECT * FROM product_characteristic_quantity_unit_value WHERE product_id=$id");
+    }
+
+    public function removeAllProductCharacteristicsQuantityUnitValues($id){
+        $this->executeQuery("DELETE FROM product_characteristic_quantity_unit_value WHERE product_id=$id");
+    }
+
+    public function updateProduct($id, $categorySubcategoryId, $manufacturerId, $photo, $model, $description, $price){
+        $this->executeQuery("UPDATE product SET category_subcategory_id=$categorySubcategoryId, manufacturer_id=$manufacturerId, photo='$photo', model='$model', description='$description', price=$price WHERE id=$id");
+    }
+
+    public function removeProduct($id){
+        $this->executeQuery("DELETE FROM product WHERE id=$id");
     }
 
     private function executeQuery($query){
