@@ -182,6 +182,9 @@ header{
 .container .container-search .container-search-button i{
     margin: auto;
 }
+.container .container-search .container-search-button i:hover{
+    color: lime;
+}
 .container .container-actions{
     width: 20%;
     height: 100%;

@@ -1,6 +1,8 @@
 <script src="/JS/XmlHttp.js"></script>
+<script src="/JS/JQuery.js"></script>
 <script src="/JS/Login.js"></script>
 <script src="/JS/Menu.js"></script>
+<script src="/JS/Main.js"></script>
 <header>
     <div class="header-top">
         <div class="header-top-location">
@@ -37,10 +39,10 @@
         </div>
         <div class="container-search">
             <div class="container-search-input">
-                <input type="search" name="inputSearch" placeholder="Поиск по сайту" />
+                <input id="inputSearch" type="search" name="inputSearch" placeholder="Поиск по сайту"/>
             </div>
             <div class="container-search-button">
-                <i class="fas fa-search"></i>
+                <i class="fas fa-search" onclick="onClickSearch();"></i>
             </div>
         </div>
         <div class="container-actions">

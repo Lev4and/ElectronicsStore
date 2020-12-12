@@ -1,0 +1,20 @@
+.results-block{
+    font-size: larger;
+    font-family: Arial;
+}
+.results-block .results-block-title-section{
+    font-weight: bold;
+}
+.results-block ul{
+    margin: 0;
+    padding: 0;
+    margin: 25px 0;
+    list-style: none;
+}
+.results-block ul li{
+    margin: 15px 0;
+}
+.results-block ul li span a{
+    color: blueviolet;
+    text-decoration: none;
+}

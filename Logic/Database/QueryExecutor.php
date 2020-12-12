@@ -534,7 +534,7 @@ class QueryExecutor{
         return $this->executeQuery("SELECT MAX(price) FROM product")[0];
     }
 
-    public function getProducts($classificationId = null, $categoryId = null, $subcategoryId = null, $categorySubcategoryId = null, $manufacturerId = null,  $minPrice = null, $maxPrice = null, $model){
+    public function getProducts($classificationId = null, $categoryId = null, $subcategoryId = null, $categorySubcategoryId = null, $manufacturerId = null,  $minPrice = null, $maxPrice = null, $model, $name = null){
         $condition1 = isset($classificationId) && $classificationId > 0 ? " AND classification_id=$classificationId" : "";
         $condition2 = isset($categoryId) && $categoryId > 0 ? " AND category_id=$categoryId" : "";
         $condition3 = isset($subcategoryId) && $subcategoryId > 0 ? " AND subcategory_id=$subcategoryId" : "";
@@ -543,6 +543,7 @@ class QueryExecutor{
         $condition6 = isset($manufacturerId) && $manufacturerId > 0 ? " AND manufacturer_id=$manufacturerId" : "";
         $condition7 = isset($minPrice) && $minPrice >= 0 ? " AND price >= $minPrice" : "";
         $condition8 = isset($maxPrice) && $maxPrice <= 0 ? " AND price <= $maxPrice" : "";
+        $condition9 = isset($name) && iconv_strlen($name, "UTF-8") > 0 ? " AND name LIKE '%$name%'" : "";
 
         $query = "SELECT * FROM v_product WHERE model LIKE '%$model%'";
         $query .= $condition1;
@@ -553,6 +554,7 @@ class QueryExecutor{
         $query .= $condition6;
         $query .= $condition7;
         $query .= $condition8;
+        $query .= $condition9;
 
         return $this->executeQuery($query);
     }
