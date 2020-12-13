@@ -19,6 +19,7 @@ $categoriesClassification = QueryExecutor::getInstance()->getCategories($_GET["c
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
+    <link rel="stylesheet" href="/CSS/Elements/ItemBlock.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
@@ -35,15 +36,15 @@ $categoriesClassification = QueryExecutor::getInstance()->getCategories($_GET["c
             <div class="header-block">
                 <h1><?php echo $selectedClassification["name"]; ?></h1>
             </div>
-            <div class="categories-block">
+            <div class="items-block">
                 <?php foreach ($categoriesClassification as $category): ?>
-                    <div class="category-block">
+                    <div class="item-block">
                         <a href=".?action=Подкатегории&categoryId=<?php echo $category["id"]; ?>">
-                            <div>
-                                <div class="category-block-image-container">
+                            <div class="item-block-container">
+                                <div class="item-block-container-image-container">
                                     <img src="<?php echo "http://" . $_SERVER["SERVER_NAME"] . "/Resources/Images/Upload/" . $category["photo"]; ?>">
                                 </div>
-                                <div class="category-block-title">
+                                <div class="item-block-container-title">
                                     <span><?php echo $category["name"]; ?></span>
                                 </div>
                             </div>

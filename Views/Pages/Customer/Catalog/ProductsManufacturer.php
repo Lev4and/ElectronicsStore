@@ -5,16 +5,16 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
 
-$selectedSubcategory = QueryExecutor::getInstance()->getSubcategory($_GET["subcategoryId"]);
-$categoriesSubcategory = QueryExecutor::getInstance()->getCategoriesSubcategory(null, null, $_GET["subcategoryId"], "");
+$manufacturer = QueryExecutor::getInstance()->getManufacturer($_GET["manufacturerId"]);
+$products = QueryExecutor::getInstance()->getProducts(null, null, null, null, $_GET["manufacturerId"], null, null, "", null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ElectronicsStore - <?php echo $selectedSubcategory["name"]; ?></title>
+    <title>ElectronicsStore - <?php echo $manufacturer["name"]; ?></title>
     <link rel="stylesheet" href="/CSS/Pages/Main.css">
-    <link rel="stylesheet" href="/CSS/Pages/CatalogCategoriesSubcategory.css">
+    <link rel="stylesheet" href="/CSS/Pages/ProductsManufacturer.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
@@ -34,18 +34,18 @@ $categoriesSubcategory = QueryExecutor::getInstance()->getCategoriesSubcategory(
     <div class="content">
         <?php if(!Access::isAdministrator()): ?>
             <div class="header-block">
-                <h1><?php echo $selectedSubcategory["name"]; ?></h1>
+                <h1><?php echo $manufacturer["name"]; ?></h1>
             </div>
             <div class="items-block">
-                <?php foreach ($categoriesSubcategory as $categorySubcategory): ?>
+                <?php foreach ($products as $product): ?>
                     <div class="item-block">
-                        <a href=".?action=Товары&categorySubcategoryId=<?php echo $categorySubcategory["id"]; ?>">
+                        <a href="Product.php?productId=<?php echo $product["id"]; ?>">
                             <div class="item-block-container">
                                 <div class="item-block-container-image-container">
-                                    <img src="<?php echo "http://" . $_SERVER["SERVER_NAME"] . "/Resources/Images/Upload/" . $categorySubcategory["photo"]; ?>">
+                                    <img src="<?php echo "http://" . $_SERVER["SERVER_NAME"] . "/Resources/Images/Upload/" . $product["photo"]; ?>">
                                 </div>
                                 <div class="item-block-container-title">
-                                    <span><?php echo $categorySubcategory["name"]; ?></span>
+                                    <span><?php echo $product["name"]; ?></span>
                                 </div>
                             </div>
                         </a>

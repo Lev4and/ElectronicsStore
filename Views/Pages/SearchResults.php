@@ -87,7 +87,7 @@ if(isset($_GET["inputSearch"]) && iconv_strlen($_GET["inputSearch"], "UTF-8") > 
                         <li><span class="results-block-title-section">Товары</span></li>
                         <ul>
                             <?php foreach ($products as $product): ?>
-                                <li><span><a href="Customer/Catalog/Product.php?productId=<?php echo $product["id"]; ?>">Товар: <?php echo "{$product["manufacturer_name"]} {$product["model"]}"; ?></a></span></li>
+                                <li><span><a href="Customer/Catalog/Product.php?productId=<?php echo $product["id"]; ?>">Товар: <?php echo "{$product["category_subcategory_name"]} {$product["manufacturer_name"]} {$product["model"]}"; ?></a></span></li>
                             <?php endforeach; ?>
                         </ul>
                     <?php endif; ?>
