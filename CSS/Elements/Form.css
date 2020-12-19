@@ -15,8 +15,9 @@
     width: 100%;
     max-width: 100%;
 }
+.form-block .form-block-reviews .form-block-reviews-fieldset,
 .form-block .form-block-description .form-block-description-fieldset,
-.form-block .form-block-characteristics .form-block-characteristics-fieldset{
+.form-block .form-block-characteristics .form-block-characteristics-fieldset {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -99,7 +100,6 @@
     width: 100%;
     height: 100%;
     color: black;
-    border: none;
     font-size: larger;
     font-family: Arial;
 }

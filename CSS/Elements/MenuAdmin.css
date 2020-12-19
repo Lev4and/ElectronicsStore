@@ -8,16 +8,18 @@
 .menu-admin ol{
     margin: 0;
     padding: 0;
+    max-height: 500px;
+    overflow: scroll;
     list-style: none;
 }
 .menu-admin ul li{
     margin: 0;
     padding: 0;
     width: 400px;
-    height: 30px;
+    height: 50px;
     color: white;
     display: flex;
-    font-size: 14px;
+    font-size: 18px;
     font-family: Arial;
     border-left-width: 0;
     border-right-width: 0;
@@ -42,11 +44,11 @@
 }
 .menu-admin ul li:hover{
     cursor: pointer;
-    color: lime;
+    color: blue;
 }
 .menu-admin ul li:hover > span a{
     cursor: pointer;
-    color: lime;
+    color: blue;
 }
 .menu-admin ul li:hover > ul{
     display: block;

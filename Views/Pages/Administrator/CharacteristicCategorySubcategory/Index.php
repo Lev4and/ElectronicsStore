@@ -110,7 +110,16 @@ if(isset($_POST["action"]) && $_POST["action"] == "КатегорииПодка�
     }
 }
 
-if(!isset($_POST["action"]) || $_POST["action"] == "Поиск"){
+if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
+    $characteristics = QueryExecutor::getInstance()->getCharacteristics("");
+    $classifications = QueryExecutor::getInstance()->getClassifications("");
+    $characteristicsCategorySubcategory = QueryExecutor::getInstance()->getCharacteristicsCategorySubcategory($_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["categorySubcategoryId"], $_POST["characteristicId"], $_POST["inputSearch"]);
+
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableCharacteristicsCategorySubcategory.php";
+    exit();
+}
+
+if(!isset($_POST["action"])){
     $characteristics = QueryExecutor::getInstance()->getCharacteristics("");
     $classifications = QueryExecutor::getInstance()->getClassifications("");
     $characteristicsCategorySubcategory = QueryExecutor::getInstance()->getCharacteristicsCategorySubcategory($_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["categorySubcategoryId"], $_POST["characteristicId"], $_POST["inputSearch"]);

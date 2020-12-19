@@ -73,16 +73,17 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить"){
     }
 }
 
-if(!isset($_POST["action"]) || $_POST["action"] == "Поиск"){
+if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
     $countries = QueryExecutor::getInstance()->getCountries("");
     $regions = QueryExecutor::getInstance()->getRegions($_POST["countryId"], $_POST["inputSearch"]);
 
-    include "Regions.php";
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableRegions.php";
+    exit();
 }
 
-if(isset($_POST["action"]) && $_POST["action"] == "Сбросить фильтры"){
+if(!isset($_POST["action"])){
     $countries = QueryExecutor::getInstance()->getCountries("");
-    $regions = QueryExecutor::getInstance()->getRegions(null, "");
+    $regions = QueryExecutor::getInstance()->getRegions($_POST["countryId"], $_POST["inputSearch"]);
 
     include "Regions.php";
 }

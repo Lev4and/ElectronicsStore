@@ -85,7 +85,15 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
     }
 }
 
-if(!isset($_POST["action"]) || $_POST["action"] == "Поиск"){
+if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
+    $classifications = QueryExecutor::getInstance()->getClassifications("");
+    $categories = QueryExecutor::getInstance()->getCategories($_POST["classificationId"], $_POST["inputSearch"]);
+
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableCategories.php";
+    exit();
+}
+
+if(!isset($_POST["action"])){
     $classifications = QueryExecutor::getInstance()->getClassifications("");
     $categories = QueryExecutor::getInstance()->getCategories($_POST["classificationId"], $_POST["inputSearch"]);
 

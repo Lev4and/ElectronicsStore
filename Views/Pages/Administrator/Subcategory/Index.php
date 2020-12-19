@@ -97,7 +97,15 @@ if(isset($_POST["action"]) && $_POST["action"] == "Категории"){
     }
 }
 
-if(!isset($_POST["action"]) || $_POST["action"] == "Поиск"){
+if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
+    $classifications = QueryExecutor::getInstance()->getClassifications("");
+    $subcategories = QueryExecutor::getInstance()->getSubcategories($_POST["classificationId"], $_POST["categoryId"], $_POST["inputSearch"]);
+
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableSubcategories.php";
+    exit();
+}
+
+if(!isset($_POST["action"])){
     $classifications = QueryExecutor::getInstance()->getClassifications("");
     $subcategories = QueryExecutor::getInstance()->getSubcategories($_POST["classificationId"], $_POST["categoryId"], $_POST["inputSearch"]);
 

@@ -69,7 +69,14 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
     }
 }
 
-if(!isset($_POST["action"]) || $_POST["action"] == "Поиск"){
+if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
+    $units = QueryExecutor::getInstance()->getUnits($_POST["inputSearch"]);
+
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableUnits.php";
+    exit();
+}
+
+if(!isset($_POST["action"])){
     $units = QueryExecutor::getInstance()->getUnits($_POST["inputSearch"]);
 
     include "Units.php";

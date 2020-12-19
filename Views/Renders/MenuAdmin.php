@@ -10,8 +10,6 @@
         <li><span><a href="/Views/Pages/Administrator/Subcategory/">Подкатегории</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/CategorySubcategory/">Категории подкатегорий</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/Manufacturer/">Производители</a></span></li>
-        <li><span><a href="/Views/Pages/Administrator//">Должности</a></span></li>
-        <li><span><a href="/Views/Pages/Administrator//">Пользователи</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/Characteristic/">Характеристики</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/CharacteristicCategorySubcategory/">Характеристики категории подкатегорий</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/CharacteristicQuantityUnitValue/">Значения характеристик</a></span></li>

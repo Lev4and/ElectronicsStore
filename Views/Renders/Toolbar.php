@@ -14,8 +14,5 @@
         <div class="toolbar-input-search">
             <input type="search" name="inputSearch" placeholder="Поиск" />
         </div>
-        <div class="toolbar-action-button">
-            <input type="submit" name="action" value="Поиск">
-        </div>
     </div>
 </div>

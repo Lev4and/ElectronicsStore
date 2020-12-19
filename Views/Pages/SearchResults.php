@@ -47,7 +47,7 @@ if(isset($_GET["inputSearch"]) && iconv_strlen($_GET["inputSearch"], "UTF-8") > 
                         <li><span class="results-block-title-section">Классификации</span></li>
                         <ul>
                             <?php foreach ($classifications as $classification): ?>
-                                <li><span><a href="Customer/Catalog/Categories.php?classificationId=<?php echo $classification["id"]; ?>">Классификация: <?php echo $classification["name"]; ?></a></span></li>
+                                <li><span><a href="Customer/Catalog/?action=Категории&classificationId=<?php echo $classification["id"]; ?>">Классификация: <?php echo $classification["name"]; ?></a></span></li>
                             <?php endforeach; ?>
                         </ul>
                     <?php endif; ?>
@@ -55,7 +55,7 @@ if(isset($_GET["inputSearch"]) && iconv_strlen($_GET["inputSearch"], "UTF-8") > 
                         <li><span class="results-block-title-section">Категории</span></li>
                         <ul>
                             <?php foreach ($categories as $category): ?>
-                                <li><span><a href="Customer/Catalog/Subcategories.php?categoryId=<?php echo $category["id"]; ?>">Категория: <?php echo $category["name"]; ?></a></span></li>
+                                <li><span><a href="Customer/Catalog/?action=Подкатегории&categoryId=<?php echo $category["id"]; ?>">Категория: <?php echo $category["name"]; ?></a></span></li>
                             <?php endforeach; ?>
                         </ul>
                     <?php endif; ?>
@@ -63,7 +63,7 @@ if(isset($_GET["inputSearch"]) && iconv_strlen($_GET["inputSearch"], "UTF-8") > 
                         <li><span class="results-block-title-section">Подкатегории</span></li>
                         <ul>
                             <?php foreach ($subcategories as $subcategory): ?>
-                                <li><span><a href="Customer/Catalog/CategoriesSubcategory.php?subcategoryId=<?php echo $subcategory["id"]; ?>">Подкатегория: <?php echo $subcategory["name"]; ?></a></span></li>
+                                <li><span><a href="Customer/Catalog/?action=КатегорииПодкатегории&subcategoryId=<?php echo $subcategory["id"]; ?>">Подкатегория: <?php echo $subcategory["name"]; ?></a></span></li>
                             <?php endforeach; ?>
                         </ul>
                     <?php endif; ?>
@@ -71,7 +71,7 @@ if(isset($_GET["inputSearch"]) && iconv_strlen($_GET["inputSearch"], "UTF-8") > 
                         <li><span class="results-block-title-section">Категории подкатегории</span></li>
                         <ul>
                             <?php foreach ($categoriesSubcategory as $categorySubcategory): ?>
-                                <li><span><a href="Customer/Catalog/Products.php?categorySubcategoryId=<?php echo $categorySubcategory["id"]; ?>">Категория подкатегории: <?php echo $categorySubcategory["name"]; ?></a></span></li>
+                                <li><span><a href="Customer/Catalog/?action=Товары&categorySubcategoryId=<?php echo $categorySubcategory["id"]; ?>">Категория подкатегории: <?php echo $categorySubcategory["name"]; ?></a></span></li>
                             <?php endforeach; ?>
                         </ul>
                     <?php endif; ?>

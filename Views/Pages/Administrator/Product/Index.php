@@ -148,9 +148,17 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
     }
 }
 
-if(!isset($_POST["action"]) || $_POST["action"] == "Поиск"){
+if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
+    $products = QueryExecutor::getInstance()->getProducts($_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["categorySubcategoryId"], $_POST["manufacturerId"], null, null, $_POST["inputSearch"]);
+
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableProducts.php";
+    exit();
+}
+
+if(!isset($_POST["action"])){
     $products = QueryExecutor::getInstance()->getProducts($_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["categorySubcategoryId"], $_POST["manufacturerId"], null, null, $_POST["inputSearch"]);
 
     include "Products.php";
+    exit();
 }
 ?>

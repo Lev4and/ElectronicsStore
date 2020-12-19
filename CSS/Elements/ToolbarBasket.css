@@ -1,0 +1,48 @@
+.toolbar-basket{
+    width: 100%;
+    height: 50px;
+    max-width: 100%;
+    max-height: 50px;
+    font-size: larger;
+    font-family: Arial;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.toolbar-basket .toolbar-basket-actions{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.toolbar-basket .toolbar-basket-actions .toolbar-basket-action-button{
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: inherit;
+    vertical-align: middle;
+}
+.toolbar-basket .toolbar-basket-actions .toolbar-basket-action-button input[type=submit]{
+    width: 100%;
+    margin: auto;
+    font-size: larger;
+    border-radius: 10px;
+}
+.toolbar-basket .toolbar-basket-actions .toolbar-basket-action-button #action-button-сheckout:hover{
+    color: white;
+    background-color: lime;
+}
+.toolbar-basket .toolbar-basket-actions .toolbar-basket-action-button #action-button-clear:hover{
+    color: white;
+    background-color: yellow;
+}
+.toolbar-basket .toolbar-basket-actions .toolbar-basket-action-button #action-button-remove:hover{
+    color: white;
+    background-color: red;
+}
+

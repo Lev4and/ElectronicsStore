@@ -69,7 +69,14 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
     }
 }
 
-if(!isset($_POST["action"]) || $_POST["action"] == "Поиск"){
+if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
+    $characteristics = QueryExecutor::getInstance()->getCharacteristics($_POST["inputSearch"]);
+
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableCharacteristics.php";
+    exit();
+}
+
+if(!isset($_POST["action"])){
     $characteristics = QueryExecutor::getInstance()->getCharacteristics($_POST["inputSearch"]);
 
     include "Characteristics.php";

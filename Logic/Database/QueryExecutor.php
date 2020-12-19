@@ -492,6 +492,26 @@ class QueryExecutor{
         return $this->executeQuery($query);
     }
 
+    public function getUsedCharacteristicQuantityUnitValues($characteristicId, $categorySubcategoryId){
+        $query = "SELECT DISTINCT
+                 v_characteristic_quantity_unit_value.id,
+                 v_characteristic_quantity_unit_value.characteristic_id,
+                 v_characteristic_quantity_unit_value.characteristic_name,
+                 v_characteristic_quantity_unit_value.quantity_unit_id,
+                 v_characteristic_quantity_unit_value.quantity_id,
+                 v_characteristic_quantity_unit_value.quantity_name,
+                 v_characteristic_quantity_unit_value.unit_id,
+                 v_characteristic_quantity_unit_value.unit_name,
+                 v_characteristic_quantity_unit_value.unit_designation,
+                 v_characteristic_quantity_unit_value.value
+                 FROM v_characteristic_quantity_unit_value INNER JOIN 
+                 product_characteristic_quantity_unit_value ON product_characteristic_quantity_unit_value.characteristic_quantity_unit_value_id = v_characteristic_quantity_unit_value.id INNER JOIN
+                 product ON product.id = product_characteristic_quantity_unit_value.product_id AND product.category_subcategory_id = $categorySubcategoryId
+                 WHERE characteristic_id = $characteristicId";
+
+        return $this->executeQuery($query);
+    }
+
     public function containsCharacteristicQuantityUnitValue($characteristicId, $quantityUnitId, $value){
         return !is_null($this->executeQuery("SELECT * FROM characteristic_quantity_unit_value WHERE characteristic_id=$characteristicId AND quantity_unit_id=$quantityUnitId AND value='$value' LIMIT 1")[0]);
     }
@@ -526,15 +546,23 @@ class QueryExecutor{
         $this->executeQuery("INSERT INTO product_characteristic_quantity_unit_value (product_id, characteristic_quantity_unit_value_id) VALUES ($productId, $characteristicQuantityUnitValueId)");
     }
 
-    public function getMinPriceProduct(){
-        return $this->executeQuery("SELECT MIN(price) FROM product")[0];
+    public function getMinPriceProduct($categorySubcategoryId){
+        return $this->executeQuery("SELECT MIN(price) AS `min_price` FROM product WHERE product.category_subcategory_id=$categorySubcategoryId")[0];
     }
 
-    public function getMaxPriceProduct(){
-        return $this->executeQuery("SELECT MAX(price) FROM product")[0];
+    public function getMaxPriceProduct($categorySubcategoryId){
+        return $this->executeQuery("SELECT MAX(price) AS `max_price` FROM product WHERE product.category_subcategory_id=$categorySubcategoryId")[0];
     }
 
-    public function getProducts($classificationId = null, $categoryId = null, $subcategoryId = null, $categorySubcategoryId = null, $manufacturerId = null,  $minPrice = null, $maxPrice = null, $model, $name = null){
+    public function getMinEvaluationProduct($categorySubcategoryId){
+        return $this->executeQuery("SELECT MIN(v_product.evaluation) AS `min_evaluation` FROM v_product WHERE v_product.category_subcategory_id=$categorySubcategoryId");
+    }
+
+    public function getMaxEvaluationProduct($categorySubcategoryId){
+        return $this->executeQuery("SELECT MAX(v_product.evaluation) AS `max_evaluation` FROM v_product WHERE v_product.category_subcategory_id=$categorySubcategoryId");
+    }
+
+    public function getProducts($classificationId = null, $categoryId = null, $subcategoryId = null, $categorySubcategoryId = null, $manufacturerId = null,  $minPrice = null, $maxPrice = null, $model, $name = null, $characteristicQuantityUnitValues = null, $manufacturers = null, $minEvaluation = null, $maxEvaluation = null){
         $condition1 = isset($classificationId) && $classificationId > 0 ? " AND classification_id=$classificationId" : "";
         $condition2 = isset($categoryId) && $categoryId > 0 ? " AND category_id=$categoryId" : "";
         $condition3 = isset($subcategoryId) && $subcategoryId > 0 ? " AND subcategory_id=$subcategoryId" : "";
@@ -543,9 +571,14 @@ class QueryExecutor{
         $condition6 = isset($manufacturerId) && $manufacturerId > 0 ? " AND manufacturer_id=$manufacturerId" : "";
         $condition7 = isset($minPrice) && $minPrice >= 0 ? " AND price >= $minPrice" : "";
         $condition8 = isset($maxPrice) && $maxPrice <= 0 ? " AND price <= $maxPrice" : "";
-        $condition9 = isset($name) && iconv_strlen($name, "UTF-8") > 0 ? " AND name LIKE '%$name%'" : "";
+        $condition9 = isset($minEvaluation) && $minEvaluation >= 1 ? " AND (evaluation >= $minEvaluation OR evaluation IS NULL)" : "";
+        $condition10 = isset($maxEvaluation) && $maxEvaluation <= 5 ? " AND (evaluation <= $maxEvaluation  OR evaluation IS NULL)" : "";
+        $condition11 = isset($name) && iconv_strlen($name, "UTF-8") > 0 ? " AND name LIKE '%$name%'" : "";
 
-        $query = "SELECT * FROM v_product WHERE model LIKE '%$model%'";
+        $query = "SELECT DISTINCT *
+                  FROM v_product
+                  WHERE v_product.model LIKE '%$model%'";
+
         $query .= $condition1;
         $query .= $condition2;
         $query .= $condition3;
@@ -555,6 +588,32 @@ class QueryExecutor{
         $query .= $condition7;
         $query .= $condition8;
         $query .= $condition9;
+        $query .= $condition10;
+        $query .= $condition11;
+
+        if(isset($manufacturers) && count($manufacturers) > 0){
+            $conditions = array();
+
+            foreach ($manufacturers as $key => $value){
+                array_push($conditions, $value);
+            }
+
+            $condition = implode(", ", $conditions);
+            $query .= " AND manufacturer_id IN ($condition)";
+        }
+
+        if(isset($characteristicQuantityUnitValues) && count($characteristicQuantityUnitValues) > 0){
+            $conditions = array();
+
+            foreach ($characteristicQuantityUnitValues as $key => $value){
+                 array_push($conditions, "(SELECT COUNT(*) FROM product_characteristic_quantity_unit_value AS p WHERE p.product_id = v_product.id AND p.characteristic_quantity_unit_value_id IN (" . implode(", ", $value) . ")) > 0");
+            }
+
+            $condition = implode(" AND ", $conditions);
+            $query .= " AND $condition";
+        }
+
+        //echo $query;
 
         return $this->executeQuery($query);
     }
@@ -567,6 +626,10 @@ class QueryExecutor{
         return $this->executeQuery("SELECT * FROM product_characteristic_quantity_unit_value WHERE product_id=$id");
     }
 
+    public function getProductCharacteristicsQuantityUnitValuesDetailedInformation($id){
+        return $this->executeQuery("SELECT * FROM v_product_characteristic_quantity_unit_value WHERE product_id=$id");
+    }
+
     public function removeAllProductCharacteristicsQuantityUnitValues($id){
         $this->executeQuery("DELETE FROM product_characteristic_quantity_unit_value WHERE product_id=$id");
     }
@@ -577,6 +640,23 @@ class QueryExecutor{
 
     public function removeProduct($id){
         $this->executeQuery("DELETE FROM product WHERE id=$id");
+    }
+
+    public function getManufacturersProducts($categorySubcategoryId){
+        return $this->executeQuery("SELECT product.manufacturer_id, manufacturer.name AS `manufacturer_name` FROM product INNER JOIN manufacturer ON manufacturer.id = product.manufacturer_id WHERE product.category_subcategory_id = $categorySubcategoryId GROUP BY product.manufacturer_id");
+    }
+
+    public function addPurchase($userId){
+        $date = date("Y-m-d H:i:s");
+        $this->executeQuery("INSERT INTO purchase (user_id, date_purchase) VALUES ($userId, '$date')");
+
+        return $this->contextDb->lastInsertId();
+    }
+
+    public function addPurchaseContent($purchaseId, $basket){
+        foreach ($basket as $key => $value){
+            $this->executeQuery("INSERT INTO purchase_content (purchase_id, product_id	, quantity) VALUES ($purchaseId, {$value["productId"]}, {$value["number"]})");
+        }
     }
 
     private function executeQuery($query){

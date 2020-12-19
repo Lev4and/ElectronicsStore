@@ -37,61 +37,68 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
             <div class="header-block">
                 <h1>Характеристики категории подкатегории</h1>
             </div>
-            <form action="." method="post">
+            <form id="filtersForm" action="." method="post">
                 <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Toolbar.php"; ?>
-                <fieldset class="filters-block">
-                    <legend>Фильтры</legend>
-                    <div class="filter">
-                        <span>Классификации</span>
-                        <div>
-                            <select id="select-classifications" name="classificationId" onchange="onChangeSelectedClassifications(this);">
-                                <option value="">Выберите классификацию</option>
-                                <?php foreach ($classifications as $classification): ?>
-                                    <option value="<?php echo $classification["id"]; ?>"><?php echo $classification["name"]; ?></option>
-                                <?php endforeach; ?>
-                            </select>
+                <div style="width: 100%; display: flex; flex-direction: row; justify-content: space-between;">
+                    <fieldset class="filters-block">
+                        <legend>Фильтры</legend>
+                        <div class="filter">
+                            <span>Классификации</span>
+                            <div>
+                                <select id="select-classifications" name="classificationId" onchange="onChangeSelectedClassifications(this);">
+                                    <option value="">Выберите классификацию</option>
+                                    <?php foreach ($classifications as $classification): ?>
+                                        <option value="<?php echo $classification["id"]; ?>"><?php echo $classification["name"]; ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="filter">
-                        <span>Категории</span>
-                        <div>
-                            <select id="select-categories" name="categoryId" onchange="onChangeSelectedCategories(this);">
+                        <div class="filter">
+                            <span>Категории</span>
+                            <div>
+                                <select id="select-categories" name="categoryId" onchange="onChangeSelectedCategories(this);">
 
-                            </select>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="filter">
-                        <span>Подкатегории</span>
-                        <div>
-                            <select id="select-subcategories" name="subcategoryId" onchange="onChangeSelectedSubcategories(this)">
+                        <div class="filter">
+                            <span>Подкатегории</span>
+                            <div>
+                                <select id="select-subcategories" name="subcategoryId" onchange="onChangeSelectedSubcategories(this)">
 
-                            </select>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="filter">
-                        <span>Категории подкатегории</span>
-                        <div>
-                            <select id="select-categories-subcategory" name="categorySubcategoryId">
+                        <div class="filter">
+                            <span>Категории подкатегории</span>
+                            <div>
+                                <select id="select-categories-subcategory" name="categorySubcategoryId">
 
-                            </select>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="filter">
-                        <span>Характеристики</span>
-                        <div>
-                            <select id="select-characteristics" name="characteristicId">
-                                <option value="">Выберите характеристику</option>
-                                <?php foreach ($characteristics as $characteristic): ?>
-                                    <option value="<?php echo $characteristic["id"]; ?>"><?php echo $characteristic["name"]; ?></option>
-                                <?php endforeach; ?>
-                            </select>
+                        <div class="filter">
+                            <span>Характеристики</span>
+                            <div>
+                                <select id="select-characteristics" name="characteristicId">
+                                    <option value="">Выберите характеристику</option>
+                                    <?php foreach ($characteristics as $characteristic): ?>
+                                        <option value="<?php echo $characteristic["id"]; ?>"><?php echo $characteristic["name"]; ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
                         </div>
+                        <div class="reset-filters">
+                            <input class="reset-filters-button" type="reset" name="action" value="Сбросить фильтры">
+                        </div>
+                        <div class="apply-filters">
+                            <input class="apply-filters-button" type="button" onclick="onClickApply();" value="Применить">
+                        </div>
+                    </fieldset>
+                    <div id="tableBlock">
+                        <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableCharacteristicsCategorySubcategory.php"; ?>
                     </div>
-                    <div class="reset-filters">
-                        <input class="reset-filters-button" type="submit" name="action" value="Сбросить фильтры">
-                    </div>
-                </fieldset>
-                <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableCharacteristicsCategorySubcategory.php"; ?>
+                </div>
             </form>
             <?php VisibleError::showError(); ?>
         <?php else: ?>

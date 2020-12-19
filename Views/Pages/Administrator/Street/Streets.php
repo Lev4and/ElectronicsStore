@@ -37,42 +37,49 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
             <div class="header-block">
                 <h1>Улицы</h1>
             </div>
-            <form action="." method="post">
+            <form id="filtersForm" action="." method="post">
                 <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Toolbar.php"; ?>
-                <fieldset class="filters-block">
-                    <legend>Фильтры</legend>
-                    <div class="filter">
-                        <span>Страны</span>
-                        <div>
-                            <select id="select-countries" name="countryId" onchange="onChangeSelectedCountries(this);">
-                                <option value="">Выберите страну</option>
-                                <?php foreach ($countries as $country): ?>
-                                    <option value="<?php echo $country["id"]; ?>"><?php echo $country["name"]; ?></option>
-                                <?php endforeach; ?>
-                            </select>
+                <div style="width: 100%; display: flex; flex-direction: row; justify-content: space-between;">
+                    <fieldset class="filters-block">
+                        <legend>Фильтры</legend>
+                        <div class="filter">
+                            <span>Страны</span>
+                            <div>
+                                <select id="select-countries" name="countryId" onchange="onChangeSelectedCountries(this);">
+                                    <option value="">Выберите страну</option>
+                                    <?php foreach ($countries as $country): ?>
+                                        <option value="<?php echo $country["id"]; ?>"><?php echo $country["name"]; ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="filter">
-                        <span>Регионы</span>
-                        <div>
-                            <select id="select-regions" name="regionId" onchange="onChangeSelectedRegions(this);">
+                        <div class="filter">
+                            <span>Регионы</span>
+                            <div>
+                                <select id="select-regions" name="regionId" onchange="onChangeSelectedRegions(this);">
 
-                            </select>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="filter">
-                        <span>Города</span>
-                        <div>
-                            <select id="select-cities" name="cityId">
+                        <div class="filter">
+                            <span>Города</span>
+                            <div>
+                                <select id="select-cities" name="cityId">
 
-                            </select>
+                                </select>
+                            </div>
                         </div>
+                        <div class="reset-filters">
+                            <input class="reset-filters-button" type="reset" name="action" value="Сбросить фильтры">
+                        </div>
+                        <div class="apply-filters">
+                            <input class="apply-filters-button" type="button" onclick="onClickApply();" value="Применить">
+                        </div>
+                    </fieldset>
+                    <div id="tableBlock">
+                        <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableStreets.php"; ?>
                     </div>
-                    <div class="reset-filters">
-                        <input class="reset-filters-button" type="submit" name="action" value="Сбросить фильтры">
-                    </div>
-                </fieldset>
-                <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableStreets.php"; ?>
+                </div>
             </form>
             <?php VisibleError::showError(); ?>
         <?php else: ?>

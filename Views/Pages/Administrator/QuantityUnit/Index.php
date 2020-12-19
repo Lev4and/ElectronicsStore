@@ -73,7 +73,16 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
     }
 }
 
-if(!isset($_POST["action"]) || $_POST["action"] == "Поиск"){
+if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
+    $quantityUnits = QueryExecutor::getInstance()->getQuantityUnits($_POST["quantityId"], $_POST["unitId"], $_POST["inputSearch"]);
+    $quantities = QueryExecutor::getInstance()->getQuantities("");
+    $units = QueryExecutor::getInstance()->getUnits("");
+
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableQuantityUnits.php";
+    exit();
+}
+
+if(!isset($_POST["action"])){
     $quantityUnits = QueryExecutor::getInstance()->getQuantityUnits($_POST["quantityId"], $_POST["unitId"], $_POST["inputSearch"]);
     $quantities = QueryExecutor::getInstance()->getQuantities("");
     $units = QueryExecutor::getInstance()->getUnits("");

@@ -69,7 +69,14 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
     }
 }
 
-if(!isset($_POST["action"]) || $_POST["action"] == "Поиск"){
+if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
+    $quantities = QueryExecutor::getInstance()->getQuantities($_POST["inputSearch"]);
+
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableQuantities.php";
+    exit();
+}
+
+if(!isset($_POST["action"])){
     $quantities = QueryExecutor::getInstance()->getQuantities($_POST["inputSearch"]);
 
     include "Quantities.php";

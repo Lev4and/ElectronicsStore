@@ -1,3 +1,6 @@
+#tableBlock{
+    width: 65%;
+}
 .table-block{
     width: 100%;
     font-family: Arial;
@@ -16,6 +19,10 @@
 }
 .table-block table .table-block-values .table-block-value-input-radio{
     text-align: center;
+}
+.table-block table .table-block-values .table-block-value-input-number input[type=number]{
+    text-align: center;
+    border: none;
 }
 .table-block table .table-block-values .table-block-value-image{
     width: 100px;

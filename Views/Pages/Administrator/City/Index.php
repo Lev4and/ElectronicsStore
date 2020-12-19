@@ -84,7 +84,15 @@ if(isset($_POST["action"]) && $_POST["action"] == "Удалить"){
     include "Cities.php";
 }
 
-if(!isset($_POST["action"]) || $_POST["action"] == "Поиск"){
+if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
+    $countries = QueryExecutor::getInstance()->getCountries("");
+    $cities = QueryExecutor::getInstance()->getCities($_POST["countryId"], $_POST["regionId"], $_POST["inputSearch"]);
+
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableCities.php";
+    exit();
+}
+
+if(!isset($_POST["action"])){
     $countries = QueryExecutor::getInstance()->getCountries("");
     $cities = QueryExecutor::getInstance()->getCities($_POST["countryId"], $_POST["regionId"], $_POST["inputSearch"]);
 

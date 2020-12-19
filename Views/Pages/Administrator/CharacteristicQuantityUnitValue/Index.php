@@ -75,7 +75,17 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
     }
 }
 
-if(!isset($_POST["action"]) || $_POST["action"] == "Поиск"){
+if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
+    $characteristicQuantityUnitValues = QueryExecutor::getInstance()->getCharacteristicQuantityUnitValues($_POST["characteristicId"], $_POST["quantityId"], $_POST["unitId"], $_POST["inputSearch"]);
+    $characteristics = QueryExecutor::getInstance()->getCharacteristics("");
+    $quantities = QueryExecutor::getInstance()->getQuantities("");
+    $units = QueryExecutor::getInstance()->getUnits("");
+
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableCharacteristicQuantityUnitValues.php";
+    exit();
+}
+
+if(!isset($_POST["action"])){
     $characteristicQuantityUnitValues = QueryExecutor::getInstance()->getCharacteristicQuantityUnitValues($_POST["characteristicId"], $_POST["quantityId"], $_POST["unitId"], $_POST["inputSearch"]);
     $characteristics = QueryExecutor::getInstance()->getCharacteristics("");
     $quantities = QueryExecutor::getInstance()->getQuantities("");

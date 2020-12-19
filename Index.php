@@ -3,6 +3,10 @@ session_start();
 
 require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
 
+if(!isset($_SESSION["basket"])){
+    $_SESSION["basket"] = array();
+}
+
 if(!isset($_SESSION["user"])){
     $_SESSION["user"] = array();
 }
@@ -18,6 +22,7 @@ if(isset($_SESSION["error"]) && iconv_strlen($_SESSION["error"], "UTF-8") > 0){
 if(isset($_POST["action"]) && $_POST["action"] == "Авторизоваться"){
     if(QueryExecutor::getInstance()->authorization($_POST["login"], $_POST["password"])){
         $_SESSION["user"] = QueryExecutor::getInstance()->getUser($_POST["login"]);
+        $_SESSION["basket"] = array();
     }
     else{
         $_SESSION["error"] = "Вы ввели неверный логин или пароль.";
@@ -58,6 +63,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Зарегистрирова�
 
 if(isset($_POST["action"]) && $_POST["action"] == "Выход"){
     $_SESSION["user"] = array();
+    $_SESSION["basket"] = array();
 }
 
 include("./Views/Pages/Main.php");

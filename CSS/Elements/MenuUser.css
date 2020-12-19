@@ -19,10 +19,10 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 30px;
+    height: 50px;
     color: white;
     display: flex;
-    font-size: 14px;
+    font-size: 18px;
     font-family: Arial;
     border-left-width: 0;
     border-right-width: 0;
@@ -38,7 +38,7 @@
 }
 .container-menu-user ul li:hover{
     cursor: pointer;
-    color: lime;
+    color: blue;
 }
 .container-menu-user:hover > ul{
     display: block;

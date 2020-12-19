@@ -17,11 +17,14 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
     <link rel="stylesheet" href="/CSS/Elements/Toolbar.css">
+    <link rel="stylesheet" href="/CSS/Elements/Filters.css">
     <link rel="stylesheet" href="/CSS/Elements/Table.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
     <link rel="stylesheet" href="/Resources/Fonts/Font%20Awesome/css/all.min.css">
+    <script src="/JS/JQuery.js"></script>
+    <script src="/JS/Classifications.js"></script>
 </head>
 <body>
 
@@ -35,9 +38,22 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
             <div class="header-block">
                 <h1>Классификации</h1>
             </div>
-            <form action="." method="post">
+            <form id="filtersForm" action="." method="post">
                 <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Toolbar.php"; ?>
-                <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableClassifications.php"; ?>
+                <div style="width: 100%; display: flex; flex-direction: row; justify-content: space-between;">
+                    <fieldset class="filters-block">
+                        <legend>Фильтры</legend>
+                        <div class="reset-filters">
+                            <input class="reset-filters-button" type="reset" name="action" value="Сбросить фильтры">
+                        </div>
+                        <div class="apply-filters">
+                            <input class="apply-filters-button" type="button" onclick="onClickApply();" value="Применить">
+                        </div>
+                    </fieldset>
+                    <div id="tableBlock">
+                        <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableClassifications.php"; ?>
+                    </div>
+                </div>
             </form>
             <?php VisibleError::showError(); ?>
         <?php else: ?>
