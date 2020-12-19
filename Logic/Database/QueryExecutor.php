@@ -232,7 +232,7 @@ class QueryExecutor{
     }
 
     public function getCategory($id){
-        return $this->executeQuery("SELECT * FROM category WHERE id=$id LIMIT 1")[0];
+        return $this->executeQuery("SELECT * FROM v_category WHERE id=$id LIMIT 1")[0];
     }
 
     public function updateCategory($id, $classificationId, $name, $photo){

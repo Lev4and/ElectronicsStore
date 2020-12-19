@@ -48,7 +48,7 @@
         <div class="container-actions">
             <?php if(!isset($_SESSION["user"]["role_name"]) || $_SESSION["user"]["role_name"] == "Покупатель"): ?>
                 <div id="container-action-basket" class="container-action">
-                    <a href="<?php echo "http://{$_SERVER["SERVER_NAME"]}/Views/Pages/Customer/Catalog/Basket.php"; ?>"><i class="fas fa-shopping-basket"></i> Корзина <span id="counterBasket"><?php echo count($_SESSION["basket"]); ?></span></a>
+                    <a href="<?php echo "http://{$_SERVER["SERVER_NAME"]}/Views/Pages/Customer/Basket.php"; ?>"><i class="fas fa-shopping-basket"></i> Корзина <span id="counterBasket"><?php echo count($_SESSION["basket"]); ?></span></a>
                 </div>
             <?php endif; ?>
         </div>

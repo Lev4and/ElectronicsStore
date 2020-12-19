@@ -1,0 +1,30 @@
+.breadcrumb-list{
+    width: 100%;
+    height: 70px;
+}
+.breadcrumb-list ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+}
+.breadcrumb-list ul li{
+    height: 100%;
+    font-size: medium;
+    font-family: Arial;
+}
+.breadcrumb-list ul li a{
+    height: 100%;
+    display: flex;
+    text-decoration: none;
+}
+.breadcrumb-list ul li a span{
+    margin: auto;
+    max-height: 100%;
+}
+.breadcrumb-list ul li:nth-child(2n){
+    margin: 0 10px;
+}

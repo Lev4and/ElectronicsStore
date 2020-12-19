@@ -18,6 +18,7 @@ $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::ge
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
+    <link rel="stylesheet" href="/CSS/Elements/BreadcrumbList.css">
     <link rel="stylesheet" href="/CSS/Elements/Form.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
@@ -35,6 +36,7 @@ $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::ge
     ?>
     <div class="content">
         <?php if(!Access::isAdministrator()): ?>
+            <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/BreadcrumbList.php"; ?>
             <div class="form-block">
                 <div class="form-block-information">
                     <div class="form-block-image-block">

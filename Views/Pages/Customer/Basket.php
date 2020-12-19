@@ -35,11 +35,11 @@ $products = array();
     include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Menu.php";
     ?>
     <div class="content">
-        <?php if(!isset($_SESSION["user"]["role_name"]) || $_SESSION["user"]["role_name"] == "Покупатель"): ?>
+        <?php if(isset($_SESSION["user"]) && $_SESSION["user"]["role_name"] == "Покупатель"): ?>
             <div class="header-block">
                 <h1>Корзина</h1>
             </div>
-            <form id="basketForm" action="." method="post">
+            <form id="basketForm" action="Catalog" method="post">
                 <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/ToolbarBasket.php"; ?>
                 <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableProductsInBasket.php"; ?>
             </form>

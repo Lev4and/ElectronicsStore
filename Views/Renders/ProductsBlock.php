@@ -19,10 +19,10 @@
                 $characteristics = array();
 
                 foreach (QueryExecutor::getInstance()->getProductCharacteristicsQuantityUnitValuesDetailedInformation($product["id"]) as $value){
-                    array_push($characteristics, "{$value["value"]} {$value["unit_designation"]}");
+                    array_push($characteristics, "{$value["value"]}" . (iconv_strlen($value["unit_designation"], "UTF-8") > 0 ? " {$value["unit_designation"]}" : ""));
                 }
 
-                echo implode(" , ", $characteristics);
+                echo implode(", ", $characteristics);
                 ?>
             </span>
         </div>

@@ -19,6 +19,7 @@ $subcategoriesCategory = QueryExecutor::getInstance()->getSubcategories(null, $_
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
+    <link rel="stylesheet" href="/CSS/Elements/BreadcrumbList.css">
     <link rel="stylesheet" href="/CSS/Elements/ItemBlock.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
@@ -33,9 +34,7 @@ $subcategoriesCategory = QueryExecutor::getInstance()->getSubcategories(null, $_
     ?>
     <div class="content">
         <?php if(!Access::isAdministrator()): ?>
-            <div class="header-block">
-                <h1><?php echo $selectedCategory["name"]; ?></h1>
-            </div>
+            <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/BreadcrumbList.php"; ?>
             <div class="items-block">
                 <?php foreach ($subcategoriesCategory as $subcategory): ?>
                     <div class="item-block">

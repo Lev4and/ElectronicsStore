@@ -5,6 +5,11 @@ require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
 
 $products = array();
 
+if(isset($_GET["action"]) && $_GET["action"] == "Каталог"){
+    header("Location: Catalog.php");
+    exit();
+}
+
 if(isset($_GET["action"]) && $_GET["action"] == "Категории"){
     header("Location: Categories.php?classificationId=" . $_GET["classificationId"]);
     exit();
