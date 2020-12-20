@@ -20,9 +20,13 @@
 .table-block table .table-block-values .table-block-value-input-radio{
     text-align: center;
 }
+.table-block table .table-block-values .table-block-value-input-number{
+    overflow: hidden;
+}
 .table-block table .table-block-values .table-block-value-input-number input[type=number]{
     text-align: center;
     border: none;
+    width: 100%;
 }
 .table-block table .table-block-values .table-block-value-image{
     width: 100px;
