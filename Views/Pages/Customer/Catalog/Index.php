@@ -58,7 +58,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Удалить"){
     $_SESSION["basket"] = array();
     $_SESSION["basket"] = $basket;
 
-    header("Location: Basket.php");
+    header("Location: http://{$_SERVER["SERVER_NAME"]}/Views/Pages/Customer/Basket.php");
     exit();
 }
 
@@ -66,7 +66,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Удалить"){
 if(isset($_POST["action"]) && $_POST["action"] == "Очистить"){
     $_SESSION["basket"] = array();
 
-    header("Location: Basket.php");
+    header("Location: http://{$_SERVER["SERVER_NAME"]}/Views/Pages/Customer/Basket.php");
     exit();
 }
 

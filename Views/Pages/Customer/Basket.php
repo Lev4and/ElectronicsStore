@@ -39,7 +39,7 @@ $products = array();
             <div class="header-block">
                 <h1>Корзина</h1>
             </div>
-            <form id="basketForm" action="Catalog" method="post">
+            <form id="basketForm" action="Catalog/" method="post">
                 <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/ToolbarBasket.php"; ?>
                 <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableProductsInBasket.php"; ?>
             </form>
