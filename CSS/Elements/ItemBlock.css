@@ -39,8 +39,8 @@
 }
 .items-block .item-block .item-block-container .item-block-container-image-container img{
     margin: auto;
-    max-width: 85%;
-    max-height: 50%;
+    max-width: 210px;
+    max-height: 210px;
 }
 .items-block .item-block .item-block-container .item-block-container-title{
     height: 30%;

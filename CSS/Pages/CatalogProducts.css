@@ -139,8 +139,8 @@ form{
 }
 .product-block .product-block-main-block .product-block-main-block-image-container img{
     margin: auto;
-    max-width: 85%;
-    max-height: 50%;
+    max-width: 150px;
+    max-height: 150px;
 }
 .product-block .product-block-main-block .product-block-main-block-information-block{
     width: 40%;

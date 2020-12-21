@@ -62,6 +62,8 @@ if(isset($_POST["action"]) && $_POST["action"] == "КатегорииПодка�
 
 if(isset($_POST["action"]) && $_POST["action"] == "Характеристики"){
     if(isset($_POST["categorySubcategoryId"]) && $_POST["categorySubcategoryId"] > 0){
+        $quantityUnits = QueryExecutor::getInstance()->getQuantityUnits(null, null, "");
+
         foreach (QueryExecutor::getInstance()->getCharacteristicsCategorySubcategory(null, null, null, $_POST["categorySubcategoryId"], null, "") as $characteristic){
             include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/CharacteristicBlock.php";
         }
@@ -84,10 +86,26 @@ if(isset($_POST["action"]) && $_POST["action"] == "Записать") {
             $productId = QueryExecutor::getInstance()->addProduct($_POST["categorySubcategoryId"], $_POST["manufacturerId"], $fileName, $_POST["model"], $_POST["description"], $_POST["price"]);
 
             foreach ($_POST["characteristics"] as $key => $value){
-                if(isset($value["characteristicQuantityUnitValueId"]) && $value["characteristicQuantityUnitValueId"] > 0){
+                if((isset($value["characteristicQuantityUnitValueId"]) && $value["characteristicQuantityUnitValueId"] > 0) || $value["newCharacteristicQuantityUnitValue"]["whetherToAdd"]){
                     //echo "Ключ: {$key} Значение: {$value["characteristicQuantityUnitValueId"]}<br>";
 
-                    QueryExecutor::getInstance()->addProductCharacteristicQuantityUnitValue($productId, $value["characteristicQuantityUnitValueId"]);
+                    if(isset($value["newCharacteristicQuantityUnitValue"]) && isset($value["newCharacteristicQuantityUnitValue"]["whetherToAdd"]) && $value["newCharacteristicQuantityUnitValue"]["whetherToAdd"] && iconv_strlen($value["newCharacteristicQuantityUnitValue"]["value"], "UTF-8") > 0 && $value["newCharacteristicQuantityUnitValue"]["quantityUnitId"] > 0){
+                        if(!QueryExecutor::getInstance()->containsCharacteristicQuantityUnitValue($key, $value["newCharacteristicQuantityUnitValue"]["quantityUnitId"], $value["newCharacteristicQuantityUnitValue"]["value"])){
+                            $characteristicQuantityUnitValueId = QueryExecutor::getInstance()->addCharacteristicQuantityUnitValue($key, $value["newCharacteristicQuantityUnitValue"]["quantityUnitId"], $value["newCharacteristicQuantityUnitValue"]["value"]);
+
+                            QueryExecutor::getInstance()->addProductCharacteristicQuantityUnitValue($productId, $characteristicQuantityUnitValueId);
+                        }
+                        else{
+                            $characteristicQuantityUnitValueId = QueryExecutor::getInstance()->getCharacteristicQuantityUnitValueId($key, $value["newCharacteristicQuantityUnitValue"]["quantityUnitId"], $value["newCharacteristicQuantityUnitValue"]["value"]);
+
+                            QueryExecutor::getInstance()->addProductCharacteristicQuantityUnitValue($productId, $characteristicQuantityUnitValueId);
+                        }
+                    }
+                    else{
+                        if(isset($value["characteristicQuantityUnitValueId"]) && $value["characteristicQuantityUnitValueId"] > 0){
+                            QueryExecutor::getInstance()->addProductCharacteristicQuantityUnitValue($productId, $value["characteristicQuantityUnitValueId"]);
+                        }
+                    }
                 }
             }
 
@@ -123,10 +141,26 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
             QueryExecutor::getInstance()->removeAllProductCharacteristicsQuantityUnitValues($_GET["productId"]);
 
             foreach ($_POST["characteristics"] as $key => $value){
-                if(isset($value["characteristicQuantityUnitValueId"]) && $value["characteristicQuantityUnitValueId"] > 0){
+                if((isset($value["characteristicQuantityUnitValueId"]) && $value["characteristicQuantityUnitValueId"] > 0) || $value["newCharacteristicQuantityUnitValue"]["whetherToAdd"]){
                     //echo "Ключ: {$key} Значение: {$value["characteristicQuantityUnitValueId"]}<br>";
 
-                    QueryExecutor::getInstance()->addProductCharacteristicQuantityUnitValue($_GET["productId"], $value["characteristicQuantityUnitValueId"]);
+                    if(isset($value["newCharacteristicQuantityUnitValue"]) && isset($value["newCharacteristicQuantityUnitValue"]["whetherToAdd"]) && $value["newCharacteristicQuantityUnitValue"]["whetherToAdd"] && iconv_strlen($value["newCharacteristicQuantityUnitValue"]["value"], "UTF-8") > 0 && $value["newCharacteristicQuantityUnitValue"]["quantityUnitId"] > 0){
+                        if(!QueryExecutor::getInstance()->containsCharacteristicQuantityUnitValue($key, $value["newCharacteristicQuantityUnitValue"]["quantityUnitId"], $value["newCharacteristicQuantityUnitValue"]["value"])){
+                            $characteristicQuantityUnitValueId = QueryExecutor::getInstance()->addCharacteristicQuantityUnitValue($key, $value["newCharacteristicQuantityUnitValue"]["quantityUnitId"], $value["newCharacteristicQuantityUnitValue"]["value"]);
+
+                            QueryExecutor::getInstance()->addProductCharacteristicQuantityUnitValue($_GET["productId"], $characteristicQuantityUnitValueId);
+                        }
+                        else{
+                            $characteristicQuantityUnitValueId = QueryExecutor::getInstance()->getCharacteristicQuantityUnitValueId($key, $value["newCharacteristicQuantityUnitValue"]["quantityUnitId"], $value["newCharacteristicQuantityUnitValue"]["value"]);
+
+                            QueryExecutor::getInstance()->addProductCharacteristicQuantityUnitValue($_GET["productId"], $characteristicQuantityUnitValueId);
+                        }
+                    }
+                    else{
+                        if(isset($value["characteristicQuantityUnitValueId"]) && $value["characteristicQuantityUnitValueId"] > 0){
+                            QueryExecutor::getInstance()->addProductCharacteristicQuantityUnitValue($_GET["productId"], $value["characteristicQuantityUnitValueId"]);
+                        }
+                    }
                 }
             }
 

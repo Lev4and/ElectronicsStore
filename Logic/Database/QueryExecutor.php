@@ -518,6 +518,8 @@ class QueryExecutor{
 
     public function addCharacteristicQuantityUnitValue($characteristicId, $quantityUnitId, $value){
         $this->executeQuery("INSERT INTO characteristic_quantity_unit_value (characteristic_id, quantity_unit_id, value) VALUES ($characteristicId, $quantityUnitId, '$value')");
+
+        return $this->contextDb->lastInsertId();
     }
 
     public function getCharacteristicQuantityUnitValue($id){
@@ -657,6 +659,10 @@ class QueryExecutor{
         foreach ($basket as $key => $value){
             $this->executeQuery("INSERT INTO purchase_content (purchase_id, product_id	, quantity) VALUES ($purchaseId, {$value["productId"]}, {$value["number"]})");
         }
+    }
+
+    public function getCharacteristicQuantityUnitValueId($characteristicId, $quantityUnitId, $value){
+        return $this->executeQuery("SELECT * FROM characteristic_quantity_unit_value WHERE characteristic_id=$characteristicId AND quantity_unit_id=$quantityUnitId AND value='$value'  LIMIT 1")[0]["id"];
     }
 
     private function executeQuery($query){

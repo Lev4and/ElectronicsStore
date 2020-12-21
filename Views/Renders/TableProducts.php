@@ -17,7 +17,7 @@
                 <td class="table-block-value-text"><?php echo $product["manufacturer_name"]; ?></td>
                 <td class="table-block-value-text"><?php echo $product["model"]; ?></td>
                 <td class="table-block-value-text" style="text-align: center"><?php echo $product["evaluation"]; ?></td>
-                <td class="table-block-value-text"><?php echo $product["price"]; ?></td>
+                <td class="table-block-value-text" style="text-align: center"><?php echo $product["price"]; ?></td>
             </tr>
         <? endforeach; ?>
     </table>
