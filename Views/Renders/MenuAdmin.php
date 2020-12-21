@@ -11,6 +11,7 @@
         <li><span><a href="/Views/Pages/Administrator/CategorySubcategory/">Категории подкатегорий</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/Manufacturer/">Производители</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/Characteristic/">Характеристики</a></span></li>
+        <li><span><a href="/Views/Pages/Administrator/Section/">Разделы характеристик</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/CharacteristicCategorySubcategory/">Характеристики категории подкатегорий</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/CharacteristicQuantityUnitValue/">Значения характеристик</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/Quantity/">Величины</a></span></li>

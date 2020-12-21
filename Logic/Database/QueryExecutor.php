@@ -665,6 +665,30 @@ class QueryExecutor{
         return $this->executeQuery("SELECT * FROM characteristic_quantity_unit_value WHERE characteristic_id=$characteristicId AND quantity_unit_id=$quantityUnitId AND value='$value'  LIMIT 1")[0]["id"];
     }
 
+    public function getSections($name){
+        return $this->executeQuery("SELECT * FROM section WHERE name LIKE '%$name%'");
+    }
+
+    public function containsSection($name){
+        return !is_null($this->executeQuery("SELECT * FROM section WHERE name='$name' LIMIT 1")[0]);
+    }
+
+    public function addSection($name){
+        $this->executeQuery("INSERT INTO section (name) VALUES ('$name')");
+    }
+
+    public function getSection($id){
+        return $this->executeQuery("SELECT * FROM section WHERE id=$id LIMIT 1 ")[0];
+    }
+
+    public function updateSection($id, $name){
+        $this->executeQuery("UPDATE section SET name='$name' WHERE id=$id");
+    }
+
+    public function removeSection($id){
+        $this->executeQuery("DELETE FROM section WHERE id=$id");
+    }
+
     private function executeQuery($query){
         try{
             return ($this->contextDb->query($query))->FETCHALL(PDO::FETCH_ASSOC);
