@@ -6,7 +6,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
 
 $product = QueryExecutor::getInstance()->getProduct($_GET["productId"]);
-$sectionsCategorySubcategory = QueryExecutor::getInstance()->getSectionsCategorySubcategory(null, null, null, null, $product["category_subcategory_id"], "");
+$sectionsCategorySubcategoryProduct = QueryExecutor::getInstance()->getSectionsCategorySubcategoryProduct($_GET["productId"]);
 $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::getInstance()->getProductCharacteristicsQuantityUnitValuesDetailedInformation($_GET["productId"]);
 ?>
 <!DOCTYPE html>
@@ -82,16 +82,16 @@ $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::ge
                     <fieldset class="form-block-characteristics-fieldset">
                         <legend>Характеристики</legend>
                         <div id="characteristics-block" class="form-block-description-fieldset-characteristics-block">
-                            <?php foreach ($sectionsCategorySubcategory as $sectionCategorySubcategory): ?>
+                            <?php foreach ($sectionsCategorySubcategoryProduct as $sectionCategorySubcategoryProduct): ?>
                                 <div class="form-block-row">
                                     <div id="form-block-row-column-label" class="form-block-row-column">
                                         <div class="form-block-row-column-label">
-                                            <label style="text-align: left; font-weight: bold"><?php echo $sectionCategorySubcategory["section_name"]; ?></label>
+                                            <label style="text-align: left; font-weight: bold"><?php echo $sectionCategorySubcategoryProduct["section_name"]; ?></label>
                                         </div>
                                     </div>
                                 </div>
                                 <?php foreach ($productCharacteristicsQuantityUnitValuesDetailedInformation as $characteristicsQuantityUnitValue): ?>
-                                    <?php if($characteristicsQuantityUnitValue["section_category_subcategory_id"] == $sectionCategorySubcategory["id"]): ?>
+                                    <?php if($characteristicsQuantityUnitValue["section_category_subcategory_id"] == $sectionCategorySubcategoryProduct["section_category_subcategory_id"]): ?>
                                         <div class="form-block-row">
                                             <div id="form-block-row-column-label" class="form-block-row-column">
                                                 <div class="form-block-row-column-label">

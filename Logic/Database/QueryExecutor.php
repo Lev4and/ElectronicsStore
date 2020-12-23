@@ -743,6 +743,16 @@ class QueryExecutor{
         $this->executeQuery("DELETE FROM section_category_subcategory WHERE id=$id");
     }
 
+    public function getSectionsCategorySubcategoryProduct($id){
+        $query = "SELECT DISTINCT v_product_characteristic_quantity_unit_value.section_category_subcategory_id, 
+                  v_product_characteristic_quantity_unit_value.section_id, 
+                  v_product_characteristic_quantity_unit_value.section_name
+                  FROM v_product_characteristic_quantity_unit_value
+                  WHERE v_product_characteristic_quantity_unit_value.product_id=$id";
+
+        return $this->executeQuery($query);
+    }
+
     private function executeQuery($query){
         try{
             return ($this->contextDb->query($query))->FETCHALL(PDO::FETCH_ASSOC);
