@@ -380,12 +380,15 @@ class QueryExecutor{
         $this->executeQuery("DELETE FROM quantity WHERE id=$id");
     }
 
-    public function getCharacteristicsCategorySubcategory($classificationId = null, $categoryId = null, $subcategoryId = null, $categorySubcategoryId = null, $characteristicId = null, $name){
-        $condition1 = isset($classificationId) && $classificationId > 0 ? " AND classification_id=$classificationId" : "";
-        $condition2 = isset($categoryId) && $categoryId > 0 ? " AND category_id=$categoryId" : "";
-        $condition3 = isset($subcategoryId) && $subcategoryId > 0 ? " AND subcategory_id=$subcategoryId" : "";
-        $condition4 = isset($categorySubcategoryId) && $categorySubcategoryId > 0 ? " AND category_subcategory_id=$categorySubcategoryId" : "";
-        $condition5 = isset($characteristicId) && $characteristicId > 0 ? " AND characteristic_id=$characteristicId" : "";
+    public function getCharacteristicsCategorySubcategory($sectionId = null, $classificationId = null, $categoryId = null, $subcategoryId = null, $categorySubcategoryId = null, $characteristicId = null, $useWhenFiltering = null, $useWhenDisplayingAsBasicInformation = null, $name){
+        $condition1 = isset($sectionId) && $sectionId > 0 ? " AND section_id=$sectionId" : "";
+        $condition2 = isset($classificationId) && $classificationId > 0 ? " AND classification_id=$classificationId" : "";
+        $condition3 = isset($categoryId) && $categoryId > 0 ? " AND category_id=$categoryId" : "";
+        $condition4 = isset($subcategoryId) && $subcategoryId > 0 ? " AND subcategory_id=$subcategoryId" : "";
+        $condition5 = isset($categorySubcategoryId) && $categorySubcategoryId > 0 ? " AND category_subcategory_id=$categorySubcategoryId" : "";
+        $condition6 = isset($characteristicId) && $characteristicId > 0 ? " AND characteristic_id=$characteristicId" : "";
+        $condition7 = isset($useWhenFiltering) && $useWhenFiltering >= 0 && iconv_strlen($useWhenFiltering, "UTF-8") > 0 ? " AND use_when_filtering=$useWhenFiltering" : "";
+        $condition8 = isset($useWhenDisplayingAsBasicInformation) && $useWhenDisplayingAsBasicInformation >= 0 && iconv_strlen($useWhenDisplayingAsBasicInformation, "UTF-8") > 0 ? " AND use_when_displaying_as_basic_information=$useWhenDisplayingAsBasicInformation" : "";
 
         $query = "SELECT * FROM v_characteristic_category_subcategory WHERE characteristic_name LIKE '%$name%'";
         $query .= $condition1;
@@ -393,6 +396,9 @@ class QueryExecutor{
         $query .= $condition3;
         $query .= $condition4;
         $query .= $condition5;
+        $query .= $condition6;
+        $query .= $condition7;
+        $query .= $condition8;
 
         return $this->executeQuery($query);
     }
@@ -401,16 +407,22 @@ class QueryExecutor{
         return !is_null($this->executeQuery("SELECT * FROM characteristic_category_subcategory WHERE characteristic_id=$characteristicId AND category_subcategory_id = $categorySubcategoryId LIMIT 1")[0]);
     }
 
-    public function addCharacteristicCategorySubcategory($characteristicId, $categorySubcategoryId){
-        $this->executeQuery("INSERT INTO characteristic_category_subcategory (characteristic_id, category_subcategory_id) VALUES ($characteristicId, $categorySubcategoryId)");
+    public function addCharacteristicCategorySubcategory($characteristicId, $categorySubcategoryId, $sectionCategorySubcategoryId, $useWhenFiltering, $useWhenDisplayingAsBasicInformation){
+        $useWhenFiltering = isset($useWhenFiltering) ? 1 : 0;
+        $useWhenDisplayingAsBasicInformation = isset($useWhenDisplayingAsBasicInformation) ? 1 : 0;
+
+        $this->executeQuery("INSERT INTO characteristic_category_subcategory (characteristic_id, category_subcategory_id, section_category_subcategory_id, use_when_filtering, use_when_displaying_as_basic_information) VALUES ($characteristicId, $categorySubcategoryId, $sectionCategorySubcategoryId, $useWhenFiltering, $useWhenDisplayingAsBasicInformation)");
     }
 
     public function getCharacteristicCategorySubcategory($id){
         return $this->executeQuery("SELECT * FROM v_characteristic_category_subcategory WHERE id=$id LIMIT 1")[0];
     }
 
-    public function updateCharacteristicCategorySubcategory($id, $characteristicId, $categorySubcategoryId){
-        $this->executeQuery("UPDATE characteristic_category_subcategory SET characteristic_id=$characteristicId, category_subcategory_id=$categorySubcategoryId WHERE id=$id");
+    public function updateCharacteristicCategorySubcategory($id, $characteristicId, $categorySubcategoryId, $sectionCategorySubcategoryId, $useWhenFiltering, $useWhenDisplayingAsBasicInformation){
+        $useWhenFiltering = isset($useWhenFiltering) ? 1 : 0;
+        $useWhenDisplayingAsBasicInformation = isset($useWhenDisplayingAsBasicInformation) ? 1 : 0;
+
+        $this->executeQuery("UPDATE characteristic_category_subcategory SET characteristic_id=$characteristicId, category_subcategory_id=$categorySubcategoryId, section_category_subcategory_id=$sectionCategorySubcategoryId, use_when_filtering=$useWhenFiltering, use_when_displaying_as_basic_information=$useWhenDisplayingAsBasicInformation WHERE id=$id");
     }
 
     public function removeCharacteristicCategorySubcategory($id){
@@ -628,8 +640,13 @@ class QueryExecutor{
         return $this->executeQuery("SELECT * FROM product_characteristic_quantity_unit_value WHERE product_id=$id");
     }
 
-    public function getProductCharacteristicsQuantityUnitValuesDetailedInformation($id){
-        return $this->executeQuery("SELECT * FROM v_product_characteristic_quantity_unit_value WHERE product_id=$id");
+    public function getProductCharacteristicsQuantityUnitValuesDetailedInformation($id, $useWhenDisplayingAsBasicInformation = null){
+        $condition = isset($useWhenDisplayingAsBasicInformation) && $useWhenDisplayingAsBasicInformation >= 0 && iconv_strlen($useWhenDisplayingAsBasicInformation, "UTF-8") > 0 ? " AND use_when_displaying_as_basic_information=$useWhenDisplayingAsBasicInformation" : "";
+
+        $query = "SELECT * FROM v_product_characteristic_quantity_unit_value WHERE product_id=$id";
+        $query .= $condition;
+
+        return $this->executeQuery($query);
     }
 
     public function removeAllProductCharacteristicsQuantityUnitValues($id){
@@ -687,6 +704,43 @@ class QueryExecutor{
 
     public function removeSection($id){
         $this->executeQuery("DELETE FROM section WHERE id=$id");
+    }
+
+    public function getSectionsCategorySubcategory($sectionId, $classificationId, $categoryId, $subcategoryId, $categorySubcategoryId, $name){
+        $condition1 = isset($sectionId) && $sectionId > 0 ? " AND section_id=$sectionId" : "";
+        $condition2 = isset($classificationId) && $classificationId > 0 ? " AND classification_id=$classificationId" : "";
+        $condition3 = isset($categoryId) && $categoryId > 0 ? " AND category_id=$categoryId" : "";
+        $condition4 = isset($subcategoryId) && $subcategoryId > 0 ? " AND subcategory_id=$subcategoryId" : "";
+        $condition5 = isset($categorySubcategoryId) && $categorySubcategoryId > 0 ? " AND category_subcategory_id=$categorySubcategoryId" : "";
+
+        $query = "SELECT * FROM v_section_category_subcategory WHERE section_name LIKE '%$name%'";
+        $query .= $condition1;
+        $query .= $condition2;
+        $query .= $condition3;
+        $query .= $condition4;
+        $query .= $condition5;
+
+        return $this->executeQuery($query);
+    }
+
+    public function containsSectionCategorySubcategory($sectionId, $categorySubcategoryId){
+        return !is_null($this->executeQuery("SELECT * FROM section_category_subcategory WHERE section_id=$sectionId AND category_subcategory_id=$categorySubcategoryId LIMIT 1")[0]);
+    }
+
+    public function addSectionCategorySubcategory($sectionId, $categorySubcategoryId){
+        $this->executeQuery("INSERT INTO section_category_subcategory (section_id, category_subcategory_id) VALUES ($sectionId, $categorySubcategoryId)");
+    }
+
+    public function getSectionCategorySubcategory($id){
+        return $this->executeQuery("SELECT * FROM v_section_category_subcategory WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function updateSectionCategorySubcategory($id, $sectionId, $categorySubcategoryId){
+        $this->executeQuery("UPDATE section_category_subcategory SET section_id=$sectionId, category_subcategory_id=$categorySubcategoryId WHERE id=$id");
+    }
+
+    public function removeSectionCategorySubcategory($id){
+        $this->executeQuery("DELETE FROM section_category_subcategory WHERE id=$id");
     }
 
     private function executeQuery($query){

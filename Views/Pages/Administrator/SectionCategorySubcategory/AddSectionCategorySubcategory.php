@@ -6,16 +6,15 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
 
 $sections = QueryExecutor::getInstance()->getSections("");
-$characteristics = QueryExecutor::getInstance()->getCharacteristics("");
-$classifications = QueryExecutor::getInstance()->getClassifications("");
+$categoriesSubcategory = QueryExecutor::getInstance()->getCategoriesSubcategory(null, null, null, "");
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ElectronicsStore - Добавление характеристики категории подкатегории</title>
+    <title>ElectronicsStore - Добавление раздела характеристики категории подкатегорий</title>
     <link rel="stylesheet" href="/CSS/Pages/Main.css">
-    <link rel="stylesheet" href="/CSS/Pages/AddCharacteristicCategorySubcategory.css">
+    <link rel="stylesheet" href="/CSS/Pages/AddSectionCategorySubcategory.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
@@ -25,8 +24,6 @@ $classifications = QueryExecutor::getInstance()->getClassifications("");
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
     <link rel="stylesheet" href="/Resources/Fonts/Font%20Awesome/css/all.min.css">
-    <script src="/JS/JQuery.js"></script>
-    <script src="/JS/CharacteristicsCategorySubcategory.js"></script>
 </head>
 <body>
 <div class="main">
@@ -37,7 +34,7 @@ $classifications = QueryExecutor::getInstance()->getClassifications("");
     <div class="content">
         <?php if(Access::isAdministrator()): ?>
             <div class="header-block">
-                <h1>Добавление характеристики категории подкатегории</h1>
+                <h1>Добавление раздела характеристики категории подкатегорий</h1>
             </div>
             <div class="form-block">
                 <form action="." method="post">
@@ -104,55 +101,17 @@ $classifications = QueryExecutor::getInstance()->getClassifications("");
                         <div class="form-block-row">
                             <div id="form-block-row-column-label" class="form-block-row-column">
                                 <div class="form-block-row-column-label">
-                                    <label>Укажите раздел характеристики категории подкатегории:</label>
+                                    <label>Укажите раздел:</label>
                                 </div>
                             </div>
                             <div id="form-block-row-column-input" class="form-block-row-column">
                                 <div class="form-block-row-column-input-select">
-                                    <select id="select-sections" name="sectionCategorySubcategoryId">
-
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-block-row">
-                            <div id="form-block-row-column-label" class="form-block-row-column">
-                                <div class="form-block-row-column-label">
-                                    <label>Укажите характеристику:</label>
-                                </div>
-                            </div>
-                            <div id="form-block-row-column-input" class="form-block-row-column">
-                                <div class="form-block-row-column-input-select">
-                                    <select id="select-characteristics" name="characteristicId">
-                                        <option value="">Выберите характеристику</option>
-                                        <?php foreach ($characteristics as $characteristic): ?>
-                                            <option value="<?php echo $characteristic["id"]; ?>"><?php echo $characteristic["name"]; ?></option>
+                                    <select name="sectionId">
+                                        <option value="">Выберите раздел</option>
+                                        <?php foreach ($sections as $section): ?>
+                                            <option value="<?php echo $section["id"]; ?>"><?php echo $section["name"]; ?></option>
                                         <?php endforeach; ?>
                                     </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-block-row">
-                            <div id="form-block-row-column-label" class="form-block-row-column">
-                                <div class="form-block-row-column-label">
-                                    <label>Используется при фильтрации?</label>
-                                </div>
-                            </div>
-                            <div id="form-block-row-column-input" class="form-block-row-column">
-                                <div class="form-block-row-column-input-checkbox">
-                                    <input type="checkbox" name="useWhenFiltering">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-block-row">
-                            <div id="form-block-row-column-label" class="form-block-row-column">
-                                <div class="form-block-row-column-label">
-                                    <label>Используется как основная информация?</label>
-                                </div>
-                            </div>
-                            <div id="form-block-row-column-input" class="form-block-row-column">
-                                <div class="form-block-row-column-input-checkbox">
-                                    <input type="checkbox" name="useWhenDisplayingAsBasicInformation">
                                 </div>
                             </div>
                         </div>

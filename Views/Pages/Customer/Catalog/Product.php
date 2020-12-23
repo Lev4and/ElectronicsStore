@@ -6,6 +6,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
 
 $product = QueryExecutor::getInstance()->getProduct($_GET["productId"]);
+$sectionsCategorySubcategory = QueryExecutor::getInstance()->getSectionsCategorySubcategory(null, null, null, null, $product["category_subcategory_id"], "");
 $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::getInstance()->getProductCharacteristicsQuantityUnitValuesDetailedInformation($_GET["productId"]);
 ?>
 <!DOCTYPE html>
@@ -81,19 +82,30 @@ $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::ge
                     <fieldset class="form-block-characteristics-fieldset">
                         <legend>Характеристики</legend>
                         <div id="characteristics-block" class="form-block-description-fieldset-characteristics-block">
-                            <?php foreach ($productCharacteristicsQuantityUnitValuesDetailedInformation as $characteristicsQuantityUnitValue): ?>
+                            <?php foreach ($sectionsCategorySubcategory as $sectionCategorySubcategory): ?>
                                 <div class="form-block-row">
                                     <div id="form-block-row-column-label" class="form-block-row-column">
                                         <div class="form-block-row-column-label">
-                                            <label style="text-align: left"><?php echo $characteristicsQuantityUnitValue["characteristic_name"]; ?></label>
-                                        </div>
-                                    </div>
-                                    <div id="form-block-row-column-input" class="form-block-row-column">
-                                        <div class="form-block-row-column-label">
-                                            <label style="text-align: left"><?php echo "{$characteristicsQuantityUnitValue["value"]} {$characteristicsQuantityUnitValue["unit_designation"]}"; ?></label>
+                                            <label style="text-align: left; font-weight: bold"><?php echo $sectionCategorySubcategory["section_name"]; ?></label>
                                         </div>
                                     </div>
                                 </div>
+                                <?php foreach ($productCharacteristicsQuantityUnitValuesDetailedInformation as $characteristicsQuantityUnitValue): ?>
+                                    <?php if($characteristicsQuantityUnitValue["section_category_subcategory_id"] == $sectionCategorySubcategory["id"]): ?>
+                                        <div class="form-block-row">
+                                            <div id="form-block-row-column-label" class="form-block-row-column">
+                                                <div class="form-block-row-column-label">
+                                                    <label style="text-align: left"><?php echo $characteristicsQuantityUnitValue["characteristic_name"]; ?></label>
+                                                </div>
+                                            </div>
+                                            <div id="form-block-row-column-input" class="form-block-row-column">
+                                                <div class="form-block-row-column-label">
+                                                    <label style="text-align: left"><?php echo "{$characteristicsQuantityUnitValue["value"]} {$characteristicsQuantityUnitValue["unit_designation"]}"; ?></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
                             <?php endforeach; ?>
                         </div>
                     </fieldset>

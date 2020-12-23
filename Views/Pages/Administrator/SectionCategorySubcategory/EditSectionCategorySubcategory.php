@@ -5,23 +5,18 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
 
-$characteristicCategorySubcategory = QueryExecutor::getInstance()->getCharacteristicCategorySubcategory($_GET["characteristicCategorySubcategoryId"]);
+$sections = QueryExecutor::getInstance()->getSections("");
+$categoriesSubcategory = QueryExecutor::getInstance()->getCategoriesSubcategory(null, null, null, "");
 
-$characteristics = QueryExecutor::getInstance()->getCharacteristics("");
-$classifications = QueryExecutor::getInstance()->getClassifications("");
-
-$categories = QueryExecutor::getInstance()->getCategories($characteristicCategorySubcategory["classification_id"], "");
-$subcategories = QueryExecutor::getInstance()->getSubcategories(null, $characteristicCategorySubcategory["category_id"], "");
-$categoriesSubcategory = QueryExecutor::getInstance()->getCategoriesSubcategory(null, null, $characteristicCategorySubcategory["subcategory_id"], "");
-$sectionsCategorySubcategory = QueryExecutor::getInstance()->getSectionsCategorySubcategory(null, null, null, null, $characteristicCategorySubcategory["category_subcategory_id"], "");
+$sectionCategorySubcategory = QueryExecutor::getInstance()->getSectionCategorySubcategory($_GET["sectionCategorySubcategoryId"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ElectronicsStore - Изменение данных о характеристики категории подкатегории</title>
+    <title>ElectronicsStore - Изменение данных о разделе характеристики категории подкатегорий</title>
     <link rel="stylesheet" href="/CSS/Pages/Main.css">
-    <link rel="stylesheet" href="/CSS/Pages/EditCharacteristicCategorySubcategory.css">
+    <link rel="stylesheet" href="/CSS/Pages/EditSectionCategorySubcategory.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
@@ -31,8 +26,6 @@ $sectionsCategorySubcategory = QueryExecutor::getInstance()->getSectionsCategory
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
     <link rel="stylesheet" href="/Resources/Fonts/Font%20Awesome/css/all.min.css">
-    <script src="/JS/JQuery.js"></script>
-    <script src="/JS/CharacteristicsCategorySubcategory.js"></script>
 </head>
 <body>
 <div class="main">
@@ -43,10 +36,10 @@ $sectionsCategorySubcategory = QueryExecutor::getInstance()->getSectionsCategory
     <div class="content">
         <?php if(Access::isAdministrator()): ?>
             <div class="header-block">
-                <h1>Изменение данных о характеристики категории подкатегории</h1>
+                <h1>Изменение данных о разделе характеристики категории подкатегорий</h1>
             </div>
             <div class="form-block">
-                <form action=".?characteristicCategorySubcategoryId=<?php echo $_GET["characteristicCategorySubcategoryId"]; ?>&characteristicId=<?php echo $characteristicCategorySubcategory["characteristic_id"]; ?>&categorySubcategoryId=<?php echo $characteristicCategorySubcategory["category_subcategory_id"];  ?>" method="post">
+                <form action=".?sectionCategorySubcategoryId=<?php echo $_GET["sectionCategorySubcategoryId"]; ?>" method="post">
                     <div class="form-block-inputs">
                         <div class="form-block-row">
                             <div id="form-block-row-column-label" class="form-block-row-column">
@@ -59,7 +52,7 @@ $sectionsCategorySubcategory = QueryExecutor::getInstance()->getSectionsCategory
                                     <select id="select-classifications" name="classificationId" onchange="onChangeSelectedClassifications(this);">
                                         <option value="">Выберите классификацию</option>
                                         <?php foreach ($classifications as $classification): ?>
-                                            <option value="<?php echo $classification["id"]; ?>" <?php echo $classification["id"] == $characteristicCategorySubcategory["classification_id"] ? 'selected="selected"' : ""; ?>><?php echo $classification["name"]; ?></option>
+                                            <option value="<?php echo $classification["id"]; ?>" <?php echo $classification["id"] == $sectionCategorySubcategory["classification_id"] ? 'selected="selected"' : ""; ?>><?php echo $classification["name"]; ?></option>
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
@@ -76,7 +69,7 @@ $sectionsCategorySubcategory = QueryExecutor::getInstance()->getSectionsCategory
                                     <select id="select-categories" name="categoryId" onchange="onChangeSelectedCategories(this);">
                                         <option value="">Выберите категорию</option>
                                         <?php foreach ($categories as $category): ?>
-                                            <option value="<?php echo $category["id"]; ?>" <?php echo $category["id"] == $characteristicCategorySubcategory["category_id"] ? 'selected="selected"' : ""; ?>><?php echo $category["name"]; ?></option>
+                                            <option value="<?php echo $category["id"]; ?>" <?php echo $category["id"] == $sectionCategorySubcategory["category_id"] ? 'selected="selected"' : ""; ?>><?php echo $category["name"]; ?></option>
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
@@ -93,7 +86,7 @@ $sectionsCategorySubcategory = QueryExecutor::getInstance()->getSectionsCategory
                                     <select id="select-subcategories" name="subcategoryId" onchange="onChangeSelectedSubcategories(this);">
                                         <option value="">Выберите подкатегорию</option>
                                         <?php foreach ($subcategories as $subcategory): ?>
-                                            <option value="<?php echo $subcategory["id"]; ?>" <?php echo $subcategory["id"] == $characteristicCategorySubcategory["subcategory_id"] ? 'selected="selected"' : ""; ?>><?php echo $subcategory["name"]; ?></option>
+                                            <option value="<?php echo $subcategory["id"]; ?>" <?php echo $subcategory["id"] == $sectionCategorySubcategory["subcategory_id"] ? 'selected="selected"' : ""; ?>><?php echo $subcategory["name"]; ?></option>
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
@@ -110,7 +103,7 @@ $sectionsCategorySubcategory = QueryExecutor::getInstance()->getSectionsCategory
                                     <select id="select-categories-subcategory" name="categorySubcategoryId" onchange="onChangeSelectedCategoriesSubcategory(this);">
                                         <option value="">Выберите категорию подкатегории</option>
                                         <?php foreach ($categoriesSubcategory as $categorySubcategory): ?>
-                                            <option value="<?php echo $categorySubcategory["id"]; ?>" <?php echo $categorySubcategory["id"] == $characteristicCategorySubcategory["category_subcategory_id"] ? 'selected="selected"' : ""; ?>><?php echo $categorySubcategory["name"]; ?></option>
+                                            <option value="<?php echo $categorySubcategory["id"]; ?>" <?php echo $categorySubcategory["id"] == $sectionCategorySubcategory["category_subcategory_id"] ? 'selected="selected"' : ""; ?>><?php echo $categorySubcategory["name"]; ?></option>
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
@@ -124,57 +117,15 @@ $sectionsCategorySubcategory = QueryExecutor::getInstance()->getSectionsCategory
                             </div>
                             <div id="form-block-row-column-input" class="form-block-row-column">
                                 <div class="form-block-row-column-input-select">
-                                    <select id="select-sections" name="sectionCategorySubcategoryId">
-                                        <option value="">Выберите раздел характеристики категории подкатегори</option>
-                                        <?php foreach ($sectionsCategorySubcategory as $sectionCategorySubcategory): ?>
-                                            <option value="<?php echo $sectionCategorySubcategory["id"]; ?>" <?php echo $sectionCategorySubcategory["id"] == $characteristicCategorySubcategory["section_category_subcategory_id"] ? 'selected="selected"' : ""; ?>><?php echo $sectionCategorySubcategory["section_name"]; ?></option>
+                                    <select name="sectionId">
+                                        <option value="">Выберите раздел</option>
+                                        <?php foreach ($sections as $section): ?>
+                                            <option value="<?php echo $section["id"]; ?>" <?php echo $section["id"] == $sectionCategorySubcategory["section_id"] ? 'selected="selected"' : ""; ?>><?php echo $section["name"]; ?></option>
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-block-row">
-                            <div id="form-block-row-column-label" class="form-block-row-column">
-                                <div class="form-block-row-column-label">
-                                    <label>Укажите характеристику:</label>
-                                </div>
-                            </div>
-                            <div id="form-block-row-column-input" class="form-block-row-column">
-                                <div class="form-block-row-column-input-select">
-                                    <select id="select-characteristics" name="characteristicId">
-                                        <option value="">Выберите характеристику</option>
-                                        <?php foreach ($characteristics as $characteristic): ?>
-                                            <option value="<?php echo $characteristic["id"]; ?>" <?php echo $characteristic["id"] == $characteristicCategorySubcategory["characteristic_id"] ? 'selected="selected"' : ""; ?>><?php echo $characteristic["name"]; ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-block-row">
-                            <div id="form-block-row-column-label" class="form-block-row-column">
-                                <div class="form-block-row-column-label">
-                                    <label>Используется при фильтрации?</label>
-                                </div>
-                            </div>
-                            <div id="form-block-row-column-input" class="form-block-row-column">
-                                <div class="form-block-row-column-input-checkbox">
-                                    <input type="checkbox" name="useWhenFiltering" <?php echo $characteristicCategorySubcategory["use_when_filtering"] == 1 ? "checked='checked'" : ""; ?>>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-block-row">
-                            <div id="form-block-row-column-label" class="form-block-row-column">
-                                <div class="form-block-row-column-label">
-                                    <label>Используется как основная информация?</label>
-                                </div>
-                            </div>
-                            <div id="form-block-row-column-input" class="form-block-row-column">
-                                <div class="form-block-row-column-input-checkbox">
-                                    <input type="checkbox" name="useWhenDisplayingAsBasicInformation" <?php echo $characteristicCategorySubcategory["use_when_displaying_as_basic_information"] == 1 ? "checked='checked'" : ""; ?>>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="form-block-actions">
                         <div class="form-block-actions-button">
                             <input class="action-button" id="add-button" type="submit" name="action" value="Сохранить"/>

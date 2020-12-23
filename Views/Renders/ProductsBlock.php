@@ -18,7 +18,7 @@
                 <?php
                 $characteristics = array();
 
-                foreach (QueryExecutor::getInstance()->getProductCharacteristicsQuantityUnitValuesDetailedInformation($product["id"]) as $value){
+                foreach (QueryExecutor::getInstance()->getProductCharacteristicsQuantityUnitValuesDetailedInformation($product["id"], 1) as $value){
                     array_push($characteristics, "{$value["value"]}" . (iconv_strlen($value["unit_designation"], "UTF-8") > 0 ? " {$value["unit_designation"]}" : ""));
                 }
 

@@ -1,6 +1,6 @@
 function onChangeSelectedClassifications(selectClassifications) {
     const request = getXmlHttp();
-    const url = "http://electronicsstore/Views/Pages/Administrator/CharacteristicCategorySubcategory/";
+    const url = "http://electronicsstore/Views/Pages/Administrator/SectionCategorySubcategory/";
     const params = "action=Категории&classificationId=" + selectClassifications.value;
 
     var selectCategories = $('select[name="categoryId"]');
@@ -20,7 +20,7 @@ function onChangeSelectedClassifications(selectClassifications) {
 
 function onChangeSelectedCategories(selectCategories) {
     const request = getXmlHttp();
-    const url = "http://electronicsstore/Views/Pages/Administrator/CharacteristicCategorySubcategory/";
+    const url = "http://electronicsstore/Views/Pages/Administrator/SectionCategorySubcategory/";
     const params = "action=Подкатегории&categoryId=" + selectCategories.value;
 
     var selectSubcategories = $('select[name="subcategoryId"]');
@@ -40,7 +40,7 @@ function onChangeSelectedCategories(selectCategories) {
 
 function onChangeSelectedSubcategories(selectSubcategories) {
     const request = getXmlHttp();
-    const url = "http://electronicsstore/Views/Pages/Administrator/CharacteristicCategorySubcategory/";
+    const url = "http://electronicsstore/Views/Pages/Administrator/SectionCategorySubcategory/";
     const params = "action=КатегорииПодкатегории&subcategoryId=" + selectSubcategories.value;
 
     var selectCategoriesSubcategory = $('select[name="categorySubcategoryId"]');
@@ -58,29 +58,9 @@ function onChangeSelectedSubcategories(selectSubcategories) {
     request.send(params);
 }
 
-function onChangeSelectedCategoriesSubcategory(selectCategoriesSubcategory) {
-    const request = getXmlHttp();
-    const url = "http://electronicsstore/Views/Pages/Administrator/CharacteristicCategorySubcategory/";
-    const params = "action=РазделыХарактеристикиКатегорииПодкатегории&categorySubcategoryId=" + selectCategoriesSubcategory.value;
-
-    var selectSectionsCategorySubcategory = $('select[name="sectionCategorySubcategoryId"]');
-
-    request.open("POST", url, true);
-    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    request.addEventListener("readystatechange", () => {
-        if(request.readyState === 4 && request.status === 200){
-            selectSectionsCategorySubcategory.html("");
-            selectSectionsCategorySubcategory.html(request.responseText);
-
-            console.log(request.responseText);
-        }
-    });
-    request.send(params);
-}
-
 function onClickApply() {
     const request = getXmlHttp();
-    const url = "http://electronicsstore/Views/Pages/Administrator/CharacteristicCategorySubcategory/?action=Применить";
+    const url = "http://electronicsstore/Views/Pages/Administrator/SectionCategorySubcategory/?action=Применить";
     const params = "";
 
     var container = $('div[id="tableBlock"]');

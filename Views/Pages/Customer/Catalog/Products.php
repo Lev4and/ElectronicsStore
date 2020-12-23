@@ -57,7 +57,7 @@ $characteristicQuantityUnitValues = QueryExecutor::getInstance()->getCharacteris
                                 </ul>
                             </div>
                         </div>
-                        <?php foreach (QueryExecutor::getInstance()->getCharacteristicsCategorySubcategory(null, null, null, $_GET["categorySubcategoryId"], null, "") as $characteristic): ?>
+                        <?php foreach (QueryExecutor::getInstance()->getCharacteristicsCategorySubcategory(null, null, null, null, $_GET["categorySubcategoryId"], null, true, false, "") as $characteristic): ?>
                             <?php if(count(QueryExecutor::getInstance()->getCharacteristicQuantityUnitValues($characteristic["characteristic_id"], null, null, "")) > 0): ?>
                                 <div class="filter">
                                     <span><?php echo $characteristic["characteristic_name"]; ?></span>

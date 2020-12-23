@@ -9,9 +9,9 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ElectronicsStore - Характеристики категории подкатегории</title>
+    <title>ElectronicsStore - Разделы характеристик категории подкатегорий</title>
     <link rel="stylesheet" href="/CSS/Pages/Main.css">
-    <link rel="stylesheet" href="/CSS/Pages/CharacteristicsCategorySubcategory.css">
+    <link rel="stylesheet" href="/CSS/Pages/SectionsCategorySubcategory.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
@@ -24,7 +24,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
     <link rel="stylesheet" href="/Resources/Fonts/Font%20Awesome/css/all.min.css">
     <script src="/JS/JQuery.js"></script>
-    <script src="/JS/CharacteristicsCategorySubcategory.js"></script>
+    <script src="/JS/SectionsCategorySubcategory.js"></script>
 </head>
 <body>
 <div class="main">
@@ -35,24 +35,13 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
     <div class="content">
         <?php if(Access::isAdministrator()): ?>
             <div class="header-block">
-                <h1>Характеристики категории подкатегории</h1>
+                <h1>Разделы характеристик категории подкатегорий</h1>
             </div>
             <form id="filtersForm" action="." method="post">
                 <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Toolbar.php"; ?>
                 <div style="width: 100%; display: flex; flex-direction: row; justify-content: space-between;">
                     <fieldset class="filters-block">
                         <legend>Фильтры</legend>
-                        <div class="filter">
-                            <span>Разделы</span>
-                            <div>
-                                <select id="select-sections" name="sectionId">
-                                    <option value="">Выберите раздел</option>
-                                    <?php foreach ($sections as $section): ?>
-                                        <option value="<?php echo $section["id"]; ?>"><?php echo $section["name"]; ?></option>
-                                    <?php endforeach; ?>
-                                </select>
-                            </div>
-                        </div>
                         <div class="filter">
                             <span>Классификации</span>
                             <div>
@@ -89,33 +78,13 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
                             </div>
                         </div>
                         <div class="filter">
-                            <span>Характеристики</span>
+                            <span>Разделы</span>
                             <div>
-                                <select id="select-characteristics" name="characteristicId">
-                                    <option value="">Выберите характеристику</option>
-                                    <?php foreach ($characteristics as $characteristic): ?>
-                                        <option value="<?php echo $characteristic["id"]; ?>"><?php echo $characteristic["name"]; ?></option>
+                                <select name="sectionId">
+                                    <option value="">Выберите раздел</option>
+                                    <?php foreach ($sections as $section): ?>
+                                        <option value="<?php echo $section["id"]; ?>"><?php echo $section["name"]; ?></option>
                                     <?php endforeach; ?>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="filter">
-                            <span>Используется при фильтрации?</span>
-                            <div>
-                                <select id="select-use-when-filtering" name="useWhenFiltering">
-                                    <option value="">Не имеет значения</option>
-                                    <option value="0">Нет</option>
-                                    <option value="1">Да</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="filter">
-                            <span>Используется как основная информация?</span>
-                            <div>
-                                <select id="use-when-displaying-as-basic-information" name="useWhenDisplayingAsBasicInformation">
-                                    <option value="">Не имеет значения</option>
-                                    <option value="0">Нет</option>
-                                    <option value="1">Да</option>
                                 </select>
                             </div>
                         </div>
@@ -127,7 +96,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
                         </div>
                     </fieldset>
                     <div id="tableBlock">
-                        <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableCharacteristicsCategorySubcategory.php"; ?>
+                        <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableSectionsCategorySubcategory.php"; ?>
                     </div>
                 </div>
             </form>
