@@ -8,7 +8,6 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
 $product = QueryExecutor::getInstance()->getProduct($_GET["productId"]);
 $categories = QueryExecutor::getInstance()->getCategories($product["classification_id"], "");
 $manufacturers = QueryExecutor::getInstance()->getManufacturers("");
-$quantityUnits = QueryExecutor::getInstance()->getQuantityUnits(null, null, "");
 $subcategories = QueryExecutor::getInstance()->getSubcategories(null, $product["category_id"], "");
 $classifications = QueryExecutor::getInstance()->getClassifications("");
 $categoriesSubcategory = QueryExecutor::getInstance()->getCategoriesSubcategory(null, null, $product["subcategory_id"], "");
@@ -185,7 +184,7 @@ function containsCharacteristicsQuantityUnitValue($value){
                         <fieldset class="form-block-characteristics-fieldset">
                             <legend>Характеристики</legend>
                             <div id="characteristics-block" class="form-block-description-fieldset-characteristics-block">
-                                <?php foreach (QueryExecutor::getInstance()->getCharacteristicsCategorySubcategory(null, null, null, $product["category_subcategory_id"], null, "") as $characteristic): ?>
+                                <?php foreach (QueryExecutor::getInstance()->getCharacteristicsCategorySubcategory(null, null, null,  null, $product["category_subcategory_id"], null, null, null,"") as $characteristic): ?>
                                     <div class="form-block-characteristic-row" style="margin: 10px 0; border-top: solid black 1px; border-bottom: solid black 1px;">
                                         <div class="form-block-row">
                                             <div id="form-block-row-column-label" class="form-block-row-column">
@@ -208,7 +207,7 @@ function containsCharacteristicsQuantityUnitValue($value){
                                             <div id="form-block-characteristic-row-column-input-checkbox" class="form-block-row-column" style="width: 100%; max-width: 100%">
                                                 <div  class="form-block-row-column-input-checkbox" style="width: 100%; height: 100%; display: flex; flex-direction: row; justify-content: center">
                                                     <div style="margin: auto">
-                                                        <input type="checkbox" name="characteristics[<?php echo $characteristic["characteristic_id"];  ?>][newCharacteristicQuantityUnitValue][whetherToAdd]" style="margin: auto; max-height: 100%;">
+                                                        <input type="checkbox" name="characteristics[<?php echo $characteristic["characteristic_id"];  ?>][newCharacteristicQuantityUnitValue][whetherToAdd]" style="margin: auto; width: auto; height: auto;">
                                                         <span style="margin: auto; max-height: 100%; text-align: left;">Новое значение</span>
                                                     </div>
                                                 </div>
@@ -224,8 +223,8 @@ function containsCharacteristicsQuantityUnitValue($value){
                                                 <div class="form-block-row-column-input-select" style="width: 95%">
                                                     <select name="characteristics[<?php echo $characteristic["characteristic_id"];  ?>][newCharacteristicQuantityUnitValue][quantityUnitId]">
                                                         <option value="">Выберите единицу измерения величины</option>
-                                                        <?php foreach ($quantityUnits as $quantityUnit): ?>
-                                                            <option value="<?php echo $quantityUnit["id"]; ?>"><?php echo $quantityUnit["quantity_name"] . " - (" . $quantityUnit["unit_name"] . " (" . $quantityUnit["unit_designation"] . "))"; ?></option>
+                                                        <?php foreach (QueryExecutor::getInstance()->getCharacteristicQuantityUnits($characteristic["characteristic_id"], null, null, "") as $characteristicQuantityUnit): ?>
+                                                            <option value="<?php echo $characteristicQuantityUnit["quantity_unit_id"]; ?>"><?php echo $characteristicQuantityUnit["quantity_name"] . " - (" . $characteristicQuantityUnit["unit_name"] . " (" . $characteristicQuantityUnit["unit_designation"] . "))"; ?></option>
                                                         <?php endforeach; ?>
                                                     </select>
                                                 </div>

@@ -15,6 +15,7 @@ $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::ge
     <meta charset="UTF-8">
     <title>ElectronicsStore - <?php echo "{$product["category_subcategory_name"]} {$product["manufacturer_name"]} {$product["model"]}"; ?></title>
     <link rel="stylesheet" href="/CSS/Pages/Main.css">
+    <link rel="stylesheet" href="/CSS/Pages/Product.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
@@ -23,7 +24,6 @@ $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::ge
     <link rel="stylesheet" href="/CSS/Elements/Form.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
-    <link rel="stylesheet" href="/CSS/Pages/Product.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
     <link rel="stylesheet" href="/Resources/Fonts/Font%20Awesome/css/all.min.css">
     <script src="/JS/JQuery.js"></script>
@@ -40,8 +40,8 @@ $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::ge
             <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/BreadcrumbList.php"; ?>
             <div class="form-block">
                 <div class="form-block-information">
-                    <div class="form-block-image-block">
-                        <div class="form-block-image-block-container">
+                    <div class="form-block-information-image-block">
+                        <div class="form-block-information-image-block-container">
                             <img id="product-photo" name="photo" src="<?php echo "http://" . $_SERVER["SERVER_NAME"] . "/Resources/Images/Upload/" . $product["photo"]; ?>">
                         </div>
                     </div>
@@ -83,7 +83,7 @@ $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::ge
                         <legend>Характеристики</legend>
                         <div id="characteristics-block" class="form-block-description-fieldset-characteristics-block">
                             <?php foreach ($sectionsCategorySubcategoryProduct as $sectionCategorySubcategoryProduct): ?>
-                                <div class="form-block-row">
+                                <div class="form-block-row" style="margin: 25px 0">
                                     <div id="form-block-row-column-label" class="form-block-row-column">
                                         <div class="form-block-row-column-label">
                                             <label style="text-align: left; font-weight: bold"><?php echo $sectionCategorySubcategoryProduct["section_name"]; ?></label>

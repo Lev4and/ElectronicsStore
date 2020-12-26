@@ -18,6 +18,7 @@
         <li><span><a href="/Views/Pages/Administrator/Quantity/">Величины</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/Unit/">Единицы измерения</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/QuantityUnit/">Единицы измерения величин</a></span></li>
+        <li><span><a href="/Views/Pages/Administrator/CharacteristicQuantityUnit/">Величины и единицы измерения характеристик</a></span></li>
         <li><span><a href="/Views/Pages/Administrator/Product/">Товары</a></span></li>
     </ul>
 </div>

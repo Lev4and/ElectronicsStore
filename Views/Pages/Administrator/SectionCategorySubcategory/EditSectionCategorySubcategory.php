@@ -5,10 +5,13 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
 
-$sections = QueryExecutor::getInstance()->getSections("");
-$categoriesSubcategory = QueryExecutor::getInstance()->getCategoriesSubcategory(null, null, null, "");
-
 $sectionCategorySubcategory = QueryExecutor::getInstance()->getSectionCategorySubcategory($_GET["sectionCategorySubcategoryId"]);
+
+$sections = QueryExecutor::getInstance()->getSections("");
+$classifications = QueryExecutor::getInstance()->getClassifications("");
+$categories = QueryExecutor::getInstance()->getCategories($sectionCategorySubcategory["classification_id"], "");
+$subcategories = QueryExecutor::getInstance()->getSubcategories(null, $sectionCategorySubcategory["category_id"], "");
+$categoriesSubcategory = QueryExecutor::getInstance()->getCategoriesSubcategory(null, null, $sectionCategorySubcategory["subcategory_id"], "");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,6 +29,8 @@ $sectionCategorySubcategory = QueryExecutor::getInstance()->getSectionCategorySu
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
     <link rel="stylesheet" href="/Resources/Fonts/Font%20Awesome/css/all.min.css">
+    <script src="/JS/JQuery.js"></script>
+    <script src="/JS/SectionsCategorySubcategory.js"></script>
 </head>
 <body>
 <div class="main">
@@ -126,6 +131,7 @@ $sectionCategorySubcategory = QueryExecutor::getInstance()->getSectionCategorySu
                                 </div>
                             </div>
                         </div>
+                    </div>
                     <div class="form-block-actions">
                         <div class="form-block-actions-button">
                             <input class="action-button" id="add-button" type="submit" name="action" value="Сохранить"/>

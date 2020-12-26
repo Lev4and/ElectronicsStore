@@ -20,7 +20,7 @@
         <div id="form-block-characteristic-row-column-input-checkbox" class="form-block-row-column" style="width: 100%; max-width: 100%">
             <div  class="form-block-row-column-input-checkbox" style="width: 100%; height: 100%; display: flex; flex-direction: row; justify-content: center">
                 <div style="margin: auto">
-                    <input type="checkbox" name="characteristics[<?php echo $characteristic["characteristic_id"];  ?>][newCharacteristicQuantityUnitValue][whetherToAdd]" style="margin: auto; max-height: 100%;">
+                    <input type="checkbox" name="characteristics[<?php echo $characteristic["characteristic_id"];  ?>][newCharacteristicQuantityUnitValue][whetherToAdd]" style="margin: auto; width: auto; height: auto;">
                     <span style="margin: auto; max-height: 100%; text-align: left;">Новое значение</span>
                 </div>
             </div>
@@ -36,8 +36,8 @@
             <div class="form-block-row-column-input-select" style="width: 95%">
                 <select name="characteristics[<?php echo $characteristic["characteristic_id"];  ?>][newCharacteristicQuantityUnitValue][quantityUnitId]">
                     <option value="">Выберите единицу измерения величины</option>
-                    <?php foreach ($quantityUnits as $quantityUnit): ?>
-                        <option value="<?php echo $quantityUnit["id"]; ?>"><?php echo $quantityUnit["quantity_name"] . " - (" . $quantityUnit["unit_name"] . " (" . $quantityUnit["unit_designation"] . "))"; ?></option>
+                    <?php foreach (QueryExecutor::getInstance()->getCharacteristicQuantityUnits($characteristic["characteristic_id"], null, null, "") as $characteristicQuantityUnit): ?>
+                        <option value="<?php echo $characteristicQuantityUnit["quantity_unit_id"]; ?>"><?php echo $characteristicQuantityUnit["quantity_name"] . " - (" . $characteristicQuantityUnit["unit_name"] . " (" . $characteristicQuantityUnit["unit_designation"] . "))"; ?></option>
                     <?php endforeach; ?>
                 </select>
             </div>

@@ -26,7 +26,13 @@ if(isset($_POST["action"]) && $_POST["action"] == "Удалить"){
 if(isset($_POST["action"]) && $_POST["action"] == "Записать") {
     if (iconv_strlen($_POST["name"], "UTF-8") > 0) {
         if (!QueryExecutor::getInstance()->containsCharacteristic($_POST["name"])) {
-            QueryExecutor::getInstance()->addCharacteristic($_POST["name"]);
+            $characteristicId = QueryExecutor::getInstance()->addCharacteristic($_POST["name"]);
+
+            if(isset($_POST["quantityUnits"]) && count($_POST["quantityUnits"]) > 0){
+                foreach ($_POST["quantityUnits"] as $key => $value){
+                    QueryExecutor::getInstance()->addCharacteristicQuantityUnit($characteristicId, $value);
+                }
+            }
 
             header("Location: http://" . $_SERVER["SERVER_NAME"] ."/Views/Pages/Administrator/Characteristic/");
             exit();
@@ -48,8 +54,15 @@ if(isset($_POST["action"]) && $_POST["action"] == "Записать") {
 
 if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
     if (iconv_strlen($_POST["name"], "UTF-8") > 0) {
-        if (!QueryExecutor::getInstance()->containsCharacteristic($_POST["name"])) {
+        if (!QueryExecutor::getInstance()->containsCharacteristic($_POST["name"]) || $_GET["countQuantityUnits"] != count($_POST["quantityUnits"])) {
             QueryExecutor::getInstance()->updateCharacteristic($_GET["characteristicId"], $_POST["name"]);
+            QueryExecutor::getInstance()->removeAllCharacteristicQuantityUnits($_GET["characteristicId"]);
+
+            if(isset($_POST["quantityUnits"]) && count($_POST["quantityUnits"]) > 0){
+                foreach ($_POST["quantityUnits"] as $key => $value){
+                    QueryExecutor::getInstance()->addCharacteristicQuantityUnit($_GET["characteristicId"], $value);
+                }
+            }
 
             header("Location: http://" . $_SERVER["SERVER_NAME"] . "/Views/Pages/Administrator/Characteristic/");
             exit();

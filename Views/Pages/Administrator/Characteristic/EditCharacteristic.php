@@ -6,6 +6,17 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
 
 $characteristic = QueryExecutor::getInstance()->getCharacteristic($_GET["characteristicId"]);
+$characteristicQuantityUnits = QueryExecutor::getInstance()->getCharacteristicQuantityUnits($_GET["characteristicId"], null, null, "");
+
+function containsCharacteristicQuantityUnit($quantityUnitId){
+    foreach ($GLOBALS["characteristicQuantityUnits"] as $characteristicQuantityUnit){
+        if($characteristicQuantityUnit["quantity_unit_id"] == $quantityUnitId){
+            return true;
+        }
+    }
+
+    return false;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,10 +44,10 @@ $characteristic = QueryExecutor::getInstance()->getCharacteristic($_GET["charact
     <div class="content">
         <?php if(Access::isAdministrator()): ?>
             <div class="header-block">
-                <h1>Добавление характеристики</h1>
+                <h1>Изменение данных о характеристики</h1>
             </div>
             <div class="form-block">
-                <form action=".?characteristicId=<?php echo $_GET["characteristicId"]; ?>" method="post">
+                <form action=".?characteristicId=<?php echo $_GET["characteristicId"]; ?>&countQuantityUnits=<?php echo count($characteristicQuantityUnits); ?>" method="post">
                     <div class="form-block-inputs">
                         <div class="form-block-row">
                             <div id="form-block-row-column-label" class="form-block-row-column">
@@ -47,6 +58,22 @@ $characteristic = QueryExecutor::getInstance()->getCharacteristic($_GET["charact
                             <div id="form-block-row-column-input" class="form-block-row-column">
                                 <div class="form-block-row-column-input-text">
                                     <input type="text" name="name" value="<?php echo $characteristic["name"]; ?>">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-block-row">
+                            <div id="form-block-row-column-label" class="form-block-row-column">
+                                <div class="form-block-row-column-label">
+                                    <label>Укажите величины и единицы измерения характеристики:</label>
+                                </div>
+                            </div>
+                            <div id="form-block-row-column-checkbox-list-block" class="form-block-row-column">
+                                <div class="form-block-row-column-checkbox-list">
+                                    <ul>
+                                        <?php foreach (QueryExecutor::getInstance()->getQuantityUnits(null, null, "") as $quantityUnit): ?>
+                                            <li><input type="checkbox" name="quantityUnits[]" value="<?php echo $quantityUnit["id"]; ?>" <?php echo containsCharacteristicQuantityUnit($quantityUnit["id"]) ? "checked='checked'" : ""; ?>><span><?php echo "{$quantityUnit["quantity_name"]} - ({$quantityUnit["unit_name"]} ({$quantityUnit["unit_designation"]}))";; ?></span></li>
+                                        <?php endforeach; ?>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

@@ -342,6 +342,8 @@ class QueryExecutor{
 
     public function addCharacteristic($name){
         $this->executeQuery("INSERT INTO characteristic (name) VALUES ('$name')");
+
+        return $this->contextDb->lastInsertId();
     }
 
     public function getCharacteristic($id){
@@ -751,6 +753,43 @@ class QueryExecutor{
                   WHERE v_product_characteristic_quantity_unit_value.product_id=$id";
 
         return $this->executeQuery($query);
+    }
+
+    public function getCharacteristicQuantityUnits($characteristicId, $quantityId, $unitId, $name){
+        $condition1 = isset($characteristicId) && $characteristicId > 0 ? " AND characteristic_id=$characteristicId" : "";
+        $condition2 = isset($quantityId) && $quantityId > 0 ? " AND quantity_id=$quantityId" : "";
+        $condition3 = isset($unitId) && $unitId > 0 ? " AND unit_id=$unitId" : "";
+
+        $query = "SELECT * FROM v_characteristic_quantity_unit WHERE characteristic_name LIKE '%$name%'";
+        $query .= $condition1;
+        $query .= $condition2;
+        $query .= $condition3;
+
+        return $this->executeQuery($query);
+    }
+
+    public function containsCharacteristicQuantityUnit($characteristicId, $quantityUnitId){
+        return !is_null($this->executeQuery("SELECT * FROM characteristic_quantity_unit WHERE characteristic_id=$characteristicId AND quantity_unit_id=$quantityUnitId LIMIT 1")[0]);
+    }
+
+    public function addCharacteristicQuantityUnit($characteristicId, $quantityUnitId){
+        $this->executeQuery("INSERT INTO characteristic_quantity_unit (characteristic_id, quantity_unit_id) VALUES ($characteristicId, $quantityUnitId)");
+    }
+
+    public function getCharacteristicQuantityUnit($id){
+        return $this->executeQuery("SELECT * FROM v_characteristic_quantity_unit WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function updateCharacteristicQuantityUnit($id, $characteristicId, $quantityUnitId){
+        $this->executeQuery("UPDATE characteristic_quantity_unit SET characteristic_id=$characteristicId, quantity_unit_id=$quantityUnitId WHERE id=$id");
+    }
+
+    public function removeCharacteristicQuantityUnit($id){
+        $this->executeQuery("DELETE FROM characteristic_quantity_unit WHERE id=$id");
+    }
+
+    public function removeAllCharacteristicQuantityUnits($characteristicId){
+        $this->executeQuery("DELETE FROM characteristic_quantity_unit WHERE characteristic_id=$characteristicId");
     }
 
     private function executeQuery($query){

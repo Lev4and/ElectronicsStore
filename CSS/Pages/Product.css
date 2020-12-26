@@ -1,6 +1,6 @@
 .form-block-information{
     width: 100%;
-    height: 200px;
+    height: 300px;
     display: flex;
     margin: 10px 0;
     max-width: 100%;
@@ -8,38 +8,48 @@
     font-size: larger;
     font-family: Arial;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     vertical-align: middle;
     align-content: center;
     align-items: center;
 }
-.form-block-information .form-block-image-block{
-    width: 30%;
+.form-block-information .form-block-information-image-block{
+    width: 40%;
     height: 100%;
+    max-width: 40%;
+    border: solid black 1px;
 }
-.form-block-information .form-block-image-block .form-block-image-block-container {
+.form-block-information .form-block-information-image-block .form-block-information-image-block-container {
     width: 100%;
     height: 100%;
+    display: flex;
 }
-.form-block-information .form-block-image-block .form-block-image-block-container img{
+.form-block-information .form-block-information-image-block .form-block-information-image-block-container img{
     margin: auto;
+    max-width: 100%;
+    max-height: 100%;
 }
 .form-block-information .form-block-information-block{
-    width: 70%;
+    width: 55%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 .form-block-information-block-row{
     width: 100%;
     height: 50%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 }
 .form-block-information-block-column{
-    margin: auto;
     width: 100%;
+    height: 50%;
+    display: flex;
+}
+.form-block-information-block-column span{
+    width: 100%;
+    margin: auto;
     max-height: 100%;
 }
 #form-block-information-block-column{
@@ -50,11 +60,12 @@
 #form-block-information-block-column-button{
     height: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
 }
 #form-block-information-block-column-button button{
     height: 50%;
-    margin: auto;
     color: white;
     max-height: 100%;
     font-size: medium;

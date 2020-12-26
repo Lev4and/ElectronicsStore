@@ -20,9 +20,8 @@ if(isset($_POST["action"]) && $_POST["action"] == "Изменить"){
 if(isset($_POST["action"]) && $_POST["action"] == "Удалить"){
     QueryExecutor::getInstance()->removeSectionCategorySubcategory($_POST["selectedSectionCategorySubcategory"]);
 
-    $sectionsCategorySubcategory = QueryExecutor::getInstance()->getSectionsCategorySubcategory($_POST["sectionId"], $_POST["categorySubcategoryId"], $_POST["inputSearch"]);
-
-    include "SectionsCategorySubcategory.php";
+    header("Location: http://" . $_SERVER["SERVER_NAME"] . "/Views/Pages/Administrator/SectionCategorySubcategory/");
+    exit();
 }
 
 if(isset($_POST["action"]) && $_POST["action"] == "Категории"){
@@ -117,6 +116,7 @@ if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
 
 if(!isset($_POST["action"])){
     $sections = QueryExecutor::getInstance()->getSections("");
+    $classifications = QueryExecutor::getInstance()->getClassifications("");
     $sectionsCategorySubcategory = QueryExecutor::getInstance()->getSectionsCategorySubcategory($_POST["sectionId"], $_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["categorySubcategoryId"],  $_POST["inputSearch"]);
 
     include "SectionsCategorySubcategory.php";

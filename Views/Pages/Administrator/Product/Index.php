@@ -62,9 +62,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "КатегорииПодка�
 
 if(isset($_POST["action"]) && $_POST["action"] == "Характеристики"){
     if(isset($_POST["categorySubcategoryId"]) && $_POST["categorySubcategoryId"] > 0){
-        $quantityUnits = QueryExecutor::getInstance()->getQuantityUnits(null, null, "");
-
-        foreach (QueryExecutor::getInstance()->getCharacteristicsCategorySubcategory(null, null, null, $_POST["categorySubcategoryId"], null, "") as $characteristic){
+        foreach (QueryExecutor::getInstance()->getCharacteristicsCategorySubcategory(null, null, null, null, $_POST["categorySubcategoryId"], null, null, null, "") as $characteristic){
             include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/CharacteristicBlock.php";
         }
     }
