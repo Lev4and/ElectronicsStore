@@ -202,7 +202,7 @@ form{
     justify-content: space-between;
 }
 .product-block .product-block-footer-block .product-block-footer-block-evaluation-block{
-    width: 40%;
+    width: 28%;
     height: 100%;
     display: flex;
     text-align: center;
@@ -217,6 +217,23 @@ form{
     font-size: medium;
     font-weight: bold;
     font-family: Arial;
+}
+.product-block .product-block-footer-block .product-block-footer-block-evaluation-block span .far{
+    z-index: 1;
+    color: black;
+    margin: auto;
+    margin-right: 5px;
+    position: relative;
+}
+.product-block .product-block-footer-block .product-block-footer-block-evaluation-block span .fas{
+    width: 0;
+    z-index: 2;
+    color: orange;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    font-size: inherit;
+    top: 0; left: 0; bottom: 0;
 }
 .product-block .product-block-footer-block .product-block-footer-block-actions-block{
     width: 20%;

@@ -59,8 +59,40 @@ $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::ge
                                     </div>
                                 </div>
                                 <div class="form-block-information-block-column-row">
+                                    <div id="form-block-information-block-column-row-column-evaluation-block" class="form-block-information-block-column-row-column">
+                                        <span>
+                                            <?php
+                                            function getCoefficient($evaluation, $numberStar){
+                                                if(!isset($evaluation)){
+                                                    return 0;
+                                                }
+
+                                                if($evaluation < $numberStar){
+                                                    return fmod($evaluation, ($numberStar - 1));
+                                                }
+
+                                                return 1;
+                                            }
+                                            ?>
+                                            <i class="far fa-star">
+                                                <i class="fas fa-star" style="width: <?php echo (asin(2 * getCoefficient($product["evaluation"], 1)  - 1) / pi() + 0.5) * 100; ?>%;"></i>
+                                            </i>
+                                            <i class="far fa-star">
+                                                <i class="fas fa-star" style="width: <?php echo (asin(2 * getCoefficient($product["evaluation"], 2) - 1) / pi() + 0.5) * 100; ?>%;"></i>
+                                            </i>
+                                            <i class="far fa-star">
+                                                <i class="fas fa-star" style="width: <?php echo (asin(2 * getCoefficient($product["evaluation"], 3) - 1) / pi() + 0.5) * 100; ?>%;"></i>
+                                            </i>
+                                            <i class="far fa-star">
+                                                <i class="fas fa-star" style="width: <?php echo (asin(2 * getCoefficient($product["evaluation"], 4) - 1) / pi() + 0.5) * 100; ?>%;"></i>
+                                            </i>
+                                            <i class="far fa-star">
+                                                <i class="fas fa-star" style="width: <?php echo (asin(2 * getCoefficient($product["evaluation"], 5) - 1) / pi() + 0.5) * 100; ?>%;"></i>
+                                            </i>
+                                        </span>
+                                    </div>
                                     <div class="form-block-information-block-column-row-column">
-                                        <span>Оценка: <?php echo isset($product["evaluation"]) ? $product["evaluation"] : "Неизвестно"; ?></span>
+                                        <span><?php echo $product["count_of_evaluations"]; ?></span>
                                     </div>
                                 </div>
                             </div>
