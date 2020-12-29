@@ -68,6 +68,42 @@ $products = QueryExecutor::getInstance()->getProducts(null, null, null, null, nu
                 </div>
             <?php endforeach; ?>
         </div>
+        <div class="header-block">
+            <h1>Вы недавно смотрели</h1>
+        </div>
+        <div class="items-block">
+            <?php if(Access::isAuthorized()): ?>
+                <?php foreach (QueryExecutor::getInstance()->getViewedProductsUser($_SESSION["user"]["id"]) as $product): ?>
+                    <div class="item-block">
+                        <a href="/Views/Pages/Customer/Catalog/Product.php?productId=<?php echo $product["product_id"]; ?>">
+                            <div class="item-block-container">
+                                <div class="item-block-container-image-container">
+                                    <img src="<?php echo "http://" . $_SERVER["SERVER_NAME"] . "/Resources/Images/Upload/" . $product["photo"]; ?>">
+                                </div>
+                                <div class="item-block-container-title">
+                                    <span><?php echo $product["name"]; ?></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <?php foreach (QueryExecutor::getInstance()->getViewedProductsStrangerUser($_COOKIE["viewedProducts"]) as $product): ?>
+                    <div class="item-block">
+                        <a href="/Views/Pages/Customer/Catalog/Product.php?productId=<?php echo $product["product_id"]; ?>">
+                            <div class="item-block-container">
+                                <div class="item-block-container-image-container">
+                                    <img src="<?php echo "http://" . $_SERVER["SERVER_NAME"] . "/Resources/Images/Upload/" . $product["photo"]; ?>">
+                                </div>
+                                <div class="item-block-container-title">
+                                    <span><?php echo $product["name"]; ?></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </div>
     </div>
     <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Footer.php"; ?>
 </div>

@@ -25,7 +25,6 @@ class QueryExecutor{
     }
 
     public function registration($roleId, $login, $password){
-
         $dateTime = date("y-m-d H:i:s");
         $this->executeQuery("INSERT INTO user (role_id, avatar, login, password, date_of_registration) VALUES($roleId, NULL, '$login', '$password', '$dateTime')");
     }
@@ -790,6 +789,36 @@ class QueryExecutor{
 
     public function removeAllCharacteristicQuantityUnits($characteristicId){
         $this->executeQuery("DELETE FROM characteristic_quantity_unit WHERE characteristic_id=$characteristicId");
+    }
+
+    public function getViewedProductsUser($userId){
+        return $this->executeQuery("SELECT * FROM v_product_view WHERE user_id=$userId ORDER BY viewing_time DESC");
+    }
+
+    public function getViewedProductsStrangerUser($viewedProducts){
+        if(iconv_strlen($viewedProducts, "UTF-8") > 0){
+            return $this->executeQuery("SELECT * FROM v_product WHERE id IN ($viewedProducts)");
+        }
+
+        /*if(count($viewedProducts) > 0){
+            $condition = "";
+            $conditions = array();
+
+            foreach ($viewedProducts as $key){
+                array_push($conditions, $key["productId"]);
+            }
+
+            $condition = implode(", ", $conditions);
+
+            return $this->executeQuery("SELECT * FROM v_product WHERE id IN ($condition)");
+        }*/
+
+        return $this->executeQuery("SELECT * FROM v_product LIMIT 0");
+    }
+
+    public function addProductView($productId, $userId){
+        $dateTime = date("y-m-d H:i:s");
+        $this->executeQuery("INSERT INTO product_view (product_id, user_id, viewing_time) VALUES ($productId, $userId, '$dateTime')");
     }
 
     private function executeQuery($query){

@@ -31,7 +31,7 @@ $roles = QueryExecutor::getInstance()->getRoles();
     include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Menu.php";
     ?>
     <div class="content">
-        <?php if(Access::isAuthorized()): ?>
+        <?php if(!Access::isAuthorized()): ?>
             <div class="header-block">
                 <h1>Регистрация</h1>
             </div>

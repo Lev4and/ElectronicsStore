@@ -3,6 +3,10 @@ session_start();
 
 require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
 
+if(!isset($_COOKIE["viewedProducts"])){
+    $_COOKIE["viewedProducts"] = "";
+}
+
 if(!isset($_SESSION["basket"])){
     $_SESSION["basket"] = array();
 }
@@ -27,7 +31,7 @@ if(isset($_POST["action"]) && $_POST["action"] == "Авторизоваться"
     else{
         $_SESSION["error"] = "Вы ввели неверный логин или пароль.";
 
-        header("Location: http://electronicsstore/Views/Pages/Authorization.php");
+        header("Location: http://{$_SERVER["SERVER_NAME"]}/Views/Pages/Authorization.php");
         exit();
     }
 }
@@ -43,20 +47,20 @@ if(isset($_POST["action"]) && $_POST["action"] == "Зарегистрирова�
         if(!QueryExecutor::getInstance()->containsUser($login)){
             QueryExecutor::getInstance()->registration($roleId, $login, $password);
 
-            header("Location: http://electronicsstore/Views/Pages/Authorization.php");
+            header("Location: http://{$_SERVER["SERVER_NAME"]}/Views/Pages/Authorization.php");
             exit();
         }
         else{
             $_SESSION["error"] = "Пользователь с таким логином уже существует.";
 
-            header("Location: http://electronicsstore/Views/Pages/Registration.php");
+            header("Location: http://{$_SERVER["SERVER_NAME"]}/Views/Pages/Registration.php");
             exit();
         }
     }
     else{
         $_SESSION["error"] = "Вы указали неверные данные.";
 
-        header("Location: http://electronicsstore/Views/Pages/Registration.php");
+        header("Location: http://{$_SERVER["SERVER_NAME"]}}/Views/Pages/Registration.php");
         exit();
     }
 }

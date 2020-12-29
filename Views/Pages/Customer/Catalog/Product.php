@@ -1,9 +1,19 @@
 <?php
+$viewedProducts = "";
+$viewedProducts = $_COOKIE["viewedProducts"];
+$viewedProducts .= (iconv_strlen($_COOKIE["viewedProducts"], "UTF-8") > 0 ? ", {$_GET["productId"]}" : "{$_GET["productId"]}");
+
+setcookie("viewedProducts", $viewedProducts, time() + 3600 * 24 * 365, "/");
+
 session_start();
 
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
+
+if(Access::isAuthorized()){
+    QueryExecutor::getInstance()->addProductView($_GET["productId"], $_SESSION["user"]["id"]);
+}
 
 $product = QueryExecutor::getInstance()->getProduct($_GET["productId"]);
 $sectionsCategorySubcategoryProduct = QueryExecutor::getInstance()->getSectionsCategorySubcategoryProduct($_GET["productId"]);
@@ -89,10 +99,15 @@ $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::ge
                                             <i class="far fa-star">
                                                 <i class="fas fa-star" style="width: <?php echo (asin(2 * getCoefficient($product["evaluation"], 5) - 1) / pi() + 0.5) * 100; ?>%;"></i>
                                             </i>
+                                            <i class="far fa-comment-dots">
+                                                <span><?php echo $product["count_of_evaluations"]; ?></span>
+                                            </i>
                                         </span>
                                     </div>
-                                    <div class="form-block-information-block-column-row-column">
-                                        <span><?php echo $product["count_of_evaluations"]; ?></span>
+                                    <div id="form-block-information-block-column-row-column-statistical-information-block" class="form-block-information-block-column-row-column">
+                                        <i class="far fa-eye">
+                                            <span><?php echo isset($product["count_of_views"]) ? $product["count_of_views"] : 0; ?></span>
+                                        </i>
                                     </div>
                                 </div>
                             </div>

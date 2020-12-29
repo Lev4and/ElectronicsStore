@@ -57,8 +57,17 @@ function getCoefficient($evaluation, $numberStar){
                     <i class="far fa-star">
                         <i class="fas fa-star" style="width: <?php echo (asin(2 * getCoefficient($product["evaluation"], 5) - 1) / pi() + 0.5) * 100; ?>%;"></i>
                     </i>
-                    <?php echo $product["count_of_evaluations"]; ?>
+                    <i class="far fa-comment-dots">
+                        <span><?php echo $product["count_of_evaluations"]; ?></span>
+                    </i>
                 </span>
+            </div>
+            <div class="product-block-footer-block-statistical-information-block">
+                <div class="product-block-footer-block-statistical-information-block-column">
+                    <i class="far fa-eye">
+                        <span><?php echo isset($product["count_of_views"]) ? $product["count_of_views"] : 0; ?></span>
+                    </i>
+                </div>
             </div>
             <div class="product-block-footer-block-actions-block">
                 <div class="product-block-footer-block-action-block">
