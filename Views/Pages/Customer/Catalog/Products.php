@@ -32,6 +32,7 @@ $characteristicQuantityUnitValues = QueryExecutor::getInstance()->getCharacteris
     <link rel="stylesheet" href="/Resources/Fonts/Font%20Awesome/css/all.min.css">
     <script src="/JS/JQuery.js"></script>
     <script src="/JS/Basket.js"></script>
+    <script src="/JS/Favorites.js"></script>
     <script src="/JS/CatalogProducts.js"></script>
 </head>
 <body>

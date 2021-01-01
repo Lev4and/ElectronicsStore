@@ -10,6 +10,33 @@ function getCoefficient($evaluation, $numberStar){
 
     return 1;
 }
+
+function containsProductView($productId){
+    if(Access::isAuthorized()){
+        return QueryExecutor::getInstance()->containsProductView($productId, $_SESSION["user"]["id"]);
+    }
+    else{
+        return in_array($productId, explode(", ", $_COOKIE["viewedProducts"]));
+    }
+}
+
+function containsPurchasedByUserProduct($productId){
+    if(Access::isAuthorized()){
+        return QueryExecutor::getInstance()->containsPurchasedByUserProduct($productId, $_SESSION["user"]["id"]);
+    }
+    else{
+        return in_array($productId, explode(", ", $_COOKIE["purchasedProducts"]));
+    }
+}
+
+function containsProductFavorite($productId){
+    if(Access::isAuthorized()){
+        return QueryExecutor::getInstance()->containsFavoriteProduct($productId, $_SESSION["user"]["id"]);
+    }
+    else{
+        return in_array($productId, explode(", ", $_COOKIE["favoriteProducts"]));
+    }
+}
 ?>
 <?php foreach ($products as $product): ?>
     <div class="product-block">
@@ -64,13 +91,28 @@ function getCoefficient($evaluation, $numberStar){
             </div>
             <div class="product-block-footer-block-statistical-information-block">
                 <div class="product-block-footer-block-statistical-information-block-column">
-                    <i class="far fa-eye">
+                    <i class="far fa-eye" <?php echo (containsProductView($product["id"]) ? "style='color: blue;'" : ""); ?>>
                         <span><?php echo isset($product["count_of_views"]) ? $product["count_of_views"] : 0; ?></span>
                     </i>
                 </div>
+                <div class="product-block-footer-block-statistical-information-block-column" style="flex-direction: column">
+                    <div class="product-block-footer-block-statistical-information-block-column-row">
+                        <i class="fas fa-shopping-bag" <?php echo (containsPurchasedByUserProduct($product["id"]) ? "style='color: lime;'" : ""); ?>>
+                            <span><?php echo isset($product["sales"]) ? $product["sales"] : 0 ?></span>
+                        </i>
+                    </div>
+                    <div class="product-block-footer-block-statistical-information-block-column-row">
+                        <i id="count-of-likes-icon-<?php echo $product["id"]; ?>" class="far fa-heart" <?php echo (containsProductFavorite($product["id"]) ? "style='color: red;'" : ""); ?>>
+                            <span id="count-of-likes-<?php echo $product["id"]; ?>"><?php echo $product["count_of_likes"]; ?></span>
+                        </i>
+                    </div>
+                </div>
             </div>
             <div class="product-block-footer-block-actions-block">
-                <div class="product-block-footer-block-action-block">
+                <div class="product-block-footer-block-action-block" style="width: 25%">
+                    <button class="favorite-button" onmousemove="onMouseMoveFavoriteButton(this, <?php echo (containsProductFavorite($product["id"]) ? "true": "false"); ?>);" onmouseleave="onMouseLeaveFavoriteButton(this, <?php echo (containsProductFavorite($product["id"]) ? "true": "false"); ?>);" onclick="onClickFavoriteButton(this, <?php echo (containsProductFavorite($product["id"]) ? "true": "false"); ?>, <?php echo $product["id"]; ?>, <?php echo $_SESSION["user"]["id"]; ?>)"><i id="favorites-icon" class="<?php echo (containsProductFavorite($product["id"]) ? "fas fa-heart" : "far fa-heart"); ?>" style="color: blue;"></i></button>
+                </div>
+                <div class="product-block-footer-block-action-block" style="width: 70%">
                     <button onclick="onClickAddToCart(this, <?php echo $product["id"]; ?>);" <?php echo in_array(array("productId" => $product["id"]), $_SESSION["basket"]) ? "disabled='disabled'" : ""; ?>>В корзину</button>
                 </div>
             </div>

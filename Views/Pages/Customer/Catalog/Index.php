@@ -93,5 +93,44 @@ if(isset($_POST["action"]) && $_POST["action"] == "В корзину"){
     }
 
     echo count($_SESSION["basket"]);
+    exit();
+}
+
+if(isset($_POST["action"]) && $_POST["action"] == "Нравиться"){
+    if(isset($_POST["userId"]) && $_POST["userId"] > 0){
+        QueryExecutor::getInstance()->addFavoriteProduct($_POST["productId"], $_POST["userId"]);
+    }
+    else{
+        $favoriteProducts = "";
+        $favoriteProducts = $_COOKIE["favoriteProducts"];
+        $favoriteProducts .= (iconv_strlen($_COOKIE["favoriteProducts"], "UTF-8") > 0 ? ", {$_POST["productId"]}" : "{$_POST["productId"]}");
+
+        setcookie("favoriteProducts", $favoriteProducts, time() + 3600 * 24 * 365, "/");
+    }
+
+    echo QueryExecutor::getInstance()->getCountOfLikesProduct($_POST["productId"]);
+    exit();
+}
+
+if(isset($_POST["action"]) && $_POST["action"] == "Не нравиться"){
+    if(isset($_POST["userId"]) && $_POST["userId"] > 0){
+        QueryExecutor::getInstance()->removeFavoriteProduct($_POST["productId"], $_POST["userId"]);
+    }
+    else{
+        $favoriteProducts = "";
+        $newFavoriteProducts = "";
+        $favoriteProducts = $_COOKIE["favoriteProducts"];
+
+        foreach (explode(", ", $favoriteProducts) as $productId) {
+            if($productId != $_POST["productId"]){
+                $newFavoriteProducts .= iconv_strlen($newFavoriteProducts, "UTF-8") > 0 ? ", {$productId}" : "{$productId}";
+            }
+        }
+
+        setcookie("favoriteProducts", $newFavoriteProducts, time() + 3600 * 24 * 365, "/");
+    }
+
+    echo QueryExecutor::getInstance()->getCountOfLikesProduct($_POST["productId"]);
+    exit();
 }
 ?>

@@ -3,8 +3,18 @@ session_start();
 
 require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
 
+
+
 if(!isset($_COOKIE["viewedProducts"])){
     $_COOKIE["viewedProducts"] = "";
+}
+
+if(!isset($_COOKIE["purchasedProducts"])){
+    $_COOKIE["purchasedProducts"] = "";
+}
+
+if(!isset($_COOKIE["favoriteProducts"])){
+    $_COOKIE["favoriteProducts"] = "";
 }
 
 if(!isset($_SESSION["basket"])){

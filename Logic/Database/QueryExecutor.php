@@ -821,6 +821,47 @@ class QueryExecutor{
         $this->executeQuery("INSERT INTO product_view (product_id, user_id, viewing_time) VALUES ($productId, $userId, '$dateTime')");
     }
 
+    public function containsProductView($productId, $userId){
+        return !is_null($this->executeQuery("SELECT * FROM product_view WHERE product_id=$productId AND user_id=$userId LIMIT 1")[0]);
+    }
+
+    public function getFavoriteProductsUser($userId){
+        return $this->executeQuery("SELECT * FROM v_product_favorite WHERE user_id=$userId");
+    }
+
+    public function getFavoriteProductsStrangerUser($favoriteProducts){
+        if(iconv_strlen($favoriteProducts, "UTF-8") > 0){
+            return $this->executeQuery("SELECT * FROM v_product_favorite WHERE product_id IN ($favoriteProducts)");
+        }
+
+        return $this->executeQuery("SELECT * FROM v_product_favorite LIMIT 0");
+    }
+
+    public function containsFavoriteProduct($productId, $userId){
+        return !is_null($this->executeQuery("SELECT * FROM product_favorite WHERE product_id=$productId AND user_id=$userId LIMIT 1")[0]);
+    }
+
+    public function addFavoriteProduct($productId, $userId){
+        $dateTime = date("y-m-d H:i:s");
+        $this->executeQuery("INSERT INTO product_favorite (product_id, user_id, date_of_adding) VALUES ($productId, $userId, '$dateTime')");
+    }
+
+    public function removeFavoriteProduct($productId, $userId){
+        $this->executeQuery("DELETE FROM product_favorite WHERE product_id=$productId AND user_id=$userId");
+    }
+
+    public function getCountOfLikesProduct($productId){
+        return $this->executeQuery("SELECT COUNT(*) AS `count_of_likes` FROM product_favorite WHERE product_id=$productId")[0]["count_of_likes"];
+    }
+
+    public function containsPurchasedByUserProduct($productId, $userId){
+        return !is_null($this->executeQuery("SELECT * FROM purchase INNER JOIN purchase_content ON purchase_content.purchase_id = purchase.id WHERE purchase_content.product_id=$productId"));
+    }
+
+    public function containsReview($productId, $userId){
+        return !is_null($this->executeQuery("SELECT * FROM review WHERE product_id=$productId AND user_id=$userId LIMIT 1")[0]);
+    }
+
     private function executeQuery($query){
         try{
             return ($this->contextDb->query($query))->FETCHALL(PDO::FETCH_ASSOC);
