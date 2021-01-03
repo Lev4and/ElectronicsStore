@@ -14,7 +14,6 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
     <link rel="stylesheet" href="/CSS/Pages/Authorization.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
-    <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/Form.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">

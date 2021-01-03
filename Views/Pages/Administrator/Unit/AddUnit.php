@@ -14,8 +14,8 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
     <link rel="stylesheet" href="/CSS/Pages/AddUnit.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
-    <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
+    <link rel="stylesheet" href="/CSS/Elements/BreadcrumbList.css">
     <link rel="stylesheet" href="/CSS/Elements/Form.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
@@ -30,6 +30,12 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
     ?>
     <div class="content">
         <?php if(Access::isAdministrator()): ?>
+            <div class="breadcrumb-list">
+                <ul>
+                    <li><a href="../../Main.php"><span>Меню администратора > </span></a></li>
+                    <li><a href="../Unit/"><span>Сущность БД: Единицы измерения</span></a></li>
+                </ul>
+            </div>
             <div class="header-block">
                 <h1>Добавление единицы измерения</h1>
             </div>

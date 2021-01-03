@@ -17,7 +17,6 @@ $subcategoriesCategory = QueryExecutor::getInstance()->getSubcategories(null, $_
     <link rel="stylesheet" href="/CSS/Pages/CatalogSubcategories.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
-    <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
     <link rel="stylesheet" href="/CSS/Elements/BreadcrumbList.css">
     <link rel="stylesheet" href="/CSS/Elements/ItemBlock.css">

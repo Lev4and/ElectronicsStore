@@ -17,8 +17,8 @@ $quantityUnits = QueryExecutor::getInstance()->getQuantityUnits(null, null, "");
     <link rel="stylesheet" href="/CSS/Pages/AddCharacteristicQuantityUnit.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
-    <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
+    <link rel="stylesheet" href="/CSS/Elements/BreadcrumbList.css">
     <link rel="stylesheet" href="/CSS/Elements/Form.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
@@ -33,6 +33,12 @@ $quantityUnits = QueryExecutor::getInstance()->getQuantityUnits(null, null, "");
     ?>
     <div class="content">
         <?php if(Access::isAdministrator()): ?>
+            <div class="breadcrumb-list">
+                <ul>
+                    <li><a href="../../Main.php"><span>Меню администратора > </span></a></li>
+                    <li><a href="../CharacteristicQuantityUnit/"><span>Сущность БД: Величины и единицы измерения характеристик</span></a></li>
+                </ul>
+            </div>
             <div class="header-block">
                 <h1>Добавление величины и единицы измерения характеристики</h1>
             </div>

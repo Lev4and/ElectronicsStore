@@ -1,8 +1,3 @@
 <?php
-if(Access::isAdministrator()){
-    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/MenuAdmin.php";
-}
-else{
-    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/MenuCustomer.php";
-}
+include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/MenuCustomer.php";
 ?>

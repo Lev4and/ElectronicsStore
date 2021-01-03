@@ -14,8 +14,8 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
     <link rel="stylesheet" href="/CSS/Pages/Characteristics.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
-    <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
+    <link rel="stylesheet" href="/CSS/Elements/BreadcrumbList.css">
     <link rel="stylesheet" href="/CSS/Elements/Toolbar.css">
     <link rel="stylesheet" href="/CSS/Elements/Filters.css">
     <link rel="stylesheet" href="/CSS/Elements/Table.css">
@@ -34,6 +34,11 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
     ?>
     <div class="content">
         <?php if(Access::isAdministrator()): ?>
+            <div class="breadcrumb-list">
+                <ul>
+                    <li><a href="../../Main.php"><span>Меню администратора</span></a></li>
+                </ul>
+            </div>
             <div class="header-block">
                 <h1>Характеристики</h1>
             </div>

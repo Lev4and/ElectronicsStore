@@ -17,7 +17,6 @@ $products = QueryExecutor::getInstance()->getProducts(null, null, null, null, $_
     <link rel="stylesheet" href="/CSS/Pages/ProductsManufacturer.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
-    <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
     <link rel="stylesheet" href="/CSS/Elements/ItemBlock.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">

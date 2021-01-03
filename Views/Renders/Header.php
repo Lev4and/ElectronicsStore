@@ -30,28 +30,26 @@
         <div class="container-logo">
             <a href="<?php echo "http://" . $_SERVER["SERVER_NAME"] . "/"; ?>"><img src="/Resources/Images/Icons/Logo.png"></a>
         </div>
-        <div class="container-catalog">
-            <?php  if(Access::isAdministrator()): ?>
-                <button id="menu" class="container-catalog-button" type="button" onclick="{ openOrCloseMenu('menu-admin'); }">Меню</button>
-            <?php else: ?>
+        <?php if(!Access::isAdministrator()): ?>
+            <div class="container-catalog">
                 <button id="catalog" class="container-catalog-button" type="button" onclick="{ openOrCloseMenu('menu-customer'); }">Каталог товаров</button>
-            <?php endif; ?>
-        </div>
-        <div class="container-search">
-            <div class="container-search-input">
-                <input id="inputSearch" type="search" name="inputSearch" placeholder="Поиск по сайту"/>
             </div>
-            <div class="container-search-button">
-                <i class="fas fa-search" onclick="onClickSearch();"></i>
-            </div>
-        </div>
-        <div class="container-actions">
-            <?php if(!isset($_SESSION["user"]["role_name"]) || $_SESSION["user"]["role_name"] == "Покупатель"): ?>
-                <div id="container-action-basket" class="container-action">
-                    <a href="<?php echo "http://{$_SERVER["SERVER_NAME"]}/Views/Pages/Customer/Basket.php"; ?>"><i class="fas fa-shopping-basket"></i> Корзина <span id="counterBasket"><?php echo count($_SESSION["basket"]); ?></span></a>
+            <div class="container-search">
+                <div class="container-search-input">
+                    <input id="inputSearch" type="search" name="inputSearch" placeholder="Поиск по сайту"/>
                 </div>
-            <?php endif; ?>
-        </div>
+                <div class="container-search-button">
+                    <i class="fas fa-search" onclick="onClickSearch();"></i>
+                </div>
+            </div>
+            <div class="container-actions">
+                <?php if(!isset($_SESSION["user"]["role_name"]) || $_SESSION["user"]["role_name"] == "Покупатель"): ?>
+                    <div id="container-action-basket" class="container-action">
+                        <a href="<?php echo "http://{$_SERVER["SERVER_NAME"]}/Views/Pages/Customer/Basket.php"; ?>"><i class="fas fa-shopping-basket"></i> Корзина <span id="counterBasket"><?php echo count($_SESSION["basket"]); ?></span></a>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
         <div class="container-login-or-menu-user">
             <?php if(!isset($_SESSION["user"]) || count($_SESSION["user"]) == 0): ?>
                 <div class="container-login">

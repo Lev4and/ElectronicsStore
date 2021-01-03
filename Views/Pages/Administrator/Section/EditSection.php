@@ -16,8 +16,8 @@ $section = QueryExecutor::getInstance()->getSection($_GET["sectionId"]);
     <link rel="stylesheet" href="/CSS/Pages/EditSection.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
-    <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
+    <link rel="stylesheet" href="/CSS/Elements/BreadcrumbList.css">
     <link rel="stylesheet" href="/CSS/Elements/Form.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
@@ -32,6 +32,12 @@ $section = QueryExecutor::getInstance()->getSection($_GET["sectionId"]);
     ?>
     <div class="content">
         <?php if(Access::isAdministrator()): ?>
+            <div class="breadcrumb-list">
+                <ul>
+                    <li><a href="../../Main.php"><span>Меню администратора > </span></a></li>
+                    <li><a href="../Section/"><span>Сущность БД: Разделы характеристик</span></a></li>
+                </ul>
+            </div>
             <div class="header-block">
                 <h1>Изменение данных о разделе характеристики</h1>
             </div>

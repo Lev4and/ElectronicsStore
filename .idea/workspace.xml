@@ -2,59 +2,85 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7235fee-ce82-4657-a516-0dde89f9f921" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/slick/ajax-loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/slick/fonts/slick.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/slick/fonts/slick.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/slick/fonts/slick.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CSS/Elements/Slider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JS/Slider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Images/Interface/sl-arrow_l.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Images/Interface/sl-arrow_r.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/CONTRIBUTING.markdown" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/ISSUE_TEMPLATE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/README.markdown" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/component.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/slick.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/slick/config.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/slick/fonts/slick.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/slick/slick-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/slick/slick-theme.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/slick/slick-theme.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/slick/slick.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/slick/slick.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/slick/slick.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/slick/slick.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Packages/Slick/slick/slick.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c6a702d1-6a32-47ed-b454-7cbaf89b2dab/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/c6a702d1-6a32-47ed-b454-7cbaf89b2dab/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c6a702d1-6a32-47ed-b454-7cbaf89b2dab/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/c6a702d1-6a32-47ed-b454-7cbaf89b2dab/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c6a702d1-6a32-47ed-b454-7cbaf89b2dab/_src_/schema/electronics_store.zip" afterPath="$PROJECT_DIR$/.idea/dataSources/c6a702d1-6a32-47ed-b454-7cbaf89b2dab/_src_/schema/electronics_store.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Images/Upload/147d2971361f9de11e089ee69c87066b84df48a50be4b8f8b2800729d2041a50.png" afterPath="$PROJECT_DIR$/Resources/Images/Upload/147d2971361f9de11e089ee69c87066b84df48a50be4b8f8b2800729d2041a50.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Images/Upload/5cb61e4213cc1c493185001b99b0f1a30f82eff3b0347526c16d2d017c12bf8c.jpg" afterPath="$PROJECT_DIR$/Resources/Images/Upload/5cb61e4213cc1c493185001b99b0f1a30f82eff3b0347526c16d2d017c12bf8c.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Images/Upload/6855c58126724ad39601c611822ee80f5a315ca705f57db0e60c231c9a9f6a07.jpg" afterPath="$PROJECT_DIR$/Resources/Images/Upload/6855c58126724ad39601c611822ee80f5a315ca705f57db0e60c231c9a9f6a07.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Images/Upload/87768c0155e1a74b3423c72deefce194927c1098529293588d0d51ad0634e57d.jpg" afterPath="$PROJECT_DIR$/Resources/Images/Upload/87768c0155e1a74b3423c72deefce194927c1098529293588d0d51ad0634e57d.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Images/Upload/927b7196d085e0d62c46e2ff5f8fe3006f23f1de4de6065670f0206438ae0aac.jpg" afterPath="$PROJECT_DIR$/Resources/Images/Upload/927b7196d085e0d62c46e2ff5f8fe3006f23f1de4de6065670f0206438ae0aac.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Images/Upload/9b67f7a2eb524b08832c9c13ab2173c5bfeb4a3a2d604828c7e713bc96f1415c.png" afterPath="$PROJECT_DIR$/Resources/Images/Upload/9b67f7a2eb524b08832c9c13ab2173c5bfeb4a3a2d604828c7e713bc96f1415c.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Images/Upload/a4d03a18b5aadfceca8bfabc6a26b4cf8b85cb12f387aecf071ae8f27b536363.jpg" afterPath="$PROJECT_DIR$/Resources/Images/Upload/a4d03a18b5aadfceca8bfabc6a26b4cf8b85cb12f387aecf071ae8f27b536363.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Images/Upload/af1ab575b1c7c61933e116f249c674c087de4d266b0a738f2faedae34a5bcbbb.jpg" afterPath="$PROJECT_DIR$/Resources/Images/Upload/af1ab575b1c7c61933e116f249c674c087de4d266b0a738f2faedae34a5bcbbb.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c6a702d1-6a32-47ed-b454-7cbaf89b2dab.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/c6a702d1-6a32-47ed-b454-7cbaf89b2dab.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS/Elements/MenuAdmin.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Views/Renders/MenuAdmin.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Elements/Form.css" afterPath="$PROJECT_DIR$/CSS/Elements/Form.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Elements/Header.css" afterPath="$PROJECT_DIR$/CSS/Elements/Header.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Elements/MenuCustomer.css" afterPath="$PROJECT_DIR$/CSS/Elements/MenuCustomer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/Product.css" afterPath="$PROJECT_DIR$/CSS/Pages/Product.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JS/Products.js" afterPath="$PROJECT_DIR$/JS/Products.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JS/UnloadFile.js" afterPath="$PROJECT_DIR$/JS/UnloadFile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Logic/Database/QueryExecutor.php" afterPath="$PROJECT_DIR$/Logic/Database/QueryExecutor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/Pages/Main.css" afterPath="$PROJECT_DIR$/CSS/Pages/Main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Category/AddCategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Category/AddCategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Category/Categories.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Category/Categories.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Category/EditCategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Category/EditCategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/CategorySubcategory/AddCategorySubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CategorySubcategory/AddCategorySubcategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/CategorySubcategory/CategoriesSubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CategorySubcategory/CategoriesSubcategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/CategorySubcategory/EditCategorySubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CategorySubcategory/EditCategorySubcategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/AddCharacteristic.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/AddCharacteristic.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/Characteristics.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/Characteristics.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/EditCharacteristic.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/EditCharacteristic.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/AddCharacteristicCategorySubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/AddCharacteristicCategorySubcategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/CharacteristicsCategorySubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/CharacteristicsCategorySubcategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/EditCharacteristicCategorySubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/EditCharacteristicCategorySubcategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnit/AddCharacteristicQuantityUnit.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnit/AddCharacteristicQuantityUnit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnit/CharacteristicQuantityUnits.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnit/CharacteristicQuantityUnits.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnit/EditCharacteristicQuantityUnit.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnit/EditCharacteristicQuantityUnit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnitValue/AddCharacteristicQuantityUnitValue.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnitValue/AddCharacteristicQuantityUnitValue.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnitValue/CharacteristicQuantityUnitValues.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnitValue/CharacteristicQuantityUnitValues.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnitValue/EditCharacteristicQuantityUnitValue.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnitValue/EditCharacteristicQuantityUnitValue.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/City/AddCity.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/City/AddCity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/City/Cities.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/City/Cities.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/City/EditCity.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/City/EditCity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Classification/AddClassification.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Classification/AddClassification.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Classification/Classifications.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Classification/Classifications.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Classification/EditClassification.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Classification/EditClassification.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Country/AddCountry.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Country/AddCountry.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Country/Countries.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Country/Countries.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Country/EditCountry.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Country/EditCountry.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/House/AddHouse.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/House/AddHouse.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/House/EditHouse.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/House/EditHouse.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/House/Houses.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/House/Houses.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/AddManufacturer.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/AddManufacturer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/EditManufacturer.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/EditManufacturer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/Manufacturers.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/Manufacturers.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Product/AddProduct.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Product/AddProduct.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Product/EditProduct.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Product/EditProduct.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Product/Index.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Product/Index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Product/Products.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Product/Products.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Quantity/AddQuantity.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Quantity/AddQuantity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Quantity/EditQuantity.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Quantity/EditQuantity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Quantity/Quantities.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Quantity/Quantities.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/QuantityUnit/AddQuantityUnit.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/QuantityUnit/AddQuantityUnit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/QuantityUnit/EditQuantityUnit.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/QuantityUnit/EditQuantityUnit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/QuantityUnit/QuantityUnits.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/QuantityUnit/QuantityUnits.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Region/AddRegion.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Region/AddRegion.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Region/EditRegion.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Region/EditRegion.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Region/Regions.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Region/Regions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Section/AddSection.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Section/AddSection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Section/EditSection.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Section/EditSection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Section/Sections.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Section/Sections.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/SectionCategorySubcategory/AddSectionCategorySubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/SectionCategorySubcategory/AddSectionCategorySubcategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/SectionCategorySubcategory/EditSectionCategorySubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/SectionCategorySubcategory/EditSectionCategorySubcategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/SectionCategorySubcategory/SectionsCategorySubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/SectionCategorySubcategory/SectionsCategorySubcategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Street/AddStreet.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Street/AddStreet.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Street/EditStreet.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Street/EditStreet.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Street/Streets.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Street/Streets.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Subcategory/AddSubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Subcategory/AddSubcategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Subcategory/EditSubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Subcategory/EditSubcategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Subcategory/Subcategories.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Subcategory/Subcategories.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Unit/AddUnit.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Unit/AddUnit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Unit/EditUnit.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Unit/EditUnit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Administrator/Unit/Units.php" afterPath="$PROJECT_DIR$/Views/Pages/Administrator/Unit/Units.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Authorization.php" afterPath="$PROJECT_DIR$/Views/Pages/Authorization.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Customer/Basket.php" afterPath="$PROJECT_DIR$/Views/Pages/Customer/Basket.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Catalog.php" afterPath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Catalog.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Categories.php" afterPath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Categories.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/CategoriesSubcategory.php" afterPath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/CategoriesSubcategory.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Product.php" afterPath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Product.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Products.php" afterPath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Products.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/ProductsManufacturer.php" afterPath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/ProductsManufacturer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Subcategories.php" afterPath="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Subcategories.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Main.php" afterPath="$PROJECT_DIR$/Views/Pages/Main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/Registration.php" afterPath="$PROJECT_DIR$/Views/Pages/Registration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Pages/SearchResults.php" afterPath="$PROJECT_DIR$/Views/Pages/SearchResults.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/Header.php" afterPath="$PROJECT_DIR$/Views/Renders/Header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Renders/Menu.php" afterPath="$PROJECT_DIR$/Views/Renders/Menu.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -119,110 +145,7 @@
     <favorites_list name="ElectronicsStore" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Product/Index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="174" column="84" lean-forward="false" selection-start-line="174" selection-start-column="84" selection-end-line="174" selection-end-column="84" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Product.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Pages/Customer/Catalog/Product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="871">
-              <caret line="57" column="52" lean-forward="false" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
-              <folding>
-                <marker date="1609656607258" expanded="true" signature="1094:1113" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Renders/Header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1210">
-              <caret line="55" column="21" lean-forward="false" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="79" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Header.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CSS/Elements/Header.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuCustomer.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CSS/Elements/MenuCustomer.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Product.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CSS/Pages/Product.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddProduct.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Product/AddProduct.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="178" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Products.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JS/Products.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="653">
-              <caret line="117" column="5" lean-forward="false" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Slider.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JS/Slider.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Slider.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CSS/Elements/Slider.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="83" column="29" lean-forward="false" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -248,57 +171,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/AddCharacteristicCategorySubcategory.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/EditCharacteristicCategorySubcategory.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicCategorySubcategory/Index.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/SectionCategorySubcategory/Index.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/SectionCategorySubcategory/AddSectionCategorySubcategory.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/SectionCategorySubcategory/EditSectionCategorySubcategory.php" />
-        <option value="$PROJECT_DIR$/Views/Renders/MenuAdmin.php" />
-        <option value="$PROJECT_DIR$/Views/Renders/TableCharacteristicQuantityUnits.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnit/CharacteristicQuantityUnits.html" />
-        <option value="$PROJECT_DIR$/CSS/Pages/CharacteristicQuantityUnits.css" />
-        <option value="$PROJECT_DIR$/JS/CharacteristicQuantityUnits.js" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnit/AddCharacteristicQuantityUnit.html" />
-        <option value="$PROJECT_DIR$/CSS/Pages/AddCharacteristicQuantityUnit.css" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnit/CharacteristicQuantityUnits.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnit/AddCharacteristicQuantityUnit.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnit/EditCharacteristicQuantityUnit.html" />
-        <option value="$PROJECT_DIR$/CSS/Pages/EditCharacteristicQuantityUnit.css" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnit/EditCharacteristicQuantityUnit.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnit/Index.php" />
-        <option value="$PROJECT_DIR$/Views/Renders/CharacteristicBlock.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/AddCharacteristic.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/EditCharacteristic.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/Index.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Category/Index.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Category/AddCategory.php" />
-        <option value="$PROJECT_DIR$/JS/Categories.js" />
-        <option value="$PROJECT_DIR$/Logic/Managers/Access.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Main.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Authorization.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Registration.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Products.php" />
-        <option value="$PROJECT_DIR$/CSS/Pages/CatalogProducts.css" />
-        <option value="$PROJECT_DIR$/JS/Basket.js" />
-        <option value="$PROJECT_DIR$/JS/Favorites.js" />
-        <option value="$PROJECT_DIR$/Index.php" />
-        <option value="$PROJECT_DIR$/Views/Renders/ProductsBlock.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Index.php" />
-        <option value="$PROJECT_DIR$/CSS/Elements/Form.css" />
-        <option value="$PROJECT_DIR$/JS/UnloadFile.js" />
-        <option value="$PROJECT_DIR$/Views/Renders/SliderItem.php" />
-        <option value="$PROJECT_DIR$/JS/Slider.js" />
-        <option value="$PROJECT_DIR$/JS/Products.js" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Classification/Classifications.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Classification/AddClassification.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Classification/EditClassification.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Country/Countries.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Country/AddCountry.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Country/EditCountry.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/House/AddHouse.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/House/EditHouse.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/Manufacturers.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/House/Houses.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/AddManufacturer.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/EditManufacturer.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Product/Products.php" />
         <option value="$PROJECT_DIR$/Views/Pages/Administrator/Product/AddProduct.php" />
         <option value="$PROJECT_DIR$/Views/Pages/Administrator/Product/EditProduct.php" />
-        <option value="$PROJECT_DIR$/Logic/Database/QueryExecutor.php" />
-        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Product/Index.php" />
-        <option value="$PROJECT_DIR$/CSS/Pages/Product.css" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Quantity/Quantities.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Quantity/AddQuantity.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Quantity/EditQuantity.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/QuantityUnit/QuantityUnits.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/QuantityUnit/AddQuantityUnit.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/QuantityUnit/EditQuantityUnit.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Region/AddRegion.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Region/EditRegion.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Section/Sections.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Section/AddSection.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Section/EditSection.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/SectionCategorySubcategory/SectionsCategorySubcategory.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/SectionCategorySubcategory/AddSectionCategorySubcategory.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/SectionCategorySubcategory/EditSectionCategorySubcategory.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Street/Streets.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Street/AddStreet.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Street/EditStreet.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Subcategory/Subcategories.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Subcategory/AddSubcategory.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Subcategory/EditSubcategory.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Unit/Units.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Unit/AddUnit.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Unit/EditUnit.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Catalog.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Categories.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Customer/Catalog/CategoriesSubcategory.php" />
         <option value="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Product.php" />
-        <option value="$PROJECT_DIR$/CSS/Elements/Slider.css" />
-        <option value="$PROJECT_DIR$/CSS/Elements/MenuCustomer.css" />
-        <option value="$PROJECT_DIR$/CSS/Elements/Header.css" />
+        <option value="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Products.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Customer/Catalog/ProductsManufacturer.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Customer/Catalog/Subcategories.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Customer/Basket.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Authorization.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Registration.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/SearchResults.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Region/Regions.php" />
+        <option value="$PROJECT_DIR$/Views/Pages/Administrator/Product/Index.php" />
       </list>
     </option>
   </component>
@@ -359,10 +282,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Renders" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -453,6 +372,166 @@
               <option name="myItemId" value="Administrator" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Unit" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Subcategory" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Street" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SectionCategorySubcategory" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Section" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Region" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuantityUnit" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -503,6 +582,292 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Product" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Manufacturer" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="House" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Country" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classification" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="City" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CharacteristicQuantityUnitValue" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CharacteristicQuantityUnit" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CharacteristicCategorySubcategory" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Characteristic" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CategorySubcategory" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectronicsStore" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Category" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -606,24 +971,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ElectronicsStore" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ElectronicsStore" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CSS" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Elements" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -641,17 +988,17 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\OpenServer\domains\ElectronicsStore\Resources\Images\Interface" />
-      <recent name="C:\OpenServer\domains\ElectronicsStore\Resources\Packages" />
-      <recent name="C:\OpenServer\domains\ElectronicsStore\Logic\Includes" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\OpenServer\domains\ElectronicsStore\Views\Pages\Customer" />
       <recent name="C:\OpenServer\domains\ElectronicsStore\Resources\Images\Interface" />
       <recent name="C:\OpenServer\domains\ElectronicsStore\Resources\Images\Upload" />
       <recent name="C:\OpenServer\domains\ElectronicsStore\Views\Renders" />
       <recent name="C:\OpenServer\domains\ElectronicsStore\Views\Pages" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\ElectronicsStore\Resources\Images\Interface" />
+      <recent name="C:\OpenServer\domains\ElectronicsStore\Resources\Packages" />
+      <recent name="C:\OpenServer\domains\ElectronicsStore\Logic\Includes" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -848,12 +1195,12 @@
       <workItem from="1609522676658" duration="3968000" />
       <workItem from="1609566043585" duration="12554000" />
       <workItem from="1609594450634" duration="723000" />
-      <workItem from="1609651927706" duration="5541000" />
+      <workItem from="1609651927706" duration="12527000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="727354000" />
+    <option name="totallyTimeSpent" value="734340000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -865,13 +1212,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19635417" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -884,7 +1231,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -901,563 +1247,412 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnit/Index.php">
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Country/AddCountry.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Renders/CharacteristicBlock.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="40" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnit/EditCharacteristicQuantityUnit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnitValue/EditCharacteristicQuantityUnitValue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="102" column="6" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="102" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/CharacteristicQuantityUnit/AddCharacteristicQuantityUnit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="84" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Elements/Footer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Pages/Products.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Elements/Filters.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/AddCharacteristic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1210">
-          <caret line="55" column="34" lean-forward="true" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/Characteristics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/EditCharacteristic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="49" column="108" lean-forward="false" selection-start-line="49" selection-start-column="90" selection-end-line="49" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Characteristic/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="56" column="84" lean-forward="false" selection-start-line="56" selection-start-column="84" selection-end-line="56" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Category/Categories.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Category/AddCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="77" column="89" lean-forward="false" selection-start-line="77" selection-start-column="89" selection-end-line="77" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/Categories.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Category/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="27" column="32" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Renders/Menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/superglobals/_superglobals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="173" column="0" lean-forward="false" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Renders/MenuCustomer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logic/Managers/Access.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="93" lean-forward="true" selection-start-line="15" selection-start-column="93" selection-end-line="15" selection-end-column="93" />
+        <state relative-caret-position="528">
+          <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Authorization.php">
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Country/EditCountry.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="29" column="6" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+        <state relative-caret-position="572">
+          <caret line="38" column="43" lean-forward="false" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Registration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="33" column="18" lean-forward="false" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/JQuery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="7993" column="36" lean-forward="false" selection-start-line="7993" selection-start-column="36" selection-end-line="7993" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/Basket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logic/Managers/VisibleError.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/Favorites.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="968">
-          <caret line="44" column="57" lean-forward="false" selection-start-line="44" selection-start-column="57" selection-end-line="44" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Renders/ProductsBlock.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1443">
-          <caret line="93" column="62" lean-forward="false" selection-start-line="93" selection-start-column="62" selection-end-line="93" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Pages/CatalogProducts.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="266" column="0" lean-forward="false" selection-start-line="266" selection-start-column="0" selection-end-line="267" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Customer/Catalog/Products.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-757">
-          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Images/Interface/sl-arrow_l.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="89" column="26" lean-forward="false" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Customer/Catalog/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1474">
-          <caret line="102" column="9" lean-forward="false" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Renders/SliderItem.php" />
-    <entry file="file://$PROJECT_DIR$/Resources/Packages/Slick/slick/slick.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5103">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Packages/Slick/slick/slick.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/UnloadFile.js">
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Classification/EditClassification.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
-          <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+          <caret line="19" column="67" lean-forward="false" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Quantity/Quantities.php">
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/City/EditCity.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="66">
+          <caret line="21" column="67" lean-forward="false" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Elements/Form.css">
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/House/AddHouse.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3146">
-          <caret line="143" column="19" lean-forward="false" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="19" />
+        <state relative-caret-position="220">
+          <caret line="19" column="67" lean-forward="false" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Product/EditProduct.php">
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/House/EditHouse.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="246" column="30" lean-forward="false" selection-start-line="246" selection-start-column="30" selection-end-line="246" selection-end-column="30" />
+        <state relative-caret-position="484">
+          <caret line="46" column="18" lean-forward="false" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Logic/Database/QueryExecutor.php">
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/House/Houses.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="873" column="85" lean-forward="false" selection-start-line="873" selection-start-column="85" selection-end-line="873" selection-end-column="85" />
-          <folding>
-            <marker date="1609655821386" expanded="true" signature="508:582" ph="SELECT * FRO... v_user" />
-            <marker date="1609655821386" expanded="true" signature="684:731" ph="SELECT * FRO... user" />
-            <marker date="1609655821386" expanded="true" signature="878:1009" ph="INSERT INTO user... " />
-            <marker date="1609655821386" expanded="true" signature="1093:1142" ph="SELECT * FRO... v_user" />
-            <marker date="1609655821386" expanded="true" signature="1224:1242" ph="SELECT * FRO... role" />
-            <marker date="1609655821386" expanded="true" signature="1330:1377" ph="SELECT * FRO... country" />
-            <marker date="1609655821386" expanded="true" signature="1457:1486" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="1589:1637" ph="SELECT * FRO... country" />
-            <marker date="1609655821386" expanded="true" signature="1727:1785" ph="INSERT INTO country... " />
-            <marker date="1609655821386" expanded="true" signature="1869:1911" ph="SELECT * FRO... country" />
-            <marker date="1609655821386" expanded="true" signature="2008:2063" ph="UPDATE count... " />
-            <marker date="1609655821386" expanded="true" signature="2248:2296" ph="SELECT * FRO... v_region" />
-            <marker date="1609655821386" expanded="true" signature="2481:2554" ph="SELECT * FRO... region" />
-            <marker date="1609655821386" expanded="true" signature="2648:2714" ph="INSERT INTO region... " />
-            <marker date="1609655821386" expanded="true" signature="2793:2821" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="2907:2948" ph="SELECT * FRO... region" />
-            <marker date="1609655821386" expanded="true" signature="3049:3112" ph="UPDATE regio... " />
-            <marker date="1609655821386" expanded="true" signature="3406:3452" ph="SELECT * FRO... v_city" />
-            <marker date="1609655821386" expanded="true" signature="3666:3735" ph="SELECT * FRO... city" />
-            <marker date="1609655821386" expanded="true" signature="3826:3888" ph="INSERT INTO city... " />
-            <marker date="1609655821386" expanded="true" signature="3965:3991" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="4074:4115" ph="SELECT * FRO... v_city" />
-            <marker date="1609655821386" expanded="true" signature="4213:4272" ph="UPDATE city " />
-            <marker date="1609655821386" expanded="true" signature="4666:4714" ph="SELECT * FRO... v_street" />
-            <marker date="1609655821386" expanded="true" signature="4959:5026" ph="SELECT * FRO... street" />
-            <marker date="1609655821386" expanded="true" signature="5117:5177" ph="INSERT INTO street... " />
-            <marker date="1609655821386" expanded="true" signature="5260:5303" ph="SELECT * FRO... v_street" />
-            <marker date="1609655821386" expanded="true" signature="5401:5458" ph="UPDATE stree... " />
-            <marker date="1609655821386" expanded="true" signature="5540:5568" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="6070:6117" ph="SELECT * FRO... v_house" />
-            <marker date="1609655821386" expanded="true" signature="6394:6464" ph="SELECT * FRO... house" />
-            <marker date="1609655821386" expanded="true" signature="6556:6619" ph="INSERT INTO house... " />
-            <marker date="1609655821386" expanded="true" signature="6701:6743" ph="SELECT * FRO... v_house" />
-            <marker date="1609655821386" expanded="true" signature="6842:6900" ph="UPDATE house... " />
-            <marker date="1609655821386" expanded="true" signature="6981:7008" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="7105:7159" ph="SELECT * FRO... classification" />
-            <marker date="1609655821386" expanded="true" signature="7266:7321" ph="SELECT * FRO... classification" />
-            <marker date="1609655821386" expanded="true" signature="7419:7486" ph="INSERT INTO classification... " />
-            <marker date="1609655821386" expanded="true" signature="7577:7626" ph="SELECT * FRO... classification" />
-            <marker date="1609655821386" expanded="true" signature="7731:7795" ph="UPDATE class... " />
-            <marker date="1609655821386" expanded="true" signature="7885:7921" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="8145:8195" ph="SELECT * FRO... v_category" />
-            <marker date="1609655821386" expanded="true" signature="8390:8479" ph="SELECT * FRO... category" />
-            <marker date="1609655821386" expanded="true" signature="8590:8689" ph="INSERT INTO category... " />
-            <marker date="1609655821386" expanded="true" signature="8774:8819" ph="SELECT * FRO... v_category" />
-            <marker date="1609655821386" expanded="true" signature="8937:9032" ph="UPDATE categ... " />
-            <marker date="1609655821386" expanded="true" signature="9116:9146" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="9492:9545" ph="SELECT * FRO... v_subcategory" />
-            <marker date="1609655821386" expanded="true" signature="9768:9848" ph="SELECT * FRO... subcategory" />
-            <marker date="1609655821386" expanded="true" signature="9956:10046" ph="INSERT INTO subcategory... " />
-            <marker date="1609655821386" expanded="true" signature="10134:10182" ph="SELECT * FRO... v_subcategory" />
-            <marker date="1609655821386" expanded="true" signature="10297:10383" ph="UPDATE subca... " />
-            <marker date="1609655821386" expanded="true" signature="10470:10503" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="10991:11053" ph="SELECT * FRO... v_category_subcategory" />
-            <marker date="1609655821386" expanded="true" signature="11319:11414" ph="SELECT * FRO... category_subcategory" />
-            <marker date="1609655821386" expanded="true" signature="11533:11638" ph="INSERT INTO category_subcategory... " />
-            <marker date="1609655821386" expanded="true" signature="11734:11791" ph="SELECT * FRO... v_category_subcategory" />
-            <marker date="1609655821386" expanded="true" signature="11917:12018" ph="UPDATE categ... " />
-            <marker date="1609655821386" expanded="true" signature="12113:12155" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="12250:12302" ph="SELECT * FRO... manufacturer" />
-            <marker date="1609655821386" expanded="true" signature="12407:12460" ph="SELECT * FRO... manufacturer" />
-            <marker date="1609655821386" expanded="true" signature="12556:12621" ph="INSERT INTO manufacturer... " />
-            <marker date="1609655821386" expanded="true" signature="12710:12757" ph="SELECT * FRO... manufacturer" />
-            <marker date="1609655821386" expanded="true" signature="12860:12922" ph="UPDATE manuf... " />
-            <marker date="1609655821386" expanded="true" signature="13010:13044" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="13141:13195" ph="SELECT * FRO... characteristic" />
-            <marker date="1609655821386" expanded="true" signature="13302:13357" ph="SELECT * FRO... characteristic" />
-            <marker date="1609655821386" expanded="true" signature="13447:13497" ph="INSERT INTO characteristic... " />
-            <marker date="1609655821386" expanded="true" signature="13638:13687" ph="SELECT * FRO... characteristic" />
-            <marker date="1609655821386" expanded="true" signature="13784:13832" ph="UPDATE chara... " />
-            <marker date="1609655821386" expanded="true" signature="13922:13958" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="14050:14098" ph="SELECT * FRO... quantity" />
-            <marker date="1609655821386" expanded="true" signature="14199:14248" ph="SELECT * FRO... quantity" />
-            <marker date="1609655821386" expanded="true" signature="14332:14376" ph="INSERT INTO quantity... " />
-            <marker date="1609655821386" expanded="true" signature="14461:14504" ph="SELECT * FRO... quantity" />
-            <marker date="1609655821386" expanded="true" signature="14595:14637" ph="UPDATE quant... " />
-            <marker date="1609655821386" expanded="true" signature="14721:14751" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="16205:16297" ph="SELECT * FRO... v_characteristic_category_subcategory" />
-            <marker date="1609655821386" expanded="true" signature="16751:16903" ph="SELECT * FRO... characteristic_category_subcategory" />
-            <marker date="1609655821386" expanded="true" signature="17299:17625" ph="INSERT INTO characteristic_category_subcategory... " />
-            <marker date="1609655821386" expanded="true" signature="17735:17807" ph="SELECT * FRO... v_characteristic_category_subcategory" />
-            <marker date="1609655821386" expanded="true" signature="18210:18530" ph="UPDATE chara... " />
-            <marker date="1609655821386" expanded="true" signature="18639:18696" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="18783:18827" ph="SELECT * FRO... unit" />
-            <marker date="1609655821386" expanded="true" signature="19037:19074" ph="SELECT * FRO... unit" />
-            <marker date="1609655821386" expanded="true" signature="19283:19352" ph="INSERT INTO unit... " />
-            <marker date="1609655821386" expanded="true" signature="19433:19472" ph="SELECT * FRO... unit" />
-            <marker date="1609655821386" expanded="true" signature="19573:19639" ph="UPDATE unit " />
-            <marker date="1609655821386" expanded="true" signature="19719:19745" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="20041:20105" ph="SELECT * FRO... v_quantity_unit" />
-            <marker date="1609655821386" expanded="true" signature="20331:20416" ph="SELECT * FRO... quantity_unit" />
-            <marker date="1609655821386" expanded="true" signature="20519:20597" ph="INSERT INTO quantity_unit... " />
-            <marker date="1609655821386" expanded="true" signature="20686:20736" ph="SELECT * FRO... v_quantity_unit" />
-            <marker date="1609655821386" expanded="true" signature="20846:20921" ph="UPDATE quant... " />
-            <marker date="1609655821386" expanded="true" signature="21009:21044" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="21509:21587" ph="SELECT * FRO... v_characteristic_quantity_unit_value" />
-            <marker date="1609655821386" expanded="true" signature="21857:23014" ph="SELECT DISTI... v_characteristic_quantity_unit_value" />
-            <marker date="1609655821386" expanded="true" signature="23236:23390" ph="SELECT * FRO... characteristic_quantity_unit_value" />
-            <marker date="1609655821386" expanded="true" signature="23534:23679" ph="INSERT INTO characteristic_quantity_unit_value... " />
-            <marker date="1609655821386" expanded="true" signature="23837:23908" ph="SELECT * FRO... v_characteristic_quantity_unit_value" />
-            <marker date="1609655821386" expanded="true" signature="24059:24200" ph="UPDATE chara... " />
-            <marker date="1609655821386" expanded="true" signature="24307:24363" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="24484:24570" ph="SELECT * FRO... product" />
-            <marker date="1609655821386" expanded="true" signature="24725:24914" ph="INSERT INTO product... " />
-            <marker date="1609655821386" expanded="true" signature="25115:25277" ph="INSERT INTO product_characteristic_quantity_unit_value... " />
-            <marker date="1609655821386" expanded="true" signature="25388:25472" ph="SELECT MIN(p... product" />
-            <marker date="1609655821386" expanded="true" signature="25608:25692" ph="SELECT MAX(p... product" />
-            <marker date="1609655821386" expanded="true" signature="25833:25941" ph="SELECT MIN(v... v_product" />
-            <marker date="1609655821386" expanded="true" signature="26079:26187" ph="SELECT MAX(v... v_product" />
-            <marker date="1609655821386" expanded="true" signature="27842:27948" ph="SELECT DISTI... v_product" />
-            <marker date="1609655821386" expanded="true" signature="29359:29403" ph="SELECT * FRO... v_product" />
-            <marker date="1609655821386" expanded="true" signature="29523:29597" ph="SELECT * FRO... product_characteristic_quantity_unit_value" />
-            <marker date="1609655821386" expanded="true" signature="30034:30110" ph="SELECT * FRO... v_product_characteristic_quantity_unit_value" />
-            <marker date="1609655821386" expanded="true" signature="30303:30375" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="30537:30719" ph="UPDATE produ... " />
-            <marker date="1609655821386" expanded="true" signature="30802:30831" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="30951:31201" ph="SELECT produ... product" />
-            <marker date="1609655821386" expanded="true" signature="31320:31391" ph="INSERT INTO purchase... " />
-            <marker date="1609655821386" expanded="true" signature="31592:31721" ph="INSERT INTO purchase_content... " />
-            <marker date="1609655821386" expanded="true" signature="31880:32035" ph="SELECT * FRO... characteristic_quantity_unit_value" />
-            <marker date="1609655821386" expanded="true" signature="32131:32178" ph="SELECT * FRO... section" />
-            <marker date="1609655821386" expanded="true" signature="32278:32326" ph="SELECT * FRO... section" />
-            <marker date="1609655821386" expanded="true" signature="32409:32452" ph="INSERT INTO section... " />
-            <marker date="1609655821386" expanded="true" signature="32536:32578" ph="SELECT * FRO... section" />
-            <marker date="1609655821386" expanded="true" signature="32669:32710" ph="UPDATE secti... " />
-            <marker date="1609655821386" expanded="true" signature="32793:32822" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="33570:33648" ph="SELECT * FRO... v_section_category_subcategory" />
-            <marker date="1609655821386" expanded="true" signature="33995:34124" ph="SELECT * FRO... section_category_subcategory" />
-            <marker date="1609655821386" expanded="true" signature="34255:34377" ph="INSERT INTO section_category_subcategory... " />
-            <marker date="1609655821386" expanded="true" signature="34480:34545" ph="SELECT * FRO... v_section_category_subcategory" />
-            <marker date="1609655821386" expanded="true" signature="34683:34802" ph="UPDATE secti... " />
-            <marker date="1609655821386" expanded="true" signature="34904:34954" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="35050:35445" ph="SELECT DISTI... v_product_characteristic_quantity_unit_value" />
-            <marker date="1609655821386" expanded="true" signature="35927:35941" ph="SELECT * FRO... characteristic_quantity_unit" />
-            <marker date="1609655821386" expanded="true" signature="35927:35978" ph="SELECT * FRO... characteristic_quantity_unit" />
-            <marker date="1609655821386" expanded="true" signature="35927:36012" ph="SELECT * FRO... v_characteristic_quantity_unit" />
-            <marker date="1609655821386" expanded="true" signature="36297:36364" ph="SELECT * FRO... characteristic_quantity_unit" />
-            <marker date="1609655821386" expanded="true" signature="36297:36403" ph="SELECT * FRO... characteristic_quantity_unit" />
-            <marker date="1609655821386" expanded="true" signature="36297:36426" ph="SELECT * FRO... characteristic_quantity_unit" />
-            <marker date="1609655821386" expanded="true" signature="36557:36597" ph="INSERT INTO characteristic_quantity_unit... " />
-            <marker date="1609655821386" expanded="true" signature="36557:36679" ph="INSERT INTO characteristic_quantity_unit... " />
-            <marker date="1609655821386" expanded="true" signature="36782:36835" ph="SELECT * FRO... v_characteristic_quantity_unit" />
-            <marker date="1609655821386" expanded="true" signature="36782:36847" ph="SELECT * FRO... v_characteristic_quantity_unit" />
-            <marker date="1609655821386" expanded="true" signature="36985:37043" ph="UPDATE chara... " />
-            <marker date="1609655821386" expanded="true" signature="36985:37079" ph="UPDATE chara... " />
-            <marker date="1609655821386" expanded="true" signature="36985:37103" ph="UPDATE chara... " />
-            <marker date="1609655821386" expanded="true" signature="36985:37104" ph="UPDATE chara... " />
-            <marker date="1609655821386" expanded="true" signature="37206:37256" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="37376:37441" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="37557:37600" ph="SELECT * FRO... v_product_view" />
-            <marker date="1609655821386" expanded="true" signature="37557:37634" ph="SELECT * FRO... v_product_view" />
-            <marker date="1609655821386" expanded="true" signature="37809:37862" ph="SELECT * FRO... v_product" />
-            <marker date="1609655821386" expanded="true" signature="38200:38230" ph="SELECT * FRO... v_product_view" />
-            <marker date="1609655821386" expanded="true" signature="38200:38248" ph="SELECT * FRO... v_product_view" />
-            <marker date="1609655821386" expanded="true" signature="38301:38332" ph="SELECT * FRO... v_product_view" />
-            <marker date="1609655821386" expanded="true" signature="38470:38572" ph="INSERT INTO product_view... " />
-            <marker date="1609655821386" expanded="true" signature="38690:38703" ph="SELECT * FRO... " />
-            <marker date="1609655821386" expanded="true" signature="38690:38748" ph="SELECT * FRO... product_view" />
-            <marker date="1609655821386" expanded="true" signature="38690:38757" ph="SELECT * FRO... product_view" />
-            <marker date="1609655821386" expanded="true" signature="38690:38772" ph="SELECT * FRO... product_view" />
-            <marker date="1609655821386" expanded="true" signature="38877:38924" ph="SELECT * FRO... v_product_favorite" />
-            <marker date="1609655821386" expanded="true" signature="39112:39184" ph="SELECT * FRO... v_product_favorite" />
-            <marker date="1609655821386" expanded="true" signature="39235:39275" ph="SELECT * FRO... v_product_favorite" />
-            <marker date="1609655821386" expanded="true" signature="39397:39444" ph="SELECT * FRO... product_favorite" />
-            <marker date="1609655821386" expanded="true" signature="39397:39445" ph="SELECT * FRO... product_favorite" />
-            <marker date="1609655821386" expanded="true" signature="39397:39468" ph="SELECT * FRO... product_favorite" />
-            <marker date="1609655821386" expanded="true" signature="39397:39469" ph="SELECT * FRO... product_favorite" />
-            <marker date="1609655821386" expanded="true" signature="39397:39483" ph="SELECT * FRO... product_favorite" />
-            <marker date="1609655821386" expanded="true" signature="39629:39737" ph="INSERT INTO product_favorite... " />
-            <marker date="1609655821386" expanded="true" signature="39841:39901" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="39841:39910" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="40020:40095" ph="SELECT COUNT... product_favorite" />
-            <marker date="1609655821386" expanded="true" signature="40255:40357" ph="SELECT * FRO... purchase" />
-            <marker date="1609655821386" expanded="true" signature="40255:40374" ph="SELECT * FRO... purchase" />
-            <marker date="1609655821386" expanded="true" signature="40255:40386" ph="SELECT * FRO... purchase" />
-            <marker date="1609655821386" expanded="true" signature="40510:40547" ph="SELECT * FRO... review" />
-            <marker date="1609655821386" expanded="true" signature="40510:40571" ph="SELECT * FRO... review" />
-            <marker date="1609655821386" expanded="true" signature="40510:40586" ph="SELECT * FRO... review" />
-            <marker date="1609655821386" expanded="true" signature="40687:40731" ph="SELECT * FRO... product_photo" />
-            <marker date="1609655821386" expanded="true" signature="40687:40732" ph="SELECT * FRO... product_photo" />
-            <marker date="1609655821386" expanded="true" signature="40839:40914" ph="INSERT INTO product_photo... " />
-            <marker date="1609655821386" expanded="true" signature="41009:41051" ph="DELETE FROM " />
-            <marker date="1609655821386" expanded="true" signature="41009:41052" ph="DELETE FROM " />
-          </folding>
+        <state relative-caret-position="440">
+          <caret line="38" column="74" lean-forward="false" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Product/Index.php">
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Country/Countries.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="37" column="74" lean-forward="true" selection-start-line="37" selection-start-column="74" selection-end-line="37" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/Manufacturers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="38" column="74" lean-forward="false" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/AddManufacturer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Manufacturer/EditManufacturer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Product/Products.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="174" column="84" lean-forward="false" selection-start-line="174" selection-start-column="84" selection-end-line="174" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Pages/Product.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/Slider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/Products.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="117" column="5" lean-forward="false" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
+          <caret line="20" column="67" lean-forward="false" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Product/AddProduct.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="178" selection-end-column="30" />
+        <state relative-caret-position="193">
+          <caret line="20" column="67" lean-forward="false" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Elements/Slider.css">
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Product/EditProduct.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="83" column="29" lean-forward="false" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
+        <state relative-caret-position="418">
+          <caret line="58" column="18" lean-forward="false" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Quantity/Quantities.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="38" column="74" lean-forward="false" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Quantity/AddQuantity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Quantity/EditQuantity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="19" column="67" lean-forward="false" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/QuantityUnit/QuantityUnits.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="38" column="74" lean-forward="true" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/QuantityUnit/AddQuantityUnit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="20" column="67" lean-forward="false" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/QuantityUnit/EditQuantityUnit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="21" column="67" lean-forward="false" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Region/AddRegion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="19" column="67" lean-forward="false" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Region/EditRegion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="20" column="67" lean-forward="false" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Section/Sections.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="38" column="74" lean-forward="false" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Section/AddSection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="17" column="67" lean-forward="false" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Section/EditSection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="39" column="18" lean-forward="false" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/SectionCategorySubcategory/SectionsCategorySubcategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="38" column="74" lean-forward="false" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/SectionCategorySubcategory/AddSectionCategorySubcategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="20" column="67" lean-forward="false" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/SectionCategorySubcategory/EditSectionCategorySubcategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="47" column="18" lean-forward="false" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Street/Streets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="38" column="74" lean-forward="true" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Street/AddStreet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="19" column="67" lean-forward="false" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Street/EditStreet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Subcategory/Subcategories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="38" column="74" lean-forward="false" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Subcategory/AddSubcategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="19" column="65" lean-forward="false" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Subcategory/EditSubcategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Unit/Units.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="38" column="74" lean-forward="false" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Unit/AddUnit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="17" column="67" lean-forward="false" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Unit/EditUnit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="39" column="18" lean-forward="false" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Customer/Catalog/Catalog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="61" lean-forward="false" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Customer/Catalog/Categories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Customer/Catalog/CategoriesSubcategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Customer/Catalog/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Product/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4070">
+          <caret line="185" column="17" lean-forward="false" selection-start-line="185" selection-start-column="17" selection-end-line="185" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/Pages/Customer/Catalog/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="871">
-          <caret line="57" column="52" lean-forward="false" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+        <state relative-caret-position="682">
+          <caret line="31" column="61" lean-forward="false" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
           <folding>
-            <marker date="1609656607258" expanded="true" signature="1094:1113" ph="..." />
+            <marker date="1609666316006" expanded="true" signature="1094:1113" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Renders/Header.php">
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Customer/Catalog/Products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1210">
-          <caret line="55" column="21" lean-forward="false" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="79" />
+        <state relative-caret-position="528">
+          <caret line="24" column="61" lean-forward="false" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Elements/MenuCustomer.css">
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Customer/Catalog/ProductsManufacturer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        <state relative-caret-position="396">
+          <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/Elements/Header.css">
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Customer/Catalog/Subcategories.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        <state relative-caret-position="396">
+          <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Customer/Basket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Authorization.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="65" lean-forward="false" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/SearchResults.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="61" lean-forward="false" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Pages/Administrator/Region/Regions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="38" column="74" lean-forward="false" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
           <folding />
         </state>
       </provider>

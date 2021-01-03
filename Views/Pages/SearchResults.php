@@ -24,7 +24,6 @@ if(isset($_GET["inputSearch"]) && iconv_strlen($_GET["inputSearch"], "UTF-8") > 
     <link rel="stylesheet" href="/CSS/Pages/SearchResults.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
-    <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">

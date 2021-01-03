@@ -16,8 +16,8 @@ $classifications = QueryExecutor::getInstance()->getClassifications("");
     <link rel="stylesheet" href="/CSS/Pages/AddCategory.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
-    <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
+    <link rel="stylesheet" href="/CSS/Elements/BreadcrumbList.css">
     <link rel="stylesheet" href="/CSS/Elements/Form.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
@@ -33,6 +33,12 @@ $classifications = QueryExecutor::getInstance()->getClassifications("");
     ?>
     <div class="content">
         <?php if(Access::isAdministrator()): ?>
+            <div class="breadcrumb-list">
+                <ul>
+                    <li><a href="../../Main.php"><span>Меню администратора > </span></a></li>
+                    <li><a href="../Category/"><span>Сущность БД: Категории</span></a></li>
+                </ul>
+            </div>
             <div class="header-block">
                 <h1>Добавление категории</h1>
             </div>

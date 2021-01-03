@@ -17,7 +17,6 @@ $products = array();
     <link rel="stylesheet" href="/CSS/Pages/Basket.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
-    <link rel="stylesheet" href="/CSS/Elements/MenuAdmin.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
     <link rel="stylesheet" href="/CSS/Elements/ToolbarBasket.css">
     <link rel="stylesheet" href="/CSS/Elements/Table.css">
