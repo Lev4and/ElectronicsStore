@@ -38,6 +38,9 @@ $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::ge
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
     <link rel="stylesheet" href="/Resources/Fonts/Font%20Awesome/css/all.min.css">
+    <link rel="stylesheet" href="/Resources/Packages/Slick/slick/slick.css"/>
+    <link rel="stylesheet" href="/Resources/Packages/Slick/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="/CSS/Elements/Slider.css">
     <script src="/JS/JQuery.js"></script>
     <script src="/JS/Basket.js"></script>
     <script src="/JS/Favorites.js"></script>
@@ -53,9 +56,42 @@ $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::ge
             <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/BreadcrumbList.php"; ?>
             <div class="form-block">
                 <div class="form-block-information">
-                    <div class="form-block-information-image-block">
-                        <div class="form-block-information-image-block-container">
-                            <img id="product-photo" name="photo" src="<?php echo "http://" . $_SERVER["SERVER_NAME"] . "/Resources/Images/Upload/" . $product["photo"]; ?>">
+                    <div class="form-block-information-slider-block">
+                        <div class="form-block-information-slider-block-container">
+                            <div id="product-photos" class="slider">
+                                <?php foreach (QueryExecutor::getInstance()->getProductPhotos($_GET["productId"]) as $photo): ?>
+                                    <div class="slider__item filter">
+                                        <img src="<?php echo "http://{$_SERVER["SERVER_NAME"]}/Resources/Images/Upload/{$photo["photo"]}"; ?>">
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                            <script type="text/javascript" src="/Resources/Packages/Slick/slick/slick.min.js"></script>
+                            <script type="text/javascript">
+                                $(document).ready(function(){
+                                    $('.slider').slick({
+                                        arrows:true,
+                                        dots:true,
+                                        slidesToShow:1,
+                                        autoplay:true,
+                                        speed:1000,
+                                        autoplaySpeed:5000,
+                                        responsive:[
+                                            {
+                                                breakpoint: 768,
+                                                settings: {
+                                                    slidesToShow:2
+                                                }
+                                            },
+                                            {
+                                                breakpoint: 550,
+                                                settings: {
+                                                    slidesToShow:1
+                                                }
+                                            }
+                                        ]
+                                    });
+                                });
+                            </script>
                         </div>
                     </div>
                     <div class="form-block-information-block">

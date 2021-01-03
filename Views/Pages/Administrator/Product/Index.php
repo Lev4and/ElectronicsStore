@@ -107,6 +107,16 @@ if(isset($_POST["action"]) && $_POST["action"] == "Записать") {
                 }
             }
 
+            foreach ($_FILES["selectedImages"]["name"] as $key => $value){
+                //echo "NAME: {$_FILES["selectedImages"]["name"][$key]} TMP_NAME: {$_FILES["selectedImages"]["tmp_name"][$key]} ";
+
+                if(isset($_FILES["selectedImages"]["name"][$key]) && isset($_FILES["selectedImages"]["tmp_name"][$key])){
+                    move_uploaded_file($_FILES["selectedImages"]["tmp_name"][$key], $_SERVER["DOCUMENT_ROOT"] . "/Resources/Images/Upload/{$_FILES["selectedImages"]["name"][$key]}");
+
+                    QueryExecutor::getInstance()->addProductPhoto($productId, $_FILES["selectedImages"]["name"][$key]);
+                }
+            }
+
             header("Location: http://" . $_SERVER["SERVER_NAME"] . "/Views/Pages/Administrator/Product/");
             exit();
         }
@@ -159,6 +169,18 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
                             QueryExecutor::getInstance()->addProductCharacteristicQuantityUnitValue($_GET["productId"], $value["characteristicQuantityUnitValueId"]);
                         }
                     }
+                }
+            }
+
+            QueryExecutor::getInstance()->removeAllProductPhoto($_GET["productId"]);
+
+            foreach ($_FILES["selectedImages"]["name"] as $key => $value){
+                //echo "NAME: {$_FILES["selectedImages"]["name"][$key]} TMP_NAME: {$_FILES["selectedImages"]["tmp_name"][$key]} ";
+
+                if(isset($_FILES["selectedImages"]["name"][$key]) && isset($_FILES["selectedImages"]["tmp_name"][$key])){
+                    move_uploaded_file($_FILES["selectedImages"]["tmp_name"][$key], $_SERVER["DOCUMENT_ROOT"] . "/Resources/Images/Upload/{$_FILES["selectedImages"]["name"][$key]}");
+
+                    QueryExecutor::getInstance()->addProductPhoto($_GET["productId"], $_FILES["selectedImages"]["name"][$key]);
                 }
             }
 

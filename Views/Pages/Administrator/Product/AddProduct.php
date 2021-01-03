@@ -24,6 +24,9 @@ $manufacturers = QueryExecutor::getInstance()->getManufacturers("");
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
     <link rel="stylesheet" href="/Resources/Fonts/Font%20Awesome/css/all.min.css">
+    <link rel="stylesheet" href="/Resources/Packages/Slick/slick/slick.css"/>
+    <link rel="stylesheet" href="/Resources/Packages/Slick/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="/CSS/Elements/Slider.css">
     <script src="/JS/JQuery.js"></script>
     <script src="/JS/Products.js"></script>
     <script src="/JS/UnloadFile.js"></script>
@@ -170,6 +173,9 @@ $manufacturers = QueryExecutor::getInstance()->getManufacturers("");
                         </div>
                         <div class="form-block-actions-select-file">
                             <input id="select-file" type="file" name="selectedImage" accept="image/*" onchange="onChangeSelectedFile('select-file' , 'product-photo');">
+                        </div>
+                        <div class="form-block-actions-select-file">
+                            <input id="select-files" type="file" name="selectedImages[]" accept="image/*" multiple="multiple">
                         </div>
                     </div>
                 </form>

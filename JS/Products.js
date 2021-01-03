@@ -98,3 +98,22 @@ function onClickApply() {
     request.send($("#filtersForm").serialize());
 }
 
+function onClickSelectFiles(fileInputElementId, sliderElementId) {
+    let container = $('.form-block-slider-block-container');
+    let sliderContainer = $('div[id="product-photos"]');
+    let fileInputElement = document.getElementById(fileInputElementId);
+
+    sliderContainer.html("");
+
+    if(fileInputElement.files){
+        for(let i = 0; i < fileInputElement.files.length; i++){
+            let reader = new FileReader();
+
+            reader.onload = function(e) {
+                sliderContainer.html(sliderContainer.html() + '<div class="slider__item filter"><img src="' + e.target.result + '"></div>');
+            };
+
+            reader.readAsDataURL(fileInputElement.files[i]);
+        }
+    }
+}

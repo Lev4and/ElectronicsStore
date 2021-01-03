@@ -1,5 +1,6 @@
 header{
     top: 0;
+    z-index: 9999;
     min-height: 2em;
     position: sticky;
     font-size: larger;
@@ -95,6 +96,7 @@ header{
     flex-wrap: wrap;
     list-style: none;
     flex-direction: row;
+    background-color: white;
     justify-content: space-between;
 }
 .container .container-logo{

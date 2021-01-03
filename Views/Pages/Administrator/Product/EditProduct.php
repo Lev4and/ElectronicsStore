@@ -242,6 +242,9 @@ function containsCharacteristicsQuantityUnitValue($value){
                         <div class="form-block-actions-select-file">
                             <input id="select-file" type="file" name="selectedImage" accept="image/*" onchange="onChangeSelectedFile('select-file' , 'product-photo');">
                         </div>
+                        <div class="form-block-actions-select-file">
+                            <input id="select-files" type="file" name="selectedImages[]" accept="image/*" multiple="multiple">
+                        </div>
                     </div>
                 </form>
             </div>

@@ -13,13 +13,15 @@
     align-content: center;
     align-items: center;
 }
-.form-block-information .form-block-information-image-block{
+.form-block-information .form-block-information-image-block,
+.form-block-information .form-block-information-slider-block{
     width: 40%;
     height: 100%;
     max-width: 40%;
     border: solid black 1px;
 }
-.form-block-information .form-block-information-image-block .form-block-information-image-block-container {
+.form-block-information .form-block-information-image-block .form-block-information-image-block-container,
+.form-block-information .form-block-information-slider-block .form-block-information-slider-block-container{
     width: 100%;
     height: 100%;
     display: flex;

@@ -862,6 +862,18 @@ class QueryExecutor{
         return !is_null($this->executeQuery("SELECT * FROM review WHERE product_id=$productId AND user_id=$userId LIMIT 1")[0]);
     }
 
+    public function getProductPhotos($productId){
+        return $this->executeQuery("SELECT * FROM product_photo WHERE product_id=$productId");
+    }
+
+    public function addProductPhoto($productId, $photo){
+        $this->executeQuery("INSERT INTO product_photo (product_id, photo) VALUES ($productId, '$photo')");
+    }
+
+    public function removeAllProductPhoto($productId){
+        $this->executeQuery("DELETE FROM product_photo WHERE product_id=$productId");
+    }
+
     private function executeQuery($query){
         try{
             return ($this->contextDb->query($query))->FETCHALL(PDO::FETCH_ASSOC);

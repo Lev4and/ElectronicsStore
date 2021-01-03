@@ -12,3 +12,7 @@ function onChangeSelectedFile(fileInputElementId, imageElementId) {
         reader.readAsDataURL(fileInputElement.files[0]);
     }
 }
+
+function onChangeSelectedFiles(fileInputElementId, sliderElementId){
+    onClickSelectFiles(fileInputElementId, sliderElementId);
+}
