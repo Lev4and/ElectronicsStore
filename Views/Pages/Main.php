@@ -129,6 +129,7 @@ $products = QueryExecutor::getInstance()->getProducts(null, null, null, null, nu
                     <li><span class="sections-block-title-section"><a href="../../Views/Pages/Administrator/Unit/">Сущность БД: Единицы измерения</a></span></li>
                     <li><span class="sections-block-title-section"><a href="../../Views/Pages/Administrator/QuantityUnit/">Сущность БД: Единицы измерения величин</a></span></li>
                     <li><span class="sections-block-title-section"><a href="../../Views/Pages/Administrator/CharacteristicQuantityUnit/">Сущность БД: Величины и единицы измерения характеристик</a></span></li>
+                    <li><span class="sections-block-title-section"><a href="../../Views/Pages/Administrator/EvaluationCriterion/">Сущность БД: Критерии оценивания</a></span></li>
                     <li><span class="sections-block-title-section"><a href="../../Views/Pages/Administrator/Product/">Сущность БД: Товары</a></span></li>
                 </ul>
             </div>

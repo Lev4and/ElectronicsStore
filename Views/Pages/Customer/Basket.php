@@ -34,7 +34,7 @@ $products = array();
     include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Menu.php";
     ?>
     <div class="content">
-        <?php if(isset($_SESSION["user"]) && $_SESSION["user"]["role_name"] == "Покупатель"): ?>
+        <?php if(!Access::isAdministrator()): ?>
             <div class="header-block">
                 <h1>Корзина</h1>
             </div>

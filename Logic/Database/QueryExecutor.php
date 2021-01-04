@@ -874,6 +874,30 @@ class QueryExecutor{
         $this->executeQuery("DELETE FROM product_photo WHERE product_id=$productId");
     }
 
+    public function getEvaluationCriterions($name){
+        return $this->executeQuery("SELECT * FROM evaluation_criterion WHERE name LIKE '%$name%'");
+    }
+
+    public function containsEvaluationCriterion($name){
+        return !is_null($this->executeQuery("SELECT * FROM evaluation_criterion WHERE name='$name' LIMIT 1")[0]);
+    }
+
+    public function addEvaluationCriterion($name){
+        $this->executeQuery("INSERT INTO evaluation_criterion (name) VALUES ('$name')");
+    }
+
+    public function getEvaluationCriterion($id){
+        return $this->executeQuery("SELECT * FROM evaluation_criterion WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function updateEvaluationCriterion($id, $name){
+        $this->executeQuery("UPDATE evaluation_criterion SET name='$name' WHERE id=$id");
+    }
+
+    public function removeEvaluationCriterion($id){
+        $this->executeQuery("DELETE FROM evaluation_criterion WHERE id=$id");
+    }
+
     private function executeQuery($query){
         try{
             return ($this->contextDb->query($query))->FETCHALL(PDO::FETCH_ASSOC);
