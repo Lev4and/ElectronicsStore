@@ -50,7 +50,7 @@ function containsProductFavorite($productId){
                 </a>
             </div>
             <div class="product-block-main-block-price-block">
-                <span><?php echo $product["price"]; ?> ₽</span>
+                <span><?php echo number_format($product["price"], 0, ",", " ") . " ₽";?></span>
             </div>
         </div>
         <div class="product-block-characteristics-block">

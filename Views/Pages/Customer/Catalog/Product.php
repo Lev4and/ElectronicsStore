@@ -18,8 +18,6 @@ else{
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
 
 $product = QueryExecutor::getInstance()->getProduct($_GET["productId"]);
-$sectionsCategorySubcategoryProduct = QueryExecutor::getInstance()->getSectionsCategorySubcategoryProduct($_GET["productId"]);
-$productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::getInstance()->getProductCharacteristicsQuantityUnitValuesDetailedInformation($_GET["productId"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +30,9 @@ $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::ge
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
     <link rel="stylesheet" href="/CSS/Elements/BreadcrumbList.css">
-    <link rel="stylesheet" href="/CSS/Elements/Form.css">
+    <link rel="stylesheet" href="/CSS/Elements/MediaViewer.css">
+    <link rel="stylesheet" href="/CSS/Elements/ProductTabDescription.css">
+    <link rel="stylesheet" href="/CSS/Elements/ProductTabCharacteristics.css">
     <link rel="stylesheet" href="/CSS/Elements/Error.css">
     <link rel="stylesheet" href="/CSS/Elements/Footer.css">
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
@@ -42,7 +42,9 @@ $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::ge
     <link rel="stylesheet" href="/CSS/Elements/Slider.css">
     <script src="/JS/JQuery.js"></script>
     <script src="/JS/Basket.js"></script>
+    <script src="/JS/MediaViewer.js"></script>
     <script src="/JS/Favorites.js"></script>
+    <script src="/JS/Tabs.js"></script>
 </head>
 <body>
 <div class="main">
@@ -53,14 +55,15 @@ $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::ge
     <div class="content">
         <?php if(!Access::isAdministrator()): ?>
             <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/BreadcrumbList.php"; ?>
-            <div class="form-block">
-                <div class="form-block-information">
-                    <div class="form-block-information-slider-block">
-                        <div class="form-block-information-slider-block-container">
+            <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/MediaViewer.php"; ?>
+            <div class="product-block">
+                <div class="product-block-information">
+                    <div class="product-block-information-slider-block">
+                        <div class="product-block-information-slider-block-container">
                             <div id="product-photos" class="slider">
                                 <?php foreach (QueryExecutor::getInstance()->getProductPhotos($_GET["productId"]) as $photo): ?>
                                     <div class="slider__item filter">
-                                        <img src="<?php echo "http://{$_SERVER["SERVER_NAME"]}/Resources/Images/Upload/{$photo["photo"]}"; ?>">
+                                        <img src="<?php echo "http://{$_SERVER["SERVER_NAME"]}/Resources/Images/Upload/{$photo["photo"]}"; ?>" onclick="onClickSliderItemProduct(this);">
                                     </div>
                                 <?php endforeach; ?>
                             </div>
@@ -93,21 +96,28 @@ $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::ge
                             </script>
                         </div>
                     </div>
-                    <div class="form-block-information-block">
-                        <div class="form-block-information-block-row">
-                            <div class="form-block-information-block-column">
-                                <span><?php echo "{$product["manufacturer_name"]} {$product["model"]}"; ?></span>
+                    <div class="product-block-information-block">
+                        <div class="product-block-information-block-row">
+                            <div class="product-block-information-block-column">
+                                <span style="text-align: center;"><?php echo "{$product["manufacturer_name"]} {$product["model"]}"; ?></span>
                             </div>
-                        </div>
-                        <div class="form-block-information-block-row">
-                            <div id="form-block-information-block-column" class="form-block-information-block-column">
-                                <div class="form-block-information-block-column-row">
-                                    <div class="form-block-information-block-column-row-column">
-                                        <span><?php echo "{$product["price"]} ₽"; ?></span>
+                            <div class="product-block-information-block-column">
+                                <div class="product-block-information-block-column-manufacturer">
+                                    <div class="product-block-information-block-column-manufacturer-image-container">
+                                        <a href="ProductsManufacturer.php?manufacturerId=<?php echo $product["manufacturer_id"]; ?>"><img src="<?php echo "http://{$_SERVER["SERVER_NAME"]}/Resources/Images/Upload/{$product["manufacturer_photo"]}"; ?>"></a>
                                     </div>
                                 </div>
-                                <div class="form-block-information-block-column-row">
-                                    <div id="form-block-information-block-column-row-column-evaluation-block" class="form-block-information-block-column-row-column">
+                            </div>
+                        </div>
+                        <div class="product-block-information-block-row">
+                            <div id="product-block-information-block-column" class="product-block-information-block-column">
+                                <div class="product-block-information-block-column-row">
+                                    <div class="product-block-information-block-column-row-column">
+                                        <span style="font-size: 36px;"><?php echo number_format($product["price"], 0, ",", " ") . " ₽"; ?></span>
+                                    </div>
+                                </div>
+                                <div class="product-block-information-block-column-row">
+                                    <div id="product-block-information-block-column-row-column-evaluation-block" class="product-block-information-block-column-row-column">
                                         <span>
                                             <?php
                                             function getCoefficient($evaluation, $numberStar){
@@ -170,7 +180,7 @@ $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::ge
                                         }
                                     }
                                     ?>
-                                    <div id="form-block-information-block-column-row-column-statistical-information-block" class="form-block-information-block-column-row-column">
+                                    <div id="product-block-information-block-column-row-column-statistical-information-block" class="product-block-information-block-column-row-column">
                                         <div class="product-block-information-block-column-row-column-statistical-information-block-column">
                                             <i class="far fa-eye" <?php echo (containsProductView($product["id"]) ? "style='color: blue;'" : ""); ?>>
                                                 <span><?php echo isset($product["count_of_views"]) ? $product["count_of_views"] : 0; ?></span>
@@ -191,60 +201,34 @@ $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::ge
                                     </div>
                                 </div>
                             </div>
-                            <div id="form-block-information-block-column-button" class="form-block-information-block-column">
-                                <button class="favorite-button" onmousemove="onMouseMoveFavoriteButton(this, <?php echo (containsProductFavorite($product["id"]) ? "true": "false"); ?>);" onmouseleave="onMouseLeaveFavoriteButton(this, <?php echo (containsProductFavorite($product["id"]) ? "true": "false"); ?>);" onclick="onClickFavoriteButton(this, <?php echo (containsProductFavorite($product["id"]) ? "true": "false"); ?>, <?php echo $product["id"]; ?>, <?php echo $_SESSION["user"]["id"]; ?>)"><i id="favorites-icon" class="<?php echo (containsProductFavorite($product["id"]) ? "fas fa-heart" : "far fa-heart"); ?>" style="color: blue;"></i></button>
+                            <div id="product-block-information-block-column-button" class="product-block-information-block-column">
+                                <button class="favorite-button" onmousemove="onMouseMoveFavoriteButton(this, <?php echo (containsProductFavorite($product["id"]) ? "true": "false"); ?>);" onmouseleave="onMouseLeaveFavoriteButton(this, <?php echo (containsProductFavorite($product["id"]) ? "true": "false"); ?>);" onclick="onClickFavoriteButton(this, <?php echo (containsProductFavorite($product["id"]) ? "true": "false"); ?>, <?php echo $product["id"]; ?>, <?php echo $_SESSION["user"]["id"]; ?>)" style="width: 50%; font-size: larger"><i id="favorites-icon" class="<?php echo (containsProductFavorite($product["id"]) ? "fas fa-heart" : "far fa-heart"); ?>" style="color: blue;"></i></button>
                             </div>
-                            <div id="form-block-information-block-column-button" class="form-block-information-block-column">
+                            <div id="product-block-information-block-column-button" class="product-block-information-block-column">
                                 <button onclick="onClickAddToCart(this, <?php echo $product["id"]; ?>);" <?php echo in_array(array("productId" => $product["id"]), $_SESSION["basket"]) ? "disabled='disabled'" : ""; ?>>В корзину</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-block-description">
-                    <fieldset class="form-block-description-fieldset">
-                        <legend>Описание товара</legend>
-                        <div class="form-block-description-fieldset-textarea-block">
-                            <textarea disabled="disabled" name="description"><?php echo $product["description"]; ?></textarea>
-                        </div>
-                    </fieldset>
+                <div class="product-block-tabs">
+                    <div id="product-block-tab-active" class="product-block-tab" onclick="onClickTab(this, 'Описание', <?php echo $product["id"]; ?>)">
+                        <span>Описание</span>
+                    </div>
+                    <div class="product-block-tab" onclick="onClickTab(this, 'Характеристики', <?php echo $product["id"]; ?>)">
+                        <span>Характеристики</span>
+                    </div>
+                    <div class="product-block-tab" onclick="onClickTab(this, 'Отзывы', <?php echo $product["id"]; ?>)">
+                        <span>Отзывы <?php echo $product["count_of_evaluations"]; ?></span>
+                    </div>
+                    <div class="product-block-tab" onclick="onClickTab(this, 'Комментарии', <?php echo $product["id"]; ?>)">
+                        <span>Комментарии</span>
+                    </div>
+                    <div class="product-block-tab" onclick="onClickTab(this, 'Вопрос-Ответ', <?php echo $product["id"]; ?>)">
+                        <span>Вопрос-Ответ</span>
+                    </div>
                 </div>
-                <div class="form-block-characteristics">
-                    <fieldset class="form-block-characteristics-fieldset">
-                        <legend>Характеристики</legend>
-                        <div id="characteristics-block" class="form-block-description-fieldset-characteristics-block">
-                            <?php foreach ($sectionsCategorySubcategoryProduct as $sectionCategorySubcategoryProduct): ?>
-                                <div class="form-block-row" style="margin: 25px 0">
-                                    <div id="form-block-row-column-label" class="form-block-row-column">
-                                        <div class="form-block-row-column-label">
-                                            <label style="text-align: left; font-weight: bold"><?php echo $sectionCategorySubcategoryProduct["section_name"]; ?></label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php foreach ($productCharacteristicsQuantityUnitValuesDetailedInformation as $characteristicsQuantityUnitValue): ?>
-                                    <?php if($characteristicsQuantityUnitValue["section_category_subcategory_id"] == $sectionCategorySubcategoryProduct["section_category_subcategory_id"]): ?>
-                                        <div class="form-block-row">
-                                            <div id="form-block-row-column-label" class="form-block-row-column">
-                                                <div class="form-block-row-column-label">
-                                                    <label style="text-align: left"><?php echo $characteristicsQuantityUnitValue["characteristic_name"]; ?></label>
-                                                </div>
-                                            </div>
-                                            <div id="form-block-row-column-input" class="form-block-row-column">
-                                                <div class="form-block-row-column-label">
-                                                    <label style="text-align: left"><?php echo "{$characteristicsQuantityUnitValue["value"]} {$characteristicsQuantityUnitValue["unit_designation"]}"; ?></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
-                            <?php endforeach; ?>
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="form-block-reviews">
-                    <fieldset class="form-block-reviews-fieldset">
-                        <legend>Отзывы</legend>
-
-                    </fieldset>
+                <div class="product-block-tab-content">
+                    <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/ProductTabDescription.php"; ?>
                 </div>
             </div>
             <?php VisibleError::showError(); ?>

@@ -1,0 +1,21 @@
+.product-block-tab-content-description{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    font-size: 20px;
+    overflow: hidden;
+    min-height: 400px;
+    font-family: Arial;
+}
+.product-block-tab-content-description textarea{
+    width: 100%;
+    color: black;
+    border: none;
+    padding: 15px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: Arial;
+    text-align: justify;
+    background-color: transparent;
+}

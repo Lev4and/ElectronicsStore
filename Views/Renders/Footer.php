@@ -78,7 +78,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <span>© 2020 Компания ElectronicsStore.</span>
+            <span>© 2020-2021 Компания ElectronicsStore.</span>
         </div>
     </div>
 </footer>

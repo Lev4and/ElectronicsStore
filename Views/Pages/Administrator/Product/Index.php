@@ -71,6 +71,29 @@ if(isset($_POST["action"]) && $_POST["action"] == "Характеристики"
     }
 }
 
+if(isset($_POST) && $_POST["action"] == "Содержимое вкладки"){
+    if(isset($_POST["productId"]) && $_POST["productId"] > 0){
+        switch ($_POST["tabName"]){
+            case "Описание":
+                $product = QueryExecutor::getInstance()->getProduct($_POST["productId"]);
+
+                include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/ProductTabDescription.php";
+                break;
+            case "Характеристики":
+                $product = QueryExecutor::getInstance()->getProduct($_POST["productId"]);
+                $sectionsCategorySubcategoryProduct = QueryExecutor::getInstance()->getSectionsCategorySubcategoryProduct($_POST["productId"]);
+                $productCharacteristicsQuantityUnitValuesDetailedInformation = QueryExecutor::getInstance()->getProductCharacteristicsQuantityUnitValuesDetailedInformation($_POST["productId"]);
+
+                include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/ProductTabCharacteristics.php";
+                break;
+            case "Отзывы":
+                break;
+        }
+    }
+
+    exit();
+}
+
 if(isset($_POST["action"]) && $_POST["action"] == "Записать") {
     if(isset($_POST["categorySubcategoryId"]) && $_POST["categorySubcategoryId"] > 0 && isset($_POST["manufacturerId"]) && $_POST["manufacturerId"] > 0 && isset($_POST["model"]) && iconv_strlen($_POST["model"], "UTF-8") > 0 && isset($_POST["price"]) && $_POST["price"] > 0){
         if(!QueryExecutor::getInstance()->containsProduct($_POST["manufacturerId"], $_POST["model"])){
