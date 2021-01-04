@@ -898,6 +898,43 @@ class QueryExecutor{
         $this->executeQuery("DELETE FROM evaluation_criterion WHERE id=$id");
     }
 
+    public function getEvaluationCriterionsCategorySubcategory($evaluationCriterionId = null, $classificationId = null, $categoryId = null, $subcategoryId = null, $categorySubcategoryId = null, $name){
+        $condition1 = isset($evaluationCriterionId) && $evaluationCriterionId > 0 ? " AND evaluation_criterion_id=$evaluationCriterionId" : "";
+        $condition2 = isset($classificationId) && $classificationId > 0 ? " AND classification_id=$classificationId" : "";
+        $condition3 = isset($categoryId) && $categoryId > 0 ? " AND category_id=$categoryId" : "";
+        $condition4 = isset($subcategoryId) && $subcategoryId > 0 ? " AND subcategory_id=$subcategoryId" : "";
+        $condition5 = isset($categorySubcategoryId) && $categorySubcategoryId > 0 ? " AND category_subcategory_id=$categorySubcategoryId" : "";
+
+        $query = "SELECT * FROM v_evaluation_criterion_category_subcategory WHERE evaluation_criterion_name LIKE '%$name%'";
+        $query .= $condition1;
+        $query .= $condition2;
+        $query .= $condition3;
+        $query .= $condition4;
+        $query .= $condition5;
+
+        return $this->executeQuery($query);
+    }
+
+    public function containsEvaluationCriterionCategorySubcategory($evaluationCriterionId, $categorySubcategoryId){
+        return !is_null($this->executeQuery("SELECT * FROM evaluation_criterion_category_subcategory WHERE evaluation_criterion_id=$evaluationCriterionId AND category_subcategory_id=$categorySubcategoryId LIMIT 1")[0]);
+    }
+
+    public function addEvaluationCriterionCategorySubcategory($evaluationCriterionId, $categorySubcategoryId){
+        $this->executeQuery("INSERT INTO evaluation_criterion_category_subcategory (evaluation_criterion_id, category_subcategory_id) VALUES($evaluationCriterionId, $categorySubcategoryId)");
+    }
+
+    public function getEvaluationCriterionCategorySubcategory($id){
+        return $this->executeQuery("SELECT * FROM v_evaluation_criterion_category_subcategory WHERE id=$id LIMIT 1")[0];
+    }
+
+    public function updateEvaluationCriterionCategorySubcategory($id, $evaluationCriterionId, $categorySubcategoryId){
+        $this->executeQuery("UPDATE evaluation_criterion_category_subcategory SET evaluation_criterion_id=$evaluationCriterionId, category_subcategory_id=$categorySubcategoryId WHERE id=$id");
+    }
+
+    public function removeEvaluationCriterionCategorySubcategory($id){
+        $this->executeQuery("DELETE FROM evaluation_criterion_category_subcategory WHERE id=$id");
+    }
+
     private function executeQuery($query){
         try{
             return ($this->contextDb->query($query))->FETCHALL(PDO::FETCH_ASSOC);
