@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Functional/NumWord.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
@@ -14,8 +15,10 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
     <link rel="stylesheet" href="/CSS/Pages/Categories.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
+    <link rel="stylesheet" href="/CSS/Elements/Pagination.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
     <link rel="stylesheet" href="/CSS/Elements/BreadcrumbList.css">
+    <link rel="stylesheet" href="/CSS/Elements/FilterArrowLeft.css">
     <link rel="stylesheet" href="/CSS/Elements/Toolbar.css">
     <link rel="stylesheet" href="/CSS/Elements/Filters.css">
     <link rel="stylesheet" href="/CSS/Elements/Table.css">
@@ -24,6 +27,8 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
     <link rel="stylesheet" href="/Resources/Fonts/Font%20Awesome/css/all.min.css">
     <script src="/JS/JQuery.js"></script>
+    <script src="/JS/Filter.js"></script>
+    <script src="/JS/Pagination.js"></script>
     <script src="/JS/Categories.js"></script>
 </head>
 <body>
@@ -39,8 +44,8 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
                     <li><a href="../../Main.php"><span>Меню администратора</span></a></li>
                 </ul>
             </div>
-            <div class="header-block">
-                <h1>Категории</h1>
+            <div class="content-counter-values">
+                <span>Категории <span id="counter-values"><?php echo NumWord::numberWord(count($categories), array('запись', 'записи', 'записей')); ?></span></span>
             </div>
             <form id="filtersForm" action="." method="post">
                 <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Toolbar.php"; ?>
@@ -48,14 +53,31 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
                     <fieldset class="filters-block">
                         <legend>Фильтры</legend>
                         <div class="filter">
-                            <span>Классификации</span>
-                            <div>
-                                <select id="select-classifications" name="classificationId">
-                                    <option value="">Выберите классификацию</option>
-                                    <?php foreach ($classifications as $classification): ?>
-                                        <option value="<?php echo $classification["id"]; ?>"><?php echo $classification["name"]; ?></option>
-                                    <?php endforeach; ?>
-                                </select>
+                            <div class="filter-collapsible-block" onclick="onClickOpenCollapsibleBlock(this);">
+                                <div class="filter-title"><i class="fas fa-chevron-up"></i><span>Классификации</span></div>
+                            </div>
+                            <div id="filter-collapsible-content-collapsible" class="filter-collapsible-content">
+                                <div class="filter-collapsible-content-select-container">
+                                    <select id="select-classifications" name="classificationId" onchange="onSelectedChanged(this);">
+                                        <option value="">Выберите классификацию</option>
+                                        <?php foreach ($classifications as $classification): ?>
+                                            <option value="<?php echo $classification["id"]; ?>"><?php echo $classification["name"]; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-arrow-left" style="display: none;">
+                            <div class="filter-arrow-left-content">
+                                <div class="filter-arrow-left-content-link">
+                                    <a onclick="onClickShowValuesFilterArrowLeft();"><span>Показать</span></a>
+                                </div>
+                                <div class="filter-arrow-left-content-counter-values-container">
+                                    <span class="filter-arrow-left-content-counter-values"></span>
+                                </div>
+                                <div class="filter-arrow-left-content-action">
+                                    <i class="fas fa-window-close" onclick="onClickCloseFilterArrowLeft();"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="reset-filters">
@@ -65,8 +87,13 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
                             <input class="apply-filters-button" type="button" onclick="onClickApply();" value="Применить">
                         </div>
                     </fieldset>
-                    <div id="tableBlock">
-                        <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableCategories.php"; ?>
+                    <div class="content-container" style="width: 65%;">
+                        <div id="tableBlock">
+                            <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableCategories.php"; ?>
+                        </div>
+                        <div class="pagination">
+                            <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Pagination.php"; ?>
+                        </div>
                     </div>
                 </div>
             </form>

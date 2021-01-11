@@ -3,7 +3,7 @@ header{
     z-index: 9999;
     min-height: 2em;
     position: sticky;
-    font-size: larger;
+    font-size: 16px;
     font-family: Arial;
 }
 .header-top{
@@ -100,10 +100,9 @@ header{
     justify-content: space-between;
 }
 .container .container-logo{
-    width: 5%;
+    width: 70px;
     height: 100%;
     display: flex;
-    max-width: 5%;
     max-height: 100%;
     vertical-align: middle;
     justify-content: inherit;
@@ -122,10 +121,8 @@ header{
     max-height: 100%;
 }
 .container .container-catalog{
-    width: 20%;
     height: 100%;
     display: flex;
-    max-width: 20%;
     max-height: 100%;
     vertical-align: middle;
     justify-content: inherit;
@@ -144,10 +141,9 @@ header{
     color: white;
 }
 .container .container-search{
-    width: 35%;
+    width: 40%;
     height: 100%;
     display: flex;
-    max-width: 35%;
     max-height: 100%;
     vertical-align: middle;
     justify-content: space-between;
@@ -159,8 +155,63 @@ header{
     display: flex;
     max-width: 100%;
     max-height: 100%;
+    flex-direction: column;
     vertical-align: middle;
     justify-content: inherit;
+}
+.container .container-search .container-search-input div{
+    top: -7px;
+    display: block;
+    position: relative;
+}
+.container .container-search .container-search-input ul{
+    margin: 0;
+    padding: 0;
+    width: 28.8%;
+    position: fixed;
+    list-style: none;
+    border-top: none;
+    border-radius: 10px;
+    background-color: white;
+    border: solid black 1px;
+}
+.container .container-search .container-search-input ul li:first-child{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.container .container-search .container-search-input ul li:last-child{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.container .container-search .container-search-input ul li{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 30px;
+    color: black;
+    display: flex;
+    font-size: 14px;
+    overflow: hidden;
+    font-family: Arial;
+    vertical-align: middle;
+    flex-direction: inherit;
+    background-color: transparent;
+}
+.container .container-search .container-search-input ul .active-search-result-item{
+    overflow: hidden;
+    background-color: gray;
+}
+.container .container-search .container-search-input ul li a{
+    width: 100%;
+    height: 100%;
+    color: black;
+    display: flex;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.container .container-search .container-search-input ul li a span{
+    width: 95%;
+    margin: auto;
 }
 .container .container-search .container-search-input input[type=search]{
     width: 100%;
@@ -188,10 +239,10 @@ header{
     color: lime;
 }
 .container .container-actions{
-    width: 20%;
+    width: 25%;
     height: 100%;
     display: flex;
-    max-width: 20%;
+    max-width: 25%;
     max-height: 100%;
     vertical-align: middle;
     justify-content: space-between;
@@ -213,9 +264,9 @@ header{
     text-decoration: none;
 }
 .container .container-login-or-menu-user{
-    width: 20%;
+    width: 15%;
     height: 100%;
-    max-width: 20%;
+    max-width: 15%;
     max-height: 100%;
 }
 .container .container-login-or-menu-user .container-login{

@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Functional/NumWord.php";
 require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
 require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
 
@@ -28,7 +29,14 @@ if(isset($_GET["action"]) && $_GET["action"] == "КатегорииПодкат�
 
 if(isset($_GET["action"]) && $_GET["action"] == "Товары"){
     $categorySubcategoryId = $_GET["categorySubcategoryId"];
-    $products = QueryExecutor::getInstance()->getProducts(null, null, null, $categorySubcategoryId, null, null, null, "", null, null);
+    $products = QueryExecutor::getInstance()->getProducts(null, null, null, $categorySubcategoryId, null, null, null, "", null, null, null, null, null, null, null);
+
+    $_SESSION["pageNumber"] = 1;
+    $_SESSION["values"] = array();
+
+    foreach ($products as $product){
+        array_push($_SESSION["values"], $product["id"]);
+    }
 
     include "Products.php";
     exit();
@@ -44,6 +52,131 @@ if(isset($_GET["action"]) && $_GET["action"] == "Рассчитать стоим
     }
 
     echo $price;
+    exit();
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Предварительное применение фильтров"){
+    $categorySubcategoryId = $_GET["categorySubcategoryId"];
+    $products = QueryExecutor::getInstance()->getProducts(null, null, null, $categorySubcategoryId, null, $_POST["filters"]["minPrice"], $_POST["filters"]["maxPrice"], "", null, $_POST["filters"]["characteristics"], $_POST["filters"]["manufacturers"], $_POST["filters"]["minEvaluation"], $_POST["filters"]["maxEvaluation"], $_POST["sortMode"], $_POST["groupMode"]);
+
+    $_SESSION["oldListPreProducts"] = $_SESSION["preProducts"];
+    $_SESSION["preProducts"] = array();
+
+    foreach ($products as $product){
+        array_push($_SESSION["preProducts"], $product["id"]);
+    }
+
+    exit();
+}
+
+if(isset($_POST["action"]) && $_POST["action"] == "Обновить предварительный счетчик количества продуктов"){
+    $countProducts = count($_SESSION["preProducts"]);
+    $word1 = NumWord::numberWord($countProducts, array('Найден', 'Найдено', 'Найдены'), false);
+    $word2 = NumWord::numberWord($countProducts, array('товар', 'товара', 'товаров'));
+
+    echo "{$word1} {$word2}";
+    exit();
+}
+
+if(isset($_POST["action"]) && $_POST["action"] == "Обновить счетчик количества продуктов"){
+    $countProducts = count($_SESSION["values"]);
+    $word = NumWord::numberWord($countProducts, array('товар', 'товара', 'товаров'));
+
+    echo "{$word}";
+    exit();
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Поменять страницу"){
+    if(isset($_GET["numberPage"]) && $_GET["numberPage"] > 0){
+        $categorySubcategoryId = $_GET["categorySubcategoryId"];
+        $products = QueryExecutor::getInstance()->getProducts(null, null, null, $categorySubcategoryId, null, $_POST["filters"]["minPrice"], $_POST["filters"]["maxPrice"], "", null, $_POST["filters"]["characteristics"], $_POST["filters"]["manufacturers"], $_POST["filters"]["minEvaluation"], $_POST["filters"]["maxEvaluation"], $_POST["sortMode"], $_POST["groupMode"]);
+
+        $_SESSION["pageNumber"] = $_GET["numberPage"];
+
+        include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/ProductsBlock.php";
+    }
+
+    exit();
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Обновить нумерацию страниц"){
+    $_SESSION["pageNumber"] = 1;
+
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Pagination.php";
+    exit();
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Получить значение счетчика количества товаров в зависимости от производителя"){
+    if(isset($_GET["mode"]) && iconv_strlen($_GET["mode"], "UTF-8") > 0){
+        if($_GET["mode"] == "Содержание"){
+            if(isset($_GET["manufacturerId"]) && $_GET["manufacturerId"] > 0){
+                echo QueryExecutor::getInstance()->getCountOfProductsWithAGivenManufacturer($_GET["manufacturerId"], implode(", ", $_SESSION["preProducts"]))["count_of_products"];
+                exit();
+            }
+        }
+
+        if($_GET["mode"] == "Добавление"){
+            $categorySubcategoryId = $_GET["categorySubcategoryId"];
+            $products = QueryExecutor::getInstance()->getProducts(null, null, null, $categorySubcategoryId, null, $_POST["filters"]["minPrice"], $_POST["filters"]["maxPrice"], "", null, $_POST["filters"]["characteristics"], $_POST["filters"]["manufacturers"], $_POST["filters"]["minEvaluation"], $_POST["filters"]["maxEvaluation"], $_POST["sortMode"], $_POST["groupMode"]);
+
+            if(count($products) == 0){
+                echo 0;
+            }
+            else{
+                if(count($_SESSION["preProducts"]) > count($products)){
+                    echo count($products);
+                }
+                else{
+                    if(count($_SESSION["preProducts"]) == count($products)){
+                        echo QueryExecutor::getInstance()->getCountOfProductsWithAGivenManufacturer($_GET["manufacturerId"], implode(", ", $_SESSION["preProducts"]))["count_of_products"];
+                    }
+                    else{
+                        echo count($products) - count($_SESSION["preProducts"]);
+                    }
+                }
+            }
+            exit();
+        }
+    }
+
+    echo 0;
+    exit();
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Получить значение счетчика количества товаров в зависимости от значения характеристики"){
+    if(isset($_GET["mode"]) && iconv_strlen($_GET["mode"], "UTF-8") > 0) {
+        if ($_GET["mode"] == "Содержание") {
+            if(isset($_GET["characteristicQuantityUnitValueId"]) && $_GET["characteristicQuantityUnitValueId"] > 0){
+                echo QueryExecutor::getInstance()->getCountOfProductsWithAGivenCharacteristicQuantityUnitValue($_GET["characteristicQuantityUnitValueId"], implode(", ", $_SESSION["preProducts"]))["count_of_products"];
+                exit();
+            }
+        }
+
+        if($_GET["mode"] == "Добавление"){
+            $categorySubcategoryId = $_GET["categorySubcategoryId"];
+            $products = QueryExecutor::getInstance()->getProducts(null, null, null, $categorySubcategoryId, null, $_POST["filters"]["minPrice"], $_POST["filters"]["maxPrice"], "", null, $_POST["filters"]["characteristics"], $_POST["filters"]["manufacturers"], $_POST["filters"]["minEvaluation"], $_POST["filters"]["maxEvaluation"], $_POST["sortMode"], $_POST["groupMode"]);
+
+            if(count($products) == 0){
+                echo 0;
+            }
+            else{
+                if(count($_SESSION["preProducts"]) > count($products)){
+                    echo count($products);
+                }
+                else{
+                    if(count($_SESSION["preProducts"]) == count($products)){
+                        echo QueryExecutor::getInstance()->getCountOfProductsWithAGivenCharacteristicQuantityUnitValue($_GET["characteristicQuantityUnitValueId"], implode(", ", $_SESSION["preProducts"]))["count_of_products"];
+                    }
+                    else{
+                        echo count($products) - count($_SESSION["preProducts"]);
+                    }
+                }
+            }
+            exit();
+        }
+    }
+
+    echo 0;
     exit();
 }
 
@@ -82,8 +215,15 @@ if(isset($_POST["action"]) && $_POST["action"] == "Оформить"){
 }
 
 if(!isset($_POST["action"]) || $_POST["action"] == "Применить"){
-    $categorySubcategoryId = $_POST["categorySubcategoryId"];
-    $products = QueryExecutor::getInstance()->getProducts(null, null, null, $categorySubcategoryId, null, $_POST["filters"]["minPrice"], $_POST["filters"]["maxPrice"], "", null, $_POST["filters"]["characteristics"], $_POST["filters"]["manufacturers"], $_POST["filters"]["minEvaluation"], $_POST["filters"]["maxEvaluation"]);
+    $categorySubcategoryId = $_GET["categorySubcategoryId"];
+    $products = QueryExecutor::getInstance()->getProducts(null, null, null, $categorySubcategoryId, null, $_POST["filters"]["minPrice"], $_POST["filters"]["maxPrice"], "", null, $_POST["filters"]["characteristics"], $_POST["filters"]["manufacturers"], $_POST["filters"]["minEvaluation"], $_POST["filters"]["maxEvaluation"], $_POST["sortMode"], $_POST["groupMode"]);
+
+    $_SESSION["pageNumber"] = 1;
+    $_SESSION["values"] = array();
+
+    foreach ($products as $product){
+        array_push($_SESSION["values"], $product["id"]);
+    }
 
     include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/ProductsBlock.php";
 }

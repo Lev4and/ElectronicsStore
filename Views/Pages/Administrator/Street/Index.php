@@ -1,7 +1,10 @@
 <?php
-require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
-
 session_start();
+
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Functional/NumWord.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
+
+$_SESSION["pageNumber"] = 1;
 
 $cities = array();
 $streets = array();
@@ -25,6 +28,52 @@ if(isset($_POST["action"]) && $_POST["action"] == "Удалить"){
     $streets = QueryExecutor::getInstance()->getStreets($_POST["countryId"], $_POST["regionId"], $_POST["cityId"], $_POST["inputSearch"]);
 
     include "Streets.php";
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Предварительное применение фильтров"){
+    $streets = QueryExecutor::getInstance()->getStreets($_POST["countryId"], $_POST["regionId"], $_POST["cityId"], $_POST["inputSearch"]);
+
+    $_SESSION["preValues"] = array();
+
+    foreach ($streets as $street){
+        array_push($_SESSION["preValues"], $street["id"]);
+    }
+
+    exit();
+}
+
+if(isset($_POST["action"]) && $_POST["action"] == "Обновить предварительный счетчик количества записей"){
+    $countValues = count($_SESSION["preValues"]);
+    $word1 = NumWord::numberWord($countValues, array('Найден', 'Найдено', 'Найдены'), false);
+    $word2 = NumWord::numberWord($countValues, array('запись', 'записи', 'записей'));
+
+    echo "{$word1} {$word2}";
+    exit();
+}
+
+if(isset($_POST["action"]) && $_POST["action"] == "Обновить счетчик количества записей"){
+    $countValues = count($_SESSION["values"]);
+    $word = NumWord::numberWord($countValues, array('запись', 'записи', 'записей'));
+
+    echo "{$word}";
+    exit();
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Поменять страницу"){
+    if(isset($_GET["numberPage"]) && $_GET["numberPage"] > 0){
+        $streets = QueryExecutor::getInstance()->getStreets($_POST["countryId"], $_POST["regionId"], $_POST["cityId"], $_POST["inputSearch"]);
+
+        $_SESSION["pageNumber"] = $_GET["numberPage"];
+
+        include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableStreets.php";
+    }
+
+    exit();
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Обновить нумерацию страниц"){
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Pagination.php";
+    exit();
 }
 
 if(isset($_POST["action"]) && $_POST["action"] == "Записать"){
@@ -102,6 +151,12 @@ if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
     $countries = QueryExecutor::getInstance()->getCountries("");
     $streets = QueryExecutor::getInstance()->getStreets($_POST["countryId"], $_POST["regionId"], $_POST["cityId"], $_POST["inputSearch"]);
 
+    $_SESSION["values"] = array();
+
+    foreach ($streets as $street){
+        array_push($_SESSION["values"], $street["id"]);
+    }
+
     include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableStreets.php";
     exit();
 }
@@ -109,6 +164,12 @@ if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
 if(!isset($_POST["action"])){
     $countries = QueryExecutor::getInstance()->getCountries("");
     $streets = QueryExecutor::getInstance()->getStreets($_POST["countryId"], $_POST["regionId"], $_POST["cityId"], $_POST["inputSearch"]);
+
+    $_SESSION["values"] = array();
+
+    foreach ($streets as $street){
+        array_push($_SESSION["values"], $street["id"]);
+    }
 
     include "Streets.php";
 }

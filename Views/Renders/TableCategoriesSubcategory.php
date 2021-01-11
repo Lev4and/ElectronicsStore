@@ -8,15 +8,17 @@
             <th class="table-block-header">Подкатегория</th>
             <th class="table-block-header">Название</th>
         </tr>
-        <?php foreach ($categoriesSubcategory as $categorySubcategory): ?>
-            <tr id="<?php echo $categorySubcategory["id"]; ?>" class="table-block-values">
-                <td class="table-block-value-input-radio"><input type="radio" name="selectedCategorySubcategory" checked="checked" value="<?php echo $categorySubcategory["id"]; ?>"></td>
-                <td class="table-block-value-image"><div><img src="/Resources/Images/Upload/<?php echo $categorySubcategory["photo"]; ?>"></div></td>
-                <td class="table-block-value-text"><?php echo $categorySubcategory["classification_name"]; ?></td>
-                <td class="table-block-value-text"><?php echo $categorySubcategory["category_name"]; ?></td>
-                <td class="table-block-value-text"><?php echo $categorySubcategory["subcategory_name"]; ?></td>
-                <td class="table-block-value-text"><?php echo $categorySubcategory["name"]; ?></td>
-            </tr>
+        <?php foreach ($categoriesSubcategory as $key => $categorySubcategory): ?>
+            <?php if($key >= ($_SESSION["pageNumber"] - 1) * 25 && $key <= $_SESSION["pageNumber"] * 25 - 1): ?>
+                <tr id="<?php echo $categorySubcategory["id"]; ?>" class="table-block-values">
+                    <td class="table-block-value-input-radio"><input type="radio" name="selectedCategorySubcategory" checked="checked" value="<?php echo $categorySubcategory["id"]; ?>"></td>
+                    <td class="table-block-value-image"><div><img src="/Resources/Images/Upload/<?php echo $categorySubcategory["photo"]; ?>"></div></td>
+                    <td class="table-block-value-text"><?php echo $categorySubcategory["classification_name"]; ?></td>
+                    <td class="table-block-value-text"><?php echo $categorySubcategory["category_name"]; ?></td>
+                    <td class="table-block-value-text"><?php echo $categorySubcategory["subcategory_name"]; ?></td>
+                    <td class="table-block-value-text"><?php echo $categorySubcategory["name"]; ?></td>
+                </tr>
+            <?php endif; ?>
         <? endforeach; ?>
     </table>
 </div>

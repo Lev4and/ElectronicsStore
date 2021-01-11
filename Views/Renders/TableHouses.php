@@ -8,15 +8,17 @@
             <th class="table-block-header">Улица</th>
             <th class="table-block-header">Название</th>
         </tr>
-        <?php foreach ($houses as $house): ?>
-            <tr id="<?php echo $house["id"]; ?>" class="table-block-values">
-                <td class="table-block-value-input-radio"><input type="radio" name="selectedHouse" checked="checked" value="<?php echo $house["id"]; ?>"></td>
-                <td class="table-block-value-text"><?php echo $house["country_name"]; ?></td>
-                <td class="table-block-value-text"><?php echo $house["region_name"]; ?></td>
-                <td class="table-block-value-text"><?php echo $house["city_name"]; ?></td>
-                <td class="table-block-value-text"><?php echo $house["street_name"]; ?></td>
-                <td class="table-block-value-text"><?php echo $house["name"]; ?></td>
-            </tr>
+        <?php foreach ($houses as $key => $house): ?>
+            <?php if($key >= ($_SESSION["pageNumber"] - 1) * 25 && $key <= $_SESSION["pageNumber"] * 25 - 1): ?>
+                <tr id="<?php echo $house["id"]; ?>" class="table-block-values">
+                    <td class="table-block-value-input-radio"><input type="radio" name="selectedHouse" checked="checked" value="<?php echo $house["id"]; ?>"></td>
+                    <td class="table-block-value-text"><?php echo $house["country_name"]; ?></td>
+                    <td class="table-block-value-text"><?php echo $house["region_name"]; ?></td>
+                    <td class="table-block-value-text"><?php echo $house["city_name"]; ?></td>
+                    <td class="table-block-value-text"><?php echo $house["street_name"]; ?></td>
+                    <td class="table-block-value-text"><?php echo $house["name"]; ?></td>
+                </tr>
+            <?php endif; ?>
         <? endforeach; ?>
     </table>
 </div>

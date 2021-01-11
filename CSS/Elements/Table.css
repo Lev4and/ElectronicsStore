@@ -1,11 +1,13 @@
 #tableBlock{
-    width: 65%;
+    width: 100%;
 }
 .table-block{
     width: 100%;
+    overflow: auto;
     font-family: Arial;
 }
 .table-block table{
+    width: 100%;
     margin: 0 auto;
 }
 .table-block table .table-block-headers .table-block-header{

@@ -1,0 +1,55 @@
+.filter-arrow-left{
+    left: 30%;
+    width: 25%;
+    z-index: 10;
+    height: 40px;
+    position: absolute;
+    background: orange;
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 10% 100%, 0 50%);
+}
+.filter-arrow-left .filter-arrow-left-content{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    font-size: medium;
+    padding-left: 10%;
+    font-family: Arial;
+    flex-direction: row;
+}
+.filter-arrow-left .filter-arrow-left-content div{
+    height: 100%;
+    display: flex;
+}
+.filter-arrow-left .filter-arrow-left-content .filter-arrow-left-content-action{
+    width: 15%;
+    text-align: center;
+}
+.filter-arrow-left .filter-arrow-left-content .filter-arrow-left-content-action:hover > i{
+    color: red;
+}
+.filter-arrow-left .filter-arrow-left-content .filter-arrow-left-content-counter-values-container,
+.filter-arrow-left .filter-arrow-left-content .filter-arrow-left-content-counter-products-container{
+    width: 60%;
+    text-align: center;
+}
+.filter-arrow-left .filter-arrow-left-content .filter-arrow-left-content-link{
+    width: 25%;
+    text-align: center;
+}
+.filter-arrow-left .filter-arrow-left-content a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+    color: blueviolet;
+    text-decoration: none;
+}
+.filter-arrow-left .filter-arrow-left-content span{
+    width: 100%;
+    margin: auto;
+}
+.filter-arrow-left .filter-arrow-left-content i{
+    width: 100%;
+    margin: auto;
+    color: black;
+}

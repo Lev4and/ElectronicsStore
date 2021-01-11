@@ -1,5 +1,6 @@
-<script src="/JS/XmlHttp.js"></script>
 <script src="/JS/JQuery.js"></script>
+<script src="/JS/XmlHttp.js"></script>
+<script src="/JS/LiveSearch.js"></script>
 <script src="/JS/Login.js"></script>
 <script src="/JS/Menu.js"></script>
 <script src="/JS/Main.js"></script>
@@ -32,11 +33,14 @@
         </div>
         <?php if(!Access::isAdministrator()): ?>
             <div class="container-catalog">
-                <button id="catalog" class="container-catalog-button" type="button" onclick="{ openOrCloseMenu('menu-customer'); }">Каталог товаров</button>
+                <button id="catalog" class="container-catalog-button" type="button" onclick="{ openOrCloseMenu('menu-customer'); }">Каталог</button>
             </div>
             <div class="container-search">
                 <div class="container-search-input">
-                    <input id="inputSearch" type="search" name="inputSearch" placeholder="Поиск по сайту"/>
+                    <input id="inputSearch" type="search" name="inputSearch" placeholder="Поиск по сайту" autocomplete="off"  onkeyup="onKeyUpInputSearch(this, event);" onkeydown="onKeyDownInputSearch(this, event)"/>
+                    <div class="container-search-result">
+
+                    </div>
                 </div>
                 <div class="container-search-button">
                     <i class="fas fa-search" onclick="onClickSearch();"></i>
@@ -47,6 +51,12 @@
                     <div id="container-action-basket" class="container-action">
                         <a href="<?php echo "http://{$_SERVER["SERVER_NAME"]}/Views/Pages/Customer/Basket.php"; ?>"><i class="fas fa-shopping-basket"></i> Корзина <span id="counterBasket"><?php echo count($_SESSION["basket"]); ?></span></a>
                     </div>
+                    <!--<div class="container-action">
+                        <a><i class="fas fa-heart"></i> Избранное <span>0</span></a>
+                    </div>
+                    <div class="container-action">
+                        <a><i class="far fa-chart-bar"></i> Сравнить <span>0</span></a>
+                    </div>-->
                 <?php endif; ?>
             </div>
         <?php endif; ?>

@@ -9,16 +9,18 @@
             <th class="table-block-header">Оценка</th>
             <th class="table-block-header">Цена</th>
         </tr>
-        <?php foreach ($products as $product): ?>
-            <tr id="<?php echo $product["id"]; ?>" class="table-block-values">
-                <td class="table-block-value-input-radio"><input type="radio" name="selectedProduct" checked="checked" value="<?php echo $product["id"]; ?>"></td>
-                <td class="table-block-value-text"><?php echo $product["category_subcategory_name"]; ?></td>
-                <td class="table-block-value-image"><div><img src="/Resources/Images/Upload/<?php echo $product["photo"]; ?>"></div></td>
-                <td class="table-block-value-text"><?php echo $product["manufacturer_name"]; ?></td>
-                <td class="table-block-value-text"><?php echo $product["model"]; ?></td>
-                <td class="table-block-value-text" style="text-align: center"><?php echo $product["evaluation"]; ?></td>
-                <td class="table-block-value-text" style="text-align: center"><?php echo $product["price"]; ?></td>
-            </tr>
+        <?php foreach ($products as $key => $product): ?>
+            <?php if($key >= ($_SESSION["pageNumber"] - 1) * 25 && $key <= $_SESSION["pageNumber"] * 25 - 1): ?>
+                <tr id="<?php echo $product["id"]; ?>" class="table-block-values">
+                    <td class="table-block-value-input-radio"><input type="radio" name="selectedProduct" checked="checked" value="<?php echo $product["id"]; ?>"></td>
+                    <td class="table-block-value-text"><?php echo $product["category_subcategory_name"]; ?></td>
+                    <td class="table-block-value-image"><div><img src="/Resources/Images/Upload/<?php echo $product["photo"]; ?>"></div></td>
+                    <td class="table-block-value-text"><?php echo $product["manufacturer_name"]; ?></td>
+                    <td class="table-block-value-text"><?php echo $product["model"]; ?></td>
+                    <td class="table-block-value-text" style="text-align: center"><?php echo $product["evaluation"]; ?></td>
+                    <td class="table-block-value-text" style="text-align: center"><?php echo $product["price"]; ?></td>
+                </tr>
+            <?php endif; ?>
         <? endforeach; ?>
     </table>
 </div>

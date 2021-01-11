@@ -1,0 +1,64 @@
+.multi-range{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.multi-range .multi-range-double-number{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+}
+.multi-range .multi-range-double-number .multi-range-double-number-container-number{
+    width: 30%;
+    height: 80%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    border: solid black 1px;
+}
+.multi-range .multi-range-double-number .multi-range-double-number-container-number input[type=number]{
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
+    -moz-appearance: textfield;
+}
+.multi-range .multi-range-double-number .multi-range-double-number-container-number input[type=number]::-webkit-inner-spin-button,
+.multi-range .multi-range-double-number .multi-range-double-number-container-number input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+.multi-range .multi-range-slider-container{
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+    padding: 17.5px 0;
+}
+.multi-range .multi-range-slider-container .multi-range-slider{
+    width: 100%;
+    height: 10px;
+    margin: 0 auto;
+    align-items: center;
+}
+.multi-range .multi-range-slider-container .multi-range-slider .noUi-connect{
+    background-color: orange;
+}
+.multi-range .multi-range-slider-container .multi-range-slider .noUi-handle{
+    top: -5px;
+    width: 20px;
+    right: -10px;
+    height: 20px;
+    box-shadow: none;
+    border-radius: 50%;
+    background-color: lime;
+}
+.multi-range .multi-range-slider-container .multi-range-slider .noUi-handle:after,
+.multi-range .multi-range-slider-container .multi-range-slider .noUi-handle:before{
+    content: normal;
+}
+
+
+

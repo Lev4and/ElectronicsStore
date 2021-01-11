@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Functional/NumWord.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/VisibleError.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
@@ -14,6 +15,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
     <link rel="stylesheet" href="/CSS/Pages/EvaluationCriterions.css">
     <link rel="stylesheet" href="/CSS/Elements/Header.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuUser.css">
+    <link rel="stylesheet" href="/CSS/Elements/Pagination.css">
     <link rel="stylesheet" href="/CSS/Elements/MenuCustomer.css">
     <link rel="stylesheet" href="/CSS/Elements/BreadcrumbList.css">
     <link rel="stylesheet" href="/CSS/Elements/Toolbar.css">
@@ -24,6 +26,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
     <link rel="icon" href="/Resources/Images/Icons/Logo.png">
     <link rel="stylesheet" href="/Resources/Fonts/Font%20Awesome/css/all.min.css">
     <script src="/JS/JQuery.js"></script>
+    <script src="/JS/Pagination.js"></script>
     <script src="/JS/EvaluationCriterions.js"></script>
 </head>
 <body>
@@ -39,8 +42,8 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
                     <li><a href="../../Main.php"><span>Меню администратора</span></a></li>
                 </ul>
             </div>
-            <div class="header-block">
-                <h1>Критерии оценивания</h1>
+            <div class="content-counter-values">
+                <span>Критерии оценивания <span id="counter-values"><?php echo NumWord::numberWord(count($evaluationCriterions), array('запись', 'записи', 'записей')); ?></span></span>
             </div>
             <form id="filtersForm" action="." method="post">
                 <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Toolbar.php"; ?>
@@ -54,8 +57,13 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Managers/Access.php";
                             <input class="apply-filters-button" type="button" onclick="onClickApply();" value="Применить">
                         </div>
                     </fieldset>
-                    <div id="tableBlock">
-                        <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableEvaluationCriterions.php"; ?>
+                    <div class="content-container" style="width: 65%;">
+                        <div id="tableBlock">
+                            <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableEvaluationCriterions.php"; ?>
+                        </div>
+                        <div class="pagination">
+                            <?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Pagination.php"; ?>
+                        </div>
                     </div>
                 </div>
             </form>

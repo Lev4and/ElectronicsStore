@@ -2,10 +2,12 @@
 class QueryExecutor{
     protected static $instance;
 
-    private $contextDb;
+    public $contextDb;
 
     private function __construct(){
-        $this->contextDb = new PDO("mysql:dbname=electronics_store;host=localhost", "root", "root");
+        $this->contextDb = new PDO("mysql:dbname=electronics_store;host=localhost", "root", "root", array(
+            PDO::ATTR_PERSISTENT => true));
+        $this->contextDb->query("SET wait_timeout=600");
     }
 
     public static function getInstance(){
@@ -577,7 +579,7 @@ class QueryExecutor{
         return $this->executeQuery("SELECT MAX(v_product.evaluation) AS `max_evaluation` FROM v_product WHERE v_product.category_subcategory_id=$categorySubcategoryId");
     }
 
-    public function getProducts($classificationId = null, $categoryId = null, $subcategoryId = null, $categorySubcategoryId = null, $manufacturerId = null,  $minPrice = null, $maxPrice = null, $model, $name = null, $characteristicQuantityUnitValues = null, $manufacturers = null, $minEvaluation = null, $maxEvaluation = null){
+    public function getProducts($classificationId = null, $categoryId = null, $subcategoryId = null, $categorySubcategoryId = null, $manufacturerId = null,  $minPrice = null, $maxPrice = null, $model, $name = null, $characteristicQuantityUnitValues = null, $manufacturers = null, $minEvaluation = null, $maxEvaluation = null, $sortMode = null, $groupMode = null){
         $condition1 = isset($classificationId) && $classificationId > 0 ? " AND classification_id=$classificationId" : "";
         $condition2 = isset($categoryId) && $categoryId > 0 ? " AND category_id=$categoryId" : "";
         $condition3 = isset($subcategoryId) && $subcategoryId > 0 ? " AND subcategory_id=$subcategoryId" : "";
@@ -585,10 +587,67 @@ class QueryExecutor{
         $condition5 = isset($characteristicId) && $characteristicId > 0 ? " AND characteristic_id=$characteristicId" : "";
         $condition6 = isset($manufacturerId) && $manufacturerId > 0 ? " AND manufacturer_id=$manufacturerId" : "";
         $condition7 = isset($minPrice) && $minPrice >= 0 ? " AND price >= $minPrice" : "";
-        $condition8 = isset($maxPrice) && $maxPrice <= 0 ? " AND price <= $maxPrice" : "";
+        $condition8 = isset($maxPrice) && $maxPrice >= 0 ? " AND price <= $maxPrice" : "";
         $condition9 = isset($minEvaluation) && $minEvaluation >= 1 ? " AND (evaluation >= $minEvaluation OR evaluation IS NULL)" : "";
         $condition10 = isset($maxEvaluation) && $maxEvaluation <= 5 ? " AND (evaluation <= $maxEvaluation  OR evaluation IS NULL)" : "";
         $condition11 = isset($name) && iconv_strlen($name, "UTF-8") > 0 ? " AND name LIKE '%$name%'" : "";
+
+        $condition12 = "";
+
+        if(isset($groupMode) && $groupMode >= 0) {
+            switch ($groupMode) {
+                case 0:
+                    $condition12 = "";
+                    break;
+                case 1:
+                    $condition12 = " ORDER BY manufacturer_name ASC";
+                    break;
+                case 2:
+                    break;
+            }
+        }
+
+        $condition13 = "";
+
+        if(isset($sortMode) && $sortMode >= 0){
+            switch ($sortMode){
+                case 0:
+                    $condition13 = "price ASC";
+                    break;
+                case 1:
+                    $condition13 = "price DESC";
+                    break;
+                case 2:
+                    $condition13 = "sales DESC";
+                    break;
+                case 3:
+                    $condition13 = "sales ASC";
+                    break;
+                case 4:
+                    $condition13 = "name ASC";
+                    break;
+                case 5:
+                    $condition13 = "name DESC";
+                    break;
+                case 6:
+
+                    break;
+                case 7:
+
+                    break;
+                case 8:
+                    $condition13 = "evaluation DESC";
+                    break;
+                case 9:
+                    $condition13 = "evaluation ASC";
+                    break;
+            }
+        }
+        else{
+            $condition13 = "price ASC";
+        }
+
+        $condition13 = iconv_strlen($condition12, "UTF-8") > 0 ? ", {$condition13}" : " ORDER BY {$condition13}";
 
         $query = "SELECT DISTINCT *
                   FROM v_product
@@ -627,6 +686,9 @@ class QueryExecutor{
             $condition = implode(" AND ", $conditions);
             $query .= " AND $condition";
         }
+
+        $query .= $condition12;
+        $query .= $condition13;
 
         //echo $query;
 
@@ -933,6 +995,24 @@ class QueryExecutor{
 
     public function removeEvaluationCriterionCategorySubcategory($id){
         $this->executeQuery("DELETE FROM evaluation_criterion_category_subcategory WHERE id=$id");
+    }
+
+    public function getCountOfProductsWithAGivenCharacteristicQuantityUnitValue($characteristicQuantityUnitValue, $productList){
+        if(isset($productList) && iconv_strlen($productList, "UTF-8") > 0){
+            return $this->executeQuery("SELECT COUNT(*) AS `count_of_products` FROM product_characteristic_quantity_unit_value WHERE characteristic_quantity_unit_value_id=$characteristicQuantityUnitValue AND product_id IN ($productList)")[0];
+        }
+        else{
+            return $this->executeQuery("SELECT 0 AS `count_of_products`")[0];
+        }
+    }
+
+    public function getCountOfProductsWithAGivenManufacturer($manufacturerId, $productList){
+        if(isset($productList) && iconv_strlen($productList, "UTF-8") > 0){
+            return $this->executeQuery("SELECT COUNT(*) AS `count_of_products` FROM product WHERE manufacturer_id=$manufacturerId AND id IN ($productList)")[0];
+        }
+        else{
+            return $this->executeQuery("SELECT 0 AS `count_of_products`")[0];
+        }
     }
 
     private function executeQuery($query){

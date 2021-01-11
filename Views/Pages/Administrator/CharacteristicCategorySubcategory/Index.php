@@ -1,7 +1,10 @@
 <?php
-require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
-
 session_start();
+
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Functional/NumWord.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
+
+$_SESSION["pageNumber"] = 1;
 
 $sections = array();
 $characteristics = array();
@@ -15,6 +18,63 @@ if(isset($_POST["action"]) && $_POST["action"] == "Добавить"){
 
 if(isset($_POST["action"]) && $_POST["action"] == "Изменить"){
     header("Location: EditCharacteristicCategorySubcategory.php?characteristicCategorySubcategoryId=" . $_POST["selectedCharacteristicCategorySubcategory"]);
+    exit();
+}
+
+if(isset($_POST["action"]) && $_POST["action"] == "Удалить"){
+    QueryExecutor::getInstance()->removeCharacteristicCategorySubcategory($_POST["selectedCharacteristicCategorySubcategory"]);
+
+    $sections = QueryExecutor::getInstance()->getSections("");
+    $characteristics = QueryExecutor::getInstance()->getCharacteristics("");
+    $classifications = QueryExecutor::getInstance()->getClassifications("");
+    $characteristicsCategorySubcategory = QueryExecutor::getInstance()->getCharacteristicsCategorySubcategory($_POST["sectionId"], $_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["categorySubcategoryId"], $_POST["characteristicId"], $_POST["useWhenFiltering"], $_POST["useWhenDisplayingAsBasicInformation"], $_POST["inputSearch"]);
+
+    include "CharacteristicsCategorySubcategory.php";
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Предварительное применение фильтров"){
+    $characteristicsCategorySubcategory = QueryExecutor::getInstance()->getCharacteristicsCategorySubcategory($_POST["sectionId"], $_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["categorySubcategoryId"], $_POST["characteristicId"], $_POST["useWhenFiltering"], $_POST["useWhenDisplayingAsBasicInformation"], $_POST["inputSearch"]);
+
+    $_SESSION["preValues"] = array();
+
+    foreach ($characteristicsCategorySubcategory as $characteristicCategorySubcategory){
+        array_push($_SESSION["preValues"], $characteristicCategorySubcategory["id"]);
+    }
+
+    exit();
+}
+
+if(isset($_POST["action"]) && $_POST["action"] == "Обновить предварительный счетчик количества записей"){
+    $countValues = count($_SESSION["preValues"]);
+    $word1 = NumWord::numberWord($countValues, array('Найден', 'Найдено', 'Найдены'), false);
+    $word2 = NumWord::numberWord($countValues, array('запись', 'записи', 'записей'));
+
+    echo "{$word1} {$word2}";
+    exit();
+}
+
+if(isset($_POST["action"]) && $_POST["action"] == "Обновить счетчик количества записей"){
+    $countValues = count($_SESSION["values"]);
+    $word = NumWord::numberWord($countValues, array('запись', 'записи', 'записей'));
+
+    echo "{$word}";
+    exit();
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Поменять страницу"){
+    if(isset($_GET["numberPage"]) && $_GET["numberPage"] > 0){
+        $characteristicsCategorySubcategory = QueryExecutor::getInstance()->getCharacteristicsCategorySubcategory($_POST["sectionId"], $_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["categorySubcategoryId"], $_POST["characteristicId"], $_POST["useWhenFiltering"], $_POST["useWhenDisplayingAsBasicInformation"], $_POST["inputSearch"]);
+
+        $_SESSION["pageNumber"] = $_GET["numberPage"];
+
+        include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableCharacteristicsCategorySubcategory.php";
+    }
+
+    exit();
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Обновить нумерацию страниц"){
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Pagination.php";
     exit();
 }
 
@@ -61,17 +121,6 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
         header("Location: EditCharacteristicCategorySubcategory.php?characteristicCategorySubcategoryId=" . $_GET["characteristicCategorySubcategoryId"]);
         exit();
     }
-}
-
-if(isset($_POST["action"]) && $_POST["action"] == "Удалить"){
-    QueryExecutor::getInstance()->removeCharacteristicCategorySubcategory($_POST["selectedCharacteristicCategorySubcategory"]);
-
-    $sections = QueryExecutor::getInstance()->getSections("");
-    $characteristics = QueryExecutor::getInstance()->getCharacteristics("");
-    $classifications = QueryExecutor::getInstance()->getClassifications("");
-    $characteristicsCategorySubcategory = QueryExecutor::getInstance()->getCharacteristicsCategorySubcategory($_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["categorySubcategoryId"], $_POST["characteristicId"], $_POST["inputSearch"]);
-
-    include "CharacteristicsCategorySubcategory.php";
 }
 
 if(isset($_POST["action"]) && $_POST["action"] == "Категории"){
@@ -129,6 +178,12 @@ if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
     $classifications = QueryExecutor::getInstance()->getClassifications("");
     $characteristicsCategorySubcategory = QueryExecutor::getInstance()->getCharacteristicsCategorySubcategory($_POST["sectionId"], $_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["categorySubcategoryId"], $_POST["characteristicId"], $_POST["useWhenFiltering"], $_POST["useWhenDisplayingAsBasicInformation"], $_POST["inputSearch"]);
 
+    $_SESSION["values"] = array();
+
+    foreach ($characteristicsCategorySubcategory as $characteristicCategorySubcategory){
+        array_push($_SESSION["values"], $characteristicCategorySubcategory["id"]);
+    }
+
     include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableCharacteristicsCategorySubcategory.php";
     exit();
 }
@@ -138,6 +193,12 @@ if(!isset($_POST["action"])){
     $characteristics = QueryExecutor::getInstance()->getCharacteristics("");
     $classifications = QueryExecutor::getInstance()->getClassifications("");
     $characteristicsCategorySubcategory = QueryExecutor::getInstance()->getCharacteristicsCategorySubcategory($_POST["sectionId"], $_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["categorySubcategoryId"], $_POST["characteristicId"], $_POST["useWhenFiltering"], $_POST["useWhenDisplayingAsBasicInformation"], $_POST["inputSearch"]);
+
+    $_SESSION["values"] = array();
+
+    foreach ($characteristicsCategorySubcategory as $characteristicCategorySubcategory){
+        array_push($_SESSION["values"], $characteristicCategorySubcategory["id"]);
+    }
 
     include "CharacteristicsCategorySubcategory.php";
 }

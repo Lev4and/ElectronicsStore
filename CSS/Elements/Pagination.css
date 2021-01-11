@@ -1,0 +1,41 @@
+.pagination-block{
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: solid black 1px;
+}
+.pagination-block ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.pagination-block ul li{
+    width: 8%;
+    height: 100%;
+    display: flex;
+}
+.pagination-block ul .active{
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: orange;
+}
+.pagination-block ul li:hover{
+    cursor: pointer;
+    background-color: #FFF7DA;
+}
+.pagination-block ul li:hover > span{
+    color: orange;
+}
+.pagination-block ul li span{
+    color: gray;
+    width: 100%;
+    margin: auto;
+    font-size: medium;
+    font-family: Arial;
+    text-align: center;
+}

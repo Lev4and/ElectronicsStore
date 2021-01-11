@@ -1,7 +1,10 @@
 <?php
-require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
-
 session_start();
+
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Functional/NumWord.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
+
+$_SESSION["pageNumber"] = 1;
 
 $classifications = array();
 $categoriesSubcategory = array();
@@ -23,6 +26,52 @@ if(isset($_POST["action"]) && $_POST["action"] == "Удалить"){
     $categoriesSubcategory = QueryExecutor::getInstance()->getCategoriesSubcategory($_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["inputSearch"]);
 
     include "CategoriesSubcategory.php";
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Предварительное применение фильтров"){
+    $categoriesSubcategory = QueryExecutor::getInstance()->getCategoriesSubcategory($_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["inputSearch"]);
+
+    $_SESSION["preValues"] = array();
+
+    foreach ($categoriesSubcategory as $categorySubcategory){
+        array_push($_SESSION["preValues"], $categorySubcategory["id"]);
+    }
+
+    exit();
+}
+
+if(isset($_POST["action"]) && $_POST["action"] == "Обновить предварительный счетчик количества записей"){
+    $countValues = count($_SESSION["preValues"]);
+    $word1 = NumWord::numberWord($countValues, array('Найден', 'Найдено', 'Найдены'), false);
+    $word2 = NumWord::numberWord($countValues, array('запись', 'записи', 'записей'));
+
+    echo "{$word1} {$word2}";
+    exit();
+}
+
+if(isset($_POST["action"]) && $_POST["action"] == "Обновить счетчик количества записей"){
+    $countValues = count($_SESSION["values"]);
+    $word = NumWord::numberWord($countValues, array('запись', 'записи', 'записей'));
+
+    echo "{$word}";
+    exit();
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Поменять страницу"){
+    if(isset($_GET["numberPage"]) && $_GET["numberPage"] > 0){
+        $categoriesSubcategory = QueryExecutor::getInstance()->getCategoriesSubcategory($_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["inputSearch"]);
+
+        $_SESSION["pageNumber"] = $_GET["numberPage"];
+
+        include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableCategoriesSubcategory.php";
+    }
+
+    exit();
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Обновить нумерацию страниц"){
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Pagination.php";
+    exit();
 }
 
 if(isset($_POST["action"]) && $_POST["action"] == "Записать") {
@@ -113,6 +162,12 @@ if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
     $classifications = QueryExecutor::getInstance()->getClassifications("");
     $categoriesSubcategory = QueryExecutor::getInstance()->getCategoriesSubcategory($_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["inputSearch"]);
 
+    $_SESSION["values"] = array();
+
+    foreach ($categoriesSubcategory as $categorySubcategory){
+        array_push($_SESSION["values"], $categorySubcategory["id"]);
+    }
+
     include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableCategoriesSubcategory.php";
     exit();
 }
@@ -120,6 +175,12 @@ if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
 if(!isset($_POST["action"])){
     $classifications = QueryExecutor::getInstance()->getClassifications("");
     $categoriesSubcategory = QueryExecutor::getInstance()->getCategoriesSubcategory($_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["inputSearch"]);
+
+    $_SESSION["values"] = array();
+
+    foreach ($categoriesSubcategory as $categorySubcategory){
+        array_push($_SESSION["values"], $categorySubcategory["id"]);
+    }
 
     include "CategoriesSubcategory.php";
 }

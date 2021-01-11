@@ -1,7 +1,10 @@
 <?php
 session_start();
 
-require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Functional/NumWord.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
+
+$_SESSION["pageNumber"] = 1;
 
 $products = array();
 
@@ -21,6 +24,52 @@ if(isset($_POST["action"]) && $_POST["action"] == "Удалить"){
     $products = QueryExecutor::getInstance()->getProducts($_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["categorySubcategoryId"], $_POST["manufacturerId"], null, null, $_POST["inputSearch"]);
 
     include "Products.php";
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Предварительное применение фильтров"){
+    $products = QueryExecutor::getInstance()->getProducts($_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["categorySubcategoryId"], $_POST["manufacturerId"], null, null, $_POST["inputSearch"]);
+
+    $_SESSION["preValues"] = array();
+
+    foreach ($products as $product){
+        array_push($_SESSION["preValues"], $product["id"]);
+    }
+
+    exit();
+}
+
+if(isset($_POST["action"]) && $_POST["action"] == "Обновить предварительный счетчик количества записей"){
+    $countValues = count($_SESSION["preValues"]);
+    $word1 = NumWord::numberWord($countValues, array('Найден', 'Найдено', 'Найдены'), false);
+    $word2 = NumWord::numberWord($countValues, array('запись', 'записи', 'записей'));
+
+    echo "{$word1} {$word2}";
+    exit();
+}
+
+if(isset($_POST["action"]) && $_POST["action"] == "Обновить счетчик количества записей"){
+    $countValues = count($_SESSION["values"]);
+    $word = NumWord::numberWord($countValues, array('запись', 'записи', 'записей'));
+
+    echo "{$word}";
+    exit();
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Поменять страницу"){
+    if(isset($_GET["numberPage"]) && $_GET["numberPage"] > 0){
+        $products = QueryExecutor::getInstance()->getProducts($_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["categorySubcategoryId"], $_POST["manufacturerId"], null, null, $_POST["inputSearch"]);
+
+        $_SESSION["pageNumber"] = $_GET["numberPage"];
+
+        include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableProducts.php";
+    }
+
+    exit();
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Обновить нумерацию страниц"){
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Pagination.php";
+    exit();
 }
 
 if(isset($_POST["action"]) && $_POST["action"] == "Категории"){
@@ -196,15 +245,27 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
             }
 
             if(isset($_FILES["selectedImages"]["name"]) && count($_FILES["selectedImages"]["name"]) > 0){
-                QueryExecutor::getInstance()->removeAllProductPhoto($_GET["productId"]);
+
+                $found = false;
 
                 foreach ($_FILES["selectedImages"]["name"] as $key => $value){
-                    //echo "NAME: {$_FILES["selectedImages"]["name"][$key]} TMP_NAME: {$_FILES["selectedImages"]["tmp_name"][$key]} ";
+                    if(isset($value) && iconv_strlen($value, "UTF-8") > 0){
+                        $found = true;
+                        break;
+                    }
+                }
 
-                    if(isset($_FILES["selectedImages"]["name"][$key]) && isset($_FILES["selectedImages"]["tmp_name"][$key])){
-                        move_uploaded_file($_FILES["selectedImages"]["tmp_name"][$key], $_SERVER["DOCUMENT_ROOT"] . "/Resources/Images/Upload/{$_FILES["selectedImages"]["name"][$key]}");
+                if($found){
+                    QueryExecutor::getInstance()->removeAllProductPhoto($_GET["productId"]);
 
-                        QueryExecutor::getInstance()->addProductPhoto($_GET["productId"], $_FILES["selectedImages"]["name"][$key]);
+                    foreach ($_FILES["selectedImages"]["name"] as $key => $value){
+                        //echo "NAME: {$_FILES["selectedImages"]["name"][$key]} TMP_NAME: {$_FILES["selectedImages"]["tmp_name"][$key]} ";
+
+                        if(isset($_FILES["selectedImages"]["name"][$key]) && isset($_FILES["selectedImages"]["tmp_name"][$key])){
+                            move_uploaded_file($_FILES["selectedImages"]["tmp_name"][$key], $_SERVER["DOCUMENT_ROOT"] . "/Resources/Images/Upload/{$_FILES["selectedImages"]["name"][$key]}");
+
+                            QueryExecutor::getInstance()->addProductPhoto($_GET["productId"], $_FILES["selectedImages"]["name"][$key]);
+                        }
                     }
                 }
             }
@@ -230,12 +291,24 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
 if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
     $products = QueryExecutor::getInstance()->getProducts($_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["categorySubcategoryId"], $_POST["manufacturerId"], null, null, $_POST["inputSearch"]);
 
+    $_SESSION["values"] = array();
+
+    foreach ($products as $product){
+        array_push($_SESSION["values"], $product["id"]);
+    }
+
     include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableProducts.php";
     exit();
 }
 
 if(!isset($_POST["action"])){
     $products = QueryExecutor::getInstance()->getProducts($_POST["classificationId"], $_POST["categoryId"], $_POST["subcategoryId"], $_POST["categorySubcategoryId"], $_POST["manufacturerId"], null, null, $_POST["inputSearch"]);
+
+    $_SESSION["values"] = array();
+
+    foreach ($products as $product){
+        array_push($_SESSION["values"], $product["id"]);
+    }
 
     include "Products.php";
     exit();

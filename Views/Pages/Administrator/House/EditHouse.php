@@ -10,7 +10,7 @@ $house = QueryExecutor::getInstance()->getHouse($_GET["houseId"]);
 $countries = QueryExecutor::getInstance()->getCountries("");
 $regions = QueryExecutor::getInstance()->getRegions($house["country_id"], "");
 $cities = QueryExecutor::getInstance()->getCities(null, $house["region_id"], "");
-$streets = QueryExecutor::getInstance()->getStreets(null, null, $house["street_id"], "");
+$streets = QueryExecutor::getInstance()->getStreets(null, null, $house["city_id"], "");
 ?>
 <!DOCTYPE html>
 <html lang="en">

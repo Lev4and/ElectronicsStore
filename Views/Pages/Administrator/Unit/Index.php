@@ -1,7 +1,10 @@
 <?php
 session_start();
 
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Functional/NumWord.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
+
+$_SESSION["pageNumber"] = 1;
 
 $units = array();
 
@@ -21,6 +24,31 @@ if(isset($_POST["action"]) && $_POST["action"] == "Удалить"){
     $units = QueryExecutor::getInstance()->getUnits($_POST["inputSearch"]);
 
     include "Units.php";
+}
+
+if(isset($_POST["action"]) && $_POST["action"] == "Обновить счетчик количества записей"){
+    $countValues = count($_SESSION["values"]);
+    $word = NumWord::numberWord($countValues, array('запись', 'записи', 'записей'));
+
+    echo "{$word}";
+    exit();
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Поменять страницу"){
+    if(isset($_GET["numberPage"]) && $_GET["numberPage"] > 0){
+        $units = QueryExecutor::getInstance()->getUnits($_POST["inputSearch"]);
+
+        $_SESSION["pageNumber"] = $_GET["numberPage"];
+
+        include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableUnits.php";
+    }
+
+    exit();
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Обновить нумерацию страниц"){
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Pagination.php";
+    exit();
 }
 
 if(isset($_POST["action"]) && $_POST["action"] == "Записать") {
@@ -72,12 +100,24 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить") {
 if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
     $units = QueryExecutor::getInstance()->getUnits($_POST["inputSearch"]);
 
+    $_SESSION["values"] = array();
+
+    foreach ($units as $unit){
+        array_push($_SESSION["values"], $unit["id"]);
+    }
+
     include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableUnits.php";
     exit();
 }
 
 if(!isset($_POST["action"])){
     $units = QueryExecutor::getInstance()->getUnits($_POST["inputSearch"]);
+
+    $_SESSION["values"] = array();
+
+    foreach ($units as $unit){
+        array_push($_SESSION["values"], $unit["id"]);
+    }
 
     include "Units.php";
 }

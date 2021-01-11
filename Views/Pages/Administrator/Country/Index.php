@@ -1,7 +1,10 @@
 <?php
-require $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
-
 session_start();
+
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Functional/NumWord.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Logic/Database/QueryExecutor.php";
+
+$_SESSION["pageNumber"] = 1;
 
 $countries = array();
 
@@ -21,6 +24,31 @@ if(isset($_POST["action"]) && $_POST["action"] == "Удалить"){
     $countries = QueryExecutor::getInstance()->getCountries($_POST["inputSearch"]);
 
     include "Countries.php";
+}
+
+if(isset($_POST["action"]) && $_POST["action"] == "Обновить счетчик количества записей"){
+    $countValues = count($_SESSION["values"]);
+    $word = NumWord::numberWord($countValues, array('запись', 'записи', 'записей'));
+
+    echo "{$word}";
+    exit();
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Поменять страницу"){
+    if(isset($_GET["numberPage"]) && $_GET["numberPage"] > 0){
+        $countries = QueryExecutor::getInstance()->getCountries($_POST["inputSearch"]);
+
+        $_SESSION["pageNumber"] = $_GET["numberPage"];
+
+        include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableCountries.php";
+    }
+
+    exit();
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "Обновить нумерацию страниц"){
+    include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/Pagination.php";
+    exit();
 }
 
 if(isset($_POST["action"]) && $_POST["action"] == "Записать"){
@@ -86,12 +114,24 @@ if(isset($_POST["action"]) && $_POST["action"] == "Сохранить"){
 if(isset($_GET["action"]) && $_GET["action"] == "Применить"){
     $countries = QueryExecutor::getInstance()->getCountries($_POST["inputSearch"]);
 
+    $_SESSION["values"] = array();
+
+    foreach ($countries as $country){
+        array_push($_SESSION["values"], $country["id"]);
+    }
+
     include $_SERVER["DOCUMENT_ROOT"] . "/Views/Renders/TableCountries.php";
     exit();
 }
 
 if(!isset($_POST["action"])){
     $countries = QueryExecutor::getInstance()->getCountries($_POST["inputSearch"]);
+
+    $_SESSION["values"] = array();
+
+    foreach ($countries as $country){
+        array_push($_SESSION["values"], $country["id"]);
+    }
 
     include "Countries.php";
 }
